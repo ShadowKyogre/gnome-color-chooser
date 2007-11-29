@@ -1,0 +1,401 @@
+# Turkish translation for gnome-color-chooser
+# Copyright (C) 2007 Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>
+# This file is distributed under the same license as the gnome-color-chooser package.
+# Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-color-chooser\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-27 15:02+0000\n"
+"PO-Revision-Date: 2007-11-26 17:55-0000\n"
+"Last-Translator: JackTheDipper <gnome-color-chooser@punk-ass-bitch.org>\n"
+"Language-Team: Turkish <tr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2007-11-25 16:12+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../profiles/compact.xml.in.h:1
+msgid "Compact"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:1
+#, fuzzy
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> Images are currently not "
+"exported!!"
+msgstr "Resimler şu an dışa aktarılmamış!!"
+
+#: ../src/gnome-color-chooser.glade.h:2
+#, fuzzy
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> These settings only work "
+"with gtk2-themes that don't specify these values on their own, otherwise "
+"nothing will happen on a change ;-)"
+msgstr ""
+"Bu ayarlar sadece kendi değerlerini belirlemeyen gtk2 temalarıyla çalışır,"
+"aksi takdirde hiçbir değişiklik olmayacaktır ;-)"
+
+#: ../src/gnome-color-chooser.glade.h:3
+#, fuzzy
+msgid "<b>Buttons</b>"
+msgstr "<b>Butonlar</b>"
+
+#: ../src/gnome-color-chooser.glade.h:4
+msgid "<b>Compiz</b>"
+msgstr "<b>Compiz</b>"
+
+#: ../src/gnome-color-chooser.glade.h:5
+msgid "<b>Default Configuration</b>"
+msgstr "<b>Varsayılan Ayarlar</b>"
+
+#: ../src/gnome-color-chooser.glade.h:6
+msgid "<b>Desktop</b>"
+msgstr "<b>Masaüstü</b>"
+
+#: ../src/gnome-color-chooser.glade.h:7
+msgid "<b>Engines</b> [for advanced users!]"
+msgstr "<b>Tema Motorları</b> [gelişmiş kullanıcılar içindir!]"
+
+#: ../src/gnome-color-chooser.glade.h:8
+msgid "<b>Entry Fields</b>"
+msgstr "<b>Giriş Alanları</b>"
+
+#: ../src/gnome-color-chooser.glade.h:9
+msgid "<b>Icon Labels</b>"
+msgstr "<b>Simge Etiketleri</b>"
+
+#: ../src/gnome-color-chooser.glade.h:10
+#, fuzzy
+msgid "<b>Icon sizes</b> (x² pixels)"
+msgstr "<b>Simge Boyutları</b> (x² pixels)"
+
+#: ../src/gnome-color-chooser.glade.h:11
+msgid "<b>Icons</b>"
+msgstr "<b>Simgeler</b>"
+
+#: ../src/gnome-color-chooser.glade.h:12
+msgid "<b>Metacity</b> (normal)"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:13
+msgid "<b>Normal</b>"
+msgstr "<b>Normal</b>"
+
+#: ../src/gnome-color-chooser.glade.h:14
+msgid "<b>Panel</b>"
+msgstr "<b>Panel</b>"
+
+#: ../src/gnome-color-chooser.glade.h:15
+msgid "<b>Progress Bars</b>"
+msgstr "<b>İlerleme Çubukları</b>"
+
+#: ../src/gnome-color-chooser.glade.h:16
+msgid "<b>Scrollbars</b>"
+msgstr "<b>Kaydırma Çubukları</b>"
+
+#: ../src/gnome-color-chooser.glade.h:17
+msgid "<b>Selection Box</b>"
+msgstr "<b>Seçim Kutusu</b>"
+
+#: ../src/gnome-color-chooser.glade.h:18
+msgid "<b>Start Menu</b>"
+msgstr "<b>Başlangıç Menüsü</b>"
+
+#: ../src/gnome-color-chooser.glade.h:19
+msgid "<b>Tooltips</b>"
+msgstr "<b>Araç İpuçları</b>"
+
+#: ../src/gnome-color-chooser.glade.h:20
+msgid "<b>Window Decoration</b>"
+msgstr "<b>Pencere Dekorasyonu</b>"
+
+#: ../src/gnome-color-chooser.glade.h:21
+msgid "Background"
+msgstr "Arka Plan"
+
+#: ../src/gnome-color-chooser.glade.h:22
+msgid "Background Opacity"
+msgstr "Arka Plan Geçirgenliği"
+
+#: ../src/gnome-color-chooser.glade.h:23
+msgid "Button"
+msgstr "Buton"
+
+#: ../src/gnome-color-chooser.glade.h:24
+msgid "Button Size"
+msgstr "Buton Boyutu"
+
+#: ../src/gnome-color-chooser.glade.h:25
+msgid "Color"
+msgstr "Renk"
+
+#: ../src/gnome-color-chooser.glade.h:26
+msgid "Desktop"
+msgstr "Masaüstü"
+
+#. Verb (to export)
+#: ../src/gnome-color-chooser.glade.h:28
+msgid "E_xport as"
+msgstr "_Farklı Biçimde Dışa Aktar"
+
+#: ../src/gnome-color-chooser.glade.h:29
+msgid "Engines"
+msgstr "Motorlar"
+
+#: ../src/gnome-color-chooser.glade.h:30
+msgid "Font"
+msgstr "Yazı Tipi"
+
+#: ../src/gnome-color-chooser.glade.h:31
+msgid "Foreground"
+msgstr "Ön Plan"
+
+#: ../src/gnome-color-chooser.glade.h:32
+msgid "Global Colors"
+msgstr "Evrensel Renkler"
+
+#: ../src/gnome-color-chooser.glade.h:33
+msgid "Icons"
+msgstr "İkonlar"
+
+#: ../src/gnome-color-chooser.glade.h:34
+msgid "Large Toolbar"
+msgstr "Geniş Araç Kutusu"
+
+#: ../src/gnome-color-chooser.glade.h:35
+msgid "Menue (e.g. application or context menues)"
+msgstr "Menü (örn. uygulama ya da sağ tık menüleri)"
+
+#. visible in tooltip of render modes
+#: ../src/gnome-color-chooser.glade.h:37
+msgid "Modes: 0=normal, 1=lighten, 2=colorize, 3=colorize monochromely"
+msgstr "Modlar: 0=normal, 1=ışıklandır, 2=renklendir, 3=siyah beyaz renklendir"
+
+#: ../src/gnome-color-chooser.glade.h:38
+msgid "Not yet possible with GNOME"
+msgstr "Şu an GNOME ile mümkün değil"
+
+#: ../src/gnome-color-chooser.glade.h:39
+msgid "Opacity"
+msgstr "Geçirgenlik"
+
+#: ../src/gnome-color-chooser.glade.h:40
+msgid "Panel"
+msgstr "Panel"
+
+#: ../src/gnome-color-chooser.glade.h:41
+msgid "Profile:"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:42
+msgid "Specific"
+msgstr "Belirlenmiş"
+
+#: ../src/gnome-color-chooser.glade.h:43
+msgid "Start menue (needs panel restart!)"
+msgstr "Başlangıç Menüsü (panel yeniden başlatılmalı!)"
+
+#: ../src/gnome-color-chooser.glade.h:44
+msgid "Text"
+msgstr "Yazı"
+
+#: ../src/gnome-color-chooser.glade.h:45
+msgid "This color is only used if render mode is 2 or 3 (colorize)"
+msgstr "Bu renk sadece render modu 2 ya da 3 (renklendirme) ise kullanılır"
+
+#: ../src/gnome-color-chooser.glade.h:46
+msgid "Title/Buttons"
+msgstr "Başlık/Butonlar"
+
+#: ../src/gnome-color-chooser.glade.h:47
+msgid "Width"
+msgstr "Genişlik"
+
+#: ../src/gnome-color-chooser.glade.h:48
+msgid "X-Padding"
+msgstr "X-Koordinatı"
+
+#: ../src/gnome-color-chooser.glade.h:49
+msgid ""
+"X-Padding\n"
+"(of widgets)"
+msgstr ""
+"X-Koordinatı\n"
+"(widgetlerin)"
+
+#: ../src/gnome-color-chooser.glade.h:51
+msgid "Y-Padding"
+msgstr "Y-Koordinatı"
+
+#: ../src/gnome-color-chooser.glade.h:52
+msgid ""
+"Y-Padding\n"
+"(of widgets)"
+msgstr ""
+"Y-Koordinatı\n"
+"(widgetlerin)"
+
+#: ../src/gnome-color-chooser.glade.h:54
+msgid "_File"
+msgstr "_Dosya"
+
+#: ../src/gnome-color-chooser.glade.h:55
+msgid "_Help"
+msgstr "_Yardım"
+
+#: ../src/gnome-color-chooser.glade.h:56
+msgid "_Install in GNOME"
+msgstr "GNOME'un _içinde kur"
+
+#: ../src/gnome-color-chooser.glade.h:57
+msgid "activate hover effects"
+msgstr "belirginleştirme efektlerini kullan"
+
+#: ../src/gnome-color-chooser.glade.h:58
+msgid "active window"
+msgstr "aktif pencere"
+
+#: ../src/gnome-color-chooser.glade.h:59
+msgid "alt. selected"
+msgstr "alternatif seçili"
+
+#: ../src/gnome-color-chooser.glade.h:60
+msgid "beautify icon labels (needed for icon label settings!)"
+msgstr "ikon etiketlerini güzelleştir (ikon etiketleri ayarları için gerekli)"
+
+#: ../src/gnome-color-chooser.glade.h:61
+msgid "brightness"
+msgstr "parlaklık"
+
+#: ../src/gnome-color-chooser.glade.h:62
+msgid "button pressed"
+msgstr "basılmış buton"
+
+#: ../src/gnome-color-chooser.glade.h:63
+msgid "colorize with"
+msgstr "ile renklendir"
+
+#: ../src/gnome-color-chooser.glade.h:64
+#, fuzzy
+msgid "deactivate (stock) icons"
+msgstr "ikonları etkisizleştir"
+
+#: ../src/gnome-color-chooser.glade.h:65
+msgid "disabled"
+msgstr "Devre Dışı"
+
+#: ../src/gnome-color-chooser.glade.h:66
+msgid "export comments (for easy human theme editing)"
+msgstr "yorumları dışa aktar (human teması düzenlemeyi kolaylaştırmak için)"
+
+#: ../src/gnome-color-chooser.glade.h:67
+msgid "export disabled theme elements"
+msgstr "devre dışı olan tema elementlerini dışa aktar"
+
+#: ../src/gnome-color-chooser.glade.h:68
+msgid "hover"
+msgstr "Belirginleştirme"
+
+#: ../src/gnome-color-chooser.glade.h:69
+msgid "inactive window"
+msgstr "aktif olmayan pencere"
+
+#: ../src/gnome-color-chooser.glade.h:70
+msgid "lighten"
+msgstr "ışıklandır"
+
+#: ../src/gnome-color-chooser.glade.h:71
+msgid "normal"
+msgstr "normal"
+
+#: ../src/gnome-color-chooser.glade.h:72
+msgid "render mode"
+msgstr "render modu"
+
+#: ../src/gnome-color-chooser.glade.h:73
+msgid "saturation"
+msgstr "renk doygunluğu"
+
+#: ../src/gnome-color-chooser.glade.h:74
+msgid "selected"
+msgstr "seçilmiş"
+
+#: ../src/gnome-color-chooser.desktop.in.h:1
+msgid "Customize your GNOME desktop"
+msgstr "GNOME masaüstünüzü özelleştirin"
+
+#: ../src/configloader.cc:108 ../src/configloader.cc:1120
+msgid "Theme Default"
+msgstr ""
+
+#: ../src/configloader.cc:873
+#, c-format
+msgid "Configuration of %s"
+msgstr "%s in ayarlaması"
+
+#: ../src/configloader.cc:1119
+msgid "None"
+msgstr ""
+
+#. dialog title
+#: ../src/mainwindow.cc:598
+msgid "Save Theme"
+msgstr "Temayı Kaydet"
+
+#. dialog title
+#: ../src/mainwindow.cc:625
+msgid "Save Theme as"
+msgstr "Temayı Farklı Kaydet"
+
+#. dialog title
+#: ../src/mainwindow.cc:651
+msgid "Export Theme as"
+msgstr "Temayı Farklı Dışa Aktar"
+
+#: ../src/mainwindow.cc:783
+msgid "A tool for customizing the appereance of the GNOME desktop"
+msgstr "GNOME masaüstünün görünümünü özelleştirmek için bir araç"
+
+#: ../src/treehandler.cc:555
+msgid "Version"
+msgstr ""
+
+#: ../src/treehandler.cc:556
+msgid "Website"
+msgstr ""
+
+#: ../src/treehandler.cc:560
+msgid "Author(s)"
+msgstr ""
+
+#~ msgid ""
+#~ "<span size='small'><u><b>ToDo:</b></u>\n"
+#~ "-> use tooltips to explain what each config is being for\n"
+#~ "-> simplify GUI and add a preview area\n"
+#~ "-> find translators! (please mail) ;-)</span>"
+#~ msgstr ""
+#~ "<span size='small'><u><b>Yapılacaklar:</b></u>\n"
+#~ "-> her ayarın ne işe yaradığını anlatmak için araç ipuçları kullan\n"
+#~ "-> Arayüzü basitleştir ve bir önizleme alanı ekle\n"
+#~ "-> çevirmenler bul! (lütfen mail atın) ;-)</span>"
+
+#~ msgid "Panel (does nothing with my clearlooks-theme)"
+#~ msgstr "Panel (benim clearlooks-theme ile hiçbirşey gerçekleşmedi)"
+
+#~ msgid "gtk-apply"
+#~ msgstr "gtk-apply"
+
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-cancel"
+
+#~ msgid "gtk-ok"
+#~ msgstr "gtk-ok"
+
+#~ msgid "gtk-save"
+#~ msgstr "gtk-save"
+
+#~ msgid "GNOME Color Chooser"
+#~ msgstr "GNOME Color Chooser"

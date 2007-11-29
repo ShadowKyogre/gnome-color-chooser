@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=GNOME Color Chooser
+_Comment=Customize your GNOME desktop
+Exec=gnome-color-chooser
+Terminal=false
+Type=Application
+Icon=gnome-color-chooser.svg
+Categories=GNOME;Settings;
