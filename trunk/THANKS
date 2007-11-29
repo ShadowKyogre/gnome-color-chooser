@@ -1,0 +1,33 @@
+gnome-color-chooser THANKS file
+
+gnome-color-chooser has originally been written by Werner Pantke.
+
+
+THANK you very much, dear translators!
+All involved translators and the translation status can be found at
+https://translations.launchpad.net/gnome-color-chooser/trunk/+pots/gnome-color-chooser
+
+
+Many people have further contributed to gnome-color-chooser by reporting
+problems, suggesting various improvements, or submitting actual code.
+Here is a list of these people. Help me keep it complete and exempt of errors.
+
+
+000000: the first tester of this.... useful... erm... tool!
+        blame him for every single bug!
+
+e4gle:  designed icon logo of 0.1.x series ;-)
+
+marooned: proposed panel font setting
+
+Goamaus: proposed panel background image setting (cause XFCE lacks an own GUI)
+
+profoX: proposed to add the ability of colorizing desktop icons to gnome and gnome-color-chooser
+
+http://vektor.ca/bugs/gtkinfo.c: for providing a good way of getting gtk stats
+
+Andreas Nilsson: designed the icon logo of 0.2.x and later in respect to GNOME/Tango guidelines
+
+felix1976: proposed ability to change scrollbar button size
+
+the author of clearlooks-compact for his great work!

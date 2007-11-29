@@ -1,0 +1,413 @@
+# Swedish translations for gnome-color-chooser
+# Copyright (C) 2007 Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>
+# This file is distributed under the same license as the gnome-color-chooser package.
+# Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-color-chooser\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-27 15:02+0000\n"
+"PO-Revision-Date: 2007-11-26 17:55-0000\n"
+"Last-Translator: JackTheDipper <gnome-color-chooser@punk-ass-bitch.org>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2007-11-25 16:12+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../profiles/compact.xml.in.h:1
+msgid "Compact"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:1
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> Images are currently not "
+"exported!!"
+msgstr ""
+"<b><span foreground=\"#ff0000\">Observera:</span></b> Bilder blir för "
+"närvarande inte exporterade!"
+
+#: ../src/gnome-color-chooser.glade.h:2
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> These settings only work "
+"with gtk2-themes that don't specify these values on their own, otherwise "
+"nothing will happen on a change ;-)"
+msgstr ""
+"<b><span foreground=\"#ff0000\">Observera:</span></b> Dessa inställningar "
+"kommer endast att fungera gtk2-teman som inte anger dessa värden på egen "
+"hand, annars kommer ingenting att hända vid en ändring ;-)"
+
+#: ../src/gnome-color-chooser.glade.h:3
+msgid "<b>Buttons</b>"
+msgstr "<b>Knappar</b>"
+
+#: ../src/gnome-color-chooser.glade.h:4
+msgid "<b>Compiz</b>"
+msgstr "<b>Compiz</b>"
+
+#: ../src/gnome-color-chooser.glade.h:5
+msgid "<b>Default Configuration</b>"
+msgstr "<b>Standardkonfiguration</b>"
+
+#: ../src/gnome-color-chooser.glade.h:6
+msgid "<b>Desktop</b>"
+msgstr "<b>Skrivbord</b>"
+
+#: ../src/gnome-color-chooser.glade.h:7
+msgid "<b>Engines</b> [for advanced users!]"
+msgstr "<b>Motorer</b> [för erfarna användare!]"
+
+#: ../src/gnome-color-chooser.glade.h:8
+msgid "<b>Entry Fields</b>"
+msgstr "<b>Inmatningsfält</b>"
+
+#: ../src/gnome-color-chooser.glade.h:9
+msgid "<b>Icon Labels</b>"
+msgstr "<b>Ikonetiketter</b>"
+
+#: ../src/gnome-color-chooser.glade.h:10
+msgid "<b>Icon sizes</b> (x² pixels)"
+msgstr "<b>Ikonstorlekar</b> (x² bildpunkter)"
+
+#: ../src/gnome-color-chooser.glade.h:11
+msgid "<b>Icons</b>"
+msgstr "<b>Ikoner</b>"
+
+#: ../src/gnome-color-chooser.glade.h:12
+msgid "<b>Metacity</b> (normal)"
+msgstr "<b>Metacity</b> (normal)"
+
+#: ../src/gnome-color-chooser.glade.h:13
+msgid "<b>Normal</b>"
+msgstr "<b>Normal</b>"
+
+#: ../src/gnome-color-chooser.glade.h:14
+msgid "<b>Panel</b>"
+msgstr "<b>Panel</b>"
+
+#: ../src/gnome-color-chooser.glade.h:15
+msgid "<b>Progress Bars</b>"
+msgstr "<b>Förloppsmätare</b>"
+
+#: ../src/gnome-color-chooser.glade.h:16
+msgid "<b>Scrollbars</b>"
+msgstr "<b>Rullningslister</b>"
+
+#: ../src/gnome-color-chooser.glade.h:17
+msgid "<b>Selection Box</b>"
+msgstr "<b>Alternativrutor</b>"
+
+#: ../src/gnome-color-chooser.glade.h:18
+msgid "<b>Start Menu</b>"
+msgstr "<b>Startmeny</b>"
+
+#: ../src/gnome-color-chooser.glade.h:19
+msgid "<b>Tooltips</b>"
+msgstr "<b>Verktygstips</b>"
+
+#: ../src/gnome-color-chooser.glade.h:20
+msgid "<b>Window Decoration</b>"
+msgstr "<b>Fönsterdekoration</b>"
+
+#: ../src/gnome-color-chooser.glade.h:21
+msgid "Background"
+msgstr "Bakgrund"
+
+#: ../src/gnome-color-chooser.glade.h:22
+msgid "Background Opacity"
+msgstr "Opakhet för bakgrund"
+
+#: ../src/gnome-color-chooser.glade.h:23
+msgid "Button"
+msgstr "Knapp"
+
+#: ../src/gnome-color-chooser.glade.h:24
+msgid "Button Size"
+msgstr "Knappstorlek"
+
+#: ../src/gnome-color-chooser.glade.h:25
+msgid "Color"
+msgstr "Färg"
+
+#: ../src/gnome-color-chooser.glade.h:26
+msgid "Desktop"
+msgstr "Skrivbord"
+
+#. Verb (to export)
+#: ../src/gnome-color-chooser.glade.h:28
+msgid "E_xport as"
+msgstr "E_xportera som"
+
+#: ../src/gnome-color-chooser.glade.h:29
+msgid "Engines"
+msgstr "Motorer"
+
+#: ../src/gnome-color-chooser.glade.h:30
+msgid "Font"
+msgstr "Typsnitt"
+
+#: ../src/gnome-color-chooser.glade.h:31
+msgid "Foreground"
+msgstr "Förgrund"
+
+#: ../src/gnome-color-chooser.glade.h:32
+msgid "Global Colors"
+msgstr "Allmänna färger"
+
+#: ../src/gnome-color-chooser.glade.h:33
+msgid "Icons"
+msgstr "Ikoner"
+
+#: ../src/gnome-color-chooser.glade.h:34
+msgid "Large Toolbar"
+msgstr "Stor verktygsrad"
+
+#: ../src/gnome-color-chooser.glade.h:35
+msgid "Menue (e.g. application or context menues)"
+msgstr "Meny (t.ex. program- eller sammanhangsmenyer)"
+
+#. visible in tooltip of render modes
+#: ../src/gnome-color-chooser.glade.h:37
+msgid "Modes: 0=normal, 1=lighten, 2=colorize, 3=colorize monochromely"
+msgstr "Lägen: 0=normal, 1=ljus, 2=färglagd, 3=färglagd svartvitt"
+
+#: ../src/gnome-color-chooser.glade.h:38
+msgid "Not yet possible with GNOME"
+msgstr "Ännu inte möjligt med GNOME"
+
+#: ../src/gnome-color-chooser.glade.h:39
+msgid "Opacity"
+msgstr "Opakhet"
+
+#: ../src/gnome-color-chooser.glade.h:40
+msgid "Panel"
+msgstr "Panel"
+
+#: ../src/gnome-color-chooser.glade.h:41
+msgid "Profile:"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:42
+msgid "Specific"
+msgstr "Specifik"
+
+#: ../src/gnome-color-chooser.glade.h:43
+msgid "Start menue (needs panel restart!)"
+msgstr "Startmeny (behöver omstart av panelen!)"
+
+#: ../src/gnome-color-chooser.glade.h:44
+msgid "Text"
+msgstr "Text"
+
+#: ../src/gnome-color-chooser.glade.h:45
+msgid "This color is only used if render mode is 2 or 3 (colorize)"
+msgstr ""
+"Den här färgen används endast om renderingsläget är 2 eller 3 (färglagd)"
+
+#: ../src/gnome-color-chooser.glade.h:46
+msgid "Title/Buttons"
+msgstr "Titel/Knappar"
+
+#: ../src/gnome-color-chooser.glade.h:47
+msgid "Width"
+msgstr "Bredd"
+
+#: ../src/gnome-color-chooser.glade.h:48
+msgid "X-Padding"
+msgstr "X-fyllning"
+
+#: ../src/gnome-color-chooser.glade.h:49
+msgid ""
+"X-Padding\n"
+"(of widgets)"
+msgstr ""
+"X-fyllning\n"
+"(för widgetar)"
+
+#: ../src/gnome-color-chooser.glade.h:51
+msgid "Y-Padding"
+msgstr "Y-fyllning"
+
+#: ../src/gnome-color-chooser.glade.h:52
+msgid ""
+"Y-Padding\n"
+"(of widgets)"
+msgstr ""
+"Y-fyllning\n"
+"(för widgetar)"
+
+#: ../src/gnome-color-chooser.glade.h:54
+msgid "_File"
+msgstr "_Arkiv"
+
+#: ../src/gnome-color-chooser.glade.h:55
+msgid "_Help"
+msgstr "_Hjälp"
+
+#: ../src/gnome-color-chooser.glade.h:56
+msgid "_Install in GNOME"
+msgstr "_Installera i GNOME"
+
+#: ../src/gnome-color-chooser.glade.h:57
+msgid "activate hover effects"
+msgstr "aktivera svävningseffekter"
+
+#: ../src/gnome-color-chooser.glade.h:58
+msgid "active window"
+msgstr "aktivt fönster"
+
+#: ../src/gnome-color-chooser.glade.h:59
+msgid "alt. selected"
+msgstr "alt. vald"
+
+#: ../src/gnome-color-chooser.glade.h:60
+msgid "beautify icon labels (needed for icon label settings!)"
+msgstr "försköna ikonetiketter (behövs för ikonetikettinställningar!)"
+
+#: ../src/gnome-color-chooser.glade.h:61
+msgid "brightness"
+msgstr "ljusstyrka"
+
+#: ../src/gnome-color-chooser.glade.h:62
+msgid "button pressed"
+msgstr "knapp intryckt"
+
+#: ../src/gnome-color-chooser.glade.h:63
+msgid "colorize with"
+msgstr "färglägg med"
+
+#: ../src/gnome-color-chooser.glade.h:64
+msgid "deactivate (stock) icons"
+msgstr "inaktivera (standard)ikoner"
+
+#: ../src/gnome-color-chooser.glade.h:65
+msgid "disabled"
+msgstr "inaktiverad"
+
+#: ../src/gnome-color-chooser.glade.h:66
+msgid "export comments (for easy human theme editing)"
+msgstr "export kommentarer (för enklare mänsklig temaredigering)"
+
+#: ../src/gnome-color-chooser.glade.h:67
+msgid "export disabled theme elements"
+msgstr "exportera inaktiverade temaelement"
+
+#: ../src/gnome-color-chooser.glade.h:68
+msgid "hover"
+msgstr "sväva"
+
+#: ../src/gnome-color-chooser.glade.h:69
+msgid "inactive window"
+msgstr "inaktivt fönster"
+
+#: ../src/gnome-color-chooser.glade.h:70
+msgid "lighten"
+msgstr "ljus"
+
+#: ../src/gnome-color-chooser.glade.h:71
+msgid "normal"
+msgstr "normal"
+
+#: ../src/gnome-color-chooser.glade.h:72
+msgid "render mode"
+msgstr "renderingsläge"
+
+#: ../src/gnome-color-chooser.glade.h:73
+msgid "saturation"
+msgstr "mättnad"
+
+#: ../src/gnome-color-chooser.glade.h:74
+msgid "selected"
+msgstr "vald"
+
+#: ../src/gnome-color-chooser.desktop.in.h:1
+msgid "Customize your GNOME desktop"
+msgstr "Anpassa ditt GNOME-skrivbord"
+
+#: ../src/configloader.cc:108 ../src/configloader.cc:1120
+msgid "Theme Default"
+msgstr ""
+
+#: ../src/configloader.cc:873
+#, c-format
+msgid "Configuration of %s"
+msgstr "Konfiguration för %s"
+
+#: ../src/configloader.cc:1119
+msgid "None"
+msgstr ""
+
+#. dialog title
+#: ../src/mainwindow.cc:598
+msgid "Save Theme"
+msgstr "Spara tema"
+
+#. dialog title
+#: ../src/mainwindow.cc:625
+msgid "Save Theme as"
+msgstr "Spara tema som"
+
+#. dialog title
+#: ../src/mainwindow.cc:651
+msgid "Export Theme as"
+msgstr "Exportera tema som"
+
+#: ../src/mainwindow.cc:783
+msgid "A tool for customizing the appereance of the GNOME desktop"
+msgstr "Ett verktyg för att anpassa utseendet på GNOME-skrivbordet"
+
+#: ../src/treehandler.cc:555
+msgid "Version"
+msgstr ""
+
+#: ../src/treehandler.cc:556
+msgid "Website"
+msgstr ""
+
+#: ../src/treehandler.cc:560
+msgid "Author(s)"
+msgstr ""
+
+#~ msgid ""
+#~ "<span size='small'><u><b>ToDo:</b></u>\n"
+#~ "-> use tooltips to explain what each config is being for\n"
+#~ "-> simplify GUI and add a preview area\n"
+#~ "-> find translators! (please mail) ;-)</span>"
+#~ msgstr ""
+#~ "<span size='small'><u><b>Att göra:</b></u>\n"
+#~ "-> använda verktygstips för att förklara vad varje konfiguration används "
+#~ "till\n"
+#~ "-> förenkla grafiska gränssnittet och lägga till en förhandsvisningsruta\n"
+#~ "-> hitta översättare! (skicka e-post) ;-)</span>"
+
+#~ msgid "Panel (does nothing with my clearlooks-theme)"
+#~ msgstr "Panel (gör ingenting med mitt clearlooks-tema)"
+
+#~ msgid ""
+#~ "cs: Lucas \"Drom\" Lommer <llommer@svn.gnome.org>\n"
+#~ "de: JackTheDipper <gnome-color-chooser@punk-ass-bitch.org>\n"
+#~ "fr: zniavre mou <zniavre2048@gmail.com>\n"
+#~ "hu:  Erno Horvath <szerencsefia@gmail.com>\n"
+#~ "sv: Daniel Nylander <dnylande@gnome.org>\n"
+#~ "\n"
+#~ "Any new translation will be very appreciated.\n"
+#~ "Please contact me!\n"
+#~ "<gnome-color-chooser@punk-ass-bitch.org>"
+#~ msgstr "Daniel Nylander <dnylande@gnome.org>"
+
+#~ msgid "gtk-apply"
+#~ msgstr "gtk-apply"
+
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-cancel"
+
+#~ msgid "gtk-ok"
+#~ msgstr "gtk-ok"
+
+#~ msgid "gtk-save"
+#~ msgstr "gtk-save"
+
+#~ msgid "GNOME Color Chooser"
+#~ msgstr "Färgväljare för GNOME"
