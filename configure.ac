@@ -40,8 +40,6 @@ AM_GLIB_GNU_GETTEXT
 
 AC_CONFIG_FILES([
    Makefile
-   debian_create_deb
-   README
    doc/Makefile
    m4/Makefile
    src/Makefile
