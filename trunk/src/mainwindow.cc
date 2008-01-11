@@ -780,7 +780,7 @@ void MainWindow::on_help_info()
     pDialog->set_name(PACKAGE_NAME);
     pDialog->set_copyright("(c) 2006-2007 by Werner Pantke");
     pDialog->set_version(version.c_str());
-    pDialog->set_comments(_("A tool for customizing the appereance of the GNOME desktop"));
+    pDialog->set_comments(_("A tool for customizing the appearance of the GNOME desktop"));
     pDialog->set_logo(m_refIcon);
     pDialog->show();
   }
