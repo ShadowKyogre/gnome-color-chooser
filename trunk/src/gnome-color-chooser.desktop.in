@@ -7,3 +7,4 @@ Terminal=false
 Type=Application
 Icon=gnome-color-chooser.svg
 Categories=GNOME;Settings;
+StartupNotify=true
