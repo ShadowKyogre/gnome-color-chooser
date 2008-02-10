@@ -1,18 +1,22 @@
-// Copyright (C) 2006-2007 W. Pantke <gnome-color-chooser@punk-ass-bitch.org>
-//  
-// This program is free software; you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation; either version 2 of the License, or
-// (at your option) any later version.
-// 
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-// 
-// You should have received a copy of the GNU General Public License
-// along with this program; if not, write to the Free Software 
-// Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+/* GNOME Color Chooser - GTK+/GNOME desktop appearance customization tool
+ * Copyright (C) 2006-2008 Werner Pantke <wpantke@punk-ass-bitch.org>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Project email: <gnome-color-chooser@punk-ass-bitch.org>
+ *
+ */
 
 #include "configloader.h"
 #include "mainwindow.h"
@@ -156,7 +160,9 @@ void MainWindow::init(TreeHandler* config,
   this->image_path   = image_path;
   this->m_filename   = configfile;
   this->m_configfile = configfile;
-  set_title((string(PACKAGE_NAME) + " " + version).c_str());
+
+  set_title(PACKAGE_NAME);
+
   if(Utils::Io::check_file(icon))
   {
     this->m_refIcon = Gdk::Pixbuf::create_from_file(icon, 48, 48, true);
@@ -778,7 +784,7 @@ void MainWindow::on_help_info()
   {
     pDialog->set_transient_for(*this);
     pDialog->set_name(PACKAGE_NAME);
-    pDialog->set_copyright("(c) 2006-2007 by Werner Pantke");
+    pDialog->set_copyright("Copyright (C) 2006-2008 Werner Pantke");
     pDialog->set_version(version.c_str());
     pDialog->set_comments(_("A tool for customizing the appearance of the GNOME desktop"));
     pDialog->set_logo(m_refIcon);

@@ -1,19 +1,101 @@
 gnome-color-chooser -- History of visible changes.
 
-Copyright (C) 2006-2007, Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>
+Copyright (C) 2006-2008, Werner Pantke <wpantke@punk-ass-bitch.org>
 See the end for copying conditions.
 
 Please send gnome-color-chooser bug reports to
 gnome-color-chooser@punk-ass-bitch.org .
 
-Version 0.1
 
-* List your features here
+Version 0.2.4
+
+* changed project license to GNU GPL3+
+
+
+Version 0.2.3
+
+* updated debian/ directory to (hopefully) fulfill debian policy
+* updated all language files (complete update is planned for 0.2.4)
+* added following languages: bg, es, id, it, pt, tr, zh_CN
+* made tooltip color changer compatible to GNOME 2.20 / GTK+ 2.12
+* added option to set tooltip text color
+* removed possibility of changing panel icon size (as i couldn't
+  ever see a difference)
+* added possibility to choose profiles
+* added first profile "compact" (looks best with Arial 8 @ 96dpi),
+  which is highly inspired by the theme "clearlooks-compact".
+  Thank you very much, dear theme author!
+* added GTK+ information window (help->information)
+* added information window to GTK+ engines
+* added manual page, see "man gnome-color-chooser" for more details
+
+
+Version 0.2.2
+
+* added possibility to change scrollbar button size
+* added Czech localization (thank you very much, Lucas "Drom" Lommer)
+* added Swedish localization by Daniel Nylander
+* added Hungarian localization by Erno Horvath
+
+
+Version 0.2.1
+
+* added French localization (a big thank you to zniavre!)
+* added debian/ directory to distribution package which allows easy
+  creation of deb packages for debian based distros like ubuntu.
+  Please share these packages with us and send them to
+  gnome-color-chooser@punk-ass-bitch.org ! Thank you!
+
+
+Version 0.2.0
+
+* integrated my new Nautilus settings (requires nautilus_colorize patch or Nautilus 2.17+)
+* added desktop icon colorization and desktop selection box settings
+* added script for automatic installation on Debian systems
+  (requires package checkinstall), theroretically it should even work
+  on slackware and rpm based distributions (but untested) ;-)
+* introduced my new Engine Schema file format that every gtk2 engine should soon be shipped with
+  (all GNOME 2.18 gtk-engines already include these schemas!)
+* added possibility to set the engine of a category and to edit all of its engine parameters
+* introduced first version of an own simple Theme file format (*.gnomecc)
+* all old menu options are now activated (new/load/save theme)
+* added internationalization and german localization
+* introduced new dependencies: libgnome-2.0 >= 2.16, libgnomeuimm-2.6 >= 2.14.0	
+
+
+Version 0.1.3
+
+* stabilized image preview (although no one reported a bug)
+* added some background image settings
+* added setting to disable (stock) icons in buttons
+* added start menue entry (in Settings)
+
+
+Version 0.1.2
+
+* changed from config file to config directory (seamless upgrade)
+* added new filechooserbutton widget
+* added possibility to select images
+  (image preview is EXPERIMENTAL, please report strange behavior!)
+* added panel background image setting (requested by Goamaus)
+
+
+Version 0.1.1
+
+* added automatic configuration updater to codebase
+* added button padding settings
+* added possibility to change fonts to codebase
+* added panel font setting (requested by marooned)
+
+
+Version 0.1.0
+
+* Announcement of very first testing version
 
 -------------------------------------------------------
 Copying information:
 
-Copyright (C) 2006-2007, Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>
+Copyright (C) 2006-2008, Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>
 
    Permission is granted to anyone to make or distribute verbatim copies
    of this document as received, in any medium, provided that the
