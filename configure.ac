@@ -31,11 +31,9 @@ AC_SUBST(DEPS_CFLAGS)
 AC_SUBST(DEPS_LIBS)
 
 
-LF_CONFIGURE_CC
 LF_CONFIGURE_CXX
 LF_HOST_TYPE
 LF_SET_WARNINGS
-#AC_PROG_RANLIB
 AC_PROG_INSTALL
 AC_PROG_MAKE_SET
 
@@ -50,6 +48,7 @@ AM_GLIB_GNU_GETTEXT
 AC_CONFIG_FILES([
    Makefile
    doc/Makefile
+   m4/Makefile
    src/Makefile
    po/Makefile.in
    profiles/Makefile

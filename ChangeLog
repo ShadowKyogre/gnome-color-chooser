@@ -1,3 +1,17 @@
+2008-03-12  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* Makefile.am:
+	* autogen.sh:
+	* configure.ac:
+	* m4/Makefile.am:
+	readded m4/ directory
+
+	* m4/lf_cxx.m4:
+	* m4/lf_host_type.m4:
+	* m4/lf_warnings.m4:
+	added some (slightly modified) macros from GNU Autotoolset as they
+	don't seem to be very common - this should fix FTBFS vor svn users
+
 2008-02-10  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* AUTHORS:
