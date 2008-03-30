@@ -19,6 +19,7 @@
 EXTRA_DIST = \
 	lf_cxx.m4 \
 	lf_host_type.m4 \
-	lf_warnings.m4
+	lf_warnings.m4 \
+	link_as_needed.m4
 
                          

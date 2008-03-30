@@ -1,3 +1,17 @@
+2008-03-30  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* autogen.sh:
+	* configure.ac:
+	* m4/Makefile.am:
+	* m4/link_as_needed.m4:
+	add linking with --as-needed option where available to strip down
+	(indirect) dependencies - if you encounter problems with this new
+	default behavior (possible if you're using binutils < 2.17), just
+	run ./configure or ./autogen.sh respectively with
+	--disable-link-as-needed option. If your compiler/linker doesn't
+	support linking with --as-needed, the configure script should
+	detect and disable it anyway.
+
 2008-03-12  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* Makefile.am:
