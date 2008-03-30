@@ -7,7 +7,7 @@ test -z "$srcdir" && srcdir=.
 PKG_NAME="GNOME Color Chooser"
 ACLOCAL_FLAGS="-I m4"
 REQUIRED_AUTOMAKE_VERSION=1.9  
-REQUIRED_M4MACROS="lf_cxx.m4 lf_host_type.m4 lf_warnings.m4"
+REQUIRED_M4MACROS="lf_cxx.m4 lf_host_type.m4 lf_warnings.m4 link_as_needed.m4"
 # intltool.m4 and glib-gettext.m4 are already checked by gnome-autogen.sh
 
 
