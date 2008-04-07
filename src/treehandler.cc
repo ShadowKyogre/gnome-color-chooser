@@ -21,8 +21,6 @@
 #include "treehandler.h"
 #include "utils.h"
 
-#include <libgnome/gnome-i18n.h>
-
 using namespace GnomeCC;
 
 

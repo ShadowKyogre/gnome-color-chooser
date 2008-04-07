@@ -1,3 +1,18 @@
+2008-04-08  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* configure.ac:
+	* src/Makefile.am:
+	added AM_MAINTAINER_MODE and GNOME_MAINTAINER_MODE_DEFINES macros to
+	get rid of deprecated library functions
+
+	* src/configloader.h:
+	* src/main.cc:
+	* src/mainwindow.h:
+	* src/treehandler.cc:
+	* src/treehandler.h:
+	removed usage of deprecated defines in <libgnome/gnome-i18n.h>,
+	replaced with gettext macros defined in <glib/gi18n.h>
+
 2008-03-30  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* autogen.sh:

@@ -91,6 +91,7 @@ INCLUDES = $(DEPS_CFLAGS) \
 		-DLOCALEDIR=\""$(datadir)/locale"\" \
 		-DGLADEDIR=\""$(gladedir)"\" \
 		-DDBDIR=\""$(dbdir)"\" \
-		-DICONDIR=\""$(icondir)"\"
+		-DICONDIR=\""$(icondir)"\" \
+		$(DISABLE_DEPRECATED)
 
 LDADD = $(DEPS_LIBS)
