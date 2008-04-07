@@ -25,6 +25,7 @@
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 #include <iostream>
+#include <string.h>
 
 using namespace std;
 

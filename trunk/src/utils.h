@@ -23,6 +23,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <string.h>
 
 // Utils::Xml
 #include <libxml/parser.h>

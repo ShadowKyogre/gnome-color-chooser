@@ -24,6 +24,7 @@
 #include "exporter.h"
 #include "treehandler.h"
 #include "ioexception.h"
+#include <string.h>
 
 using namespace std;
 

@@ -1,5 +1,13 @@
 2008-04-08  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
+	* src/configloader.h:
+	* src/gtkrcexporter.h:
+	* src/treehandler.h:
+	* src/utils.h:
+	fixed FTBFS that occured when building with g++-4.3
+
+2008-04-08  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
 	* configure.ac:
 	* src/Makefile.am:
 	added AM_MAINTAINER_MODE and GNOME_MAINTAINER_MODE_DEFINES macros to
