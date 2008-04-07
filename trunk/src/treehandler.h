@@ -21,6 +21,7 @@
 #ifndef _TREEHANDLER_H
 #define _TREEHANDLER_H
 
+#include <glib/gi18n.h>
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 #include <iostream>

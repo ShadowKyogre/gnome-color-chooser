@@ -23,7 +23,6 @@
 #include <config.h>
 #endif
 
-#include <libgnome/gnome-i18n.h>
 #include <gnome.h>
 
 #include "utils.h"

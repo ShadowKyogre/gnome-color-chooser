@@ -40,7 +40,7 @@
 #include <config.h>
 #endif
 
-#include <libgnome/gnome-i18n.h>
+#include <glib/gi18n.h>
 
 #include "treehandler.h"
 #include "enginewindow.h"
