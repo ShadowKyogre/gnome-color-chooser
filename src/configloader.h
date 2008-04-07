@@ -25,17 +25,17 @@
 #include <config.h>
 #endif
 
-#include <glib/gi18n.h>
-
 #include "treehandler.h"
 #include "mainwindow.h"
 #include "enginewindow.h"
 #include "modwidget.h"
 #include "combobox.h"
+#include <glib/gi18n.h>
 #include <gtkmm.h>
 #include <libglademm.h>
 #include <libxml/parser.h>
 #include <libxml/tree.h>
+#include <string.h>
 
 using namespace std;
 
