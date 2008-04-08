@@ -21,13 +21,13 @@
 #ifndef _TREEHANDLER_H
 #define _TREEHANDLER_H
 
-#include <glib/gi18n.h>
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 #include <iostream>
 #include <string.h>
 
 using namespace std;
+
 
 class TreeHandler
 {
@@ -164,3 +164,4 @@ class TreeHandler
 };
 
 #endif // _TREEHANDLER_H
+

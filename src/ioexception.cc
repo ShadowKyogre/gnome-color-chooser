@@ -44,5 +44,6 @@ string IoException::get_string()
       return "IO: Write Error";
       break;
   }
-  
+
+  return "";
 }

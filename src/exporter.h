@@ -41,11 +41,12 @@ class Exporter
     static Exporter* create_exporter(ExporterType t);
 
   protected:
-    TreeHandler* m_pConfig;
+    TreeHandler *m_pConfig;
+
+  private:
+    static TreeHandler *exporter_pConfig;
 
 };
 
-static TreeHandler* exporter_pConfig;
-
-
 #endif // _GNOMECC_EXPORTER_H
+

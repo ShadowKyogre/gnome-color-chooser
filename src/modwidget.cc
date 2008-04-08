@@ -20,7 +20,6 @@
 
 #include "modwidget.h"
 
-
 void ModWidget::init(int id, TreeHandler* config)
 {
   this->isEngineWidget  = false;
@@ -76,6 +75,21 @@ GType ModWidget::get_base_type()
   return gtk_widget_get_type();
 }
 
+
+ModWidget::Widget::Widget()
+{
+  p    = NULL;
+  next = NULL;
+}
+
+
+
+
+
+/* statics */
+
+ModWidget::Widget *ModWidget::widgets = NULL;
+
 void ModWidget::register_widget(ModWidget* new_widget)
 {
   if(widgets == NULL)
@@ -108,8 +122,3 @@ void ModWidget::reload_all_widgets()
   }
 }
 
-ModWidget::Widget::Widget()
-{
-  p    = NULL;
-  next = NULL;
-}

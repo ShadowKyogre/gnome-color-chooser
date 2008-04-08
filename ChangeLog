@@ -1,5 +1,23 @@
 2008-04-08  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
+	* src/configloader.cc:
+	* src/configloader.h:
+	* src/exception.h:
+	* src/exporter.cc:
+	* src/exporter.h:
+	* src/ioexception.cc:
+	* src/mainwindow.cc:
+	* src/mainwindow.h:
+	* src/modwidget.cc:
+	* src/modwidget.h:
+	* src/treehandler.cc:
+	* src/treehandler.h:
+	* src/utils.cc:
+	* src/utils.h:
+	fixed compiler warnings (use ./configure --with-warnings to check)
+
+2008-04-08  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
 	* src/configloader.h:
 	* src/gtkrcexporter.h:
 	* src/treehandler.h:

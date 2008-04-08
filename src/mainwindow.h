@@ -21,26 +21,9 @@
 #ifndef _MAIN_WINDOW_H
 #define _MAIN_WINDOW_H
 
-/*
-//#include <libglademm/variablesmap.h>
-//#include <gtkmm.h>
-//#include <gnome.h>
-#include <gtkmm/window.h>
-#include <gtkmm/dialog.h>
-#include <gtkmm/toolbar.h>
-#include <gtkmm/toolbutton.h>
-#include <gtkmm/stock.h> // stock icons
-#include <gtkmm/separatortoolitem.h>
-//#include <gtkmm/button.h>
-#include <libglademm/xml.h>
-//#include <libgnomeuimm/app.h>
-*/
-
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
-
-#include <glib/gi18n.h>
 
 #include "treehandler.h"
 #include "enginewindow.h"

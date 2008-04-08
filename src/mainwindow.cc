@@ -23,6 +23,8 @@
 #include "infowindow.h"
 #include "gtkrcexporter.h"
 #include "utils.h"
+
+#include <glib/gi18n.h>
 #include <iostream>
 #include <fstream>
 
