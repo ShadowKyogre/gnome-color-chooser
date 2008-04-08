@@ -24,6 +24,10 @@
 #include "gtpexporter.h"
 
 
+TreeHandler *Exporter::exporter_pConfig = NULL;
+
+
+
 /*** static factory methods ***/
 
 
@@ -33,8 +37,7 @@ void Exporter::init(TreeHandler* config)
 }
 
 
-/* init _must_ be executed once before any exporter creation,
- * otherwise the creation process may crash!
+/* init has to be called before any exporter creation!
  */
 Exporter* Exporter::create_exporter(ExporterType t)
 {

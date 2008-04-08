@@ -30,12 +30,12 @@
 #include "enginewindow.h"
 #include "modwidget.h"
 #include "combobox.h"
-#include <glib/gi18n.h>
+
 #include <gtkmm.h>
 #include <libglademm.h>
 #include <libxml/parser.h>
 #include <libxml/tree.h>
-#include <string.h>
+
 
 using namespace std;
 
@@ -55,21 +55,31 @@ class ConfigLoader
     static void unload_profiles();
     static void fill_with_profiles(ComboBox* box);
     static void change_profile(string profile, TreeHandler *pConfig);
-    
-/*
-    static bool check_file(string filename, bool write_check = false);
-    static bool check_directory(string directory);
-    static bool create_file(string filename);
-    static bool create_directory(string directory);
-    static bool remove_directory(string directory);
-    static bool remove_node(string path);
-    static bool copy_directory(string src, string dst);
-    static bool copy_file(string src, string dst);
-    static bool check_include(string filename, string include, string searchpattern = "");
-    static bool create_include(string filename, string include, string searchpattern = "");
-*/
 
-  public:
+
+  private:
+    ConfigLoader();
+    ~ConfigLoader();
+    static void load_theme_element(
+          TreeHandler *pConfig,
+          const Glib::RefPtr<Gnome::Glade::Xml>& refGlade,
+          MainWindow  *pWindow,
+          xmlNode     *element);
+    static void load_theme_engine(
+          TreeHandler *pConfig,
+          MainWindow  *pWindow,
+          xmlNode     *element);
+    static void load_theme_profile(
+          TreeHandler *pConfig,
+          xmlNode     *element);
+    
+    static bool load_engine_schema(string filename);
+    static bool load_profile(string filename);
+    static void fill_config(TreeHandler* pConfig, const Glib::RefPtr<Gnome::Glade::Xml>& refGlade, MainWindow* pWindow, int id, char* value);
+    static string xml_encode(string input);
+    static void reload_enginetable_row(string category, MainWindow* p_refWindow);
+    static void select_engine(string category, string engine, MainWindow* p_refWindow);
+
     class Engine
     {
       public:
@@ -100,59 +110,26 @@ class ConfigLoader
       public:
         Param();
         string name;
-  //    Gtk::HBox *row;
-        Gtk::HBox *box;
-//        Gtk::Label *label;
-        Gtk::EventBox *label;
-//        Gtk::Label *desc;
-        Gtk::EventBox* desc;
+      //Gtk::HBox       *row;
+        Gtk::HBox       *box;
+      //Gtk::Label      *label;
+        Gtk::EventBox   *label;
+      //Gtk::Label      *desc;
+        Gtk::EventBox   *desc;
         Gtk::HSeparator *line;
-        CheckButton *cbox;
-  //    Gtk::Button *button,
-        Gtk::Widget *widget;
-        Gtk::EventBox *widget_ebox;
-
-        Param *next;
+        CheckButton     *cbox;
+      //Gtk::Button     *button,
+        Gtk::Widget     *widget;
+        Gtk::EventBox   *widget_ebox;
+        Param           *next;
     };
 
-  private:
-    ConfigLoader();
-    ~ConfigLoader();
-    static void load_theme_element(
-          TreeHandler *pConfig,
-          const Glib::RefPtr<Gnome::Glade::Xml>& refGlade,
-          MainWindow  *pWindow,
-          xmlNode     *element);
-    static void load_theme_engine(
-          TreeHandler *pConfig,
-          MainWindow  *pWindow,
-          xmlNode     *element);
-    static void load_theme_profile(
-          TreeHandler *pConfig,
-          xmlNode     *element);
-    
-    static bool load_engine_schema(string filename);
-    static bool load_profile(string filename);
-    static void fill_config(TreeHandler* pConfig, const Glib::RefPtr<Gnome::Glade::Xml>& refGlade, MainWindow* pWindow, int id, char* value);
-    static string xml_encode(string input);
-    static void reload_enginetable_row(string category, MainWindow* p_refWindow);
-    static void select_engine(string category, string engine, MainWindow* p_refWindow);
+    static Engine  *engines;
+    static Param   *params;
+    static Profile *profiles;
+    static PTheme  *profile_theme;
 
-/*
-    static const char* get_property(xmlNode* node, const char* property);
-    static const char* get_content(xmlNode* node, const char* content);
-    static xmlNode* get_node(xmlNode* ref_node, string name);
-
-    static const char* get_lang(xmlNode* node, const char* content, const char* locale, bool acceptSpace = false);
-*/
 };
 
-
-static ConfigLoader::Engine  *engines       = NULL;
-static ConfigLoader::Param   *params        = NULL;
-static ConfigLoader::Profile *profiles      = NULL;
-static ConfigLoader::PTheme  *profile_theme = NULL;
-
-
-
 #endif // _CONFIG_LOADER_H
+

@@ -21,6 +21,8 @@
 #include "treehandler.h"
 #include "utils.h"
 
+#include <glib/gi18n.h>
+
 using namespace GnomeCC;
 
 
@@ -233,7 +235,7 @@ void TreeHandler::unsetProfile()
   xmlNode* profile;
 
   // if someone has manually added multiple profiles, remove all of them  
-  while(profile = get_profile())
+  while( (profile = get_profile()) )
   {
     //cout << "profile " << getProfileName() << " removed" << endl;
     xmlUnlinkNode(profile);
@@ -246,22 +248,19 @@ void TreeHandler::unsetProfile()
 const string TreeHandler::getProfile()
 {
   xmlNode* profile;
-  const char* content;
   
-  if(profile = get_profile())
+  if( (profile = get_profile()) )
     return Utils::Xml::get_content(profile, "content");
       
   return "";
-
 }
 
 
 const string TreeHandler::getProfileName()
 {
   xmlNode* profile;
-  const char* property;
   
-  if(profile = get_profile())
+  if( (profile = get_profile()) )
     return Utils::Xml::get_property(profile, "name");
 
   return "";

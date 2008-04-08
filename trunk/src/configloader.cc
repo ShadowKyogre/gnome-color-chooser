@@ -21,6 +21,8 @@
 #include "configloader.h"
 #include "utils.h"
 
+#include <glib/gi18n.h>
+#include <string.h>
 #include <fstream>
 #include <iostream>
 #include <sys/types.h>
@@ -32,17 +34,11 @@
 using namespace GnomeCC;
 
 
-/*
-ConfigLoader::ConfigLoader()
-{
-//  engines = NULL;
-}
+ConfigLoader::Engine  *ConfigLoader::engines       = NULL;
+ConfigLoader::Param   *ConfigLoader::params        = NULL;
+ConfigLoader::Profile *ConfigLoader::profiles      = NULL;
+ConfigLoader::PTheme  *ConfigLoader::profile_theme = NULL;
 
-ConfigLoader::~ConfigLoader()
-{
-  
-}
-*/
 
 bool ConfigLoader::load_config(string filename,
                                TreeHandler* pConfig,
@@ -94,6 +90,7 @@ bool ConfigLoader::load_config(string filename,
   return 1;
 
 }
+
 
 void ConfigLoader::load_theme_profile(TreeHandler *pConfig, xmlNode *element)
 {
@@ -493,7 +490,7 @@ bool ConfigLoader::load_engine_schemas(string directory)
     perror((string("Error in accessing ") + directory).c_str());
   else
   {
-    while(entry = readdir(dir))
+    while( (entry = readdir(dir)) )
     {
       string name = string(entry->d_name);
       if(name.length() > 4)
@@ -646,6 +643,8 @@ bool ConfigLoader::load_engine_schema(string filename)
   xmlFree(long_name);
 */
   engine->lname = Utils::Xml::get_property(root, "long_name");
+
+  return 1;
 }
 
 
@@ -730,7 +729,7 @@ void ConfigLoader::load_engine_params(EngineWindow* window, string engine_name, 
                  w_lname    = Utils::Xml::get_content(element, "long_name"),
                  w_sdesc    = Utils::Xml::get_content(element, "description"),
                  w_ldesc    = Utils::Xml::get_content(element, "comment");
-          bool   w_disabled = Utils::Xml::get_property(element, "disabled") == "yes" ? true : false;
+          //bool   w_disabled = Utils::Xml::get_property(element, "disabled") == "yes" ? true : false;
                  
           // create new Parameter (for saving widgets in order to be able to delete them later)
           Param *param;
@@ -998,7 +997,7 @@ bool ConfigLoader::load_profiles(string directory)
     perror((string("Error in accessing ") + directory).c_str());
   else
   {
-    while(entry = readdir(dir))
+    while( (entry = readdir(dir)) )
     {
       string name = string(entry->d_name);
       if(name.length() > 4)
@@ -1092,6 +1091,7 @@ bool ConfigLoader::load_profile(string filename)
   
   profile->lname = Utils::Xml::get_content(root, "long_name");
 
+  return 1;
 }
 
 
@@ -1179,127 +1179,6 @@ ConfigLoader::Param::Param()
   this->widget_ebox = NULL;
   this->next   = NULL;
 }
-
-
-
-
-/***********************************************************/
-//todo: remove these ugly doubled methods and create statics
-
-/*
-const char* ConfigLoader::get_property(xmlNode* node, const char* property)
-{
-  if(node)
-  {    
-    xmlChar* value = xmlGetProp(node, (xmlChar*)property);
-
-    if(value != NULL && strcmp((char*)value, ""))
-    {
-      string temp = string((char*)value);
-      xmlFree(value);
-      return temp.c_str();
-    }
-
-    xmlFree(value);
-  }
-
-  return NULL;
-}
-
-const char* ConfigLoader::get_content(xmlNode* node, const char* content)
-{
-  if(node && content)
-  {
-    xmlNode *child = NULL;
-    char *loc = NULL;
-    string locale;
-//todo: only use locale for indeed translatable tags
-    if( content \
-        && (    !strcmp(content, "long_name") \
-             || !strcmp(content, "description") \
-             || !strcmp(content, "comment") \
-             || !strcmp(content, "label")
-           )
-        && (loc = setlocale(LC_ALL, NULL)) && strcmp(loc, "en")
-      )
-    {
-      const char* output = NULL;
-      locale = loc;
-
-      if(output = get_lang(get_node(node->children, content), content, locale.c_str()))
-        return output;
-
-      if(locale.find("@", 0) != string::npos)
-        if(output = get_lang(get_node(node->children, content), content, locale.substr(0, locale.find("@", 0)).c_str() ))
-          return output;
-
-      if(locale.find(".", 0) != string::npos)
-        if(output = get_lang(get_node(node->children, content), content, locale.substr(0, locale.find(".", 0)).c_str() ))
-          return output;
-
-      if(locale.find("_", 0) != string::npos)
-        if(output = get_lang(get_node(node->children, content), content, locale.substr(0, locale.find("_", 0)).c_str() ))
-          return output;
-    }
-    
-    return get_lang(get_node(node->children, content), content, NULL, true);
-  }
-
-  return NULL;
-}
-
-
-const char* ConfigLoader::get_lang(xmlNode* node, const char* content, const char* locale, bool acceptSpace)
-{
-  xmlNode* child = node;
-  xmlChar *lang = NULL;
-
-  while(child != NULL && content != NULL)
-  {
-    lang = xmlNodeGetLang(child);
-    if(acceptSpace || (lang && !strcmp((char*)lang, locale)))
-    {
-      //if(!acceptSpace)cout << "got content with " << locale << " for " << child->name << endl;
-      //else cout << "got default content for " << child->name << endl;
-      
-      xmlChar* value = xmlNodeGetContent(child);
-      if(value != NULL && strcmp((char*)value, ""))
-      {
-        string temp = string((char*)value);
-        xmlFree(value);
-        xmlFree(lang);
-        return temp.c_str();
-      }
-      xmlFree(value);
-    }
-    //else cout << "got no content with " << locale << " for " << child->name << endl;
-    xmlFree(lang);
-    child = get_node(child->next, content);
-  }
-
-  return NULL;
-}
-
-
-
-xmlNode* ConfigLoader::get_node(xmlNode* ref_node, string name)
-{
-  if(ref_node)
-  {
-    xmlNode* node = ref_node;
-  
-    while(node != NULL && !(node->type == XML_ELEMENT_NODE && !strcmp((char*)node->name, name.c_str())))
-      node = node->next;
-   
-    if(node != NULL && node->type == XML_ELEMENT_NODE && !strcmp((char*)node->name, name.c_str()))
-      return node;
-  }
-
-  return NULL;
-}
-
-*/
-
 
 
 

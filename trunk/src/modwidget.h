@@ -36,18 +36,9 @@ public:
   void init(TreeHandler* config);
   void setConfig(TreeHandler* config);
   virtual void reload() = 0;
-  static void register_widget(ModWidget* widget);
   static void reload_all_widgets();
   static GType get_base_type() G_GNUC_CONST;
 
-  class Widget
-  {
-    public:
-      Widget();
-      ModWidget *p;
-      Widget   *next;
-  };
-  
 protected:
   Glib::RefPtr<Gnome::Glade::Xml> m_refGlade;
   TreeHandler* m_pConfig;
@@ -58,8 +49,19 @@ protected:
   bool isParamWidget;
   bool isProfileWidget;
 
+  static void register_widget(ModWidget* widget);
+
+private: 
+  class Widget
+  {
+    public:
+      Widget();
+      ModWidget *p;
+      Widget   *next;
+  };
+  static Widget *widgets;
+
 };
 
-static ModWidget::Widget *widgets = NULL;
-
 #endif // _MOD_WIDGET_H
+

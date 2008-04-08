@@ -72,8 +72,10 @@ bool Utils::create_include(string filename, string include, string searchpattern
 
     gtkrc << include << "\n";
     gtkrc.close();
+    return 1;
   }
 
+  return 0;
 }
 
 
@@ -141,7 +143,6 @@ const string Utils::Xml::get_content(xmlNode* node, string content)
 
   if(node && content != "")
   {
-    xmlNode *child = NULL;
     char *loc = NULL;
     string locale;
 
@@ -348,7 +349,7 @@ bool Utils::Io::remove_directory(string directory)
     else
     {
     
-      while(entry = readdir(dir))
+      while( (entry = readdir(dir)) )
       {
       
         string name = string(entry->d_name);
@@ -424,7 +425,7 @@ bool Utils::Io::copy_directory(string src, string dst)
     else
     {
     
-      while(entry = readdir(dir))
+      while( (entry = readdir(dir)) )
       {
       
         string name = string(entry->d_name);
@@ -858,14 +859,6 @@ string Utils::gtkinfo()
 }
 
 ////////////////////
-
-
-
-
-
-
-
-
 
 
 

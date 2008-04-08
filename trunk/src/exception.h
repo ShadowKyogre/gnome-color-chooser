@@ -32,7 +32,7 @@ class Exception
     virtual ~Exception() {};
     //later:
     //virtual string get_type() {};
-    virtual string get_string() {};
+    virtual string get_string() {return "";};
 
 };
 

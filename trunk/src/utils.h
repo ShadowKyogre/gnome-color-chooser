@@ -82,3 +82,4 @@ namespace GnomeCC
 };
 
 #endif // _GNOMECC_UTILS_H
+
