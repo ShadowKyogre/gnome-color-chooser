@@ -1,3 +1,10 @@
+2008-04-13  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* src/gnome-color-chooser.db:
+	* src/gnome-color-chooser.glade:
+	added possibility to remove Menubar and Toolbar shadows,
+	changing of panel colors now also affect fast-user-switch-applet
+
 2008-04-08  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* src/configloader.cc:

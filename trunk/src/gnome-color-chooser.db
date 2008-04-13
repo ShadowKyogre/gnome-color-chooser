@@ -29,6 +29,8 @@
     <!-- <element id="58" name="bg_pixmap[SELECTED]" value="&lt;none&gt;" type="image" override="no"/> -->
     <!-- <element id="59" name="bg_pixmap[ACTIVE]" value="&lt;none&gt;" type="image" override="no"/> -->
     <element id="60" name="bg_pixmap[INSENSITIVE]" value="&lt;none&gt;" type="image" override="no"/>
+    <element id="79" name="GtkMenuBar::shadow_type" value="GTK_SHADOW_NONE" type="check_alone" override="no"/>
+    <element id="80" name="GtkToolbar::shadow_type" value="GTK_SHADOW_NONE" type="check_alone" override="no"/>
   </category>
   <category name="desktop-icon" long_name="Desktop Icon">
     <class name="*DesktopIcon*" type="widget_class"/>
@@ -61,6 +63,7 @@
     <class name="*Tray*" type="widget"/><!-- affects some tray icons like xchat -->
     <!-- <class name="*print*" type="widget"/> -->
     <class name="*Mail*" type="widget_class"/>
+    <class name="*fast-user-switch-applet*" type = "widget"/>
     <element id="26" name="bg[NORMAL]" value="#999999" type="color" override="no"/>
     <element id="27" name="bg[PRELIGHT]" value="#ff0000" type="color" override="no"/>
     <element id="28" name="bg[SELECTED]" value="#ffffff" type="color" override="no"/>
