@@ -62,7 +62,7 @@
     <class name="*Tray*" type="class"/><!-- affects normal tray icons -->
     <class name="*Tray*" type="widget"/><!-- affects some tray icons like xchat -->
     <!-- <class name="*print*" type="widget"/> -->
-    <class name="*Mail*" type="widget_class"/>
+    <!-- <class name="*Mail*" type="widget_class"/> --> <!-- also affects Evolution's email preferences dialog -->
     <class name="*fast-user-switch-applet*" type = "widget"/>
     <element id="26" name="bg[NORMAL]" value="#999999" type="color" override="no"/>
     <element id="27" name="bg[PRELIGHT]" value="#ff0000" type="color" override="no"/>
