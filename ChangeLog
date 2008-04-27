@@ -1,5 +1,12 @@
 2008-04-27  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
+	* configure.ac:
+	replaced AC_PROG_INTLTOOL with IT_PROG_INTLTOOL macro,
+	bumped needed intltool version to 0.35.5,
+	IT_PROG_INTLTOOL is now called _after_ AM_GLIB_GNU_GETTEXT
+
+2008-04-27  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
 	* src/gnome-color-chooser.db:
 	removed panel / notification area workaround that also affected evolution's
 	email preferences dialog
