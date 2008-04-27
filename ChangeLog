@@ -1,3 +1,9 @@
+2008-04-27  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* src/gnome-color-chooser.db:
+	removed panel / notification area workaround that also affected evolution's
+	email preferences dialog
+
 2008-04-13  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* src/gnome-color-chooser.db:
