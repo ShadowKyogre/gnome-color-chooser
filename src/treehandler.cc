@@ -684,7 +684,7 @@ const string TreeHandler::getElementShortDescription()
 }
 
 
-void TreeHandler::setElementValue(char* value)
+void TreeHandler::setElementValue(const char* value)
 {
   if(el_cur != NULL)
   {

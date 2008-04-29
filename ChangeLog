@@ -1,3 +1,18 @@
+2008-04-29  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* src/configloader.cc:
+	* src/configloader.h:
+	first overall cleanup, introducing glib as direct dependency
+
+	* src/treehandler.cc:
+	* src/treehandler.h:
+	minor cleanup
+
+	* src/utils.cc:
+	* src/utils.h:
+	minor cleanup and localization rewrite: translations are now chosen
+	by best_score principle
+
 2008-04-27  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* configure.ac:

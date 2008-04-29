@@ -102,7 +102,7 @@ class TreeHandler
     int   getElementMax();
     const string getElementShortDescription();
     
-    void  setElementValue(char* value);
+    void  setElementValue(const char* value);
         
     void gotoCategoriesFirstClass();
     void gotoCategoriesNextClass();
