@@ -1,5 +1,6 @@
-[type: gettext/xml] profiles/compact.xml.in
 [encoding: UTF-8]
+[type: gettext/xml] profiles/compact.xml.in
+[type: gettext/xml] src/gnome-color-chooser.xml.in
 src/gnome-color-chooser.glade
 src/gnome-color-chooser.desktop.in
 src/configloader.cc

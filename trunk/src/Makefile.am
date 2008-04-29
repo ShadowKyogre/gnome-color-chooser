@@ -67,8 +67,10 @@ man_MANS = gnome-color-chooser.1
 gladedir = $(pkgdatadir)/glade
 glade_DATA = gnome-color-chooser.glade
 
-dbdir = $(pkgdatadir)
-db_DATA = gnome-color-chooser.db
+xmldir = $(pkgdatadir)
+xml_DATA = gnome-color-chooser.xml
+xml_in_files = gnome-color-chooser.xml.in
+@INTLTOOL_XML_RULE@
 
 icondir = $(datadir)/pixmaps
 icon_DATA =  gnome-color-chooser.svg
@@ -79,19 +81,20 @@ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 EXTRA_DIST = 	$(glade_DATA) \
-		$(db_DATA) \
+		$(xml_in_files) \
 		$(icon_DATA) \
-		gnome-color-chooser.desktop.in \
-		gnome-color-chooser.1
+		$(desktop_in_files) \
+		$(man_MANS)
 
-DISTCLEANFILES = $(desktop_DATA)
+CLEANFILES = $(desktop_DATA) $(xml_DATA)
 
 INCLUDES = $(DEPS_CFLAGS) \
 		-DDATADIR=\""$(datadir)"\" \
 		-DLOCALEDIR=\""$(datadir)/locale"\" \
 		-DGLADEDIR=\""$(gladedir)"\" \
-		-DDBDIR=\""$(dbdir)"\" \
+		-DDBDIR=\""$(xmldir)"\" \
 		-DICONDIR=\""$(icondir)"\" \
 		$(DISABLE_DEPRECATED)
 
 LDADD = $(DEPS_LIBS)
+
