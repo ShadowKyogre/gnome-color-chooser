@@ -25,6 +25,7 @@
 #include <sys/stat.h>
 #include <dirent.h> // not platform independent :(
 
+#include <glib.h>
 
 using namespace GnomeCC;
 
@@ -46,7 +47,8 @@ bool Utils::check_include(string filename, string include, string searchpattern)
   {
     //string::size_type i = line.find_first_not_of ( " \t\n\v" );
 
-    if ( line == include || (searchpattern != "" && line.find(searchpattern, 0) != string::npos) )
+    if ( line == include \
+          || (searchpattern != "" && line.find(searchpattern, 0) != string::npos) )
     {
       fi.close();
       return 1;
@@ -138,45 +140,91 @@ const string Utils::Xml::get_property(xmlNode* node, string property)
 }
 
 
-const string Utils::Xml::get_content(xmlNode* node, string content)
+
+// returns the most proper translation of a child content
+//   (using all locales a user has set).
+const string Utils::Xml::get_content(xmlNode* parent, string content)
+{
+  if(parent == NULL || content == "")
+    return "";
+
+  int      lang_score  = INT_MAX;
+  xmlNode *node        = NULL;
+  xmlNode *node_best   = NULL;
+  bool use_translation = Utils::Xml::needs_translation(content);
+
+  char const * const *langs = g_get_language_names ();
+
+
+  for(node = get_node(parent->children, content);
+        node != NULL;
+        node = get_node(node->next, content))
+  {
+    string lang = lang2string(node);
+
+    if(!use_translation && lang == "")
+      return content2string(node);
+
+    if(use_translation && lang != "")
+    {
+      for (int i = 0; langs[i] != NULL && i < lang_score; i++)
+      {
+        if(lang == string(langs[i]))
+        {
+          node_best  = node;
+          lang_score = i;
+        }
+      }
+    }
+    else if(lang == "" && node_best == NULL)
+      node_best = node;
+
+    if(lang_score == 0)
+      return content2string(node_best);
+
+  }
+  
+  return content2string(node_best);
+}
+
+
+const string Utils::Xml::content2string(xmlNode *node)
 {
 
-  if(node && content != "")
+  if(node)
   {
-    char *loc = NULL;
-    string locale;
-
-    if(Utils::Xml::needs_translation(content) \
-          && (loc = setlocale(LC_ALL, NULL)) \
-          && strcmp(loc, "en_US")
-      )
+    xmlChar* content = xmlNodeGetContent(node);
+    if(content != NULL && strcmp((char*)content, ""))
     {
-      string output;
-      locale = loc;
-
-      if((output = get_lang(get_node(node->children, content), content, locale.c_str())) != "")
-        return output;
-
-      if(locale.find("@", 0) != string::npos)
-        if((output = get_lang(get_node(node->children, content), content, locale.substr(0, locale.find("@", 0)).c_str() )) != "")
-          return output;
-
-      if(locale.find(".", 0) != string::npos)
-        if((output = get_lang(get_node(node->children, content), content, locale.substr(0, locale.find(".", 0)).c_str() )) != "")
-          return output;
-
-      if(locale.find("_", 0) != string::npos)
-        if((output = get_lang(get_node(node->children, content), content, locale.substr(0, locale.find("_", 0)).c_str() )) != "")
-          return output;
+      const string temp = string((char*)content);
+      xmlFree(content);
+      return temp;
     }
+    xmlFree(content);
+  }
 
-    return get_lang(get_node(node->children, content), content, NULL, true);
+  return "";
+}
+
+const string Utils::Xml::lang2string(xmlNode *node)
+{
+  if(node)
+  {
+    xmlChar *lang = xmlNodeGetLang(node);
+    if(lang)
+    {
+      const string temp = string((char*)lang);
+      xmlFree(lang);
+      return temp;
+    }
+    xmlFree(lang); // super cleanex 2.0
   }
 
   return "";
 }
 
 
+/*
 const string Utils::Xml::get_lang(xmlNode* node, string content, const char* locale, bool acceptSpace)
 {
   xmlNode *child = node;
@@ -207,6 +255,10 @@ const string Utils::Xml::get_lang(xmlNode* node, string content, const char* loc
 
   return "";
 }
+*/
+
+
+
 
 
 xmlNode* Utils::Xml::get_node(xmlNode* pNode, string name)
@@ -292,7 +344,9 @@ bool Utils::Io::check_directory(string directory)
 {
   struct stat config_stat;
 
-  if(directory != "" && !stat( directory.c_str(), &config_stat) && (config_stat.st_mode & S_IFDIR))
+  if(directory != "" \
+        && !stat( directory.c_str(), &config_stat) \
+        && (config_stat.st_mode & S_IFDIR))
     return 1;
   
   return 0;
@@ -418,7 +472,6 @@ bool Utils::Io::copy_directory(string src, string dst)
 
   if(Utils::Io::check_directory(src))
   {
-
     DIR *dir = opendir(src.c_str());
     if(!dir)
       return 0;
@@ -459,7 +512,6 @@ bool Utils::Io::copy_directory(string src, string dst)
   }
   else
     return 0;
-  
 }
 
 

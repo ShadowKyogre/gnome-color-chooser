@@ -50,12 +50,14 @@ namespace GnomeCC
           //static const string get_property(string &out, xmlNode* node, string property);
           static const string get_content(xmlNode* node, string content);
           //static const string get_content(string &m_out, xmlNode* node, const char* content);
-          static const string get_lang(xmlNode* node, string content, const char* locale, bool acceptSpace = false);
+          //static const string get_lang(xmlNode* node, string content, bool original_text);
 
           static xmlNode* get_node(xmlNode* pNode, string name);
           
         private:
           static const bool needs_translation(string content);
+          static const string content2string(xmlNode* node);
+          static const string lang2string(xmlNode *node);
       };
       
       class Io

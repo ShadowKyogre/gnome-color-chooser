@@ -60,25 +60,6 @@ class ConfigLoader
   private:
     ConfigLoader();
     ~ConfigLoader();
-    static void load_theme_element(
-          TreeHandler *pConfig,
-          const Glib::RefPtr<Gnome::Glade::Xml>& refGlade,
-          MainWindow  *pWindow,
-          xmlNode     *element);
-    static void load_theme_engine(
-          TreeHandler *pConfig,
-          MainWindow  *pWindow,
-          xmlNode     *element);
-    static void load_theme_profile(
-          TreeHandler *pConfig,
-          xmlNode     *element);
-    
-    static bool load_engine_schema(string filename);
-    static bool load_profile(string filename);
-    static void fill_config(TreeHandler* pConfig, const Glib::RefPtr<Gnome::Glade::Xml>& refGlade, MainWindow* pWindow, int id, char* value);
-    static string xml_encode(string input);
-    static void reload_enginetable_row(string category, MainWindow* p_refWindow);
-    static void select_engine(string category, string engine, MainWindow* p_refWindow);
 
     class Engine
     {
@@ -109,12 +90,11 @@ class ConfigLoader
     {
       public:
         Param();
+        ~Param();
         string name;
       //Gtk::HBox       *row;
         Gtk::HBox       *box;
-      //Gtk::Label      *label;
         Gtk::EventBox   *label;
-      //Gtk::Label      *desc;
         Gtk::EventBox   *desc;
         Gtk::HSeparator *line;
         CheckButton     *cbox;
@@ -128,6 +108,60 @@ class ConfigLoader
     static Param   *params;
     static Profile *profiles;
     static PTheme  *profile_theme;
+
+    static void load_theme_element(
+          TreeHandler *pConfig,
+          const Glib::RefPtr<Gnome::Glade::Xml>& refGlade,
+          MainWindow  *pWindow,
+          xmlNode     *element);
+
+    static void load_theme_engine(
+          TreeHandler *pConfig,
+          MainWindow  *pWindow,
+          xmlNode     *element);
+
+    static void load_theme_engine_options(
+          TreeHandler *pConfig,
+          string       category,
+          xmlNode     *engine);
+
+    static Param* create_unique_param(string name);
+    
+    static bool create_engine_option_widget(
+          EngineWindow *window,
+          Param        *param,
+          TreeHandler  *config,
+          xmlNode      *element,
+          string        category,
+          string        w_name,
+          string        w_type,
+          string        w_ldesc);
+
+    static void load_theme_profile(
+          TreeHandler *pConfig,
+          xmlNode     *element);
+
+    static bool load_engine_schema(string filename);
+
+    static bool load_profile(string filename);
+
+    static void fill_config(
+          TreeHandler* pConfig,
+          const Glib::RefPtr<Gnome::Glade::Xml>& refGlade,
+          MainWindow* pWindow,
+          int id,
+          const char* value);
+          
+    static string xml_encode(string input);
+
+    static void reload_enginetable_row(
+          string category,
+          MainWindow* pWindow);
+
+    static void select_engine(
+          string category,
+          string engine,
+          MainWindow* pWindow);
 
 };
 

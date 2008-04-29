@@ -29,7 +29,7 @@
 #include <sys/stat.h>
 #include <dirent.h> // not platform independent :(
 #include <gtk/gtk.h>
-
+#include <glib.h>
 
 using namespace GnomeCC;
 
@@ -40,10 +40,11 @@ ConfigLoader::Profile *ConfigLoader::profiles      = NULL;
 ConfigLoader::PTheme  *ConfigLoader::profile_theme = NULL;
 
 
-bool ConfigLoader::load_config(string filename,
-                               TreeHandler* pConfig,
-                               const Glib::RefPtr<Gnome::Glade::Xml>& refGlade,
-                               MainWindow* pWindow)
+bool ConfigLoader::load_config(
+      string filename,
+      TreeHandler* pConfig,
+      const Glib::RefPtr<Gnome::Glade::Xml>& refGlade,
+      MainWindow* pWindow)
 {
 //todo: check use of strtol() !
 
@@ -70,18 +71,11 @@ bool ConfigLoader::load_config(string filename,
     if(element->type == XML_ELEMENT_NODE && (char*)element->name)
     {
       if(!strcmp((char*)element->name, "element"))
-      {
         load_theme_element(pConfig, refGlade, pWindow, element);
-      }
       else if(!strcmp((char*)element->name, "engine"))
-      {
         load_theme_engine(pConfig, pWindow, element);
-      }
       else if(!strcmp((char*)element->name, "profile"))
-      {
         load_theme_profile(pConfig, element);
-      }
-
     }
     
     element = element->next;
@@ -92,7 +86,9 @@ bool ConfigLoader::load_config(string filename,
 }
 
 
-void ConfigLoader::load_theme_profile(TreeHandler *pConfig, xmlNode *element)
+void ConfigLoader::load_theme_profile(
+      TreeHandler *pConfig,
+      xmlNode *element)
 {
   if(strcmp((char*)element->name, "profile"))
     return;
@@ -120,29 +116,27 @@ void ConfigLoader::load_theme_element(
       xmlNode    *element)
 {
 
-  xmlChar* id       = NULL;
-  xmlChar* value    = NULL;
-  xmlChar* disabled = NULL;
-
   if(!strcmp((char*)element->name, "element"))
   {
-    id = xmlGetProp(element, (xmlChar*)"id");
-    value = xmlGetProp(element, (xmlChar*)"value");
-    disabled = xmlGetProp(element, (xmlChar*)"disabled");
+    string id       = Utils::Xml::get_property(element, "id");
+    string value    = Utils::Xml::get_property(element, "value");
+    string disabled = Utils::Xml::get_property(element, "disabled");
     
-    if(id && value && strcmp((char*)id, "") && strcmp((char*)value, ""))
+    if(id != "" && value != "")
     {
-      if(disabled && !strcasecmp((char*)disabled, "true"))
-        pConfig->setOverride(strtol((char*)id, NULL, 10), false);
+      if(disabled == "true")
+        pConfig->setOverride(strtol(id.c_str(), NULL, 10), false);
       else
-        pConfig->setOverride(strtol((char*)id, NULL, 10), true);
+        pConfig->setOverride(strtol(id.c_str(), NULL, 10), true);
 
-      ConfigLoader::fill_config(pConfig, refGlade, pWindow, atoi((char*)id), (char*)value);
+      ConfigLoader::fill_config(
+            pConfig,
+            refGlade,
+            pWindow,
+            atoi(id.c_str()),
+            value.c_str());
     }
-    
-    xmlFree(id);
-    xmlFree(value);
-    xmlFree(disabled);
+
   }
 
 }
@@ -154,77 +148,63 @@ void ConfigLoader::load_theme_engine(
       xmlNode     *element)
 {
 
-  xmlChar* id       = NULL;
-  xmlChar* value    = NULL;
-  xmlChar* disabled = NULL;
-
   if(!strcmp((char*)element->name, "engine"))
   {
+    string name     = Utils::Xml::get_property(element, "name");
+    string category = Utils::Xml::get_property(element, "category");
+    string disabled = Utils::Xml::get_property(element, "disabled");
 
-    id = xmlGetProp(element, (xmlChar*)"name");
-    value = xmlGetProp(element, (xmlChar*)"category");
-    disabled = xmlGetProp(element, (xmlChar*)"disabled");
-
-    if(id && value && strcmp((char*)id, "") && strcmp((char*)value, ""))
+    if(name != "" && category != "")
     {
-      // cout << "found engine " << id << " for category " << value << endl; // debugging ;-)
+      // cout << "found engine " << name << " for category " << category << endl; // debugging ;-)
       
-      if(disabled && !strcasecmp((char*)disabled, "true"))
-        ConfigLoader::attach_engine((char*)id, (char*)value, pConfig, false);          
-        // pConfig->setEngineOverride((char*)value, false);
+      if(disabled != "" && !strcasecmp(disabled.c_str(), "true"))
+        ConfigLoader::attach_engine(name, category, pConfig, false);
+        // pConfig->setEngineOverride(category, false);
       else
-        ConfigLoader::attach_engine((char*)id, (char*)value, pConfig, true);
-        // pConfig->setEngineOverride((char*)value, true);
+        ConfigLoader::attach_engine(name, category, pConfig, true);
+        // pConfig->setEngineOverride(category, true);
       
-      reload_enginetable_row(string((char*)value), pWindow);
-      select_engine(string((char*)value), string((char*)id), pWindow);
+      reload_enginetable_row(category, pWindow);
+      select_engine(category, name, pWindow);
 
-
-      xmlNode* subelement = element->children;
-      xmlChar* subname;
-      xmlChar* subvalue;
-      xmlChar* subdisabled;
-      while( subelement != NULL )
-      {
-        subname = NULL;
-        subvalue = NULL;
-        subdisabled = NULL;
-        
-        if(subelement->type == XML_ELEMENT_NODE)
-        {
-          subname = xmlGetProp(subelement, (xmlChar*)"name");
-          subvalue = xmlGetProp(subelement, (xmlChar*)"value");
-          subdisabled = xmlGetProp(subelement, (xmlChar*)"disabled");
-          
-          if(subname && subvalue && strcmp((char*)subname, "") && strcmp((char*)subvalue, ""))
-          {
-            // cout << "-> found subelement " << subname << endl; // debugging ;-)
-  
-            //todo: set value only if 100% valid ;-)
-            // (but theoretically it should be corrected automatically by the widgets themself)
-            pConfig->setValue((char*)value, (char*)subname, (char*)subvalue); // value ^= category
-  
-            if(subdisabled && !strcasecmp((char*)subdisabled, "true"))
-              pConfig->setOverride((char*)value, (char*)subname, false);
-            else
-              pConfig->setOverride((char*)value, (char*)subname, true);
-  
-          }
-          
-          xmlFree(subname);
-          xmlFree(subvalue);
-          xmlFree(subdisabled);
-        }
-  
-        subelement = subelement->next;
-      }
-      
+      ConfigLoader::load_theme_engine_options(pConfig, category, element);
       
     }
-    
-    xmlFree(id);
-    xmlFree(value);
-    xmlFree(disabled);
+  }
+
+}
+
+
+void ConfigLoader::load_theme_engine_options(
+      TreeHandler *pConfig,
+      string       category,
+      xmlNode     *engine)
+{
+
+  xmlNode *element = Utils::Xml::get_node(engine->children, "element");
+
+  while( element != NULL )
+  {
+    string name     = Utils::Xml::get_property(element, "name");
+    string value    = Utils::Xml::get_property(element, "value");
+    string disabled = Utils::Xml::get_property(element, "disabled");
+
+    if(name != "" && value != "")
+    {
+      //cout << "-> found engine option " << name << endl; // debugging ;-)
+
+      //todo: set value only if 100% valid ;-)
+      // (normally it should be corrected automatically by the widgets themself)
+      pConfig->setValue(category, name, value.c_str());
+
+      if(disabled != "" && !strcasecmp(disabled.c_str(), "true"))
+        pConfig->setOverride(category, name, false);
+      else
+        pConfig->setOverride(category, name, true);
+    }
+
+    element = Utils::Xml::get_node(element->next, "element");
   }
 
 }
@@ -232,11 +212,12 @@ void ConfigLoader::load_theme_engine(
 
 
 
-void ConfigLoader::fill_config(TreeHandler* pConfig,
-                               const Glib::RefPtr<Gnome::Glade::Xml>& refGlade,
-                               MainWindow* pWindow,
-                               int id,
-                               char* value)
+void ConfigLoader::fill_config(
+      TreeHandler* pConfig,
+      const Glib::RefPtr<Gnome::Glade::Xml>& refGlade,
+      MainWindow* pWindow,
+      int id,
+      const char* value)
 {
 //todo: safer implementation (atoi)
 
@@ -261,7 +242,8 @@ void ConfigLoader::fill_config(TreeHandler* pConfig,
   //let the widgets itself and MainWindow correct wrong values and then save them
   if(type == "spin" || type == "iconsize")
   {
-    if(atoi(value) >= pConfig->getElementMin() && atoi(value) <= pConfig->getElementMax()) // not necessarily needed
+    if(atoi(value) >= pConfig->getElementMin() \
+          && atoi(value) <= pConfig->getElementMax()) // not necessarily needed
     {
       char temp[11];
       snprintf (temp, 10, "%i", atoi(value));
@@ -316,49 +298,65 @@ void ConfigLoader::fill_config(TreeHandler* pConfig,
 }
 
 
-void ConfigLoader::reload_enginetable_row(string category, MainWindow* p_refWindow)
+void ConfigLoader::reload_enginetable_row(
+      string category,
+      MainWindow *pWindow)
 {
   int i = 0;
-  while(p_refWindow->engine_name[i] != "")
+  
+  if(!pWindow)
+    return;
+    
+  while(pWindow->engine_name[i] != "")
   {
-    if(p_refWindow->engine_name[i] == category)
+    if(pWindow->engine_name[i] == category)
     {
-      p_refWindow->engine_cbox[i].reload();
+      pWindow->engine_cbox[i].reload();
       break;
     }
     i++;
   }
 }
 
-void ConfigLoader::select_engine(string category, string engine, MainWindow* p_refWindow)
+
+void ConfigLoader::select_engine(
+      string category,
+      string engine,
+      MainWindow *pWindow)
 {
   int i = 0;
-  while(p_refWindow->engine_name[i] != "")
+
+  if(!pWindow)
+    return;
+
+  while(pWindow->engine_name[i] != "")
   {
-    if(p_refWindow->engine_name[i] == category)
+    if(pWindow->engine_name[i] == category)
     {
-      p_refWindow->engine_combo[i].set_active_text(engine);
+      pWindow->engine_combo[i].set_active_text(engine);
       break;
     }
     i++;
   }
+
 }
 
 
 string ConfigLoader::xml_encode(string input)
 {
-  xmlChar *temp = xmlEncodeSpecialChars	(NULL, (xmlChar*)input.c_str());
+  xmlChar *temp = xmlEncodeSpecialChars(NULL, (xmlChar*)input.c_str());
   string copy = string((char*)temp);
   xmlFree(temp);
-  
   return copy;
 }
 
 
-bool ConfigLoader::export_config(TreeHandler* pConfig,
-                                 string filename,
-                                 bool export_disabled_elements,
-                                 bool export_comments)
+//todo: create GnomeCC-exporter
+bool ConfigLoader::export_config(
+      TreeHandler* pConfig,
+      string filename,
+      bool export_disabled_elements,
+      bool export_comments)
 {
 
   if(! (Utils::Io::check_file(filename, true) || Utils::Io::create_file(filename)) )
@@ -513,7 +511,7 @@ bool ConfigLoader::load_engine_schemas(string directory)
 
 bool ConfigLoader::load_engine_schema(string filename)
 {
-  if(!Utils::Io::check_file(filename)) // if file does not exists (or is no regular file)
+  if(!Utils::Io::check_file(filename)) // if file does not exist (or is no regular file)
     return 0;
 
   /*parse the file and get the DOM */
@@ -523,89 +521,42 @@ bool ConfigLoader::load_engine_schema(string filename)
     return 0;
   
   xmlNode* root = xmlDocGetRootElement(doc);
-
-  if(root == NULL)
+  if(root == NULL || strcmp((char*)root->name, "engine"))
   {
     xmlFreeDoc(doc);
     return 0;
   }
 
-  if(strcmp((char*)root->name, "engine"))
-  {
-    xmlFreeDoc(doc);
-    return 0;
-  }
-  
-  xmlChar* xmlchar_val = xmlGetProp(root, (xmlChar*)"module_name");
-
-  if(xmlchar_val == NULL || !strcmp((char*)xmlchar_val, ""))
-  {
-    xmlFree(xmlchar_val);
-    xmlFreeDoc(doc);
-    return 0;
-  }
-  
-  std::string name = std::string((char*)xmlchar_val);
-  xmlFree(xmlchar_val);
-
-  if(name == "") // just for being super clean ;-)
+  string name = Utils::Xml::get_property(root, "module_name");
+  if(name == "")
   {
     xmlFreeDoc(doc);
     return 0;
   }
 
 
-  // check if elements have name, type, and default value defined, otherwise delete them off the tree!
-  xmlNode* element = root->children;
-  xmlNode* element_tmp = NULL;
+  // check if engine options have name, type, and default value defined,
+  //   otherwise remove them from the tree!
+  xmlNode* element      = Utils::Xml::get_node(root->children, "option");
+  xmlNode* element_next = NULL;
   while( element != NULL )
   {
-    element_tmp = NULL;
+    // find/save next element now, because the current element could get deleted
+    element_next = Utils::Xml::get_node(element->next, "option");
     
-    if(element->type == XML_ELEMENT_NODE && !strcmp((char*)element->name, "element"))
+    if(Utils::Xml::get_property(element, "name") == "" \
+            || Utils::Xml::get_property(element, "type") == "" \
+            || Utils::Xml::get_property(element, "default") == "")
     {
-      xmlchar_val = xmlGetProp(element, (xmlChar*)"name");
-      if(xmlchar_val == NULL || !strcmp((char*)xmlchar_val, ""))
-      {
-        element_tmp = element->next;
-        xmlUnlinkNode(element);
-        xmlFreeNode(element);
-      }
-      else
-      {
-        xmlFree(xmlchar_val);
-        xmlchar_val = xmlGetProp(element, (xmlChar*)"type");
-        if(xmlchar_val == NULL || !strcmp((char*)xmlchar_val, ""))
-        {
-          element_tmp = element->next;
-          xmlUnlinkNode(element);
-          xmlFreeNode(element);
-        }
-        else
-        {
-          xmlFree(xmlchar_val);
-          xmlchar_val = xmlGetProp(element, (xmlChar*)"default");
-          if(xmlchar_val == NULL || !strcmp((char*)xmlchar_val, ""))
-          {
-            element_tmp = element->next;
-            xmlUnlinkNode(element);
-            xmlFreeNode(element);
-          }
-          //else cout << "Valid Element!" << endl;
-        }
-      }
-      xmlFree(xmlchar_val);
+      xmlUnlinkNode(element);
+      xmlFreeNode(element);
     }
 
-    if(element_tmp)
-      element = element_tmp;
-    else
-      element = element->next;
+    element = element_next;
   }
 
 
-
-  // save engine for later use
+  // save engine for later use if engine name is unique
   Engine *engine;
   if(engines == NULL)
   {
@@ -631,17 +582,9 @@ bool ConfigLoader::load_engine_schema(string filename)
     engine = engine->next;
   }
 
-//todo: add only engines with different names _AND_ lnames!
-
   engine->name = name;
   engine->doc = doc;
   engine->next = NULL;
-  
-/*
-  xmlChar* long_name = xmlGetProp(root, (xmlChar*)"long_name");
-  engine->lname = (long_name != NULL) ? (char*)long_name : "";
-  xmlFree(long_name);
-*/
   engine->lname = Utils::Xml::get_property(root, "long_name");
 
   return 1;
@@ -665,7 +608,11 @@ void ConfigLoader::unload_engines() // deletes all engine objects, but, of cours
 }
 
 
-void ConfigLoader::attach_engine(string engine_name, string category, TreeHandler* config, bool override)
+void ConfigLoader::attach_engine(
+      string engine_name,
+      string category,
+      TreeHandler* config,
+      bool override)
 {
   //cout << "!! attach engine " << engine_name << " to " << category << endl; // debugging, heh ;-)
   Engine *engine = engines;
@@ -684,279 +631,278 @@ void ConfigLoader::attach_engine(string engine_name, string category, TreeHandle
 
 
 
-void ConfigLoader::load_engine_params(EngineWindow* window, string engine_name, string category, TreeHandler* config)
+void ConfigLoader::load_engine_params(
+      EngineWindow* window,
+      string engine_name,
+      string category,
+      TreeHandler* config)
 {
-  bool skipParam;
 
-  if(engine_name != "" && engines != NULL)
+  g_return_if_fail(engines     != NULL);
+  g_return_if_fail(engine_name != "");
+  g_return_if_fail(category    != "");
+
+  Engine *engine = engines;
+  while(engine != NULL)
   {
-    Engine *engine = engines;
-    
-    while(engine != NULL)
+    if(engine_name == engine->name)
+      break;
+    engine = engine->next;
+  }
+
+  if(engine == NULL || engine_name != engine->name)
+    return;
+
+  xmlNode *root    = xmlDocGetRootElement(engine->doc);
+  xmlNode *element = Utils::Xml::get_node(root->children, "option");
+  Param   *param   = NULL;
+
+  int y = 0;
+
+  while(element != NULL)
+  {
+    string w_name     = Utils::Xml::get_property(element, "name"),
+           w_value    = Utils::Xml::get_property(element, "value"),
+           w_default  = Utils::Xml::get_property(element, "default"),
+           w_type     = Utils::Xml::get_property(element, "type"),
+           w_lname    = Utils::Xml::get_content (element, "long_name"),
+           w_sdesc    = Utils::Xml::get_content (element, "description"),
+           w_ldesc    = Utils::Xml::get_content (element, "comment");
+
+
+    // create new Parameter (for saving widgets in order to be able to delete them later)
+    if( !(param = ConfigLoader::create_unique_param(w_name)) )
     {
-      if(engine_name == engine->name)
-        break;
-      engine = engine->next;
+      element = Utils::Xml::get_node(element->next, "option");
+      continue; // goto next engine parameter
     }
-    
-    if(engine != NULL && engine_name == engine->name)
+
+
+    // create widget(s) of that new Parameter and attach them to the output table
+    if(ConfigLoader::create_engine_option_widget(
+          window,
+          param,
+          config,
+          element,
+          category,
+          w_name,
+          w_type,
+          w_ldesc))
     {
-      xmlNode* root = xmlDocGetRootElement(engine->doc);
-      xmlNode* element = root->children;
-      int y = 0;
-      
-      while(element != NULL)
+      char* config_label = NULL;
+
+      param->box   = new Gtk::HBox();
+
+      param->label = new Gtk::EventBox();
+      param->label->add_label(w_lname != "" ? w_lname : param->name);
+
+      param->desc = new Gtk::EventBox();
+      param->desc->add_label(
+            w_sdesc != "" ? w_sdesc : config_label = g_strdup_printf(_("Configuration of %s"),
+                  (w_lname != "" ? w_lname.c_str() : param->name.c_str() )),
+            0.0, 0.0);
+
+      if(config_label)
+        free(config_label);
+
+      ((Gtk::Label*)(param->desc->get_child()))->set_line_wrap(true);
+      param->line  = new Gtk::HSeparator();
+      param->line->set_size_request(-1, 20);
+
+      param->cbox  = new CheckButton();
+      param->cbox->init(category, w_name, config, false);
+      param->cbox->signal_toggled().connect(
+            sigc::bind( sigc::bind( sigc::bind( sigc::mem_fun(
+                  *window, &EngineWindow::on_checkbox_toggled), param->widget),
+                  param->cbox), w_name) );
+
+      if(w_ldesc != "")
       {
-    	  if(element->type == XML_ELEMENT_NODE && !strcmp((char*)element->name,"option"))
-    	  {
-    	    skipParam = false;
-
-/*
-    	    const char* dummy = NULL;
-     	    string w_name     = (dummy = get_property(element, "name"))             ? dummy : "",
-    	           w_value    = (dummy = get_property(element, "value"))            ? dummy : "",
-    	           w_default  = (dummy = get_property(element, "default"))          ? dummy : "",
-    	           w_type     = (dummy = get_property(element, "type"))             ? dummy : "",
-    	           w_lname    = (dummy = get_content(element,  "long_name"))        ? dummy : "",
-    	           w_sdesc    = (dummy = get_content(element,  "description"))      ? dummy : "",
-    	           w_ldesc    = (dummy = get_content(element,  "comment"))          ? dummy : "";
-          bool   w_disabled = ((dummy = get_property(element, "disabled")) && !strcasecmp(dummy, "yes")) ? true : false;
-*/
-          string w_name     = Utils::Xml::get_property(element, "name"),
-                 w_value    = Utils::Xml::get_property(element, "value"),
-                 w_default  = Utils::Xml::get_property(element, "default"),
-                 w_type     = Utils::Xml::get_property(element, "type"),
-                 w_lname    = Utils::Xml::get_content(element, "long_name"),
-                 w_sdesc    = Utils::Xml::get_content(element, "description"),
-                 w_ldesc    = Utils::Xml::get_content(element, "comment");
-          //bool   w_disabled = Utils::Xml::get_property(element, "disabled") == "yes" ? true : false;
-                 
-          // create new Parameter (for saving widgets in order to be able to delete them later)
-          Param *param;
-          if(params == NULL)
-          {
-            params = new Param();
-            param = params;
-          }
-          else
-          {
-            param = params;
-            while(param->next != NULL)
-            {
-              if(param->name == w_name)
-              {
-                skipParam = true;
-              }
-              param = param->next;
-            }
-
-            if(param->name == w_name)
-            {
-              skipParam = true;
-            }
-    
-            if(skipParam)
-            {
-              element = element->next;
-              break; // goto next parameter
-            }
-            param->next = new Param();
-            param = param->next;
-          }
-
-          param->name = w_name;
-          param->next = NULL;
-
-
-
-          // attention: recycling of skipParam *g*
-          skipParam = false;
-
-
-
-          // create widgets of that new Parameter and attach them to the output table
-
-
-/*
-          if(w_type == "spin")
-          {
-            SpinButton *widget = new SpinButton();
-            widget->init(category, w_name, config);
-            //widget->reload(); // already run by init() !
-            param->widget = (Gtk::Widget*)widget;
-            widget->signal_value_changed().connect( sigc::bind( sigc::bind( sigc::mem_fun(*window, &EngineWindow::on_changed_spinbutton), widget) , w_name) );
-
-          }
-*/
-          if(w_type == "color")
-          {
-            ColorButton *widget = new ColorButton();
-            widget->init(category, w_name, config);
-            param->widget = (Gtk::Widget*)widget;
-            widget->signal_color_set().connect( sigc::bind( sigc::bind( sigc::mem_fun(*window, &EngineWindow::on_changed_colorbutton), widget) , w_name) );
-          }
-          else if(w_type == "boolean")
-          {
-            CheckButton *widget = new CheckButton();
-            widget->init(category, w_name, config);
-            param->widget = (Gtk::Widget*)widget;
-            widget->signal_toggled().connect( sigc::bind( sigc::bind( sigc::mem_fun(*window, &EngineWindow::on_changed_checkbutton), widget) , w_name) );
-          }
-          else if(w_type == "integer")
-          {
-            //todo: add sync spinbutton
-            Slider *widget = new Slider();
-            widget->init(category, w_name, config);
-            param->widget = (Gtk::Widget*)widget;
-            widget->signal_value_changed().connect( sigc::bind( sigc::bind( sigc::mem_fun(*window, &EngineWindow::on_changed_slider), widget) , w_name) );
-          }
-          else if(w_type == "real")
-          {
-            //todo: add sync spinbutton
-            Slider *widget = new Slider();
-            widget->init(category, w_name, config);
-            param->widget = (Gtk::Widget*)widget;
-            widget->signal_value_changed().connect( sigc::bind( sigc::bind( sigc::mem_fun(*window, &EngineWindow::on_changed_slider), widget) , w_name) );
-          }
-          else if(w_type == "enumeration")
-          {
-            ComboBox *widget = new ComboBox();
-            if(w_ldesc != "")
-            {
-              param->widget_ebox = new Gtk::EventBox();
-              param->widget_ebox->add(*widget);
-            }
-
-            
-            for(xmlNode* option = element->children; option != NULL; option = option->next)
-            {
-              if(option->type == XML_ELEMENT_NODE && !strcmp((char*)option->name, "enumeration"))
-              {
-/*
-                string option_value = (dummy = get_property(option, "value")) ? dummy : "",
-                       option_name  = (dummy = get_content(option, "label")) ? dummy : "";
-*/
-                string option_value = Utils::Xml::get_property(option, "value"),
-                       option_name  = Utils::Xml::get_content(option, "label");
-              
-                if(option_value != "" && option_name != "")
-                {
-                  widget->append_text((char*)option_value.c_str(), (char*)option_name.c_str());
-                }
-
-              }
-            }
-
-            widget->init(category, w_name, config);
-            param->widget = (Gtk::Widget*)widget;
-            widget->signal_changed().connect( sigc::bind( sigc::bind( sigc::mem_fun(*window, &EngineWindow::on_changed_combobox), widget) , w_name) );
-          }
-          else
-          {
-            //todo: delete param and its widgets!
-            skipParam = true;
-          }
-
-
-          if(!skipParam)
-          {
-            char* config_label = NULL;
-          
-            param->box   = new Gtk::HBox();
-//            param->label = new Gtk::Label(w_lname != "" ? w_lname : param->name);
-            param->label = new Gtk::EventBox();
-            param->label->add_label(w_lname != "" ? w_lname : param->name);
-//            param->desc  = new Gtk::Label(w_sdesc != "" ? w_sdesc : (Glib::ustring("Configuration of ") +
-//                                         (w_lname != "" ? w_lname : param->name)).c_str(), 0.0, 0.0);
-            param->desc = new Gtk::EventBox();
-//            param->desc->add_label(w_sdesc != "" ? w_sdesc : (Glib::ustring("Configuration of ") +
-//                                  (w_lname != "" ? w_lname : param->name)).c_str(), 0.0, 0.0);
-
-            param->desc->add_label(
-                  w_sdesc != "" ? w_sdesc : config_label = g_strdup_printf(_("Configuration of %s"),
-                        (w_lname != "" ? w_lname.c_str() : param->name.c_str() )),
-                  0.0, 0.0);
-
-            if(config_label)
-              free(config_label);
-            
-            ((Gtk::Label*)(param->desc->get_child()))->set_line_wrap(true);
-            param->line  = new Gtk::HSeparator();
-            param->line->set_size_request(-1, 20);
-            
-            param->cbox  = new CheckButton();
-            param->cbox->init(category, w_name, config, false);
-            param->cbox->signal_toggled().connect( sigc::bind( sigc::bind( sigc::bind( sigc::mem_fun(*window, &EngineWindow::on_checkbox_toggled), param->widget),  param->cbox), w_name) );
-            
-            if(w_ldesc != "")
-            {
-              window->tooltips.set_tip(*param->label,  w_ldesc);
-              window->tooltips.set_tip(*param->desc,   w_ldesc);
-              if(param->widget_ebox)
-                window->tooltips.set_tip(*param->widget_ebox, w_ldesc);
-              else
-                window->tooltips.set_tip(*param->widget, w_ldesc);
-            }
-            
-            window->table.resize(y+2, 2); // rows, coloumns
-            window->table.attach(*param->desc,  0, 2, y,   y+1,  Gtk::FILL |  Gtk::EXPAND, ~Gtk::FILL & ~Gtk::EXPAND);
-            window->table.attach(*param->label, 0, 1, y+1, y+2, ~Gtk::FILL & ~Gtk::EXPAND, ~Gtk::FILL & ~Gtk::EXPAND);
-            window->table.attach(*param->box,   1, 2, y+1, y+2,  Gtk::FILL |  Gtk::EXPAND, ~Gtk::FILL & ~Gtk::EXPAND);
-            window->table.attach(*param->line,  0, 2, y+2, y+3,  Gtk::FILL |  Gtk::EXPAND, ~Gtk::FILL & ~Gtk::EXPAND);
-            
-            param->box->pack_start(*param->cbox,   Gtk::PACK_SHRINK);
-            if(param->widget_ebox)
-              param->box->pack_start(*param->widget_ebox, Gtk::PACK_EXPAND_WIDGET);
-            else
-              param->box->pack_start(*param->widget, Gtk::PACK_EXPAND_WIDGET);
-              
-          }
-
-
-          y = y+3;
-
-    	  }
-    	  element = element->next;
+        window->tooltips.set_tip(*param->label, w_ldesc);
+        window->tooltips.set_tip(*param->desc,  w_ldesc);
+        if(param->widget_ebox)
+          window->tooltips.set_tip(*param->widget_ebox, w_ldesc);
+        else
+          window->tooltips.set_tip(*param->widget, w_ldesc);
       }
-      
+
+      window->table.resize(y+2, 2); // rows, coloumns
+
+      window->table.attach(
+            *param->desc,
+            0, 2, y, y+1,
+            Gtk::FILL |  Gtk::EXPAND, ~Gtk::FILL & ~Gtk::EXPAND);
+
+      window->table.attach(
+            *param->label,
+            0, 1, y+1, y+2,
+            ~Gtk::FILL & ~Gtk::EXPAND, ~Gtk::FILL & ~Gtk::EXPAND);
+
+      window->table.attach(
+            *param->box,
+            1, 2, y+1, y+2,
+            Gtk::FILL |  Gtk::EXPAND, ~Gtk::FILL & ~Gtk::EXPAND);
+
+      window->table.attach(*param->line,
+            0, 2, y+2, y+3,
+            Gtk::FILL |  Gtk::EXPAND, ~Gtk::FILL & ~Gtk::EXPAND);
+
+
+      param->box->pack_start(*param->cbox, Gtk::PACK_SHRINK);
+      if(param->widget_ebox)
+        param->box->pack_start(*param->widget_ebox, Gtk::PACK_EXPAND_WIDGET);
+      else
+        param->box->pack_start(*param->widget, Gtk::PACK_EXPAND_WIDGET);
+
     }
+
+    y = y+3;
+    element = Utils::Xml::get_node(element->next, "option");
   }
+
 }
 
 
-
-void ConfigLoader::unload_engine_params()
+ConfigLoader::Param* ConfigLoader::create_unique_param(string name)
 {
-  Param *param = params;
-  Param *param_next;
-  
-  while(param != NULL)
+  Param *param = NULL;
+  if(params == NULL)
   {
-    param_next = param->next;
-    if(param->box)
-      delete param->box;
-    if(param->label)
-      delete param->label;
-    if(param->desc)
-      delete param->desc;
-    if(param->line)
-      delete param->line;
-    if(param->cbox)
-      delete param->cbox;
-    if(param->widget)
-      delete param->widget;
-    if(param->widget_ebox)
-      delete param->widget_ebox;
-    delete param;
-    param = param_next;
+    params = new Param();
+    param = params;
+  }
+  else
+  {
+    param = params;
+    while(param->next != NULL)
+    {
+      if(param->name == name)
+        return NULL;
+      param = param->next;
+    }
+    if(param->name == name)
+      return NULL;
+
+    param->next = new Param();
+    param = param->next;
   }
 
-  params = NULL;
-  // cout << "unloaded engine" << endl; // debugging ;-)
+  param->name = name;
+  param->next = NULL;
+
+  return param;
 }
 
 
-void ConfigLoader::fill_with_engines(string category, ComboBox* box, TreeHandler* p_refConfig)
+
+bool ConfigLoader::create_engine_option_widget(
+      EngineWindow *window,
+      Param        *param,
+      TreeHandler  *config,
+      xmlNode      *element,
+      string        category,
+      string        w_name,
+      string        w_type,
+      string        w_ldesc)
+{
+
+/* //todo: use slider _and_ spinbutton for integer/real
+  if(w_type == "spin")
+  {
+    SpinButton *widget = new SpinButton();
+    widget->init(category, w_name, config);
+    //widget->reload(); // already run by init() !
+    param->widget = (Gtk::Widget*)widget;
+    widget->signal_value_changed().connect( sigc::bind( sigc::bind( sigc::mem_fun(*window, &EngineWindow::on_changed_spinbutton), widget) , w_name) );
+  }
+*/
+
+  if(w_type == "color")
+  {
+    ColorButton *widget = new ColorButton();
+    widget->init(category, w_name, config);
+    param->widget = (Gtk::Widget*)widget;
+    widget->signal_color_set().connect(
+          sigc::bind( sigc::bind( sigc::mem_fun(
+                *window, &EngineWindow::on_changed_colorbutton), widget) , w_name) );
+    return 1;
+  }
+
+  if(w_type == "boolean")
+  {
+    CheckButton *widget = new CheckButton();
+    widget->init(category, w_name, config);
+    param->widget = (Gtk::Widget*)widget;
+    widget->signal_toggled().connect(
+          sigc::bind( sigc::bind( sigc::mem_fun(
+                *window, &EngineWindow::on_changed_checkbutton), widget) , w_name) );
+    return 1;
+  }
+
+  if(w_type == "integer")
+  {
+    //todo: add sync spinbutton
+    Slider *widget = new Slider();
+    widget->init(category, w_name, config);
+    param->widget = (Gtk::Widget*)widget;
+    widget->signal_value_changed().connect(
+          sigc::bind( sigc::bind( sigc::mem_fun(
+                *window, &EngineWindow::on_changed_slider), widget) , w_name) );
+    return 1;
+  }
+
+  if(w_type == "real")
+  {
+    //todo: add sync spinbutton
+    Slider *widget = new Slider();
+    widget->init(category, w_name, config);
+    param->widget = (Gtk::Widget*)widget;
+    widget->signal_value_changed().connect(
+          sigc::bind( sigc::bind( sigc::mem_fun(
+                *window, &EngineWindow::on_changed_slider), widget) , w_name) );
+    return 1;
+  }
+
+  if(w_type == "enumeration")
+  {
+    ComboBox *widget = new ComboBox();
+    if(w_ldesc != "")
+    {
+      param->widget_ebox = new Gtk::EventBox();
+      param->widget_ebox->add(*widget);
+    }
+
+    for(xmlNode *option = Utils::Xml::get_node(element->children, "enumeration"); \
+          option != NULL; \
+          option = Utils::Xml::get_node(option->next, "enumeration"))
+    {
+      string option_value = Utils::Xml::get_property(option, "value"),
+             option_name  = Utils::Xml::get_content (option, "label");
+       if(option_value != "" && option_name != "")
+        widget->append_text((char*)option_value.c_str(), (char*)option_name.c_str());
+    }
+
+    widget->init(category, w_name, config);
+    param->widget = (Gtk::Widget*)widget;
+    widget->signal_changed().connect(
+          sigc::bind( sigc::bind( sigc::mem_fun(
+                *window, &EngineWindow::on_changed_combobox), widget) , w_name) );
+    return 1;
+  }
+
+  return 0;
+}
+
+
+
+
+
+
+
+void ConfigLoader::fill_with_engines(
+      string category,
+      ComboBox* box,
+      TreeHandler* p_refConfig)
 {
   if(box != NULL)
   {
@@ -967,18 +913,27 @@ void ConfigLoader::fill_with_engines(string category, ComboBox* box, TreeHandler
       Engine *engine = engines;
       while(engine != NULL)
       {
-        box->append_text(engine->name, (engine->lname != "") ? engine->lname : engine->name);
+        box->append_text(
+              engine->name,
+              (engine->lname != "") ? engine->lname : engine->name);
+
         if(first_entry)
         {
           box->set_active_text(engine->name);
           first_entry = false;
         }
+        
         engine = engine->next;
       }
 
       if(box->get_active_text() != "")
-        ConfigLoader::attach_engine(box->get_active_text(), category, p_refConfig, false);
+        ConfigLoader::attach_engine(
+              box->get_active_text(),
+              category,
+              p_refConfig,
+              false);
     }
+
   }
 }
 
@@ -1017,6 +972,7 @@ bool ConfigLoader::load_profiles(string directory)
   return loaded_profile;
 }
 
+
 bool ConfigLoader::load_profile(string filename)
 {
   if(!Utils::Io::check_file(filename)) // if file does not exists (or is no regular file)
@@ -1030,13 +986,7 @@ bool ConfigLoader::load_profile(string filename)
   
   xmlNode* root = xmlDocGetRootElement(doc);
 
-  if(root == NULL)
-  {
-    xmlFreeDoc(doc);
-    return 0;
-  }
-
-  if(strcmp((char*)root->name, "profile"))
+  if(root == NULL || strcmp((char*)root->name, "profile"))
   {
     xmlFreeDoc(doc);
     return 0;
@@ -1083,12 +1033,9 @@ bool ConfigLoader::load_profile(string filename)
     profile = profile->next;
   }
 
-//todo: add only profiles with different names _AND_ lnames!
-
   profile->name = name;
   profile->doc  = doc;
   profile->next = NULL;
-  
   profile->lname = Utils::Xml::get_content(root, "long_name");
 
   return 1;
@@ -1122,20 +1069,23 @@ void ConfigLoader::fill_with_profiles(ComboBox* box)
   {
     box->append_text("none", _("None"));
     box->append_text("theme", _("Theme Default"));
-    //box->append_text("none", "-----");
-    
+
     if(profiles != NULL)
     {
       Profile *profile = profiles;
       while(profile != NULL)
       {
-        box->append_text(profile->name, (profile->lname != "") ? profile->lname : profile->name);
+        box->append_text(
+              profile->name,
+              (profile->lname != "") ? profile->lname : profile->name);
+
         profile = profile->next;
       }
     }
-    
+
   }
 }
+
 
 void ConfigLoader::change_profile(string profile_name, TreeHandler *pConfig)
 {
@@ -1167,6 +1117,22 @@ void ConfigLoader::change_profile(string profile_name, TreeHandler *pConfig)
 }
 
 
+void ConfigLoader::unload_engine_params()
+{
+  Param *param = params;
+  Param *param_next;
+  
+  while(param != NULL)
+  {
+    param_next = param->next;
+    delete param;
+    param = param_next;
+  }
+
+  params = NULL;
+  // cout << "unloaded engine" << endl; // debugging ;-)
+}
+
 
 ConfigLoader::Param::Param()
 {
@@ -1178,6 +1144,25 @@ ConfigLoader::Param::Param()
   this->widget = NULL;
   this->widget_ebox = NULL;
   this->next   = NULL;
+}
+
+
+ConfigLoader::Param::~Param()
+{
+  if(box)
+    delete box;
+  if(label)
+    delete label;
+  if(desc)
+    delete desc;
+  if(line)
+    delete line;
+  if(cbox)
+    delete cbox;
+  if(widget)
+    delete widget;
+  if(widget_ebox)
+    delete widget_ebox;
 }
 
 
