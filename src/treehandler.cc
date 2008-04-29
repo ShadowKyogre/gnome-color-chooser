@@ -348,7 +348,7 @@ const string TreeHandler::getCategoryShortDescription()
 
 const string TreeHandler::getCategoryLongName()
 {
-  return Utils::Xml::get_property(cat_cur, "long_name");
+  return Utils::Xml::get_content(cat_cur, "long_name");
 }
 
 

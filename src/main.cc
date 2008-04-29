@@ -137,7 +137,7 @@ int main (int argc, char *argv[])
   string configpath_images = configpath + string("images/");
   string globalpath_engines = DATADIR + string("/gtk-engines/");
   string globalpath_profiles = string(DBDIR).append("/profiles/");
-  string dbfile = string(DBDIR).append("/gnome-color-chooser.db");
+  string dbfile = string(DBDIR).append("/gnome-color-chooser.xml");
   string gtkrcfile = string(getenv("HOME")).append("/.gtkrc-2.0").c_str();
 
 

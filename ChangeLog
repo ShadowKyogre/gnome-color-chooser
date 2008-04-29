@@ -1,5 +1,19 @@
 2008-04-29  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
+	* po/POTFILES.in:
+	* po/de.po:
+	added new .xml.in and updated German translation
+
+	* src/Makefile.am:
+	* src/gnome-color-chooser.db:
+	* src/gnome-color-chooser.xml.in:
+	* src/main.cc:
+	* src/treehandler.cc:
+	renamed gnome-color-chooser.db to gnome-color-chooser.xml.in, which
+	introduces localization support for category names
+
+2008-04-29  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
 	* src/configloader.cc:
 	* src/configloader.h:
 	first overall cleanup, introducing glib as direct dependency
