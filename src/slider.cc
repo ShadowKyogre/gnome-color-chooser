@@ -22,12 +22,12 @@
 
 Slider::Slider()
 {
-  
+
 }
 
 Slider::~Slider()
 {
-  
+
 }
 
 void Slider::init(int id, TreeHandler* config)
@@ -80,6 +80,7 @@ void Slider::init(string category, string id, TreeHandler* config)
   this->reload();
 }
 
+
 void Slider::reload()
 {
   if(this->isParamWidget)
@@ -102,6 +103,7 @@ void Slider::reload()
     }
     else
       this->set_value(this->def);
+
   }
   else
   {

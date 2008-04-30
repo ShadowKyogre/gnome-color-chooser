@@ -28,12 +28,12 @@ SpinButton::SpinButton(BaseObjectType* cobject, const Glib::RefPtr<Gnome::Glade:
 
 SpinButton::SpinButton()
 {
-  
+
 }
 
 SpinButton::~SpinButton()
 {
-  
+
 }
 
 void SpinButton::init(int id, TreeHandler* config)
@@ -86,7 +86,8 @@ void SpinButton::init(string category, string id, TreeHandler* config)
   //reloads value from internal configuration
   this->reload();
 }
-#include <iostream>
+
+
 void SpinButton::reload()
 {
   if(this->isParamWidget)
@@ -109,6 +110,7 @@ void SpinButton::reload()
     }
     else
       this->set_value(this->def);
+
   }
   else
   {

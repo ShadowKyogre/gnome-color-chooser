@@ -22,6 +22,7 @@
 
 void ModWidget::init(int id, TreeHandler* config)
 {
+  this->m_linked_widget = NULL;
   this->isEngineWidget  = false;
   this->isParamWidget   = false;
   this->isProfileWidget = false;
@@ -33,6 +34,7 @@ void ModWidget::init(int id, TreeHandler* config)
 
 void ModWidget::init(string category, string id, TreeHandler* config)
 {
+  this->m_linked_widget = NULL;
   this->isEngineWidget  = false;
   this->isParamWidget   = true;
   this->isProfileWidget = false;
@@ -45,6 +47,7 @@ void ModWidget::init(string category, string id, TreeHandler* config)
 
 void ModWidget::init(string category, TreeHandler* config) // as engine widget
 {
+  this->m_linked_widget = NULL;
   this->isEngineWidget  = true;
   this->isParamWidget   = false;
   this->isProfileWidget = false;
@@ -56,6 +59,7 @@ void ModWidget::init(string category, TreeHandler* config) // as engine widget
 
 void ModWidget::init(TreeHandler* config) // as profile widget
 {
+  this->m_linked_widget = NULL;
   this->isEngineWidget  = false;
   this->isParamWidget   = false;
   this->isProfileWidget = true;
@@ -75,6 +79,17 @@ GType ModWidget::get_base_type()
   return gtk_widget_get_type();
 }
 
+
+void ModWidget::link_with_widget(ModWidget *widget)
+{
+  this->m_linked_widget = widget;
+}
+
+void ModWidget::reload_linked_widget()
+{
+  if(this->m_linked_widget)
+    this->m_linked_widget->reload();
+}
 
 ModWidget::Widget::Widget()
 {
