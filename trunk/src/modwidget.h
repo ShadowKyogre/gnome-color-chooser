@@ -35,6 +35,8 @@ public:
   void init(string category, TreeHandler* config);
   void init(TreeHandler* config);
   void setConfig(TreeHandler* config);
+  void link_with_widget(ModWidget *widget);
+  void reload_linked_widget();
   virtual void reload() = 0;
   static void reload_all_widgets();
   static GType get_base_type() G_GNUC_CONST;
@@ -48,6 +50,7 @@ protected:
   bool isEngineWidget;
   bool isParamWidget;
   bool isProfileWidget;
+  ModWidget *m_linked_widget;
 
   static void register_widget(ModWidget* widget);
 

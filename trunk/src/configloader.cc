@@ -20,6 +20,11 @@
 
 #include "configloader.h"
 #include "utils.h"
+#include "colorbutton.h"
+#include "checkbutton.h"
+#include "spinbutton.h"
+#include "slider.h"
+#include "combobox.h"
 
 #include <glib/gi18n.h>
 #include <string.h>
@@ -711,10 +716,24 @@ void ConfigLoader::load_engine_params(
 
       param->cbox  = new CheckButton();
       param->cbox->init(category, w_name, config, false);
-      param->cbox->signal_toggled().connect(
-            sigc::bind( sigc::bind( sigc::bind( sigc::mem_fun(
-                  *window, &EngineWindow::on_checkbox_toggled), param->widget),
-                  param->cbox), w_name) );
+
+      if(param->widget1 && param->widget2)
+      {
+        param->cbox->signal_toggled().connect(
+              sigc::bind( sigc::bind( sigc::bind( sigc::bind( sigc::mem_fun(
+                    *window, &EngineWindow::on_checkbox_toggled),
+                    param->widget2),
+                    param->widget1),
+                    param->cbox), w_name) );
+      }
+      else{ // use param->widget instead
+        param->cbox->signal_toggled().connect(
+              sigc::bind( sigc::bind( sigc::bind( sigc::bind( sigc::mem_fun(
+                    *window, &EngineWindow::on_checkbox_toggled),
+                    param->widget),
+                    param->widget),
+                    param->cbox), w_name) );
+      }
 
       if(w_ldesc != "")
       {
@@ -806,17 +825,6 @@ bool ConfigLoader::create_engine_option_widget(
       string        w_ldesc)
 {
 
-/* //todo: use slider _and_ spinbutton for integer/real
-  if(w_type == "spin")
-  {
-    SpinButton *widget = new SpinButton();
-    widget->init(category, w_name, config);
-    //widget->reload(); // already run by init() !
-    param->widget = (Gtk::Widget*)widget;
-    widget->signal_value_changed().connect( sigc::bind( sigc::bind( sigc::mem_fun(*window, &EngineWindow::on_changed_spinbutton), widget) , w_name) );
-  }
-*/
-
   if(w_type == "color")
   {
     ColorButton *widget = new ColorButton();
@@ -839,27 +847,30 @@ bool ConfigLoader::create_engine_option_widget(
     return 1;
   }
 
-  if(w_type == "integer")
+  if(w_type == "integer" || w_type == "real")
   {
-    //todo: add sync spinbutton
-    Slider *widget = new Slider();
-    widget->init(category, w_name, config);
-    param->widget = (Gtk::Widget*)widget;
-    widget->signal_value_changed().connect(
+    // create synchronized slider and spinbutton
+    Slider *widget1 = new Slider();
+    widget1->init(category, w_name, config);
+    param->widget1 = (Gtk::Widget*)widget1;
+    widget1->signal_value_changed().connect(
           sigc::bind( sigc::bind( sigc::mem_fun(
-                *window, &EngineWindow::on_changed_slider), widget) , w_name) );
-    return 1;
-  }
+                *window, &EngineWindow::on_changed_slider), widget1) , w_name) );
 
-  if(w_type == "real")
-  {
-    //todo: add sync spinbutton
-    Slider *widget = new Slider();
-    widget->init(category, w_name, config);
-    param->widget = (Gtk::Widget*)widget;
-    widget->signal_value_changed().connect(
+    SpinButton *widget2 = new SpinButton();
+    widget2->init(category, w_name, config);
+    param->widget2 = (Gtk::Widget*)widget2;
+    widget2->signal_value_changed().connect(
           sigc::bind( sigc::bind( sigc::mem_fun(
-                *window, &EngineWindow::on_changed_slider), widget) , w_name) );
+                *window, &EngineWindow::on_changed_spinbutton), widget2) , w_name) );
+
+    widget1->link_with_widget(widget2);
+    widget2->link_with_widget(widget1);
+
+    Gtk::HBox *hbox = new Gtk::HBox();
+    hbox->pack_start(*widget1, Gtk::PACK_EXPAND_WIDGET);
+    hbox->pack_start(*widget2, Gtk::PACK_SHRINK);
+    param->widget = (Gtk::Widget*)hbox;
     return 1;
   }
 
@@ -1136,14 +1147,16 @@ void ConfigLoader::unload_engine_params()
 
 ConfigLoader::Param::Param()
 {
-  this->box    = NULL;
-  this->label  = NULL;
-  this->desc   = NULL;
-  this->line   = NULL;
-  this->cbox   = NULL;
-  this->widget = NULL;
+  this->box         = NULL;
+  this->label       = NULL;
+  this->desc        = NULL;
+  this->line        = NULL;
+  this->cbox        = NULL;
+  this->widget      = NULL;
+  this->widget1     = NULL;
+  this->widget2     = NULL;
   this->widget_ebox = NULL;
-  this->next   = NULL;
+  this->next        = NULL;
 }
 
 
@@ -1161,6 +1174,10 @@ ConfigLoader::Param::~Param()
     delete cbox;
   if(widget)
     delete widget;
+  if(widget1)
+    delete widget1;
+  if(widget2)
+    delete widget2;
   if(widget_ebox)
     delete widget_ebox;
 }

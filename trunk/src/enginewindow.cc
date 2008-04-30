@@ -23,6 +23,7 @@
 #include "configloader.h"
 #include <iostream>
 #include <locale.h>
+#include <glib.h>
 
 EngineWindow::EngineWindow(Gtk::Window* parent, string engine, string category, TreeHandler* config, const Glib::RefPtr<Gnome::Glade::Xml>& refGlade)
 {
@@ -108,20 +109,30 @@ void EngineWindow::close()
 }
 
 
-void EngineWindow::on_checkbox_toggled(string id, CheckButton* cbox, Gtk::Widget* widget)
+void EngineWindow::on_checkbox_toggled(
+      string id,
+      CheckButton* cbox,
+      Gtk::Widget* widget1,
+      Gtk::Widget* widget2)
 {
+  g_return_if_fail(cbox != NULL);
+  g_return_if_fail(widget1 != NULL);
 
   if(cbox->get_active())
   {
     m_pConfig->setOverride(this->category, id, true);
 //    widget->reload();
-    widget->set_sensitive(true);
+    widget1->set_sensitive(true);
+    if(widget2)
+      widget2->set_sensitive(true);
   }
   else
   {
     m_pConfig->setOverride(this->category, id, false);
 //    widget->reload();
-    widget->set_sensitive(false);
+    widget1->set_sensitive(false);
+    if(widget2)
+      widget2->set_sensitive(false);
   }
 
 }
@@ -176,6 +187,7 @@ void EngineWindow::on_changed_spinbutton(string id, SpinButton* sbutton)
     snprintf (temp, 10, "%i", sbutton->get_value_as_int());
     
   m_pConfig->setValue(this->category, id, temp);
+  sbutton->reload_linked_widget();
 }
 
 
@@ -198,6 +210,7 @@ void EngineWindow::on_changed_slider(string id, Slider* slider)
     snprintf (temp, 10, "%i", (int)slider->get_value());
 
   m_pConfig->setValue(this->category, id, temp);
+  slider->reload_linked_widget();
 }
 
 

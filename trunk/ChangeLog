@@ -1,3 +1,17 @@
+2008-04-30  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* src/configloader.cc:
+	* src/configloader.h:
+	* src/enginewindow.cc:
+	* src/enginewindow.h:
+	* src/modwidget.cc:
+	* src/modwidget.h:
+	* src/slider.cc: (only minor indent changes)
+	* src/spinbutton.cc: (only minor indent changes)
+	reals and integers of engine schemas are now changeable by a
+	spinbutton additionally to a slider (both are synchronized with
+	each other).
+
 2008-04-29  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* po/POTFILES.in:

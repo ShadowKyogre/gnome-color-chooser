@@ -100,6 +100,8 @@ class ConfigLoader
         CheckButton     *cbox;
       //Gtk::Button     *button,
         Gtk::Widget     *widget;
+        Gtk::Widget     *widget1;
+        Gtk::Widget     *widget2;
         Gtk::EventBox   *widget_ebox;
         Param           *next;
     };

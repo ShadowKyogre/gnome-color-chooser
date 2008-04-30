@@ -53,7 +53,12 @@ class EngineWindow : public Gtk::Window
 
     //Signal handlers:
 
-    void on_checkbox_toggled(string id, CheckButton* cbox, Gtk::Widget* widget);
+    void on_checkbox_toggled(
+          string id,
+          CheckButton *cbox,
+          Gtk::Widget *widget1,
+          Gtk::Widget *widget2 = NULL);
+
     void on_changed_checkbutton(string id, CheckButton* cbox);
     void on_changed_colorbutton(string id, ColorButton* cbutton);
     void on_changed_spinbutton(string id, SpinButton* sbutton);
