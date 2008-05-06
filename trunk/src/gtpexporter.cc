@@ -18,10 +18,17 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include "gtpexporter.h"
+#include "treehandler.h"
 #include "configloader.h"
 #include "utils.h"
+#include "ioexception.h"
 
+#include <iostream>
 #include <fstream>
 
 using namespace GnomeCC;
@@ -85,7 +92,7 @@ themedir = "/usr/share/themes/";
 
   if(themedir == "")
   {
-    cerr << "Couldn't find theme " << gtk_theme_name << endl;
+    std::cerr << "Couldn't find theme " << gtk_theme_name << std::endl;
 //todo: return value or exception !
     return;
   }
@@ -126,7 +133,7 @@ themedir = "/usr/share/themes/";
     catch(Exception &e)
     {
 //todo: throw Exception(e.get_type); instead of cerroring
-      cerr << "Export to " << filename << " failed: " << e.get_string() << endl;
+      std::cerr << "Export to " << filename << " failed: " << e.get_string() << std::endl;
       throw IoException(IoException::WriteError);
     }
     delete exporter;

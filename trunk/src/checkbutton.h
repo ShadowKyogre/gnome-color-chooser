@@ -21,12 +21,11 @@
 #ifndef _CHECK_BUTTON_H
 #define _CHECK_BUTTON_H
 
-#include "treehandler.h"
 #include "modwidget.h"
-#include <gtkmm.h>
-#include <libglademm.h>
+#include <gtkmm/checkbutton.h>
 
-using namespace std;
+class TreeHandler;
+
 
 class CheckButton : public Gtk::CheckButton, public ModWidget
 {
@@ -49,3 +48,4 @@ private:
 
 
 #endif // _CHECK_BUTTON_H
+

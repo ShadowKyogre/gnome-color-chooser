@@ -22,8 +22,12 @@
 #define _GNOMECC_GTP_EXPORTER_H
 
 #include "exporter.h"
-#include "treehandler.h"
-#include "ioexception.h"
+#include <string>
+
+class TreeHandler;
+
+using std::string;
+
 
 class GtpExporter : public Exporter
 {

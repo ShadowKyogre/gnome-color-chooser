@@ -1,3 +1,48 @@
+2008-05-06  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* src/checkbutton.cc:
+	* src/checkbutton.h:
+	* src/colorbutton.cc:
+	* src/colorbutton.h:
+	* src/combobox.cc:
+	* src/combobox.h:
+	* src/configloader.cc:
+	* src/configloader.h:
+	* src/enginewindow.cc:
+	* src/enginewindow.h:
+	* src/exception.h:
+	* src/exporter.cc:
+	* src/exporter.h:
+	* src/filechooserbutton.cc:
+	* src/filechooserbutton.h:
+	* src/fontbutton.cc:
+	* src/fontbutton.h:
+	* src/gtkrcexporter.cc:
+	* src/gtkrcexporter.h:
+	* src/gtpexporter.cc:
+	* src/gtpexporter.h:
+	* src/infowindow.cc:
+	* src/infowindow.h:
+	* src/ioexception.h:
+	* src/main.cc:
+	* src/mainwindow.cc:
+	* src/mainwindow.h:
+	* src/modwidget.cc:
+	* src/modwidget.h:
+	* src/slider.cc:
+	* src/slider.h:
+	* src/spinbutton.cc:
+	* src/spinbutton.h:
+	* src/treehandler.cc:
+	* src/treehandler.h:
+	* src/utils.cc:
+	* src/utils.h:
+	decreased compile time by ~20% (using a non-hyperthreaded single-core
+	CPU) by using forward declarations in header files wherever possible
+	and moving most includes from header to source files,
+	removed usage of "using namespace std",
+	replaced <string.h> by <cstring>
+
 2008-04-30  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* src/configloader.cc:

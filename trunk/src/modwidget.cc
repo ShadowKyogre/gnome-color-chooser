@@ -20,6 +20,7 @@
 
 #include "modwidget.h"
 
+
 void ModWidget::init(int id, TreeHandler* config)
 {
   this->m_linked_widget = NULL;

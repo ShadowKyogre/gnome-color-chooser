@@ -19,7 +19,9 @@
  */
 
 #include "filechooserbutton.h"
-#include <iostream>
+#include "treehandler.h"
+#include <gtkmm/image.h>
+
 
 FileChooserButton::FileChooserButton(BaseObjectType* cobject, const Glib::RefPtr<Gnome::Glade::Xml>& refGlade)
 : Gtk::FileChooserButton(cobject)

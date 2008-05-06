@@ -21,9 +21,17 @@
 #include "enginewindow.h"
 #include "infowindow.h"
 #include "configloader.h"
-#include <iostream>
+#include "treehandler.h"
+#include "colorbutton.h"
+#include "checkbutton.h"
+#include "spinbutton.h"
+#include "slider.h"
+#include "combobox.h"
+
 #include <locale.h>
 #include <glib.h>
+#include <gtkmm.h>
+
 
 EngineWindow::EngineWindow(Gtk::Window* parent, string engine, string category, TreeHandler* config, const Glib::RefPtr<Gnome::Glade::Xml>& refGlade)
 {

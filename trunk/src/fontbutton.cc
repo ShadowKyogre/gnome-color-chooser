@@ -19,6 +19,7 @@
  */
 
 #include "fontbutton.h"
+#include "treehandler.h"
 
 
 FontButton::FontButton(BaseObjectType* cobject, const Glib::RefPtr<Gnome::Glade::Xml>& refGlade)

@@ -19,6 +19,8 @@
  */
 
 #include "infowindow.h"
+#include <gtkmm/button.h>
+#include <gtkmm/label.h>
 
 
 InfoWindow::InfoWindow(BaseObjectType* cobject, const Glib::RefPtr<Gnome::Glade::Xml>& refGlade)

@@ -18,12 +18,9 @@
  *
  */
 
-
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
-
-#include <gnome.h>
 
 #include "utils.h"
 #include "treehandler.h"
@@ -34,14 +31,20 @@
 
 #include <iostream>
 #include <fstream>
-
 #include <sys/types.h>
 #include <sys/stat.h>
-
 #include <libintl.h>
 #include <locale.h>
+#include <string>
+#include <libgnome/libgnome.h>
+#include <libgnomeui/libgnomeui.h>
+#include <gtkmm/main.h>
 
-using namespace std;
+using std::string;
+using std::cerr;
+using std::cout;
+using std::flush;
+using std::endl;
 using namespace GnomeCC;
 
 

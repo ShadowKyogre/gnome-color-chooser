@@ -21,23 +21,28 @@
 #ifndef _CONFIG_LOADER_H
 #define _CONFIG_LOADER_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
-#include "treehandler.h"
-#include "mainwindow.h"
-#include "enginewindow.h"
-#include "modwidget.h"
-#include "combobox.h"
-
-#include <gtkmm.h>
-#include <libglademm.h>
+#include <glibmm/refptr.h>
+#include <libglademm/xml.h>
 #include <libxml/parser.h>
 #include <libxml/tree.h>
+#include <string>
 
+class TreeHandler;
+class MainWindow;
+class EngineWindow;
+class ModWidget;
+class ComboBox;
+class CheckButton;
 
-using namespace std;
+namespace Gtk
+{
+  class HBox;
+  class EventBox;
+  class HSeparator;
+}
+
+using std::string;
+
 
 class ConfigLoader
 {

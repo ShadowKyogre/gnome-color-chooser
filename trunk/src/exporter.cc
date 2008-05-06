@@ -19,7 +19,6 @@
  */
 
 #include "exporter.h"
-
 #include "gtkrcexporter.h"
 #include "gtpexporter.h"
 

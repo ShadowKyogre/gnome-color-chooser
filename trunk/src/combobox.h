@@ -26,7 +26,8 @@
 #define _COMBO_BOX_H
 
 #include "modwidget.h"
-#include <gtkmm.h>
+#include <gtkmm/combobox.h>
+#include <gtkmm/liststore.h>
 
 
 class ComboBox

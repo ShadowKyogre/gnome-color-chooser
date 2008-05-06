@@ -21,16 +21,14 @@
 #ifndef _GNOMECC_UTILS_H
 #define _GNOMECC_UTILS_H
 
-#include <iostream>
-#include <fstream>
-#include <string.h>
+#include <string>
 
 // Utils::Xml
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 
+using std::string;
 
-using namespace std;
 
 namespace GnomeCC
 {
