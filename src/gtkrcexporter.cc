@@ -19,11 +19,15 @@
  */
 
 #include "gtkrcexporter.h"
+#include "treehandler.h"
 #include "configloader.h"
+#include "ioexception.h"
 #include "utils.h"
 
 #include <fstream>
 
+using std::ofstream;
+using std::endl;
 using namespace GnomeCC;
 
 

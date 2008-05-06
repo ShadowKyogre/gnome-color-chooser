@@ -23,6 +23,7 @@
  */
 
 #include "combobox.h"
+#include "treehandler.h"
 
 
 ComboBox::ComboBox(BaseObjectType* cobject, const Glib::RefPtr<Gnome::Glade::Xml>& refGlade)

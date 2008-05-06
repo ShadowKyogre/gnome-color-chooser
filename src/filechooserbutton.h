@@ -21,10 +21,16 @@
 #ifndef _FILECHOOSER_BUTTON_H
 #define _FILECHOOSER_BUTTON_H
 
-#include "treehandler.h"
 #include "modwidget.h"
-#include <gtkmm.h>
-#include <libglademm.h>
+#include <gtkmm/filechooserbutton.h>
+
+class TreeHandler;
+
+namespace Gtk
+{
+  class Image;
+}
+
 
 class FileChooserButton : public Gtk::FileChooserButton, public ModWidget
 {

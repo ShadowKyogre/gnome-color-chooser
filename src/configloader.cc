@@ -18,16 +18,26 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include "configloader.h"
+#include "treehandler.h"
+#include "mainwindow.h"
+#include "enginewindow.h"
+#include "modwidget.h"
+#include "combobox.h"
 #include "utils.h"
 #include "colorbutton.h"
 #include "checkbutton.h"
 #include "spinbutton.h"
 #include "slider.h"
 #include "combobox.h"
+#include "fontbutton.h"
 
 #include <glib/gi18n.h>
-#include <string.h>
+#include <cstring>
 #include <fstream>
 #include <iostream>
 #include <sys/types.h>
@@ -35,7 +45,15 @@
 #include <dirent.h> // not platform independent :(
 #include <gtk/gtk.h>
 #include <glib.h>
+#include <gtkmm/box.h>
+#include <gtkmm/eventbox.h>
+#include <gtkmm/separator.h>
 
+using std::cerr;
+using std::cout;
+using std::flush;
+using std::endl;
+using std::ofstream;
 using namespace GnomeCC;
 
 

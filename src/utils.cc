@@ -20,13 +20,20 @@
 
 #include "utils.h"
 
+#include <fstream>
+#include <glib.h>
+#include <cstring>
+
 // Utils::Io
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <dirent.h> // not platform independent :(
 
-#include <glib.h>
-
+using std::fstream;
+using std::ofstream;
+using std::ifstream;
+using std::ios;
+using std::ios_base;
 using namespace GnomeCC;
 
 

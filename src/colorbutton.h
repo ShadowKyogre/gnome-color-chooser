@@ -21,10 +21,9 @@
 #ifndef _COLOR_BUTTON_H
 #define _COLOR_BUTTON_H
 
-#include "treehandler.h"
 #include "modwidget.h"
-#include <gtkmm.h>
-#include <libglademm.h>
+#include <gtkmm/colorbutton.h>
+
 
 class ColorButton : public Gtk::ColorButton, public ModWidget
 {

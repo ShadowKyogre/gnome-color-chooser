@@ -23,10 +23,9 @@
 
 #include <libxml/parser.h>
 #include <libxml/tree.h>
-#include <iostream>
-#include <string.h>
+#include <string>
 
-using namespace std;
+using std::string;
 
 
 class TreeHandler

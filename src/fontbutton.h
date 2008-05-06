@@ -21,10 +21,11 @@
 #ifndef _FONT_BUTTON_H
 #define _FONT_BUTTON_H
 
-#include "treehandler.h"
 #include "modwidget.h"
-#include <gtkmm.h>
-#include <libglademm.h>
+#include <gtkmm/fontbutton.h>
+
+class TreeHandler;
+
 
 class FontButton : public Gtk::FontButton, public ModWidget
 {

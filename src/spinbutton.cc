@@ -19,6 +19,8 @@
  */
 
 #include "spinbutton.h"
+#include "treehandler.h"
+
 
 SpinButton::SpinButton(BaseObjectType* cobject, const Glib::RefPtr<Gnome::Glade::Xml>& refGlade)
 : Gtk::SpinButton(cobject)

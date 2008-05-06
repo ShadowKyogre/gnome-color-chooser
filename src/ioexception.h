@@ -22,6 +22,10 @@
 #define _GNOMECC_IOEXCEPTION_H
 
 #include "exception.h"
+#include <string>
+
+using std::string;
+
 
 class IoException : public Exception
 {

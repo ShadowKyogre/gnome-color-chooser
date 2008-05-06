@@ -21,21 +21,24 @@
 #ifndef _ENGINE_WINDOW_H
 #define _ENGINE_WINDOW_H
 
+#include <glibmm/refptr.h>
+#include <libglademm/xml.h>
+#include <gtkmm/window.h>
+#include <gtkmm/scrolledwindow.h>
+#include <gtkmm/box.h>
+#include <gtkmm/button.h>
+#include <gtkmm/table.h>
+#include <gtkmm/tooltips.h>
 
-#include "treehandler.h"
+class TreeHandler;
+class ColorButton;
+class CheckButton;
+class SpinButton;
+class Slider;
+class ComboBox;
 
-#include "modwidget.h"
-#include "colorbutton.h"
-#include "checkbutton.h"
-#include "spinbutton.h"
-//#include "fontbutton.h"
-//#include "filechooserbutton.h"
-#include "slider.h"
-#include "combobox.h"
-#include <gtkmm.h>
-//#include <libglademm.h>
+using std::string;
 
-using namespace std;
 
 class EngineWindow : public Gtk::Window
 {

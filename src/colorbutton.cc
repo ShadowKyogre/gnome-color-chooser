@@ -19,6 +19,7 @@
  */
 
 #include "colorbutton.h"
+#include "treehandler.h"
 
 
 ColorButton::ColorButton(BaseObjectType* cobject, const Glib::RefPtr<Gnome::Glade::Xml>& refGlade)
@@ -54,3 +55,4 @@ void ColorButton::reload()
     this->set_color(Gdk::Color((m_pConfig->getValue(this->id))));
   }
 }
+

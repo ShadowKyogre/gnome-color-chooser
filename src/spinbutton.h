@@ -21,10 +21,11 @@
 #ifndef _SPIN_BUTTON_H
 #define _SPIN_BUTTON_H
 
-#include "treehandler.h"
 #include "modwidget.h"
-#include <gtkmm.h>
-#include <libglademm.h>
+#include <gtkmm/spinbutton.h>
+
+class TreeHandler;
+
 
 class SpinButton : public Gtk::SpinButton, public ModWidget
 {

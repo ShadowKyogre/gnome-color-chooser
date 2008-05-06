@@ -21,10 +21,9 @@
 #ifndef _SLIDER_H
 #define _SLIDER_H
 
-#include "treehandler.h"
 #include "modwidget.h"
-#include <gtkmm.h>
-//#include <libglademm.h>
+#include <gtkmm/scale.h>
+
 
 class Slider : public Gtk::HScale, public ModWidget
 {

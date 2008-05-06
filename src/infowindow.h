@@ -21,11 +21,19 @@
 #ifndef _INFO_WINDOW_H
 #define _INFO_WINDOW_H
 
+#include <glibmm/refptr.h>
+#include <libglademm/xml.h>
+#include <gtkmm/window.h>
+#include <string>
 
-#include <gtkmm.h>
-#include <libglademm.h>
+namespace Gtk
+{
+  class Button;
+  class Label;
+}
 
-using namespace std;
+using std::string;
+
 
 class InfoWindow : public Gtk::Window
 {
@@ -46,6 +54,5 @@ class InfoWindow : public Gtk::Window
 
 
 
-
-
 #endif // _INFO_WINDOW_H
+

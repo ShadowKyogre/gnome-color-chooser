@@ -21,9 +21,10 @@
 #ifndef _GNOMECC_EXCEPTION_H
 #define _GNOMECC_EXCEPTION_H
 
-#include <iostream>
+#include <string>
 
-using namespace std;
+using std::string;
+
 
 class Exception
 {

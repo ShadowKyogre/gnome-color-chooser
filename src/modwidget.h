@@ -21,9 +21,14 @@
 #ifndef _MOD_WIDGET_H
 #define _MOD_WIDGET_H
 
-#include "treehandler.h"
-#include <gtkmm.h>
-#include <libglademm.h>
+#include <glibmm/refptr.h>
+#include <libglademm/xml.h>
+#include <string>
+
+class TreeHandler;
+
+using std::string;
+
 
 class ModWidget
 {

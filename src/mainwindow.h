@@ -21,27 +21,24 @@
 #ifndef _MAIN_WINDOW_H
 #define _MAIN_WINDOW_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
-#include "treehandler.h"
-#include "enginewindow.h"
-#include "colorbutton.h"
 #include "checkbutton.h"
-#include "spinbutton.h"
-#include "fontbutton.h"
-#include "filechooserbutton.h"
 #include "combobox.h"
-#include <gtkmm.h>
-#include <libglademm.h>
+#include "filechooserbutton.h"
+
+#include <glibmm/refptr.h>
+#include <libglademm/xml.h>
 //#include <stack>
+
+class TreeHandler;
+class EngineWindow;
+class ColorButton;
+class SpinButton;
+class FontButton;
 
 //todo: remove and allocate dynamically!!
 #define MAX_ENGINE_CATEGORIES 10
 
-
-using namespace std;
+using std::string;
 
 
 class MainWindow : public Gtk::Window

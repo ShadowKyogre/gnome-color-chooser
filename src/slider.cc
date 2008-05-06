@@ -19,6 +19,8 @@
  */
 
 #include "slider.h"
+#include "treehandler.h"
+
 
 Slider::Slider()
 {

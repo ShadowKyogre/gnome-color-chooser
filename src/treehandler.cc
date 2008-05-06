@@ -22,6 +22,8 @@
 #include "utils.h"
 
 #include <glib/gi18n.h>
+#include <cstring>
+#include <iostream>
 
 using namespace GnomeCC;
 

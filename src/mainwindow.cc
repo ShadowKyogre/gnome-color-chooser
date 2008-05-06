@@ -18,16 +18,37 @@
  *
  */
 
-#include "configloader.h"
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include "mainwindow.h"
+#include "treehandler.h"
+#include "configloader.h"
+#include "enginewindow.h"
 #include "infowindow.h"
 #include "gtkrcexporter.h"
 #include "utils.h"
+#include "exception.h"
+
+#include "colorbutton.h"
+#include "checkbutton.h"
+#include "spinbutton.h"
+#include "fontbutton.h"
+#include "filechooserbutton.h"
+#include "combobox.h"
 
 #include <glib/gi18n.h>
+#include <gtkmm.h>
 #include <iostream>
 #include <fstream>
 
+using std::cerr;
+using std::cout;
+using std::endl;
+using std::fstream;
+using std::ifstream;
+using std::ios;
 using namespace GnomeCC;
 
 

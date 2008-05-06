@@ -22,11 +22,12 @@
 #define _GNOMECC_GTKRC_EXPORTER_H
 
 #include "exporter.h"
-#include "treehandler.h"
-#include "ioexception.h"
-#include <string.h>
+#include <string>
 
-using namespace std;
+class TreeHandler;
+
+using std::string;
+
 
 class GtkrcExporter : public Exporter
 {

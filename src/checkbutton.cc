@@ -19,6 +19,7 @@
  */
 
 #include "checkbutton.h"
+#include "treehandler.h"
 
 
 CheckButton::CheckButton(BaseObjectType* cobject, const Glib::RefPtr<Gnome::Glade::Xml>& refGlade)
