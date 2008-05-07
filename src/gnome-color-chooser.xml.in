@@ -33,6 +33,8 @@
     <element id="60" name="bg_pixmap[INSENSITIVE]" value="&lt;none&gt;" type="image" override="no"/>
     <element id="79" name="GtkMenuBar::shadow_type" value="GTK_SHADOW_NONE" type="check_alone" override="no"/>
     <element id="80" name="GtkToolbar::shadow_type" value="GTK_SHADOW_NONE" type="check_alone" override="no"/>
+    <element id="81" name="GtkWidget::link-color" value="#0000EE" type="color" override="no"/>
+    <element id="82" name="GtkWidget::visited-link-color" value="#551A8B" type="color" override="no"/>
   </category>
   <category name="desktop-icon">
     <!-- category name -->

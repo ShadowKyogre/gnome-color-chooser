@@ -1,3 +1,17 @@
+2008-05-07  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* configure.ac:
+	bumped program version to 0.2.4 (still in development phase though)
+
+	* po/de.po:
+	updated German translation
+
+	* THANKS:
+	* src/gnome-color-chooser.glade:
+	* src/gnome-color-chooser.xml.in:
+	added color settings for hyperlinks in GTK+ applications,
+	thank you to norsen, who desperately searched for such an option.
+
 2008-05-06  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* src/checkbutton.cc:

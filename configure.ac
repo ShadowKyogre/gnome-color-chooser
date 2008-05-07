@@ -18,7 +18,7 @@
 #
 
 AC_INIT([GNOME Color Chooser],
-        [0.2.3],
+        [0.2.4],
         [Werner Pantke \<gnome-color-chooser\@punk-ass-bitch.org\>],
         [gnome-color-chooser])
 #AC_CONFIG_AUX_DIR(config)
