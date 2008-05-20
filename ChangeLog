@@ -1,3 +1,32 @@
+2008-05-19  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* NEWS:
+	updated release notes for upcoming version 0.2.4 with listing of
+	already	implemented changes
+
+	* po/POTFILES.in:
+	added newly internationalized source files:
+	- src/main.cc
+	- src/ioexception.cc
+
+	* po/de.po:
+	the usual update to provide 100% translated strings ;-)
+
+	* src/main.cc:
+	now most error messages that prevent the app from starting are
+	shown in an error dialog instead of terminal output,
+	g_warning() is set to use those error dialogs, either.
+
+	* src/ioexception.cc:
+	* src/ioexception.h: 
+	* src/mainwindow.cc:
+	* src/mainwindow.h:
+	added new translatable strings
+
+	* src/utils.cc:
+	* src/utils.h:
+	added subclass 'UI' that introduces support for error dialogs
+
 2008-05-07  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* configure.ac:
@@ -187,7 +216,7 @@
 	* m4/lf_host_type.m4:
 	* m4/lf_warnings.m4:
 	added some (slightly modified) macros from GNU Autotoolset as they
-	don't seem to be very common - this should fix FTBFS vor svn users
+	don't seem to be very common - this should fix FTBFS for svn users
 
 2008-02-10  Werner Pantke  <wpantke@punk-ass-bitch.org>
 

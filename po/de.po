@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-color-chooser 0.2.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-07 10:57+0200\n"
-"PO-Revision-Date: 2008-05-07 11:00+0100\n"
+"POT-Creation-Date: 2008-05-20 23:21+0200\n"
+"PO-Revision-Date: 2008-05-19 16:36+0100\n"
 "Last-Translator: Werner Pantke <wpantke@punk-ass-bitch.org>\n"
 "Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -37,8 +37,7 @@ msgid "Global"
 msgstr "Allgemein"
 
 #. category name
-#: ../src/gnome-color-chooser.xml.in.h:8
-#: ../src/gnome-color-chooser.glade.h:42
+#: ../src/gnome-color-chooser.xml.in.h:8 ../src/gnome-color-chooser.glade.h:42
 msgid "Panel"
 msgstr "Panel"
 
@@ -58,12 +57,22 @@ msgid "Tooltips"
 msgstr "Tooltips"
 
 #: ../src/gnome-color-chooser.glade.h:1
-msgid "<b><span foreground=\"#ff0000\">Note:</span></b> Images are currently not exported!!"
-msgstr "<b><span foreground=\"#ff0000\">Anmerkung:</span></b> Bilder werden momentan nicht exportiert!"
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> Images are currently not "
+"exported!!"
+msgstr ""
+"<b><span foreground=\"#ff0000\">Anmerkung:</span></b> Bilder werden momentan "
+"nicht exportiert!"
 
 #: ../src/gnome-color-chooser.glade.h:2
-msgid "<b><span foreground=\"#ff0000\">Note:</span></b> These settings only work with gtk2-themes that don't specify these values on their own, otherwise nothing will happen on a change ;-)"
-msgstr "<b><span foreground=\"#ff0000\">Anmerkung:</span></b> Diese Einstellungen werden nur wirksam, wenn sie noch nicht im momentan benutzten GTK2 Thema gesetzt sind, andernfalls werden sie ignoriert ;-)"
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> These settings only work "
+"with gtk2-themes that don't specify these values on their own, otherwise "
+"nothing will happen on a change ;-)"
+msgstr ""
+"<b><span foreground=\"#ff0000\">Anmerkung:</span></b> Diese Einstellungen "
+"werden nur wirksam, wenn sie noch nicht im momentan benutzten GTK2 Thema "
+"gesetzt sind, andernfalls werden sie ignoriert ;-)"
 
 #: ../src/gnome-color-chooser.glade.h:3
 msgid "<b>Buttons</b>"
@@ -230,7 +239,9 @@ msgstr "Text"
 
 #: ../src/gnome-color-chooser.glade.h:47
 msgid "This color is only used if render mode is 2 or 3 (colorize)"
-msgstr "Diese Farbe wird nur benutzt, falls der Render-Modus auf 2 oder 3 gesetzt ist (einfärben)"
+msgstr ""
+"Diese Farbe wird nur benutzt, falls der Render-Modus auf 2 oder 3 gesetzt "
+"ist (einfärben)"
 
 #: ../src/gnome-color-chooser.glade.h:48
 msgid "This option does not affect all themes!"
@@ -376,8 +387,7 @@ msgstr "besucht"
 msgid "Customize your GNOME desktop"
 msgstr "Den GNOME-Desktop farblich anpassen"
 
-#: ../src/configloader.cc:128
-#: ../src/configloader.cc:1100
+#: ../src/configloader.cc:128 ../src/configloader.cc:1100
 msgid "Theme Default"
 msgstr "Themenstandard"
 
@@ -390,24 +400,58 @@ msgstr "Konfiguration von %s"
 msgid "None"
 msgstr "Keins"
 
+#: ../src/ioexception.cc:43
+msgid "Read Error"
+msgstr "Lesefehler"
+
+#: ../src/ioexception.cc:46
+msgid "Write Error"
+msgstr "Schreibfehler"
+
+#: ../src/main.cc:66 ../src/main.cc:96
+#, c-format
+msgid "Could not open or create file %s."
+msgstr "Konnte die Datei %s nicht öffnen oder anlegen."
+
+#. "Error" is the caption of an error message
+#: ../src/main.cc:67 ../src/main.cc:85 ../src/main.cc:97 ../src/main.cc:108
+#: ../src/main.cc:118 ../src/main.cc:134 ../src/main.cc:207
+msgid "Error"
+msgstr "Fehler"
+
+#: ../src/main.cc:84 ../src/main.cc:107
+#, c-format
+msgid "Unable to modify file %s."
+msgstr "Kann die Datei %s nicht bearbeiten."
+
+#: ../src/main.cc:117
+#, c-format
+msgid "Could not open file %s."
+msgstr "Konnte die Datei %s nicht öffnen."
+
 #. dialog title
-#: ../src/mainwindow.cc:627
+#: ../src/mainwindow.cc:610
 msgid "Save Theme"
 msgstr "Thema speichern"
 
 #. dialog title
-#: ../src/mainwindow.cc:654
+#: ../src/mainwindow.cc:637
 msgid "Save Theme as"
 msgstr "Thema speichern unter"
 
 #. dialog title
-#: ../src/mainwindow.cc:680
+#: ../src/mainwindow.cc:663
 msgid "Export Theme as"
 msgstr "Thema exportieren als"
 
-#: ../src/mainwindow.cc:812
+#: ../src/mainwindow.cc:795
 msgid "A tool for customizing the appearance of the GNOME desktop"
-msgstr "Ein Werkzeug um das Aussehen des GNOME Desktops anzupassen"
+msgstr "Ein Werkzeug, um das Aussehen des GNOME Desktops anzupassen"
+
+#: ../src/mainwindow.cc:842
+#, c-format
+msgid "Export to file %s failed: %s."
+msgstr "Exportieren nach Datei %s schlug fehl: %s."
 
 #: ../src/treehandler.cc:558
 msgid "Version"
@@ -424,10 +468,13 @@ msgstr "Author(en)"
 #, fuzzy
 #~ msgid "gtk-info"
 #~ msgstr "gtk-ok"
+
 #~ msgid "gtk-ok"
 #~ msgstr "gtk-ok"
+
 #~ msgid "Panel (does nothing with my clearlooks-theme)"
 #~ msgstr "Panel (Wirksamkeit unbekannt *G*)"
+
 #~ msgid ""
 #~ "<span size='small'><u><b>ToDo:</b></u>\n"
 #~ "-> use tooltips to explain what each config is being for\n"
@@ -437,14 +484,19 @@ msgstr "Author(en)"
 #~ "<span size='small'><u><b>ToDo:</b></u>\n"
 #~ "-> benutze Tooltips zur Erklärung der Konfigurationsmöglichkeiten\n"
 #~ "-> vereinfache GUI und füge Vorschau-Anzeige hinzu</span>"
+
 #~ msgid "GNOME Color Chooser"
 #~ msgstr "GNOME Color Chooser"
+
 #~ msgid "gtk-apply"
 #~ msgstr "gtk-apply"
+
 #~ msgid "gtk-cancel"
 #~ msgstr "gtk-cancel"
+
 #~ msgid "gtk-save"
 #~ msgstr "gtk-save"
+
 #~ msgid ""
 #~ "cs: Lucas \"Drom\" Lommer <llommer@svn.gnome.org>\n"
 #~ "de: JackTheDipper <gnome-color-chooser@punk-ass-bitch.org>\n"
@@ -456,8 +508,9 @@ msgstr "Author(en)"
 #~ "Please contact me!\n"
 #~ "<gnome-color-chooser@punk-ass-bitch.org>"
 #~ msgstr "JackTheDipper <gnome-color-chooser@punk-ass-bitch.org>"
+
 #~ msgid "[active]"
 #~ msgstr "[aktiv]"
+
 #~ msgid "[selected]"
 #~ msgstr "[selektiert]"
-

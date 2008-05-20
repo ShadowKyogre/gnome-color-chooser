@@ -49,3 +49,4 @@ class IoException : public Exception
 };
 
 #endif // _GNOMECC_IOEXCEPTION_H
+

@@ -50,6 +50,7 @@ public:
   virtual ~MainWindow();
   void init(TreeHandler* config,
             string configfile,
+            string customgtkrcfile,
             string version,
             string icon,
             string image_path,
@@ -59,7 +60,7 @@ public:
 protected:
   void create_engines_table();
   void close();
-  void write_gtkrc();
+  void write_gtkrc(string filename);
   void setConfig(TreeHandler* config);
   void setVersion(string version);
   void open_engine_window(string category, int y);
@@ -97,11 +98,12 @@ protected:
 
 private:
   TreeHandler* m_pConfig;
-  std::string m_filename;
-  std::string m_configfile;
+  string m_filename;
+  string m_configfile;
+  string m_customgtkrcfile;
   Glib::RefPtr<Gdk::Pixbuf>  m_refIcon;
   string version;
-  std::string image_path;
+  string image_path;
   EngineWindow* engine_window;
   Gtk::Label engine_label[MAX_ENGINE_CATEGORIES];
   Gtk::HBox engine_hbox[MAX_ENGINE_CATEGORIES];

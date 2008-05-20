@@ -39,9 +39,10 @@
 #include <libgnome/libgnome.h>
 #include <libgnomeui/libgnomeui.h>
 #include <gtkmm/main.h>
+#include <glib.h>
+#include <glib/gi18n.h>
 
 using std::string;
-using std::cerr;
 using std::cout;
 using std::flush;
 using std::endl;
@@ -50,13 +51,21 @@ using namespace GnomeCC;
 
 #ifdef LIBXML_TREE_ENABLED
 
-bool config_ok(string configfile, string dbfile, string gtkrcfile)
+bool config_ok(
+      string configfile,
+      string dbfile,
+      string gtkrcfile,
+      string customgtkrcfile)
 {
+  GString *error;
 
   if(! (Utils::Io::check_file(gtkrcfile, true)
         || Utils::Io::create_file(gtkrcfile)) )
   {
-    cerr << "cannot create/open file " << gtkrcfile << endl;
+    error =  g_string_new("");
+    g_string_printf(error, _("Could not open or create file %s."), gtkrcfile.c_str());
+    Utils::Ui::print_error(_("Error"), error->str, 1);
+    g_string_free(error, true);
     return false;
   }
 
@@ -71,21 +80,22 @@ bool config_ok(string configfile, string dbfile, string gtkrcfile)
           "include \".gtkrc-2.0-gnome-color-chooser\"",
           ".gtkrc-2.0-gnome-color-chooser"))
     {
-      cerr << "unable to modify ~/.gtkrc-2.0" << endl;
+      error =  g_string_new("");
+      g_string_printf(error, _("Unable to modify file %s."), "~/.gtkrc-2.0");
+      Utils::Ui::print_error(_("Error"), error->str, 1);
+      g_string_free(error, true);
       return false;
     }
   }
 
 
-  if(!Utils::Io::check_file(
-           getenv("HOME") + string("/.gtkrc-2.0-gnome-color-chooser"), true)
-     && !Utils::Io::create_file(
-              getenv("HOME") + string("/.gtkrc-2.0-gnome-color-chooser")))
+  if(!Utils::Io::check_file(customgtkrcfile, true)
+     && !Utils::Io::create_file(customgtkrcfile))
   {
-    cerr << "cannot create/open file "
-         << getenv("HOME")
-         << string("/.gtkrc-2.0-gnome-color-chooser")
-         << endl;
+    error =  g_string_new("");
+    g_string_printf(error, _("Could not open or create file %s."), customgtkrcfile.c_str() );
+    Utils::Ui::print_error(_("Error"), error->str, 1);
+    g_string_free(error, true);
     return false;
   }
 
@@ -93,23 +103,36 @@ bool config_ok(string configfile, string dbfile, string gtkrcfile)
   if(Utils::Io::check_file(configfile)
         && !Utils::Io::check_file(configfile, true))
   {
-    cerr << "cannot write to config file " << configfile << endl;
+    error =  g_string_new("");
+    g_string_printf(error, _("Unable to modify file %s."), configfile.c_str());
+    Utils::Ui::print_error(_("Error"), error->str, 1);
+    g_string_free(error, true);
     return false;
   }
   
 
   if(!Utils::Io::check_file(dbfile))
   {    
-    cerr << "cannot open gnomecc database " << dbfile << endl;
-    return false;      
+    error =  g_string_new("");
+    g_string_printf(error, _("Could not open file %s."), dbfile.c_str());
+    Utils::Ui::print_error(_("Error"), error->str, 1);
+    g_string_free(error, true);
+    return false;
   }
 
-  
+
   return true;
 }
 
 
-
+void warning_log_handler (
+      const gchar *log_domain,
+      GLogLevelFlags log_level,
+      const gchar *message,
+      gpointer unused_data)
+{
+  Utils::Ui::print_error(_("Error"), message);
+}
 
 
 int main (int argc, char *argv[])
@@ -141,14 +164,11 @@ int main (int argc, char *argv[])
   string globalpath_engines = DATADIR + string("/gtk-engines/");
   string globalpath_profiles = string(DBDIR).append("/profiles/");
   string dbfile = string(DBDIR).append("/gnome-color-chooser.xml");
-  string gtkrcfile = string(getenv("HOME")).append("/.gtkrc-2.0").c_str();
-
+  string gtkrcfile = string(getenv("HOME")).append("/.gtkrc-2.0");
+  string customgtkrcfile = gtkrcfile.append("-gnome-color-chooser");
 
   cout << "Welcome to " << PACKAGE << " version " << VERSION
        << " for " << YOUR_OS << endl << endl;
-  //   << "[Datadir: " << DATADIR << "]" << endl
-  //   << "[Localedir: " << LOCALEDIR << "]" << endl
-  //   << "[Gettext Package: " << GETTEXT_PACKAGE << "]" << endl << endl;
 
 
   if(mkdir(configpath.c_str(), (mode_t)00700) != -1)
@@ -161,8 +181,11 @@ int main (int argc, char *argv[])
   }
 
 
-  if(!config_ok(configfile, dbfile, gtkrcfile))
+  if(!config_ok(configfile, dbfile, gtkrcfile, customgtkrcfile))
+  {
+    kit.run(); // run mainloop to make error messages appear on screen
     return 1;
+  }
 
 
   // config has to be loaded before the glade file
@@ -180,7 +203,9 @@ int main (int argc, char *argv[])
   }
   catch(const Gnome::Glade::XmlError& ex)
   {
-    cerr << endl << ex.what() << endl;
+    // "Error" is the caption of an error message
+    Utils::Ui::print_error(_("Error"), ex.what(), 1);
+    kit.run(); // run mainloop to make error messages appear on screen
     return 1;
   }
 
@@ -193,8 +218,12 @@ int main (int argc, char *argv[])
   refXml->get_widget_derived("window1", pWindow);
   if(pWindow)
   {
+    Utils::Ui::set_dialog_parent_window(pWindow);
+    g_log_set_handler (NULL, G_LOG_LEVEL_WARNING, warning_log_handler, NULL);
+
     pWindow->init(pConfig,
                   configfile,
+                  customgtkrcfile,
                   VERSION,
                   string(ICONDIR) + string("/gnome-color-chooser.svg"),
                   configpath_images,
@@ -214,7 +243,7 @@ int main (int argc, char *argv[])
 
 #else
 int main(void) {
-    cerr << "Tree support of libxml2 not compiled in\n";
+    std::cerr << "Tree support of libxml2 not compiled in\n";
     exit(1);
 }
 #endif

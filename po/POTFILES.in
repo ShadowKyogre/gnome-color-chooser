@@ -4,5 +4,7 @@
 src/gnome-color-chooser.glade
 src/gnome-color-chooser.desktop.in
 src/configloader.cc
+src/ioexception.cc
+src/main.cc
 src/mainwindow.cc
 src/treehandler.cc
