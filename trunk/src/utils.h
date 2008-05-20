@@ -27,6 +27,12 @@
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 
+namespace Gtk
+{
+  class Dialog;
+  class Window;
+}
+
 using std::string;
 
 
@@ -40,7 +46,7 @@ namespace GnomeCC
       static bool create_include(string filename, string include, string searchpattern = "");
       static string int2string(int);
       static string double2string(double, int fractionalDigits=2);
-      
+
       class Xml
       {
         public:
@@ -57,7 +63,7 @@ namespace GnomeCC
           static const string content2string(xmlNode* node);
           static const string lang2string(xmlNode *node);
       };
-      
+
       class Io
       {
         public:
@@ -71,6 +77,25 @@ namespace GnomeCC
           static bool copy_file(string src, string dst);
       };
 
+      class Ui
+      {
+        public:
+          static void set_dialog_parent_window(Gtk::Window *parent);
+
+          static void print_error(
+                string message1,
+                string message2 = "",
+                bool quit_mainloop = false);
+
+          static void close_dialog(
+                int response_id,
+                Gtk::Dialog *dialog,
+                bool quit_mainloop = false);
+
+        private:
+          static int m_quit_message_count;
+          static Gtk::Window *m_dialog_parent;
+      };
 
       // the following method has been copied from http://vektor.ca/bugs/gtkinfo.c
       // and adopted to use an output string instead of stdout

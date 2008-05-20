@@ -19,6 +19,8 @@
  */
 
 #include "ioexception.h"
+#include <glib/gi18n.h>
+#include <string>
 
 
 IoException::IoException(ExceptionType t)
@@ -38,12 +40,13 @@ string IoException::get_string()
   switch(m_type)
   {
     case ReadError:
-      return "IO: Read Error";
+      return _("Read Error");
       break;
     case WriteError:
-      return "IO: Write Error";
+      return _("Write Error");
       break;
   }
 
   return "";
 }
+

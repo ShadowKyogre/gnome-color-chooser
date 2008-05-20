@@ -10,6 +10,16 @@ gnome-color-chooser@punk-ass-bitch.org .
 Version 0.2.4
 
 * changed project license to GNU GPL3+
+* new (direct) runtime dependency: glib
+* new compiletime dependencies: glib, gnome-common
+* added following features:
+  - disable menubar and toolbar shadows
+  - change colors of hyperlinks used in (GTK+) applications
+  - also affect fast-user-switch-applet by panel settings
+* many "unimportant" changes like a decreased startup time by stripping down
+  indirect dependencies by default and a decreased compile time
+  (see ChangeLog for further details and problems that may occur using
+   GNU binutils < 2.17 due to these changes)
 
 
 Version 0.2.3

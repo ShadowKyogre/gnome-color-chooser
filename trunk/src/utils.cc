@@ -18,6 +18,10 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include "utils.h"
 
 #include <fstream>
@@ -28,6 +32,12 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <dirent.h> // not platform independent :(
+
+// Utils::UI
+#include <gtkmm/dialog.h>
+#include <gtkmm/main.h>
+#include <gtkmm/messagedialog.h>
+#include <gtkmm/window.h>
 
 using std::fstream;
 using std::ofstream;
@@ -552,6 +562,73 @@ bool Utils::Io::copy_file(string src, string dst)
 
 
 
+
+
+
+
+
+
+
+
+
+// Utils::Ui
+
+int Utils::Ui::m_quit_message_count = 0;
+
+Gtk::Window *Utils::Ui::m_dialog_parent = NULL;
+
+
+void Utils::Ui::set_dialog_parent_window(Gtk::Window *parent)
+{
+  m_dialog_parent = parent;
+}
+
+
+void Utils::Ui::print_error(
+      string message1,
+      string message2,
+      bool quit_mainloop)
+{
+  g_return_if_fail(message1 != "");
+  
+  Gtk::MessageDialog *dialog = new Gtk::MessageDialog(message1, false, Gtk::MESSAGE_ERROR);
+  dialog->set_modal(true);
+  dialog->set_title(PACKAGE_NAME);
+
+  if(message2 != "")
+    dialog->set_secondary_text(message2);
+
+  if(m_dialog_parent)
+    dialog->set_transient_for(*m_dialog_parent);
+
+  dialog->signal_response().connect(
+        sigc::bind( sigc::bind( sigc::ptr_fun(&Utils::Ui::close_dialog),
+              quit_mainloop), (Gtk::Dialog*)dialog) );
+
+  if(quit_mainloop)
+    m_quit_message_count++;
+
+  dialog->show();
+}
+
+
+void Utils::Ui::close_dialog(
+      int response_id,
+      Gtk::Dialog *dialog,
+      bool quit_mainloop)
+{
+  g_return_if_fail(dialog != NULL);
+
+  delete dialog;
+
+  if(quit_mainloop)
+  {
+    m_quit_message_count--;
+    
+    if(m_quit_message_count <= 0)
+      Gtk::Main::quit();
+  }
+}
 
 
 

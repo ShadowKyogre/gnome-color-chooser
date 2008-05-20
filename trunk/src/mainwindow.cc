@@ -70,7 +70,6 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gnome::Glade:
 
   m_refGlade->connect_clicked("main_cancel",        sigc::mem_fun(*this, &MainWindow::on_main_cancel));
   m_refGlade->connect_clicked("main_apply",         sigc::mem_fun(*this, &MainWindow::on_main_apply));
-  //m_refGlade->connect_clicked("main_ok",            sigc::mem_fun(*this, &MainWindow::on_main_ok));
   
   m_refGlade->connect_clicked("file_exit",          sigc::mem_fun(*this, &MainWindow::on_file_exit));
   m_refGlade->connect_clicked("file_new",           sigc::mem_fun(*this, &MainWindow::on_file_new));
@@ -172,6 +171,7 @@ void MainWindow::close()
 // connect and initialize all found widgets
 void MainWindow::init(TreeHandler* config,
                       string       configfile,
+                      string       customgtkrcfile,
                       string       version,
                       string       icon,
                       string       image_path,
@@ -180,9 +180,10 @@ void MainWindow::init(TreeHandler* config,
 {
   this->setConfig(config);
   this->setVersion(version);
-  this->image_path   = image_path;
-  this->m_filename   = configfile;
-  this->m_configfile = configfile;
+  this->image_path        = image_path;
+  this->m_filename        = configfile;
+  this->m_configfile      = configfile;
+  this->m_customgtkrcfile = customgtkrcfile;
 
   set_title(PACKAGE_NAME);
 
@@ -323,7 +324,6 @@ void MainWindow::init(TreeHandler* config,
     combobox->signal_changed().connect( sigc::bind( sigc::mem_fun(*this, &MainWindow::on_profile_changed), combobox) );
     combobox->init(m_pConfig);
   }
-
 
 }
 
@@ -535,31 +535,14 @@ void MainWindow::on_main_cancel()
 void MainWindow::on_main_apply()
 {
   // save settings
-//  m_pConfig->save();
   if(m_configfile != "")
   {
     ConfigLoader::export_config(m_pConfig, m_configfile, true, true); 
 
     // let all gtk apps redraw (save changes and let the apps re-read them)
-    this->write_gtkrc();
+    this->write_gtkrc(m_customgtkrcfile);
     this->redraw_all_gtk_apps();
   }
-}
-
-
-void MainWindow::on_main_ok()
-{
-//  m_pConfig->save(); // save database
-
-  if(m_configfile != "")
-  {
-    ConfigLoader::export_config(m_pConfig, m_configfile, true, true);
-    
-    // let all gtk apps redraw (save changes and let the apps re-read them)
-    this->write_gtkrc();
-    this->redraw_all_gtk_apps();
-  }
-  this->close();       // close this window
 }
 
 
@@ -766,9 +749,7 @@ void MainWindow::on_dialog_save(int response_id)
         }
 
       }
-      else
-        cerr << "Invalid filename \"" << file << "\"" << endl;
-      
+
     }
     else
       dialog->hide();
@@ -843,11 +824,9 @@ void MainWindow::redraw_all_gtk_apps()
 }
 
 
-void MainWindow::write_gtkrc()
+void MainWindow::write_gtkrc(string filename)
 {
-//todo: parameter: file to write to
-//  GtkrcExporter exporter = new GtkrcExporter();
-  string filename = getenv("HOME") + string("/.gtkrc-2.0-gnome-color-chooser");
+  g_return_if_fail(filename != "");
 
   Exporter* exporter = Exporter::create_exporter(Exporter::Gtkrc);
   try
@@ -856,7 +835,11 @@ void MainWindow::write_gtkrc()
   }
   catch(Exception &e)
   {
-    cerr << "Export to " << filename << " failed: " << e.get_string() << endl;
+
+    g_warning(
+          _("Export to file %s failed: %s."),
+          filename.c_str(),
+          e.get_string().c_str() );
   }
 
   delete exporter;
