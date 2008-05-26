@@ -146,7 +146,7 @@
     <!-- category name; comboboxes are button widgets with a dropdown list -->
     <_long_name>Comboboxes</_long_name>
     <class name="*.&lt;GtkComboBox&gt;.&lt;GtkCellView&gt;" type="widget_class"/>
-    <class name="*.gtk-combobox-popup-menu.*" type="widget"/>
+    <!-- <class name="*.gtk-combobox-popup-menu.*" type="widget"/> --> <!-- would affect its dropdown menu -->
     <element id="94" name="text[NORMAL]" value="#ff0000" type="color" override="no"/>
     <element id="95" name="text[PRELIGHT]" value="#00ff00" type="color" override="no"/>
     <!-- <element id="96" name="fg[SELECTED]" value="#ffffff" type="color" override="no"/> --> <!-- has no effect -->
