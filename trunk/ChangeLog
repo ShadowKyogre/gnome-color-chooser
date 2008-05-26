@@ -1,3 +1,14 @@
+2008-05-26  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* po/de.po:
+	translated new strings
+
+	* src/gnome-color-chooser.glade:
+	* src/gnome-color-chooser.xml.in:
+	* THANKS:
+	added new tab with color options for buttons and comboboxes, thanks
+	to nitrofurano for proposing this.
+
 2008-05-19  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* NEWS:

@@ -11,8 +11,8 @@
     <element id="4" name="bg[INSENSITIVE]" value="#EEEAB0" type="color" override="no"/>
     <element id="5" name="fg[NORMAL]" value="#ff0000" type="color" override="no"/>
     <element id="6" name="fg[PRELIGHT]" value="#00ff00" type="color" override="no"/>
-    <element id="7" name="fg[ACTIVE]" value="#ffff00" type="color" override="no"/>
-    <element id="8" name="fg[SELECTED]" value="#ffffff" type="color" override="no"/>
+    <element id="7" name="fg[SELECTED]" value="#ffffff" type="color" override="no"/>
+    <element id="8" name="fg[ACTIVE]" value="#ffff00" type="color" override="no"/>
     <element id="9" name="fg[INSENSITIVE]" value="#DBDACC" type="color" override="no"/>
     <element id="10" name="base[NORMAL]" value="#999999" type="color" override="no"/>
     <element id="11" name="base[PRELIGHT]" value="#ff0000" type="color" override="no"/>
@@ -21,8 +21,8 @@
     <element id="14" name="base[INSENSITIVE]" value="#EEEAB0" type="color" override="no"/>
     <element id="15" name="text[NORMAL]" value="#ff0000" type="color" override="no"/>
     <element id="16" name="text[PRELIGHT]" value="#00ff00" type="color" override="no"/>
-    <element id="17" name="text[ACTIVE]" value="#ffff00" type="color" override="no"/>
-    <element id="18" name="text[SELECTED]" value="#ffffff" type="color" override="no"/>
+    <element id="17" name="text[SELECTED]" value="#ffffff" type="color" override="no"/>
+    <element id="18" name="text[ACTIVE]" value="#ffff00" type="color" override="no"/>
     <element id="19" name="text[INSENSITIVE]" value="#DBDACC" type="color" override="no"/>
     <element id="20" name="xthickness" value="3" type="spin" min="0" max="20" override="no"/>
     <element id="21" name="ythickness" value="3" type="spin" min="0" max="20" override="no"/>
@@ -79,8 +79,8 @@
     <element id="30" name="bg[INSENSITIVE]" value="#EEEAB0" type="color" override="no"/>
     <element id="31" name="fg[NORMAL]" value="#ff0000" type="color" override="no"/>
     <element id="32" name="fg[PRELIGHT]" value="#00ff00" type="color" override="no"/>
-    <element id="33" name="fg[ACTIVE]" value="#ffff00" type="color" override="no"/>
-    <element id="34" name="fg[SELECTED]" value="#ffffff" type="color" override="no"/>
+    <element id="33" name="fg[SELECTED]" value="#ffffff" type="color" override="no"/>
+    <element id="34" name="fg[ACTIVE]" value="#ffff00" type="color" override="no"/>
     <element id="35" name="fg[INSENSITIVE]" value="#DBDACC" type="color" override="no"/>
     <element id="36" name="xthickness" value="1" type="spin" min="0" max="20" override="no"/>
     <element id="37" name="ythickness" value="1" type="spin" min="0" max="20" override="no"/>
@@ -127,9 +127,31 @@
   <category name="button">
     <!-- category name -->
     <_long_name>Buttons</_long_name>
-    <class name="GtkButton" type="class"/>
+    <class name="*.&lt;GtkButton&gt;*" type="widget_class"/>
     <element id="52" name="xthickness" value="2" type="spin" min="0" max="20" override="no"/>
     <element id="53" name="ythickness" value="1" type="spin" min="0" max="20" override="no"/>
+    <element id="83" name="bg[NORMAL]" value="#999999" type="color" override="no"/>
+    <element id="84" name="bg[PRELIGHT]" value="#ff0000" type="color" override="no"/>
+    <element id="85" name="bg[SELECTED]" value="#ffffff" type="color" override="no"/>
+    <element id="86" name="bg[ACTIVE]" value="#0000ff" type="color" override="no"/>
+    <element id="87" name="bg[INSENSITIVE]" value="#EEEAB0" type="color" override="no"/>
+    <element id="88" name="fg[NORMAL]" value="#ff0000" type="color" override="no"/>
+    <element id="89" name="fg[PRELIGHT]" value="#00ff00" type="color" override="no"/>
+    <!-- <element id="90" name="fg[SELECTED]" value="#ffffff" type="color" override="no"/> --> <!-- has no effect -->
+    <element id="91" name="fg[ACTIVE]" value="#ffff00" type="color" override="no"/>
+    <element id="92" name="fg[INSENSITIVE]" value="#DBDACC" type="color" override="no"/>
+    <element id="93" name="font_name" value="Arial 8" type="font" override="no"/>
+  </category>
+  <category name="combobox">
+    <!-- category name; comboboxes are button widgets with a dropdown list -->
+    <_long_name>Comboboxes</_long_name>
+    <class name="*.&lt;GtkComboBox&gt;.&lt;GtkCellView&gt;" type="widget_class"/>
+    <class name="*.gtk-combobox-popup-menu.*" type="widget"/>
+    <element id="94" name="text[NORMAL]" value="#ff0000" type="color" override="no"/>
+    <element id="95" name="text[PRELIGHT]" value="#00ff00" type="color" override="no"/>
+    <!-- <element id="96" name="fg[SELECTED]" value="#ffffff" type="color" override="no"/> --> <!-- has no effect -->
+    <element id="97" name="text[ACTIVE]" value="#ffff00" type="color" override="no"/>
+    <element id="98" name="text[INSENSITIVE]" value="#DBDACC" type="color" override="no"/>
   </category>
   <category name="_TOPLEVEL_">
     <element id="100" name="gtk-menu" value="16,16" type="iconsize" min="0" max="64" override="no"/>
