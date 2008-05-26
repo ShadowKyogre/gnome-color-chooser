@@ -1,3 +1,8 @@
+2008-05-27  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* src/gnome-color-chooser.xml.in:
+	made combobox settings not affect the dropdown menu of comboboxes
+
 2008-05-26  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* po/de.po:
