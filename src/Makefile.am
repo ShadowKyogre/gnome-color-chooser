@@ -30,6 +30,7 @@ gnome_color_chooser_SOURCES = 	main.cc \
 				mainwindow.cc \
 				enginewindow.cc \
 				infowindow.cc \
+				validatorwindow.cc \
 				modwidget.cc \
 				treehandler.cc \
 				checkbutton.cc \
@@ -50,6 +51,7 @@ gnome_color_chooser_SOURCES = 	main.cc \
 				mainwindow.h \
 				enginewindow.h \
 				infowindow.h \
+				validatorwindow.h \
 				modwidget.h \
 				treehandler.h \
 				checkbutton.h \

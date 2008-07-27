@@ -57,6 +57,7 @@ namespace GnomeCC
           //static const string get_lang(xmlNode* node, string content, bool original_text);
 
           static xmlNode* get_node(xmlNode* pNode, string name);
+          static const string get_language(xmlNode *node);
           
         private:
           static const bool needs_translation(string content);
@@ -75,6 +76,12 @@ namespace GnomeCC
           static bool remove_node(string path);
           static bool copy_directory(string src, string dst);
           static bool copy_file(string src, string dst);
+      };
+
+      class String
+      {
+        public:
+          static string to_lower(string str);
       };
 
       class Ui

@@ -26,6 +26,7 @@
 #include "treehandler.h"
 #include "mainwindow.h"
 #include "enginewindow.h"
+#include "validatorwindow.h"
 #include "modwidget.h"
 #include "combobox.h"
 #include "utils.h"
@@ -534,6 +535,8 @@ bool ConfigLoader::load_engine_schemas(string directory)
 
 bool ConfigLoader::load_engine_schema(string filename)
 {
+  g_return_val_if_fail(filename != "", 0);
+
   if(!Utils::Io::check_file(filename)) // if file does not exist (or is no regular file)
     return 0;
 
@@ -558,24 +561,55 @@ bool ConfigLoader::load_engine_schema(string filename)
   }
 
 
-  // check if engine options have name, type, and default value defined,
-  //   otherwise remove them from the tree!
-  xmlNode* element      = Utils::Xml::get_node(root->children, "option");
-  xmlNode* element_next = NULL;
-  while( element != NULL )
-  {
-    // find/save next element now, because the current element could get deleted
-    element_next = Utils::Xml::get_node(element->next, "option");
-    
-    if(Utils::Xml::get_property(element, "name") == "" \
-            || Utils::Xml::get_property(element, "type") == "" \
-            || Utils::Xml::get_property(element, "default") == "")
-    {
-      xmlUnlinkNode(element);
-      xmlFreeNode(element);
-    }
+  string schema_version = Utils::Xml::get_property(root, "schema_version");
+  string long_name = "";
 
-    element = element_next;
+  if(schema_version == "0.1")
+  {
+    long_name = Utils::Xml::get_property(root, "long_name");
+
+    // check if engine options have name, type, and default value defined,
+    //   otherwise remove them from the tree!
+    xmlNode* element      = Utils::Xml::get_node(root->children, "option");
+    xmlNode* element_next = NULL;
+    while( element != NULL )
+    {
+      // find/save next element now, because the current element could get deleted
+      element_next = Utils::Xml::get_node(element->next, "option");
+      
+      if(Utils::Xml::get_property(element, "name") == "" \
+              || Utils::Xml::get_property(element, "type") == "" \
+              || Utils::Xml::get_property(element, "default") == "")
+      {
+        xmlUnlinkNode(element);
+        xmlFreeNode(element);
+      }
+
+      element = element_next;
+    }
+  }
+/*
+  else if(schema_version == "0.2")
+  {
+//todo: set real xsd path!
+    if(ValidatorWindow::is_valid(filename.c_str(), (string(getenv("PWD")) + "/schema_0_2.xsd").c_str() ) <= 0)
+    {
+      g_debug("Engine Schema %s (schema_version %s) is invalid!",
+            filename.c_str(),
+            schema_version.c_str() );
+      xmlFreeDoc(doc);
+      return 0;
+    }
+    long_name = Utils::Xml::get_content(root, "long_name");
+  }
+*/
+  else
+  {
+    g_debug("Engine Schema %s (schema_version %s) is not supported!",
+          filename.c_str(),
+          schema_version != "" ? schema_version.c_str() : 0);
+    xmlFreeDoc(doc);
+    return 0;
   }
 
 
@@ -608,7 +642,7 @@ bool ConfigLoader::load_engine_schema(string filename)
   engine->name = name;
   engine->doc = doc;
   engine->next = NULL;
-  engine->lname = Utils::Xml::get_property(root, "long_name");
+  engine->lname = long_name;
 
   return 1;
 }

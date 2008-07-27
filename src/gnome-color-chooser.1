@@ -16,25 +16,30 @@
 .\"
 .\" Project email: <gnome-color-chooser@punk-ass-bitch.org>
 .\"
-.TH "GNOME Color Chooser" 1 2007-11-27
+.TH "GNOME Color Chooser" 1 2008-08-20
 .SH NAME
 gnome\-color\-chooser \- GTK\+/GNOME desktop appearance customization tool
 .SH SYNOPSIS
 .B gnome\-color\-chooser
 .RI [ options ]
+.RI [ filename ]
 .br
 .SH DESCRIPTION
 GNOME Color Chooser is an application for customizing the appearance of the
 GNOME desktop.
 .PP
+Filename:
+.br
+  Theme to open (*.gnomecc)
+.PP
 Features:
 .br
-* change colors and sizes of GTK widgets
+* change colors and sizes of GTK+ widgets
 .br
 * colorize desktop icons
 .br
-* configure installed gtk engines and let your current theme be drawn
-  by a gtk engine you want
+* configure installed GTK+ engines and let your current theme be drawn
+  by an installed GTK+ engine of your choice
 .BR
 .SH OPTIONS
 GNOME Color Chooser follows the usual GNU command line syntax, with long options starting
@@ -47,6 +52,9 @@ Show a summary of options.
 .TP
 .B \-\-version
 Show GNOME Color Chooser's version.
+.TP
+.B \-\-validator-only
+Start Engine Schema validator only.
 .TP
 Other standard GTK\+/GNOME options not listed here are also supported.
 .SH SEE ALSO

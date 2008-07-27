@@ -296,6 +296,15 @@ xmlNode* Utils::Xml::get_node(xmlNode* pNode, string name)
 
 
 
+const string Utils::Xml::get_language(xmlNode *node)
+{
+  return lang2string(node);
+}
+
+
+
+
+
 // Utils::Xml privates
 const bool Utils::Xml::needs_translation(string content)
 {
@@ -558,6 +567,33 @@ bool Utils::Io::copy_file(string src, string dst)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Utils::String
+
+
+string Utils::String::to_lower(string str)
+{
+  for (unsigned int i=0;i<strlen(str.c_str());i++)
+    if (str[i] >= 0x41 && str[i] <= 0x5A)
+      str[i] = str[i] + 0x20;
+
+  return str;
+}
 
 
 
