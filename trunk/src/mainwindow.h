@@ -27,6 +27,7 @@
 
 #include <glibmm/refptr.h>
 #include <libglademm/xml.h>
+#include <string>
 //#include <stack>
 
 class TreeHandler;
@@ -50,6 +51,7 @@ public:
   virtual ~MainWindow();
   void init(TreeHandler* config,
             string configfile,
+            string filename,
             string customgtkrcfile,
             string version,
             string icon,
@@ -80,6 +82,7 @@ protected:
   void on_file_export();
   void on_file_export_as_gtp();
   void on_file_install();
+  void on_tools_validate();
   void on_help_gtkinfo();
   void on_help_info();
   void on_dialog_open(int response_id);

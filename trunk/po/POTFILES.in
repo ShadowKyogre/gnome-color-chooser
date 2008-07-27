@@ -8,3 +8,4 @@ src/ioexception.cc
 src/main.cc
 src/mainwindow.cc
 src/treehandler.cc
+src/validatorwindow.cc

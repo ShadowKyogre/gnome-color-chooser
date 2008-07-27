@@ -1,3 +1,48 @@
+2008-07-27  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* po/POTFILES.in:
+	added src/validatorwindow.cc
+
+	* po/de.po:
+	100% translated strings as usual ;-)
+
+	* src/Makefile.am:
+	added validatorwindow.(h|cc)
+
+	* src/checkbutton.cc:
+	made comparison of checkbutton value (true/false) case-insensitive
+
+	* src/configloader.cc:
+	first preparation of the schema loader for newer schema formats
+
+	* src/exporter.cc:
+	* src/exporter.h:
+	(minor) moved an include from header to source file
+
+	* src/gnome-color-chooser.1:
+	added new command line options (filename and --validator-only)
+
+	* src/gnome-color-chooser.glade:
+	added validator window and its menu entry in the main window
+
+	* src/main.cc:
+	added custom command line options (filename of a GNOMECC theme to
+	load and --validator-only that starts the Engine Schema Validator
+	only instead of the full application)
+
+	* src/mainwindow.cc:
+	* src/mainwindow.h:
+	made mainwindow able to be initialized with a GNOMECC theme instead
+	of user settings, added menuentry Tools -> Engine Schema Validator
+
+	* src/utils.cc:
+	* src/utils.h:
+	added Utils::Xml::get_language(node), Utils::String::to_lower(string)
+
+	* src/validatorwindow.cc:
+	* src/validatorwindow.h:
+	initial commit
+
 2008-05-27  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* src/gnome-color-chooser.xml.in:

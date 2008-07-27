@@ -27,6 +27,7 @@
 #include "configloader.h"
 #include "enginewindow.h"
 #include "infowindow.h"
+#include "validatorwindow.h"
 #include "gtkrcexporter.h"
 #include "utils.h"
 #include "exception.h"
@@ -70,7 +71,7 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gnome::Glade:
 
   m_refGlade->connect_clicked("main_cancel",        sigc::mem_fun(*this, &MainWindow::on_main_cancel));
   m_refGlade->connect_clicked("main_apply",         sigc::mem_fun(*this, &MainWindow::on_main_apply));
-  
+
   m_refGlade->connect_clicked("file_exit",          sigc::mem_fun(*this, &MainWindow::on_file_exit));
   m_refGlade->connect_clicked("file_new",           sigc::mem_fun(*this, &MainWindow::on_file_new));
   m_refGlade->connect_clicked("file_open",          sigc::mem_fun(*this, &MainWindow::on_file_open));
@@ -79,7 +80,9 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gnome::Glade:
   //m_refGlade->connect_clicked("file_export_as_caption",       sigc::mem_fun(*this, &MainWindow::on_file_export));
   m_refGlade->connect_clicked("file_export_as_gtp", sigc::mem_fun(*this, &MainWindow::on_file_export_as_gtp));
   m_refGlade->connect_clicked("file_install",       sigc::mem_fun(*this, &MainWindow::on_file_install));
-  
+
+  m_refGlade->connect_clicked("tools_validate",     sigc::mem_fun(*this, &MainWindow::on_tools_validate));
+
   m_refGlade->connect_clicked("help_gtkinfo",       sigc::mem_fun(*this, &MainWindow::on_help_gtkinfo));
   m_refGlade->connect_clicked("help_info",          sigc::mem_fun(*this, &MainWindow::on_help_info));
   
@@ -164,13 +167,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::close()
 {
-	hide();
+  hide();
 }
 
 
 // connect and initialize all found widgets
 void MainWindow::init(TreeHandler* config,
                       string       configfile,
+                      string       filename,
                       string       customgtkrcfile,
                       string       version,
                       string       icon,
@@ -181,8 +185,8 @@ void MainWindow::init(TreeHandler* config,
   this->setConfig(config);
   this->setVersion(version);
   this->image_path        = image_path;
-  this->m_filename        = configfile;
   this->m_configfile      = configfile;
+  this->m_filename        = filename;
   this->m_customgtkrcfile = customgtkrcfile;
 
   set_title(PACKAGE_NAME);
@@ -314,8 +318,8 @@ void MainWindow::init(TreeHandler* config,
   if(!ConfigLoader::load_profiles(profile_dir))
     cout << "Couldn't find any gnomecc profile!" << endl;
 
-  if(!ConfigLoader::load_config(m_configfile, m_pConfig, m_refGlade, this))
-    cout << "Couldn't load gnomecc theme!" << endl;
+  if(!ConfigLoader::load_config(m_filename, m_pConfig, m_refGlade, this))
+    cout << "Couldn't load gnomecc theme '" << m_filename << "'!" << endl;
 
   m_refGlade->get_widget_derived("profilebox", combobox);
   if(combobox)
@@ -537,7 +541,7 @@ void MainWindow::on_main_apply()
   // save settings
   if(m_configfile != "")
   {
-    ConfigLoader::export_config(m_pConfig, m_configfile, true, true); 
+    ConfigLoader::export_config(m_pConfig, m_configfile, true, true);
 
     // let all gtk apps redraw (save changes and let the apps re-read them)
     this->write_gtkrc(m_customgtkrcfile);
@@ -761,6 +765,18 @@ void MainWindow::on_dialog_save(int response_id)
 void MainWindow::on_file_install()
 {
 //todo: implement ;-)
+}
+
+
+void MainWindow::on_tools_validate()
+{
+  ValidatorWindow *pWindow = 0;
+  m_refGlade->get_widget_derived("validatorwindow", pWindow);
+  if(pWindow)
+  {
+    pWindow->init(this);
+    pWindow->show();
+  }
 }
 
 

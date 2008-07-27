@@ -20,6 +20,9 @@
 
 #include "checkbutton.h"
 #include "treehandler.h"
+#include "utils.h"
+
+using namespace GnomeCC;
 
 
 CheckButton::CheckButton(BaseObjectType* cobject, const Glib::RefPtr<Gnome::Glade::Xml>& refGlade)
@@ -93,7 +96,7 @@ void CheckButton::reload()
 
       if((value = m_pConfig->getValue(this->category, this->id_string)) != "" && 
             (checked = m_pConfig->getChecked(this->category, this->id_string)) != ""  &&
-             value == checked)
+             Utils::String::to_lower(value) == Utils::String::to_lower(checked))
         this->set_active(true);
       else
         this->set_active(false);

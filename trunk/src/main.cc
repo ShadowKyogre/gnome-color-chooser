@@ -27,6 +27,7 @@
 #include "configloader.h"
 #include "exporter.h"
 #include "mainwindow.h"
+#include "validatorwindow.h"
 #include "gtpexporter.h"
 
 #include <iostream>
@@ -50,6 +51,15 @@ using namespace GnomeCC;
 
 
 #ifdef LIBXML_TREE_ENABLED
+
+struct OptionState
+{
+  gboolean validator_only;
+  gchar **filenames;
+};
+
+OptionState optionstate;
+
 
 bool config_ok(
       string configfile,
@@ -145,12 +155,24 @@ int main (int argc, char *argv[])
   textdomain(GETTEXT_PACKAGE);
 #endif
 
+  const GOptionEntry options[] = {
+    //translator note: used in --help message, describes the CLI command --validator-only
+    {"validator-only", '\0', 0, G_OPTION_ARG_NONE, &optionstate.validator_only, N_("Start Engine Schema validator only"), NULL},
+    //translator note: used in --help message, name of optional parameter (brackets!), please use uppercase letters only!
+    {G_OPTION_REMAINING, '\0', 0, G_OPTION_ARG_FILENAME_ARRAY, &optionstate.filenames, NULL, N_("[FILENAME]")},
+    {NULL} /* end the list */
+  };
+
+
+  GOptionContext *context = g_option_context_new("");
+  g_option_context_add_main_entries(context, options, GETTEXT_PACKAGE);
+
   GnomeProgram *program;
-  program = gnome_program_init
-                (PACKAGE, VERSION,
+  program = gnome_program_init(
+                 PACKAGE, VERSION,
                  LIBGNOMEUI_MODULE,
                  argc, argv,
-//                 GNOME_PARAM_POPT_TABLE, cmd_options_table,
+                 GNOME_PARAM_GOPTION_CONTEXT, context,
                  GNOME_PARAM_APP_DATADIR, DATADIR,
                  GNOME_PARAM_NONE);
 
@@ -213,16 +235,42 @@ int main (int argc, char *argv[])
   cout << "Initializing and starting " << PACKAGE << ".. " << flush;
 
 
+  if(optionstate.validator_only)
+  {
+    //Get the Glade-instantiated window:
+    ValidatorWindow* pWindow = 0;
+    refXml->get_widget_derived("validatorwindow", pWindow);
+    if(pWindow)
+    {
+      cout << "done (validator only)" << endl;
+      pWindow->init();
+      kit.run(*pWindow);
+    }
+
+    delete pWindow;
+    delete pConfig;
+    return 0;
+  }
+
+
   //Get the Glade-instantiated window:
   MainWindow* pWindow = 0;
   refXml->get_widget_derived("window1", pWindow);
   if(pWindow)
   {
+    string filename;
+
     Utils::Ui::set_dialog_parent_window(pWindow);
     g_log_set_handler (NULL, G_LOG_LEVEL_WARNING, warning_log_handler, NULL);
 
+    if(optionstate.filenames != NULL && optionstate.filenames[0] != NULL)
+      filename = optionstate.filenames[0];
+    else
+      filename = configfile;
+
     pWindow->init(pConfig,
                   configfile,
+                  filename,
                   customgtkrcfile,
                   VERSION,
                   string(ICONDIR) + string("/gnome-color-chooser.svg"),

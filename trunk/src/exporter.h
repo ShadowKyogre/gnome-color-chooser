@@ -21,7 +21,11 @@
 #ifndef _GNOMECC_EXPORTER_H
 #define _GNOMECC_EXPORTER_H
 
-#include "treehandler.h"
+#include <string>
+
+class TreeHandler;
+
+using std::string;
 
 
 class Exporter

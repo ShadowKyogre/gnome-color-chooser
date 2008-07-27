@@ -19,6 +19,7 @@
  */
 
 #include "exporter.h"
+#include "treehandler.h"
 #include "gtkrcexporter.h"
 #include "gtpexporter.h"
 
@@ -40,7 +41,6 @@ void Exporter::init(TreeHandler* config)
  */
 Exporter* Exporter::create_exporter(ExporterType t)
 {
-
   if (exporter_pConfig)
   {
     switch(t)
@@ -56,3 +56,5 @@ Exporter* Exporter::create_exporter(ExporterType t)
 
   return NULL;
 }
+
+
