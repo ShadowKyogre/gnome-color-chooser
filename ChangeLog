@@ -1,5 +1,12 @@
 2008-09-01  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
+	* src/gnome-color-chooser.glade:
+	* src/mainwindow.cc:
+	* src/mainwindow.h:
+	added revert button that instantly resets all theme modifications
+
+2008-09-01  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
 	* src/validatorwindow.cc:
 	made ValidatorWindow appear in taskbar if started with
 	  --validator-only,
