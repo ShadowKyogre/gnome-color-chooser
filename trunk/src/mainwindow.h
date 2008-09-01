@@ -71,6 +71,7 @@ protected:
   void redraw_all_gtk_apps();
 
   //Signal handlers:
+  void on_main_revert();
   void on_main_cancel();
   void on_main_apply();
   void on_main_ok();

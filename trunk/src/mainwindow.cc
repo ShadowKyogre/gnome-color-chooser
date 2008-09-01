@@ -69,6 +69,7 @@ MainWindow::MainWindow(BaseObjectType* cobject, const Glib::RefPtr<Gnome::Glade:
   //set_border_width(10); // Sets the border width of the window.
   //stick(); // Window appears on all user desktops
 
+  m_refGlade->connect_clicked("main_revert",        sigc::mem_fun(*this, &MainWindow::on_main_revert));
   m_refGlade->connect_clicked("main_cancel",        sigc::mem_fun(*this, &MainWindow::on_main_cancel));
   m_refGlade->connect_clicked("main_apply",         sigc::mem_fun(*this, &MainWindow::on_main_apply));
 
@@ -547,6 +548,13 @@ void MainWindow::on_main_apply()
     this->write_gtkrc(m_customgtkrcfile);
     this->redraw_all_gtk_apps();
   }
+}
+
+
+void MainWindow::on_main_revert()
+{
+  this->on_file_new();
+  this->on_main_apply();
 }
 
 
