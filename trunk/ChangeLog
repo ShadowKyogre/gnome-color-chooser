@@ -1,3 +1,10 @@
+2008-09-01  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* src/validatorwindow.cc:
+	made ValidatorWindow appear in taskbar if started with
+	  --validator-only,
+	added line and coloumn numbers in error messages
+
 2008-07-27  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* po/POTFILES.in:

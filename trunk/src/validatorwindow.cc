@@ -78,6 +78,8 @@ void ValidatorWindow::init(Gtk::Window* parent)
 
   if(parent)
     this->set_transient_for(*parent);
+  else
+    this->set_skip_taskbar_hint(false);
 
   xmlSetGenericErrorFunc(NULL, (xmlGenericErrorFunc)&ValidatorWindow::xml_error_handler);
 
@@ -202,8 +204,14 @@ void ValidatorWindow::xml_error_handler(void *ctx, const char *msg, ...)
   va_list args;
   
   GString *error =  g_string_new("");
+
+  xmlErrorPtr err = xmlGetLastError();
+  if(err)
+    //translator note: as in "error found on line x"
+    g_string_printf(error, "[%s %i,%i] ", _("Line"), err->line, err->int2);
+
   va_start(args, msg);
-  g_string_vprintf(error, msg, args);
+  g_string_append_vprintf(error, msg, args);
   va_end(args);
   m_text->get_buffer()->insert_at_cursor(error->str);
   g_string_free(error, true);
