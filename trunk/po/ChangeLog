@@ -1,0 +1,26 @@
+2008-09-03  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* LINGUAS:
+	added new translations: Hebrew, Occitan (post 1500), Polish,
+	  Brazilian Portugese, Russian, Thai
+	updated all other translations
+
+	the following translation files are affected:
+	* bg.po:
+	* cs.po:
+	* es.po:
+	* fr.po:
+	* he.po:
+	* hu.po:
+	* id.po:
+	* it.po:
+	* oc.po:
+	* pl.po:
+	* pt.po:
+	* pt_BR.po:
+	* ru.po:
+	* sv.po:
+	* th.po:
+	* tr.po:
+	* zh_CN.po:
+

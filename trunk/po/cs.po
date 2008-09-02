@@ -1,25 +1,123 @@
 # Czech translations for gnome-color-chooser package.
-# Copyright (C) 2007 Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>
+# Copyright (C) 2007-2008 Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>
 # This file is distributed under the same license as the gnome-color-chooser package.
-# Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>, 2007.
+# Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>, 2007-2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-color-chooser 0.2.1\n"
+"Project-Id-Version: gnome-color-chooser 0.2.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-27 15:02+0000\n"
-"PO-Revision-Date: 2007-11-26 17:55-0000\n"
-"Last-Translator: JackTheDipper <gnome-color-chooser@punk-ass-bitch.org>\n"
+"POT-Creation-Date: 2008-07-26 11:58+0200\n"
+"PO-Revision-Date: 2008-05-25 00:01+0000\n"
+"Last-Translator: Vojtěch Trefný <vojtech.trefny@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2007-09-27 21:18+0000\n"
+"X-Launchpad-Export-Date: 2008-09-02 21:12+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
+
+#~ msgid ""
+#~ "<span size='small'><u><b>ToDo:</b></u>\n"
+#~ "-> use tooltips to explain what each config is being for\n"
+#~ "-> simplify GUI and add a preview area\n"
+#~ "-> find translators! (please mail) ;-)</span>"
+#~ msgstr ""
+#~ "<span size='small'><u><b>ToDo:</b></u>\n"
+#~ "-> bublinová nápověda k vysvětlení voleb\n"
+#~ "-> zjednodušení rozhraní a náhledy\n"
+#~ "-> najít překladatele! (mailujte) ;-)</span>"
+
+#~ msgid "Panel (does nothing with my clearlooks-theme)"
+#~ msgstr "Panel (nefunguje s clearlooks)"
+
+#~ msgid "alt. selected"
+#~ msgstr "alt. zvolené"
+
+#~ msgid ""
+#~ "cs: Lucas \"Drom\" Lommer <llommer@svn.gnome.org>\n"
+#~ "de: JackTheDipper <gnome-color-chooser@punk-ass-bitch.org>\n"
+#~ "fr: zniavre mou <zniavre2048@gmail.com>\n"
+#~ "hu:  Erno Horvath <szerencsefia@gmail.com>\n"
+#~ "sv: Daniel Nylander <dnylande@gnome.org>\n"
+#~ "\n"
+#~ "Any new translation will be very appreciated.\n"
+#~ "Please contact me!\n"
+#~ "<gnome-color-chooser@punk-ass-bitch.org>"
+#~ msgstr "Lucas \"Drom\" Lommer <llommer@svn.gnome.org>"
+
+#~ msgid "gtk-apply"
+#~ msgstr "gtk-apply"
+
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-cancel"
+
+#~ msgid "gtk-ok"
+#~ msgstr "gtk-ok"
+
+#~ msgid "gtk-save"
+#~ msgstr "gtk-save"
+
+#~ msgid "GNOME Color Chooser"
+#~ msgstr "GNOME Color Chooser"
+
+#~ msgid "A tool for customizing the appereance of the GNOME desktop"
+#~ msgstr "Nástroj pro úpravu vzhledu prostředí GNOME"
+
+#~ msgid "[active]"
+#~ msgstr "[aktiv]"
+
+#~ msgid "[selected]"
+#~ msgstr "[selektiert]"
+
+#, fuzzy
+#~ msgid "gtk-info"
+#~ msgstr "gtk-ok"
 
 #: ../profiles/compact.xml.in.h:1
 msgid "Compact"
+msgstr "Kompaktní"
+
+#. category name
+#: ../src/gnome-color-chooser.xml.in.h:2 ../src/gnome-color-chooser.glade.h:31
+msgid "Buttons"
+msgstr "Tlačítka"
+
+#. category name; comboboxes are button widgets with a dropdown list
+#: ../src/gnome-color-chooser.xml.in.h:4
+msgid "Comboboxes"
 msgstr ""
+
+#. category name
+#: ../src/gnome-color-chooser.xml.in.h:6
+msgid "Desktop Icons"
+msgstr "Ikony na ploše"
+
+#. category name
+#: ../src/gnome-color-chooser.xml.in.h:8
+msgid "Global"
+msgstr "Globální"
+
+#. category name
+#: ../src/gnome-color-chooser.xml.in.h:10
+#: ../src/gnome-color-chooser.glade.h:51
+msgid "Panel"
+msgstr "Panel"
+
+#. category name
+#: ../src/gnome-color-chooser.xml.in.h:12
+msgid "Progress Bars"
+msgstr "Indikátory průběhu"
+
+#. category name
+#: ../src/gnome-color-chooser.xml.in.h:14
+msgid "Scrollbars"
+msgstr "Posuvníky"
+
+#. category name
+#: ../src/gnome-color-chooser.xml.in.h:16
+msgid "Tooltips"
+msgstr "Tipy"
 
 #: ../src/gnome-color-chooser.glade.h:1
 msgid ""
@@ -43,183 +141,219 @@ msgstr ""
 msgid "<b>Buttons</b>"
 msgstr "<b>Tlačítka</b>"
 
-#: ../src/gnome-color-chooser.glade.h:4
+#. Comboboxes are button widgets with a dropdown list, translations may be longer than the english word
+#: ../src/gnome-color-chooser.glade.h:5
+msgid "<b>Comboboxes</b>"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:6
 msgid "<b>Compiz</b>"
 msgstr "<b>Compiz</b>"
 
-#: ../src/gnome-color-chooser.glade.h:5
+#: ../src/gnome-color-chooser.glade.h:7
 msgid "<b>Default Configuration</b>"
 msgstr "<b>Výchozí nastavení</b>"
 
-#: ../src/gnome-color-chooser.glade.h:6
+#: ../src/gnome-color-chooser.glade.h:8
 msgid "<b>Desktop</b>"
 msgstr "<b>Plocha</b>"
 
-#: ../src/gnome-color-chooser.glade.h:7
+#: ../src/gnome-color-chooser.glade.h:9
 msgid "<b>Engines</b> [for advanced users!]"
 msgstr "<b>Engines</b> [pro pokročilé uživatele!]"
 
-#: ../src/gnome-color-chooser.glade.h:8
+#: ../src/gnome-color-chooser.glade.h:10
 msgid "<b>Entry Fields</b>"
 msgstr "<b>Vstupní pole</b>"
 
-#: ../src/gnome-color-chooser.glade.h:9
+#: ../src/gnome-color-chooser.glade.h:11
 msgid "<b>Icon Labels</b>"
 msgstr "<b>Popisky ikon</b>"
 
-#: ../src/gnome-color-chooser.glade.h:10
+#: ../src/gnome-color-chooser.glade.h:12
 msgid "<b>Icon sizes</b> (x² pixels)"
 msgstr "<b>Velikost ikon</b> (x² pixelů)"
 
-#: ../src/gnome-color-chooser.glade.h:11
+#: ../src/gnome-color-chooser.glade.h:13
 msgid "<b>Icons</b>"
 msgstr "<b>Ikony</b>"
 
-#: ../src/gnome-color-chooser.glade.h:12
+#. Abbreviation for Hyperlinks
+#: ../src/gnome-color-chooser.glade.h:15
+msgid "<b>Links</b>"
+msgstr "<b>Odkazy</b>"
+
+#: ../src/gnome-color-chooser.glade.h:16
 msgid "<b>Metacity</b> (normal)"
 msgstr "<b>Metacity</b> (výchozí)"
 
-#: ../src/gnome-color-chooser.glade.h:13
+#: ../src/gnome-color-chooser.glade.h:17
 msgid "<b>Normal</b>"
 msgstr "<b>Normal</b>"
 
-#: ../src/gnome-color-chooser.glade.h:14
+#: ../src/gnome-color-chooser.glade.h:18
 msgid "<b>Panel</b>"
 msgstr "<b>Panel</b>"
 
-#: ../src/gnome-color-chooser.glade.h:15
+#: ../src/gnome-color-chooser.glade.h:19
 msgid "<b>Progress Bars</b>"
 msgstr "<b>Progress bar</b>"
 
-#: ../src/gnome-color-chooser.glade.h:16
+#. Label of the frame that shows the result of the Schema Validation process
+#: ../src/gnome-color-chooser.glade.h:21
+msgid "<b>Result</b>"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:22
 msgid "<b>Scrollbars</b>"
 msgstr "<b>Posuvníky</b>"
 
-#: ../src/gnome-color-chooser.glade.h:17
+#: ../src/gnome-color-chooser.glade.h:23
 msgid "<b>Selection Box</b>"
 msgstr "<b>Výběr myší</b>"
 
-#: ../src/gnome-color-chooser.glade.h:18
+#: ../src/gnome-color-chooser.glade.h:24
 msgid "<b>Start Menu</b>"
 msgstr "<b>Hlavní nabídka</b>"
 
-#: ../src/gnome-color-chooser.glade.h:19
+#: ../src/gnome-color-chooser.glade.h:25
 msgid "<b>Tooltips</b>"
 msgstr "<b>Bublinová nápověda</b>"
 
-#: ../src/gnome-color-chooser.glade.h:20
+#: ../src/gnome-color-chooser.glade.h:26
 msgid "<b>Window Decoration</b>"
 msgstr "<b>Dekorace oken</b>"
 
-#: ../src/gnome-color-chooser.glade.h:21
+#: ../src/gnome-color-chooser.glade.h:27
 msgid "Background"
 msgstr "Pozadí"
 
-#: ../src/gnome-color-chooser.glade.h:22
+#: ../src/gnome-color-chooser.glade.h:28
 msgid "Background Opacity"
 msgstr "Průhlednost pozadí"
 
-#: ../src/gnome-color-chooser.glade.h:23
+#: ../src/gnome-color-chooser.glade.h:29
 msgid "Button"
 msgstr "Tlačítko"
 
-#: ../src/gnome-color-chooser.glade.h:24
+#: ../src/gnome-color-chooser.glade.h:30
 msgid "Button Size"
 msgstr "Velikost tlačítka"
 
-#: ../src/gnome-color-chooser.glade.h:25
+#: ../src/gnome-color-chooser.glade.h:32
 msgid "Color"
 msgstr "Barva"
 
-#: ../src/gnome-color-chooser.glade.h:26
+#: ../src/gnome-color-chooser.glade.h:33
 msgid "Desktop"
 msgstr "Plocha"
 
 #. Verb (to export)
-#: ../src/gnome-color-chooser.glade.h:28
+#: ../src/gnome-color-chooser.glade.h:35
 msgid "E_xport as"
 msgstr "E_xportovat jako"
 
-#: ../src/gnome-color-chooser.glade.h:29
+#. Label for the filechooserbutton that selects an Engine Schema XML file
+#: ../src/gnome-color-chooser.glade.h:37
+msgid "Engine Schema (XML)"
+msgstr ""
+
+#. Menubar entry
+#. translator note: window title
+#: ../src/gnome-color-chooser.glade.h:39 ../src/validatorwindow.cc:51
+msgid "Engine Schema Validator"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:40
 msgid "Engines"
 msgstr "Engines"
 
-#: ../src/gnome-color-chooser.glade.h:30
+#: ../src/gnome-color-chooser.glade.h:41
 msgid "Font"
 msgstr "Písmo"
 
-#: ../src/gnome-color-chooser.glade.h:31
+#: ../src/gnome-color-chooser.glade.h:42
 msgid "Foreground"
 msgstr "Popředí"
 
-#: ../src/gnome-color-chooser.glade.h:32
+#: ../src/gnome-color-chooser.glade.h:43
 msgid "Global Colors"
 msgstr "Globální barvy"
 
-#: ../src/gnome-color-chooser.glade.h:33
+#: ../src/gnome-color-chooser.glade.h:44
 msgid "Icons"
 msgstr "Ikony"
 
-#: ../src/gnome-color-chooser.glade.h:34
+#: ../src/gnome-color-chooser.glade.h:45
 msgid "Large Toolbar"
 msgstr "Velká nástrojová lišta"
 
-#: ../src/gnome-color-chooser.glade.h:35
+#: ../src/gnome-color-chooser.glade.h:46
 msgid "Menue (e.g. application or context menues)"
 msgstr "Nabídky (např. aplikační nebo kontextové)"
 
 #. visible in tooltip of render modes
-#: ../src/gnome-color-chooser.glade.h:37
+#: ../src/gnome-color-chooser.glade.h:48
 msgid "Modes: 0=normal, 1=lighten, 2=colorize, 3=colorize monochromely"
 msgstr "Mód: 0=normální, 1=vysvícený, 2=obarvený, 3=obarvený monochromatický"
 
-#: ../src/gnome-color-chooser.glade.h:38
+#: ../src/gnome-color-chooser.glade.h:49
 msgid "Not yet possible with GNOME"
 msgstr "Prozatím není v GNOME dostupné"
 
-#: ../src/gnome-color-chooser.glade.h:39
+#: ../src/gnome-color-chooser.glade.h:50
 msgid "Opacity"
 msgstr "Průhlednost"
 
-#: ../src/gnome-color-chooser.glade.h:40
-msgid "Panel"
-msgstr "Panel"
-
-#: ../src/gnome-color-chooser.glade.h:41
+#: ../src/gnome-color-chooser.glade.h:52
 msgid "Profile:"
-msgstr ""
+msgstr "Profil:"
 
-#: ../src/gnome-color-chooser.glade.h:42
+#: ../src/gnome-color-chooser.glade.h:53
 msgid "Specific"
 msgstr "Specifické"
 
-#: ../src/gnome-color-chooser.glade.h:43
+#: ../src/gnome-color-chooser.glade.h:54
 msgid "Start menue (needs panel restart!)"
 msgstr "Hlavní nabídka (vyžaduje restart panelu!)"
 
-#: ../src/gnome-color-chooser.glade.h:44
+#: ../src/gnome-color-chooser.glade.h:55
 msgid "Text"
 msgstr "Text"
 
-#: ../src/gnome-color-chooser.glade.h:45
+#: ../src/gnome-color-chooser.glade.h:56
 msgid "This color is only used if render mode is 2 or 3 (colorize)"
 msgstr ""
 "Barva je použita pouze je-li vykreslovací mód 2 nebo 3 (obarvený, "
 "obarvenýmonochromatický"
 
-#: ../src/gnome-color-chooser.glade.h:46
+#: ../src/gnome-color-chooser.glade.h:57
+msgid "This option does not affect all themes!"
+msgstr "Tato volba neovlivní všechna témata!"
+
+#: ../src/gnome-color-chooser.glade.h:58
 msgid "Title/Buttons"
 msgstr "Titulek/Tlačítka"
 
-#: ../src/gnome-color-chooser.glade.h:47
+#. Button Label of the Schema Validator
+#: ../src/gnome-color-chooser.glade.h:60
+msgid "Validate"
+msgstr ""
+
+#. Label for the filechooserbutton that selects a Validator Schema XSD file
+#: ../src/gnome-color-chooser.glade.h:62
+msgid "Validator Schema (XSD)"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:63
 msgid "Width"
 msgstr "Šířka"
 
-#: ../src/gnome-color-chooser.glade.h:48
+#: ../src/gnome-color-chooser.glade.h:64
 msgid "X-Padding"
 msgstr "Odsazení X"
 
-#: ../src/gnome-color-chooser.glade.h:49
+#: ../src/gnome-color-chooser.glade.h:65
 msgid ""
 "X-Padding\n"
 "(of widgets)"
@@ -227,11 +361,11 @@ msgstr ""
 "Odsazení X\n"
 "(widgety)"
 
-#: ../src/gnome-color-chooser.glade.h:51
+#: ../src/gnome-color-chooser.glade.h:67
 msgid "Y-Padding"
 msgstr "Odsazení Y"
 
-#: ../src/gnome-color-chooser.glade.h:52
+#: ../src/gnome-color-chooser.glade.h:68
 msgid ""
 "Y-Padding\n"
 "(of widgets)"
@@ -239,185 +373,221 @@ msgstr ""
 "Odsazení Y\n"
 "(widgety)"
 
-#: ../src/gnome-color-chooser.glade.h:54
+#: ../src/gnome-color-chooser.glade.h:70
 msgid "_File"
 msgstr "_Soubor"
 
-#: ../src/gnome-color-chooser.glade.h:55
+#: ../src/gnome-color-chooser.glade.h:71
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: ../src/gnome-color-chooser.glade.h:56
+#: ../src/gnome-color-chooser.glade.h:72
 msgid "_Install in GNOME"
 msgstr "_Instalovat do GNOME"
 
-#: ../src/gnome-color-chooser.glade.h:57
+#: ../src/gnome-color-chooser.glade.h:73
+msgid "_Tools"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:74
 msgid "activate hover effects"
 msgstr "Aktivovat hover efekt"
 
-#: ../src/gnome-color-chooser.glade.h:58
+#: ../src/gnome-color-chooser.glade.h:75
+msgid "active"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:76
 msgid "active window"
 msgstr "aktivní okno"
 
-#: ../src/gnome-color-chooser.glade.h:59
-msgid "alt. selected"
-msgstr "alt. zvolené"
-
-#: ../src/gnome-color-chooser.glade.h:60
+#: ../src/gnome-color-chooser.glade.h:77
 msgid "beautify icon labels (needed for icon label settings!)"
 msgstr "Hezké popisky ikon (nutné pro další nastavení!)"
 
-#: ../src/gnome-color-chooser.glade.h:61
+#: ../src/gnome-color-chooser.glade.h:78
 msgid "brightness"
 msgstr "jas"
 
-#: ../src/gnome-color-chooser.glade.h:62
+#: ../src/gnome-color-chooser.glade.h:79
 msgid "button pressed"
 msgstr "Stisknuté tlačítko"
 
-#: ../src/gnome-color-chooser.glade.h:63
+#: ../src/gnome-color-chooser.glade.h:80
 msgid "colorize with"
 msgstr "obarvit"
 
-#: ../src/gnome-color-chooser.glade.h:64
+#: ../src/gnome-color-chooser.glade.h:81
 msgid "deactivate (stock) icons"
 msgstr "Deaktivovat (stock) ikony"
 
-#: ../src/gnome-color-chooser.glade.h:65
+#: ../src/gnome-color-chooser.glade.h:82
 msgid "disabled"
 msgstr "neaktivní"
 
-#: ../src/gnome-color-chooser.glade.h:66
+#: ../src/gnome-color-chooser.glade.h:83
 msgid "export comments (for easy human theme editing)"
 msgstr "exportovat komentáře (pro snadnější editaci)"
 
-#: ../src/gnome-color-chooser.glade.h:67
+#: ../src/gnome-color-chooser.glade.h:84
 msgid "export disabled theme elements"
 msgstr "exportovat neaktivní elementy tématu"
 
-#: ../src/gnome-color-chooser.glade.h:68
+#: ../src/gnome-color-chooser.glade.h:85
 msgid "hover"
 msgstr "Hover"
 
-#: ../src/gnome-color-chooser.glade.h:69
+#: ../src/gnome-color-chooser.glade.h:86
 msgid "inactive window"
 msgstr "neaktivní okno"
 
-#: ../src/gnome-color-chooser.glade.h:70
+#: ../src/gnome-color-chooser.glade.h:87
 msgid "lighten"
 msgstr "zesvětlit"
 
-#: ../src/gnome-color-chooser.glade.h:71
+#: ../src/gnome-color-chooser.glade.h:88
 msgid "normal"
 msgstr "Normální"
 
-#: ../src/gnome-color-chooser.glade.h:72
+#: ../src/gnome-color-chooser.glade.h:89
+msgid "pressed"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:90
 msgid "render mode"
 msgstr "vykreslovací mód"
 
-#: ../src/gnome-color-chooser.glade.h:73
+#: ../src/gnome-color-chooser.glade.h:91
 msgid "saturation"
 msgstr "sytost"
 
-#: ../src/gnome-color-chooser.glade.h:74
+#: ../src/gnome-color-chooser.glade.h:92
 msgid "selected"
 msgstr "zvolené"
+
+#. as in unvisited link
+#: ../src/gnome-color-chooser.glade.h:94
+msgid "unvisited"
+msgstr "nenavštíveno"
+
+#: ../src/gnome-color-chooser.glade.h:95
+msgid "use shadowless Menubars"
+msgstr "použít nabídky bez stínů"
+
+#: ../src/gnome-color-chooser.glade.h:96
+msgid "use shadowless Toolbars"
+msgstr "použít nástrojové lišty bez stínů"
+
+#. as in (already) visited link
+#: ../src/gnome-color-chooser.glade.h:98
+msgid "visited"
+msgstr "navštíveno"
 
 #: ../src/gnome-color-chooser.desktop.in.h:1
 msgid "Customize your GNOME desktop"
 msgstr "Úprava vzhledu prostředí GNOME"
 
-#: ../src/configloader.cc:108 ../src/configloader.cc:1120
+#: ../src/configloader.cc:129 ../src/configloader.cc:1134
 msgid "Theme Default"
-msgstr ""
+msgstr "Výchozí pro téma"
 
-#: ../src/configloader.cc:873
+#: ../src/configloader.cc:758
 #, c-format
 msgid "Configuration of %s"
 msgstr "Konfigurace %s"
 
-#: ../src/configloader.cc:1119
+#: ../src/configloader.cc:1133
 msgid "None"
+msgstr "Žádný"
+
+#: ../src/ioexception.cc:43
+msgid "Read Error"
+msgstr "Chyba při čtení"
+
+#: ../src/ioexception.cc:46
+msgid "Write Error"
+msgstr "Chyba při zápisu"
+
+#: ../src/main.cc:76 ../src/main.cc:106
+#, c-format
+msgid "Could not open or create file %s."
+msgstr "Nemohu otevřít nebo vytvořit soubor %s."
+
+#. "Error" is the caption of an error message
+#: ../src/main.cc:77 ../src/main.cc:95 ../src/main.cc:107 ../src/main.cc:118
+#: ../src/main.cc:128 ../src/main.cc:144 ../src/main.cc:229
+msgid "Error"
+msgstr "Chyba"
+
+#: ../src/main.cc:94 ../src/main.cc:117
+#, c-format
+msgid "Unable to modify file %s."
+msgstr "Nemohu upravit soubor %s."
+
+#: ../src/main.cc:127
+#, c-format
+msgid "Could not open file %s."
+msgstr "Nemohu otevřít soubor %s."
+
+#. translator note: used in --help message, describes the CLI command --validator-only
+#: ../src/main.cc:160
+msgid "Start Engine Schema validator only"
+msgstr ""
+
+#. translator note: used in --help message, name of optional parameter (brackets!), please use uppercase letters only!
+#: ../src/main.cc:162
+msgid "[FILENAME]"
 msgstr ""
 
 #. dialog title
-#: ../src/mainwindow.cc:598
+#: ../src/mainwindow.cc:614
 msgid "Save Theme"
 msgstr "Uložit téma"
 
 #. dialog title
-#: ../src/mainwindow.cc:625
+#: ../src/mainwindow.cc:641
 msgid "Save Theme as"
 msgstr "Uložit téma jako..."
 
 #. dialog title
-#: ../src/mainwindow.cc:651
+#: ../src/mainwindow.cc:667
 msgid "Export Theme as"
 msgstr "Exportovat téma jako"
 
-#: ../src/mainwindow.cc:783
-msgid "A tool for customizing the appereance of the GNOME desktop"
-msgstr "Nástroj pro úpravu vzhledu prostředí GNOME"
+#: ../src/mainwindow.cc:809
+msgid "A tool for customizing the appearance of the GNOME desktop"
+msgstr "Nástroj k úpravě vzhledu pracovního prostředí GNOME."
 
-#: ../src/treehandler.cc:555
+#: ../src/mainwindow.cc:856
+#, c-format
+msgid "Export to file %s failed: %s."
+msgstr "Export do souboru %s selhal: %s."
+
+#: ../src/treehandler.cc:558
 msgid "Version"
-msgstr ""
+msgstr "Verze"
 
-#: ../src/treehandler.cc:556
+#: ../src/treehandler.cc:559
 msgid "Website"
-msgstr ""
+msgstr "Web"
 
-#: ../src/treehandler.cc:560
+#: ../src/treehandler.cc:563
 msgid "Author(s)"
+msgstr "Autoři"
+
+#: ../src/validatorwindow.cc:106
+msgid "No XML file specified!"
 msgstr ""
 
-#, fuzzy
-#~ msgid "gtk-info"
-#~ msgstr "gtk-ok"
+#: ../src/validatorwindow.cc:108
+msgid "No XSD file specified!"
+msgstr ""
 
-#~ msgid "gtk-ok"
-#~ msgstr "gtk-ok"
+#. translator note: message that appears if a validation has been successful
+#: ../src/validatorwindow.cc:113
+msgid "Validation passed!"
+msgstr ""
 
-#~ msgid "Panel (does nothing with my clearlooks-theme)"
-#~ msgstr "Panel (nefunguje s clearlooks)"
-
-#~ msgid ""
-#~ "<span size='small'><u><b>ToDo:</b></u>\n"
-#~ "-> use tooltips to explain what each config is being for\n"
-#~ "-> simplify GUI and add a preview area\n"
-#~ "-> find translators! (please mail) ;-)</span>"
-#~ msgstr ""
-#~ "<span size='small'><u><b>ToDo:</b></u>\n"
-#~ "-> bublinová nápověda k vysvětlení voleb\n"
-#~ "-> zjednodušení rozhraní a náhledy\n"
-#~ "-> najít překladatele! (mailujte) ;-)</span>"
-
-#~ msgid "GNOME Color Chooser"
-#~ msgstr "GNOME Color Chooser"
-
-#~ msgid "gtk-apply"
-#~ msgstr "gtk-apply"
-
-#~ msgid "gtk-cancel"
-#~ msgstr "gtk-cancel"
-
-#~ msgid "gtk-save"
-#~ msgstr "gtk-save"
-
-#~ msgid ""
-#~ "cs: Lucas \"Drom\" Lommer <llommer@svn.gnome.org>\n"
-#~ "de: JackTheDipper <gnome-color-chooser@punk-ass-bitch.org>\n"
-#~ "fr: zniavre mou <zniavre2048@gmail.com>\n"
-#~ "hu:  Erno Horvath <szerencsefia@gmail.com>\n"
-#~ "sv: Daniel Nylander <dnylande@gnome.org>\n"
-#~ "\n"
-#~ "Any new translation will be very appreciated.\n"
-#~ "Please contact me!\n"
-#~ "<gnome-color-chooser@punk-ass-bitch.org>"
-#~ msgstr "Lucas \"Drom\" Lommer <llommer@svn.gnome.org>"
-
-#~ msgid "[active]"
-#~ msgstr "[aktiv]"
-
-#~ msgid "[selected]"
-#~ msgstr "[selektiert]"
+#: ../src/validatorwindow.cc:116
+msgid "Validation failed!"
+msgstr ""
