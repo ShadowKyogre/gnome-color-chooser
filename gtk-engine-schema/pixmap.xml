@@ -43,7 +43,9 @@
     <child ref="window_edge">
       <minimum_occurs>0</minimum_occurs>
     </child>
-    <child ref="file"/>
+    <child ref="file">
+      <minimum_occurs>0</minimum_occurs>
+    </child>
     <child ref="border">
       <minimum_occurs>0</minimum_occurs>
     </child>
@@ -261,6 +263,10 @@
         </rule>
         <rule>
           <name>function</name>
+          <value>SHADOW_GAP</value>
+        </rule>
+        <rule>
+          <name>function</name>
           <value>EXTENSION</value>
         </rule>
       </or>
@@ -418,24 +424,6 @@
   </filename>
 
 
-  <tuple name="overlay_border">
-    <long_name>Overlay Border Sizes</long_name>
-    <section>hidden</section>
-    <condition>
-      <not>
-        <rule>
-          <name>overlay_file</name>
-          <value></value>
-        </rule>
-      </not>
-    </condition>
-    <child ref="t_border_left"/>
-    <child ref="t_border_right"/>
-    <child ref="t_border_top"/>
-    <child ref="t_border_bottom"/>
-  </tuple>
-
-
   <boolean name="overlay_stretch">
     <section>hidden</section>
     <condition>
@@ -448,6 +436,30 @@
     </condition>
     <default>true</default>
   </boolean>
+
+
+  <tuple name="overlay_border">
+    <long_name>Overlay Border Sizes</long_name>
+    <section>hidden</section>
+    <condition>
+      <and>
+        <not>
+          <rule>
+            <name>overlay_file</name>
+            <value></value>
+          </rule>
+        </not>
+        <rule>
+          <name>overlay_stretch</name>
+          <value>true</value>
+        </rule>
+      </and>
+    </condition>
+    <child ref="t_border_left"/>
+    <child ref="t_border_right"/>
+    <child ref="t_border_top"/>
+    <child ref="t_border_bottom"/>
+  </tuple>
 
 
   <enumeration name="arrow_direction">
@@ -475,7 +487,7 @@
     <entry value="LEFT">
       <long_name>Left</long_name>
     </entry>
-    <entry value="Right">
+    <entry value="RIGHT">
       <long_name>Right</long_name>
     </entry>
   </enumeration>
