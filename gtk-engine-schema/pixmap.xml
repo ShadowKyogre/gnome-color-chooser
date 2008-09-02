@@ -230,10 +230,6 @@
         </rule>
         <rule>
           <name>function</name>
-          <value>BOX_GAP</value>
-        </rule>
-        <rule>
-          <name>function</name>
           <value>SLIDER</value>
         </rule>
         <rule>
