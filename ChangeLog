@@ -1,3 +1,8 @@
+2008-09-03  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* src/gnome-color-chooser.glade:
+	marked "gtk-revert-to-saved" button as not translatable
+
 2008-09-01  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* src/gnome-color-chooser.glade:

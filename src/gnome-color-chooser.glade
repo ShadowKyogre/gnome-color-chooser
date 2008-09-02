@@ -6685,7 +6685,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="label" translatable="yes">gtk-revert-to-saved</property>
+                <property name="label" translatable="no">gtk-revert-to-saved</property>
                 <property name="use_stock">True</property>
                 <property name="response_id">0</property>
               </widget>
