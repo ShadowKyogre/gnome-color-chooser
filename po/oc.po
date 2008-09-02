@@ -1,4 +1,4 @@
-# Bulgarian translation for gnome-color-chooser
+# Occitan (post 1500) translation for gnome-color-chooser
 # Copyright (C) 2007-2008 Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>
 # This file is distributed under the same license as the gnome-color-chooser package.
 # Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>, 2007-2008.
@@ -6,42 +6,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-color-chooser\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2008-07-26 11:58+0200\n"
-"PO-Revision-Date: 2008-02-02 15:14+0000\n"
-"Last-Translator: Yasen Pramatarov <Unknown>\n"
-"Language-Team: Bulgarian <bg@li.org>\n"
+"PO-Revision-Date: 2008-04-01 17:44+0000\n"
+"Last-Translator: Cédric VALMARY <Unknown>\n"
+"Language-Team: Occitan (post 1500) <oc@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2008-09-02 21:12+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#~ msgid "gtk-apply"
-#~ msgstr "gtk-apply"
-
-#~ msgid "gtk-cancel"
-#~ msgstr "gtk-cancel"
-
-#~ msgid "gtk-ok"
-#~ msgstr "gtk-ok"
-
-#~ msgid "gtk-save"
-#~ msgstr "gtk-save"
-
-#~ msgid "GNOME Color Chooser"
-#~ msgstr "Избор на цветове за GNOME"
-
-#~ msgid "A tool for customizing the appereance of the GNOME desktop"
-#~ msgstr "Инструмент за настройка изгледа на работната площ на GNOME"
-
-#, fuzzy
-#~ msgid "gtk-info"
-#~ msgstr "gtk-ok"
-
 #: ../profiles/compact.xml.in.h:1
 msgid "Compact"
-msgstr "Компактно"
+msgstr "Compact"
 
 #. category name
 #: ../src/gnome-color-chooser.xml.in.h:2 ../src/gnome-color-chooser.glade.h:31
@@ -67,7 +45,7 @@ msgstr ""
 #: ../src/gnome-color-chooser.xml.in.h:10
 #: ../src/gnome-color-chooser.glade.h:51
 msgid "Panel"
-msgstr "Панел"
+msgstr "Tablèu de bòrd"
 
 #. category name
 #: ../src/gnome-color-chooser.xml.in.h:12
@@ -89,8 +67,8 @@ msgid ""
 "<b><span foreground=\"#ff0000\">Note:</span></b> Images are currently not "
 "exported!!"
 msgstr ""
-"<b><span foreground=\"#ff0000\">Забележка:</span></b> Засега изображенията "
-"не се изнасят!"
+"<b><span foreground=\"#ff0000\">Nòta:</span></b> Los imatges son pas estats "
+"exportats!!"
 
 #: ../src/gnome-color-chooser.glade.h:2
 msgid ""
@@ -98,13 +76,13 @@ msgid ""
 "with gtk2-themes that don't specify these values on their own, otherwise "
 "nothing will happen on a change ;-)"
 msgstr ""
-"<b><span foreground=\"#ff0000\">Забележка:</span></b> Тези настройки ще "
-"важат само за gtk2-теми, които не им задават свои стойности, иначе нищо няма "
-"да се промени ;-)"
+"<b><span foreground=\"#ff0000\">Note:</span></b> Los paramètres foncionaràn "
+"pas qu'amb los tèmas-gtk2 qu'especifican pas lors pròprias valors, "
+"autrament, los cambiaments de Gnome-color-chooseur prendràn pas efièch."
 
 #: ../src/gnome-color-chooser.glade.h:3
 msgid "<b>Buttons</b>"
-msgstr "<b>Бутони</b>"
+msgstr "<b>Botons</b>"
 
 #. Comboboxes are button widgets with a dropdown list, translations may be longer than the english word
 #: ../src/gnome-color-chooser.glade.h:5
@@ -117,31 +95,31 @@ msgstr "<b>Compiz</b>"
 
 #: ../src/gnome-color-chooser.glade.h:7
 msgid "<b>Default Configuration</b>"
-msgstr "<b>Настройка по подразбиране</b>"
+msgstr "<b>Configuracion per defaut</b>"
 
 #: ../src/gnome-color-chooser.glade.h:8
 msgid "<b>Desktop</b>"
-msgstr "<b>Работен плот</b>"
+msgstr "<b>Burèu</b>"
 
 #: ../src/gnome-color-chooser.glade.h:9
 msgid "<b>Engines</b> [for advanced users!]"
-msgstr "<b>Системи</b> [за напреднали потребители!]"
+msgstr "<b>Motors de rendut</b> [per utilizaires avançats!]"
 
 #: ../src/gnome-color-chooser.glade.h:10
 msgid "<b>Entry Fields</b>"
-msgstr "<b>Полета за въвеждане</b>"
+msgstr "<b>Zònas de picadas</b>"
 
 #: ../src/gnome-color-chooser.glade.h:11
 msgid "<b>Icon Labels</b>"
-msgstr "<b>Надписи на иконите</b>"
+msgstr "<b>Icònas Labèls</b>"
 
 #: ../src/gnome-color-chooser.glade.h:12
 msgid "<b>Icon sizes</b> (x² pixels)"
-msgstr "<b>Размери на иконите</b> (x² точки)"
+msgstr "<b>Talhas d'icònas</b> (x² Pixel)"
 
 #: ../src/gnome-color-chooser.glade.h:13
 msgid "<b>Icons</b>"
-msgstr "<b>Икони</b>"
+msgstr "<b>Icònas</b>"
 
 #. Abbreviation for Hyperlinks
 #: ../src/gnome-color-chooser.glade.h:15
@@ -150,19 +128,19 @@ msgstr ""
 
 #: ../src/gnome-color-chooser.glade.h:16
 msgid "<b>Metacity</b> (normal)"
-msgstr "<b>Metacity</b> (нормално)"
+msgstr "<b>Metacity</b> (normal)"
 
 #: ../src/gnome-color-chooser.glade.h:17
 msgid "<b>Normal</b>"
-msgstr "<b>Нормално</b>"
+msgstr "<b>Normal</b>"
 
 #: ../src/gnome-color-chooser.glade.h:18
 msgid "<b>Panel</b>"
-msgstr "<b>Панел</b>"
+msgstr "<b>Tablèu de bòrd</b>"
 
 #: ../src/gnome-color-chooser.glade.h:19
 msgid "<b>Progress Bars</b>"
-msgstr ""
+msgstr "<b>Barra de progression</b>"
 
 #. Label of the frame that shows the result of the Schema Validation process
 #: ../src/gnome-color-chooser.glade.h:21
@@ -171,52 +149,52 @@ msgstr ""
 
 #: ../src/gnome-color-chooser.glade.h:22
 msgid "<b>Scrollbars</b>"
-msgstr "<b>Плъзгачи</b>"
+msgstr "<b>Barra de desfilament</b>"
 
 #: ../src/gnome-color-chooser.glade.h:23
 msgid "<b>Selection Box</b>"
-msgstr "<b>Поле за отметка</b>"
+msgstr "<b>Zòna de seleccion</b>"
 
 #: ../src/gnome-color-chooser.glade.h:24
 msgid "<b>Start Menu</b>"
-msgstr "<b>Начално меню</b>"
+msgstr "<b>Menut amodar</b>"
 
 #: ../src/gnome-color-chooser.glade.h:25
 msgid "<b>Tooltips</b>"
-msgstr "<b>Подсказки</b>"
+msgstr "<b>Infobullas</b>"
 
 #: ../src/gnome-color-chooser.glade.h:26
 msgid "<b>Window Decoration</b>"
-msgstr "<b>Рамки на прозорците</b>"
+msgstr "<b>Decorator de fenèstra</b>"
 
 #: ../src/gnome-color-chooser.glade.h:27
 msgid "Background"
-msgstr "Фон"
+msgstr "Rèire plan"
 
 #: ../src/gnome-color-chooser.glade.h:28
 msgid "Background Opacity"
-msgstr "Прозрачност на фона"
+msgstr "Rèire plan opacificat"
 
 #: ../src/gnome-color-chooser.glade.h:29
 msgid "Button"
-msgstr "Бутон"
+msgstr "Boton"
 
 #: ../src/gnome-color-chooser.glade.h:30
 msgid "Button Size"
-msgstr "Размер на бутоните"
+msgstr "Talha dels botons"
 
 #: ../src/gnome-color-chooser.glade.h:32
 msgid "Color"
-msgstr "Цвят"
+msgstr "Color"
 
 #: ../src/gnome-color-chooser.glade.h:33
 msgid "Desktop"
-msgstr "Работен плот"
+msgstr "Burèu"
 
 #. Verb (to export)
 #: ../src/gnome-color-chooser.glade.h:35
 msgid "E_xport as"
-msgstr "И_знасяне като"
+msgstr "E_xportar jos"
 
 #. Label for the filechooserbutton that selects an Engine Schema XML file
 #: ../src/gnome-color-chooser.glade.h:37
@@ -231,66 +209,68 @@ msgstr ""
 
 #: ../src/gnome-color-chooser.glade.h:40
 msgid "Engines"
-msgstr "Системи"
+msgstr "Motor de rendut"
 
 #: ../src/gnome-color-chooser.glade.h:41
 msgid "Font"
-msgstr "Шрифт"
+msgstr "Poliça"
 
 #: ../src/gnome-color-chooser.glade.h:42
 msgid "Foreground"
-msgstr "Преден план"
+msgstr "Primièr plan"
 
 #: ../src/gnome-color-chooser.glade.h:43
 msgid "Global Colors"
-msgstr "Общи цветове"
+msgstr "Colors globalas"
 
 #: ../src/gnome-color-chooser.glade.h:44
 msgid "Icons"
-msgstr "Икони"
+msgstr "Icònas"
 
 #: ../src/gnome-color-chooser.glade.h:45
 msgid "Large Toolbar"
-msgstr "Голяма лента с инструменти"
+msgstr "Barra d'espleches granda"
 
 #: ../src/gnome-color-chooser.glade.h:46
 msgid "Menue (e.g. application or context menues)"
-msgstr ""
+msgstr "Menut (ex: aplicacions o menuts contextual)"
 
 #. visible in tooltip of render modes
 #: ../src/gnome-color-chooser.glade.h:48
 msgid "Modes: 0=normal, 1=lighten, 2=colorize, 3=colorize monochromely"
-msgstr ""
-"Режими: 0 - нормално, 1 - изсветляване, 2 - оцветяване, 3 - едноцветно "
-"оцветяване"
+msgstr "Mòdes: 0=normal, 1=esclarzir, 2=acolorir, 3=acolorir monocròm"
 
 #: ../src/gnome-color-chooser.glade.h:49
 msgid "Not yet possible with GNOME"
-msgstr "Засега не е възможно в GNOME"
+msgstr "Pas encara possible amb GNOME"
 
 #: ../src/gnome-color-chooser.glade.h:50
 msgid "Opacity"
-msgstr "Непрозрачност"
+msgstr "Opacitat"
 
 #: ../src/gnome-color-chooser.glade.h:52
 msgid "Profile:"
-msgstr "Профил:"
+msgstr "Perfil :"
 
 #: ../src/gnome-color-chooser.glade.h:53
 msgid "Specific"
-msgstr ""
+msgstr "Especific"
 
 #: ../src/gnome-color-chooser.glade.h:54
 msgid "Start menue (needs panel restart!)"
-msgstr "Начално меню (изисква презареждане на панела)"
+msgstr ""
+"Boton del menut\n"
+"(necessita de tornar amodar lo tablèu de bòrd (panel)!)"
 
 #: ../src/gnome-color-chooser.glade.h:55
 msgid "Text"
-msgstr "Текст"
+msgstr "Tèxt"
 
 #: ../src/gnome-color-chooser.glade.h:56
 msgid "This color is only used if render mode is 2 or 3 (colorize)"
-msgstr "Този цвят се ползва само при режими на оцветяване 2 или 3"
+msgstr ""
+"Aquesta color serà pas utilizada que se lo mòde de rendut es en posicion 2 o "
+"3 (acolorir)"
 
 #: ../src/gnome-color-chooser.glade.h:57
 msgid "This option does not affect all themes!"
@@ -298,7 +278,7 @@ msgstr ""
 
 #: ../src/gnome-color-chooser.glade.h:58
 msgid "Title/Buttons"
-msgstr "Заглавия/Бутони"
+msgstr "Títol/Botons"
 
 #. Button Label of the Schema Validator
 #: ../src/gnome-color-chooser.glade.h:60
@@ -312,43 +292,43 @@ msgstr ""
 
 #: ../src/gnome-color-chooser.glade.h:63
 msgid "Width"
-msgstr "Широчина"
+msgstr "Largor"
 
 #: ../src/gnome-color-chooser.glade.h:64
 msgid "X-Padding"
-msgstr "Отместване по Х"
+msgstr "Escart sus l'ais x"
 
 #: ../src/gnome-color-chooser.glade.h:65
 msgid ""
 "X-Padding\n"
 "(of widgets)"
 msgstr ""
-"Отместване по Х\n"
-"(на обектите)"
+"Escart sus l'ais x\n"
+"(dels Widgets)"
 
 #: ../src/gnome-color-chooser.glade.h:67
 msgid "Y-Padding"
-msgstr "Отместване по Y"
+msgstr "Escart sus l'ais y"
 
 #: ../src/gnome-color-chooser.glade.h:68
 msgid ""
 "Y-Padding\n"
 "(of widgets)"
 msgstr ""
-"Отместване по Y\n"
-"(на обектите)"
+"Escart sus l'ais y\n"
+"(dels Widgets)"
 
 #: ../src/gnome-color-chooser.glade.h:70
 msgid "_File"
-msgstr "_Файл"
+msgstr "_Fichièr"
 
 #: ../src/gnome-color-chooser.glade.h:71
 msgid "_Help"
-msgstr "Помо_щ"
+msgstr "_Ajuda"
 
 #: ../src/gnome-color-chooser.glade.h:72
 msgid "_Install in GNOME"
-msgstr "_Инсталиране в GNOME"
+msgstr "_Installacion jos GNOME"
 
 #: ../src/gnome-color-chooser.glade.h:73
 msgid "_Tools"
@@ -356,7 +336,7 @@ msgstr ""
 
 #: ../src/gnome-color-chooser.glade.h:74
 msgid "activate hover effects"
-msgstr "включване на ефекти за мишката"
+msgstr "Activar los efièches de susbrilhança"
 
 #: ../src/gnome-color-chooser.glade.h:75
 msgid "active"
@@ -364,56 +344,55 @@ msgstr ""
 
 #: ../src/gnome-color-chooser.glade.h:76
 msgid "active window"
-msgstr "активен прозорец"
+msgstr "Fenèstra activa"
 
 #: ../src/gnome-color-chooser.glade.h:77
 msgid "beautify icon labels (needed for icon label settings!)"
-msgstr ""
-"красиви етикети на иконите (изисква се за настройка етикетите на иконите)"
+msgstr "Abelir las icònas (indispensable per l'edicion de las icònas!)"
 
 #: ../src/gnome-color-chooser.glade.h:78
 msgid "brightness"
-msgstr "яркост"
+msgstr "Luminositat"
 
 #: ../src/gnome-color-chooser.glade.h:79
 msgid "button pressed"
-msgstr "натиснат бутон"
+msgstr "boton quichat"
 
 #: ../src/gnome-color-chooser.glade.h:80
 msgid "colorize with"
-msgstr "оцветяване с"
+msgstr "acolorir amb"
 
 #: ../src/gnome-color-chooser.glade.h:81
 msgid "deactivate (stock) icons"
-msgstr "изключване (на стандартните) икони"
+msgstr "desactivar (Stock) las icònas"
 
 #: ../src/gnome-color-chooser.glade.h:82
 msgid "disabled"
-msgstr "изключено"
+msgstr "desactivat"
 
 #: ../src/gnome-color-chooser.glade.h:83
 msgid "export comments (for easy human theme editing)"
-msgstr "изнасяне на коментарите (за лесно редактиране темата на ръка)"
+msgstr "exportar de comentaris (Per una edicion aisida del tèma Human)"
 
 #: ../src/gnome-color-chooser.glade.h:84
 msgid "export disabled theme elements"
-msgstr "изнасяне на изключените от темата елементи"
+msgstr "exportar los elements del tèma desactivats"
 
 #: ../src/gnome-color-chooser.glade.h:85
 msgid "hover"
-msgstr "преминаване отгоре"
+msgstr "susbrilhança"
 
 #: ../src/gnome-color-chooser.glade.h:86
 msgid "inactive window"
-msgstr "неактивен прозорец"
+msgstr "Fenèstra inactiva"
 
 #: ../src/gnome-color-chooser.glade.h:87
 msgid "lighten"
-msgstr "осветяване"
+msgstr "esclarzir"
 
 #: ../src/gnome-color-chooser.glade.h:88
 msgid "normal"
-msgstr "нормално"
+msgstr "normal"
 
 #: ../src/gnome-color-chooser.glade.h:89
 msgid "pressed"
@@ -421,15 +400,15 @@ msgstr ""
 
 #: ../src/gnome-color-chooser.glade.h:90
 msgid "render mode"
-msgstr "режим на изобразяване"
+msgstr "mòde de rendut"
 
 #: ../src/gnome-color-chooser.glade.h:91
 msgid "saturation"
-msgstr "насищане"
+msgstr "saturacion"
 
 #: ../src/gnome-color-chooser.glade.h:92
 msgid "selected"
-msgstr "избрано"
+msgstr "seleccionat"
 
 #. as in unvisited link
 #: ../src/gnome-color-chooser.glade.h:94
@@ -451,20 +430,20 @@ msgstr ""
 
 #: ../src/gnome-color-chooser.desktop.in.h:1
 msgid "Customize your GNOME desktop"
-msgstr "Настройка работния плот на GNOME"
+msgstr "Customizatz vòstre burèu GNOME"
 
 #: ../src/configloader.cc:129 ../src/configloader.cc:1134
 msgid "Theme Default"
-msgstr "По подразбиране за темата"
+msgstr "Tèma per defaut"
 
 #: ../src/configloader.cc:758
 #, c-format
 msgid "Configuration of %s"
-msgstr "Настройка на %s"
+msgstr "Configuracion de %s"
 
 #: ../src/configloader.cc:1133
 msgid "None"
-msgstr "Без"
+msgstr "Pas cap"
 
 #: ../src/ioexception.cc:43
 msgid "Read Error"
@@ -508,17 +487,17 @@ msgstr ""
 #. dialog title
 #: ../src/mainwindow.cc:614
 msgid "Save Theme"
-msgstr "Запазване на темата"
+msgstr "Salvagardar lo tèma"
 
 #. dialog title
 #: ../src/mainwindow.cc:641
 msgid "Save Theme as"
-msgstr "Запазване на темата като"
+msgstr "Salvagardar lo tèma jos"
 
 #. dialog title
 #: ../src/mainwindow.cc:667
 msgid "Export Theme as"
-msgstr "Изнасяне на темата като"
+msgstr "Exportar un tèma jos"
 
 #: ../src/mainwindow.cc:809
 msgid "A tool for customizing the appearance of the GNOME desktop"
@@ -531,15 +510,15 @@ msgstr ""
 
 #: ../src/treehandler.cc:558
 msgid "Version"
-msgstr "Версия"
+msgstr "Version"
 
 #: ../src/treehandler.cc:559
 msgid "Website"
-msgstr "Уеб-страница"
+msgstr "Sit web"
 
 #: ../src/treehandler.cc:563
 msgid "Author(s)"
-msgstr "Автор(и)"
+msgstr "Autor(s)"
 
 #: ../src/validatorwindow.cc:106
 msgid "No XML file specified!"
