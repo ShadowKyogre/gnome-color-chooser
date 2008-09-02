@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:xml="http://www.w3.org/XML/1998/namespace">
+
+  <xsd:import
+        namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="http://www.w3.org/2001/03/xml.xsd"/>
+
+
+  <xsd:element name="engine">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="metainfo"/>
+        <xsd:group ref="optiongroup" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <xsd:attribute name="module_name" type="xsd:Name" use="required"/>
+      <xsd:attribute name="schema_version" use="required" fixed="0.2"/>
+    </xsd:complexType>
+    <xsd:key name="unique_option_names">
+      <xsd:selector xpath="color|boolean|integer|real|enumeration|string|filename|tuple|group"/>
+      <xsd:field xpath="@name"/>
+    </xsd:key>
+    <xsd:keyref name="valid_child_references_in_groups" refer="unique_option_names">
+      <xsd:selector xpath="group/child"/>
+      <xsd:field xpath="@ref"/>
+    </xsd:keyref>
+    <xsd:key name="unique_option_names_excluding_groups_and_tuples">
+      <xsd:selector xpath="color|boolean|integer|real|enumeration|string|filename"/>
+      <xsd:field xpath="@name"/>
+    </xsd:key>
+    <xsd:keyref name="valid_child_references_in_tuples" refer="unique_option_names_excluding_groups_and_tuples">
+      <xsd:selector xpath="tuple/child"/>
+      <xsd:field xpath="@ref"/> <!-- 'content' would be "." -->
+    </xsd:keyref>
+    <xsd:keyref name="valid_child_references_in_conditions" refer="unique_option_names_excluding_groups_and_tuples">
+      <xsd:selector xpath=".//rule"/> <!-- affecting all <rule> children independent of its sublevel -->
+      <xsd:field xpath="name"/>
+    </xsd:keyref>
+    <xsd:key name="unique_section_names">
+      <xsd:selector xpath="section"/>
+      <xsd:field xpath="@name"/>
+    </xsd:key>
+    <xsd:keyref name="valid_section_names" refer="unique_section_names">
+      <xsd:selector xpath="color|boolean|integer|real|enumeration|string|filename|tuple|group"/>
+      <xsd:field xpath="section"/>
+    </xsd:keyref>
+  </xsd:element>
+  
+  <xsd:element name="metainfo">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="descriptive_tag">
+          <xsd:sequence>
+            <xsd:element name="version" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="license" type="t_license"/>
+            <xsd:element name="website" type="httpURI" minOccurs="0"/>
+            <xsd:element name="author" type="t_author" maxOccurs="unbounded"/>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:group name="optiongroup">
+    <xsd:choice>
+      <xsd:element name="color" type="skeleton_option_color"/>
+      <xsd:element name="boolean" type="skeleton_option_boolean"/>
+      <xsd:element name="enumeration" type="skeleton_option_enumeration"/>
+      <xsd:element name="string" type="skeleton_option_string"/>
+      <xsd:element name="integer" type="skeleton_option_integer"/>
+      <xsd:element name="real" type="skeleton_option_real"/>
+      <xsd:element name="filename" type="skeleton_option_filename"/>
+      <xsd:element name="tuple" type="skeleton_option_tuple"/>
+      <xsd:element name="group" type="skeleton_option_group"/>
+      <xsd:element name="section" type="skeleton_section"/>
+    </xsd:choice>
+  </xsd:group>
+
+
+
+
+
+
+
+
+  <!-- global elements and types -->
+
+  <xsd:element name="long_name" type="translatable_string"/>
+  <xsd:element name="description" type="translatable_string"/>
+  <xsd:element name="comment" type="translatable_string"/>
+
+<!-- todo: check whether/how an (additional) unlocalized string can be forced -->
+
+  <xsd:complexType name="translatable_string">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute ref="xml:lang"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="t_license">
+    <xsd:choice>
+      <xsd:sequence>
+        <xsd:element name="id">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:pattern value="[a-zA-Z]+[a-zA-Z0-9]*([0-9]+(\.)?[0-9]*(\+)?)?"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="url" type="httpURI" minOccurs="0"/>
+      </xsd:sequence>
+      <xsd:sequence>
+        <xsd:element name="name" type="xsd:normalizedString"/>
+        <xsd:choice>
+          <xsd:element name="text" type="translatable_string" maxOccurs="unbounded"/>
+          <xsd:element name="url" type="httpURI"/>
+        </xsd:choice>
+      </xsd:sequence>
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:complexType name="t_author">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="email" type="emailURI" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="t_bool">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="true"/>
+      <xsd:enumeration value="false"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="t_real">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="([0-9]+(\.)?)|([0-9]*\.[0-9]+)"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="t_filetype">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="all"/>
+      <xsd:enumeration value="image"/> <!-- could e.g. be implemented by using the image filter of the filechooser dialog -->
+      <xsd:enumeration value="css"/> <!-- could e.g. be implemented by using a suffix filter in the filechooser dialog (*.css) -->
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="t_unsignedInt_or_unbounded">
+      <xsd:union memberTypes="xsd:unsignedInt t_unbounded"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="t_unbounded">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="unbounded"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="t_condition">
+    <xsd:sequence>
+      <xsd:group ref="condition_group"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:group name="condition_group">
+    <xsd:choice>
+      <xsd:element name="and" type="t_condition_child"/>
+      <xsd:element name="or" type="t_condition_child"/>
+      <xsd:element name="not" type="t_condition_not"/>
+      <xsd:element name="rule" type="t_condition_rule"/>
+    </xsd:choice>
+  </xsd:group>
+
+  <xsd:complexType name="t_condition_child">
+    <xsd:choice>
+      <xsd:group ref="condition_group" minOccurs="2" maxOccurs="unbounded"/>
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:complexType name="t_condition_not">
+    <xsd:sequence>
+      <xsd:group ref="condition_group"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="t_condition_rule">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="value" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="httpURI">
+    <xsd:restriction base="xsd:anyURI">
+      <xsd:pattern value="https?://.*"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+<!--
+  <xsd:simpleType name="fileURI_or_empty">
+    <xsd:restriction base="xsd:anyURI">
+      <xsd:pattern value="(file://.*)?"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+-->
+
+  <xsd:simpleType name="emailURI">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[^@]+@[^\.]+\..+"/>
+    </xsd:restriction> 
+  </xsd:simpleType>
+
+  <xsd:complexType name="descriptive_tag">
+    <xsd:sequence>
+      <xsd:element ref="long_name" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="description" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="comment" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="skeleton_option" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="descriptive_tag">
+        <xsd:sequence>
+          <xsd:element name="section" type="xsd:string" minOccurs="0" default="main"/> <!-- todo: again: check whether libxml2 provides proper preprocessing -->
+          <xsd:element name="condition" type="t_condition" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="skeleton_option_color">
+    <xsd:complexContent>
+      <xsd:extension base="skeleton_option">
+        <xsd:sequence>
+          <xsd:element name="default" type="xsd:string"/>
+<!--
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="nillable" type="t_bool" default="false"/>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+-->
+<!-- todo: don't use nillable in schema_version 0.2 as this concept is broken in engine settings inheritance -->
+<!-- alternative: put the "nillable" attribute to its parent (option) -->
+        </xsd:sequence>
+<!--
+        <xsd:attribute name="nillable" type="t_bool" default="false"/>
+-->
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="skeleton_option_boolean">
+    <xsd:complexContent>
+      <xsd:extension base="skeleton_option">
+        <xsd:sequence>
+          <xsd:element name="default" type="t_bool"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="skeleton_option_integer">
+    <xsd:complexContent>
+      <xsd:extension base="skeleton_option">
+        <xsd:sequence>
+          <xsd:element name="default" type="xsd:int"/>
+          <xsd:element name="minimum" type="xsd:int" minOccurs="0" default="0"/>
+          <xsd:element name="maximum" type="xsd:int" minOccurs="0" default="255"/> <!-- todo: again: check whether libxml2 provides proper preprocessing -->
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="skeleton_option_real">
+    <xsd:complexContent>
+      <xsd:extension base="skeleton_option">
+        <xsd:sequence>
+          <xsd:element name="default" type="t_real"/>
+          <xsd:element name="minimum" type="t_real" minOccurs="0" default="0"/>
+          <xsd:element name="maximum" type="t_real" minOccurs="0" default="255"/> <!-- todo: again: check whether libxml2 provides proper preprocessing -->
+          <xsd:element name="precision" type="xsd:unsignedInt" minOccurs="0" default="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="skeleton_option_enumeration">
+    <xsd:complexContent>
+      <xsd:extension base="skeleton_option">
+        <xsd:sequence>
+          <xsd:element name="default" type="xsd:string"/>
+          <xsd:element name="entry" minOccurs="1" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:complexContent>
+                <xsd:extension base="descriptive_tag">
+                  <xsd:attribute name="value" type="xsd:string" use="required"/>
+                </xsd:extension>
+              </xsd:complexContent>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="skeleton_option_string">
+    <xsd:complexContent>
+      <xsd:extension base="skeleton_option">
+        <xsd:sequence>
+          <xsd:element name="default" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <!-- filenames are quoted in GTKRC/pixmap ! -->
+  <xsd:complexType name="skeleton_option_filename">
+    <xsd:complexContent>
+      <xsd:extension base="skeleton_option">
+        <xsd:sequence>
+          <!-- <xsd:element name="default" type="fileURI_or_empty"/> --> <!-- doesn't make much sense yet, does it? -->
+          <xsd:element name="filetype" type="t_filetype" minOccurs="0" default="all"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="skeleton_option_tuple">
+    <xsd:complexContent>
+      <xsd:extension base="skeleton_option">
+        <xsd:sequence>
+          <xsd:element name="child" type="skeleton_child_tuple" minOccurs="1" maxOccurs="unbounded"/> <!-- todo: better: <option> ??? -->
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="skeleton_child_tuple">
+    <xsd:complexContent>
+      <xsd:restriction base="xsd:anyType">
+        <xsd:attribute name="ref" type="xsd:string" use="required"/>
+      </xsd:restriction>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="skeleton_option_group">
+    <xsd:complexContent>
+      <xsd:extension base="skeleton_option">
+        <xsd:sequence>
+          <xsd:element name="minimum_occurs" type="t_unsignedInt_or_unbounded" minOccurs="0" default="1"/>
+          <xsd:element name="maximum_occurs" type="t_unsignedInt_or_unbounded" minOccurs="0" default="1"/> <!-- todo: how restrict min <= max in xsd? -->
+          <xsd:element name="child" type="skeleton_child_group" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="skeleton_child_group">
+    <xsd:complexContent>
+      <xsd:restriction base="xsd:anyType">
+        <xsd:sequence>
+          <xsd:element name="minimum_occurs" type="t_unsignedInt_or_unbounded" minOccurs="0" default="1"/>
+          <xsd:element name="maximum_occurs" type="t_unsignedInt_or_unbounded" minOccurs="0" default="1"/> <!-- todo: how restrict min <= max in xsd? -->
+        </xsd:sequence>
+        <xsd:attribute name="ref" type="xsd:string" use="required"/>
+      </xsd:restriction>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="skeleton_section">
+    <xsd:complexContent>
+      <xsd:extension base="descriptive_tag">
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+</xsd:schema>
+

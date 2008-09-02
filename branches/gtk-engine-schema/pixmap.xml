@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<engine schema_version="0.2" module_name="pixmap">
+
+  <metainfo>
+    <long_name>Pixmap</long_name>
+    <description>This Engine is used to create GTK+ 2.x Themes based on images</description>
+    <version>@VERSION@</version>
+    <license>
+      <id>LGPL2.1+</id>
+      <url>http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</url>
+    </license>
+    <website>http://www.gtk.org</website>
+    <author>
+      <name>Mr. GTK+ Dev</name>
+      <email>dummy@gtk.org</email>
+    </author>
+  </metainfo>
+
+
+  <group name="image">
+    <section>main</section>
+    <maximum_occurs>unbounded</maximum_occurs>
+    <child ref="function"/>
+    <child ref="state">
+      <minimum_occurs>0</minimum_occurs>
+    </child>
+    <child ref="shadow">
+      <minimum_occurs>0</minimum_occurs>
+    </child>
+    <child ref="detail">
+      <minimum_occurs>0</minimum_occurs>
+    </child>
+    <child ref="orientation">
+      <minimum_occurs>0</minimum_occurs>
+    </child>
+    <child ref="gap_side">
+      <minimum_occurs>0</minimum_occurs>
+    </child>
+    <child ref="expander_style">
+      <minimum_occurs>0</minimum_occurs>
+    </child>
+    <child ref="window_edge">
+      <minimum_occurs>0</minimum_occurs>
+    </child>
+    <child ref="file"/>
+    <child ref="border">
+      <minimum_occurs>0</minimum_occurs>
+    </child>
+    <child ref="stretch">
+      <minimum_occurs>0</minimum_occurs>
+    </child>
+    <child ref="overlay_file">
+      <minimum_occurs>0</minimum_occurs>
+    </child>
+    <child ref="overlay_border">
+      <minimum_occurs>0</minimum_occurs>
+    </child>
+    <child ref="overlay_stretch">
+      <minimum_occurs>0</minimum_occurs>
+    </child>
+    <child ref="arrow_direction">
+      <minimum_occurs>0</minimum_occurs>
+    </child>
+  </group>
+
+
+  <enumeration name="function">
+    <long_name>Function</long_name>
+    <section>hidden</section>
+    <default>HLINE</default>
+    <entry value="HLINE">
+      <long_name>Horizontal Line</long_name>
+    </entry>
+    <entry value="VLINE">
+      <long_name>Vertical Line</long_name>
+    </entry>
+    <entry value="SHADOW">
+      <long_name>Shadow</long_name>
+    </entry>
+    <entry value="BOX">
+      <long_name>Box</long_name>
+    </entry>
+    <entry value="SHADOW_GAP">
+      <long_name>Shadow Gap</long_name>
+    </entry>
+    <entry value="BOX_GAP">
+      <long_name>Box Gap</long_name>
+    </entry>
+    <entry value="STEPPER">
+      <long_name>Stepper</long_name>
+    </entry>
+    <entry value="ARROW">
+      <long_name>Arrow</long_name>
+    </entry>
+    <entry value="FLAT_BOX">
+      <long_name>Flat Box</long_name>
+    </entry>
+    <entry value="CHECK">
+      <long_name>Check button</long_name>
+    </entry>
+    <entry value="OPTION">
+      <long_name>Radio button</long_name>
+    </entry>
+    <entry value="TAB">
+      <long_name>Tab</long_name>
+    </entry>
+    <entry value="EXTENSION">
+      <long_name>Extension</long_name>
+    </entry>
+    <entry value="FOCUS">
+      <long_name>Focus</long_name>
+    </entry>
+    <entry value="SLIDER">
+      <long_name>Slider</long_name>
+    </entry>
+    <entry value="HANDLE">
+      <long_name>Handle</long_name>
+    </entry>
+    <entry value="EXPANDER">
+      <long_name>Expander</long_name>
+    </entry>
+    <entry value="RESIZE_GRIP">
+      <long_name>Resize Grip</long_name>
+    </entry>
+    <entry value="DIAMOND">
+      <long_name>Diamond</long_name>
+    </entry>
+  </enumeration>
+
+  <enumeration name="state">
+    <long_name>Widget State</long_name>
+    <section>hidden</section>
+    <condition>
+      <not>
+        <rule>
+          <name>function</name>
+          <value>FOCUS</value>
+        </rule>
+      </not>
+    </condition>
+    <default>NORMAL</default>
+    <entry value="NORMAL">
+      <long_name>Normal</long_name>
+    </entry>
+    <entry value="PRELIGHT">
+      <long_name>Prelight</long_name>
+    </entry>
+    <entry value="ACTIVE">
+      <long_name>Active</long_name>
+    </entry>
+    <entry value="INSENSITIVE">
+      <long_name>Insensitive</long_name>
+    </entry>
+    <entry value="SELECTED">
+      <long_name>Selected</long_name>
+    </entry>
+  </enumeration>
+
+
+  <enumeration name="shadow">
+    <long_name>Shadow Type</long_name>
+    <section>hidden</section>
+    <condition>
+      <not>
+        <or>
+          <rule>
+            <name>function</name>
+            <value>HLINE</value>
+          </rule>
+          <rule>
+            <name>function</name>
+            <value>VLINE</value>
+          </rule>
+          <rule>
+            <name>function</name>
+            <value>FOCUS</value>
+          </rule>
+          <rule>
+            <name>function</name>
+            <value>EXPANDER</value>
+          </rule>
+          <rule>
+            <name>function</name>
+            <value>RESIZE_GRIP</value>
+          </rule>
+        </or>
+      </not>
+    </condition>
+    <default>IN</default>
+    <entry value="IN">
+      <long_name>In</long_name>
+    </entry>
+    <entry value="OUT">
+      <long_name>Out</long_name>
+    </entry>
+    <entry value="ETCHED_IN">
+      <long_name>Etched In</long_name>
+    </entry>
+    <entry value="ETCHED_OUT">
+      <long_name>Etched Out</long_name>
+    </entry>
+    <entry value="NONE">
+      <long_name>None</long_name>
+    </entry>
+  </enumeration>
+
+
+  <string name="detail">
+    <long_name>Detail String</long_name>
+    <section>hidden</section>
+    <default></default>
+  </string>
+
+
+  <enumeration name="orientation">
+    <long_name>Orientation</long_name>
+    <section>hidden</section>
+    <condition>
+      <or>
+        <rule>
+          <name>function</name>
+          <value>HLINE</value>
+        </rule>
+        <rule>
+          <name>function</name>
+          <value>VLINE</value>
+        </rule>
+        <rule>
+          <name>function</name>
+          <value>BOX_GAP</value>
+        </rule>
+        <rule>
+          <name>function</name>
+          <value>SLIDER</value>
+        </rule>
+        <rule>
+          <name>function</name>
+          <value>HANDLE</value>
+        </rule>
+      </or>
+    </condition>
+    <default>HORIZONTAL</default>
+    <entry value="HORIZONTAL">
+      <long_name>Horizontal</long_name>
+    </entry>
+    <entry value="VERTICAL">
+      <long_name>Vertical</long_name>
+    </entry>
+  </enumeration>
+
+
+  <enumeration name="gap_side">
+    <long_name>Gap Side</long_name>
+    <section>hidden</section>
+    <condition>
+      <or>
+        <rule>
+          <name>function</name>
+          <value>BOX_GAP</value>
+        </rule>
+        <rule>
+          <name>function</name>
+          <value>EXTENSION</value>
+        </rule>
+      </or>
+    </condition>
+    <default>BOTTOM</default>
+    <entry value="TOP">
+      <long_name>Top</long_name>
+    </entry>
+    <entry value="BOTTOM">
+      <long_name>Bottom</long_name>
+    </entry>
+    <entry value="LEFT">
+      <long_name>Left</long_name>
+    </entry>
+    <entry value="RIGHT">
+      <long_name>Right</long_name>
+    </entry>
+  </enumeration>
+
+
+  <enumeration name="expander_style">
+    <long_name>Expander Style</long_name>
+    <section>hidden</section>
+    <condition>
+      <rule>
+        <name>function</name>
+        <value>EXPANDER</value>
+      </rule>
+    </condition>
+    <default>COLLAPSED</default>
+    <entry value="COLLAPSED">
+      <long_name>Collapsed</long_name>
+    </entry>
+    <entry value="SEMI_COLLAPSED">
+      <long_name>Semi Collapsed</long_name>
+    </entry>
+    <entry value="SEMI_EXPANDED">
+      <long_name>Semi Expanded</long_name>
+    </entry>
+    <entry value="EXPANDED">
+      <long_name>Expanded</long_name>
+    </entry>
+  </enumeration>
+
+
+  <enumeration name="window_edge">
+    <long_name>Window Edge</long_name>
+    <section>hidden</section>
+    <condition>
+      <rule>
+        <name>function</name>
+        <value>RESIZE_GRIP</value>
+      </rule>
+    </condition>
+    <default>NORTH_WEST</default>
+    <entry value="NORTH_WEST">
+      <long_name>North West</long_name>
+    </entry>
+    <entry value="NORTH">
+      <long_name>North</long_name>
+    </entry>
+    <entry value="NORTH_EAST">
+      <long_name>North East</long_name>
+    </entry>
+    <entry value="WEST">
+      <long_name>West</long_name>
+    </entry>
+    <entry value="EAST">
+      <long_name>East</long_name>
+    </entry>
+    <entry value="SOUTH_WEST">
+      <long_name>South West</long_name>
+    </entry>
+    <entry value="SOUTH">
+      <long_name>South</long_name>
+    </entry>
+    <entry value="SOUTH_EAST">
+      <long_name>South East</long_name>
+    </entry>
+  </enumeration>
+
+
+  <filename name="file">
+    <long_name>Image Filename</long_name>
+    <section>hidden</section>
+    <filetype>image</filetype>
+  </filename>
+
+
+  <tuple name="border">
+    <long_name>Border Sizes</long_name>
+    <section>hidden</section>
+    <condition>
+      <not>
+        <rule>
+          <name>file</name>
+          <value></value>
+        </rule>
+      </not>
+    </condition>
+    <child ref="t_border_left"/>
+    <child ref="t_border_right"/>
+    <child ref="t_border_top"/>
+    <child ref="t_border_bottom"/>
+  </tuple>
+
+  <integer name="t_border_left">
+    <long_name>Left Border</long_name>
+    <section>hidden</section>
+    <default>0</default>
+    <minimum>0</minimum>
+    <maximum>65535</maximum>
+  </integer>
+  <integer name="t_border_right">
+    <long_name>Right Border</long_name>
+    <section>hidden</section>
+    <default>0</default>
+    <minimum>0</minimum>
+    <maximum>65535</maximum>
+  </integer>
+  <integer name="t_border_top">
+    <long_name>Top Border</long_name>
+    <section>hidden</section>
+    <default>0</default>
+    <minimum>0</minimum>
+    <maximum>65535</maximum>
+  </integer>
+  <integer name="t_border_bottom">
+    <long_name>Bottom Border</long_name>
+    <section>hidden</section>
+    <default>0</default>
+    <minimum>0</minimum>
+    <maximum>65535</maximum>
+  </integer>
+
+
+  <boolean name="stretch">
+    <section>hidden</section>
+    <condition>
+      <not>
+        <rule>
+          <name>file</name>
+          <value></value>
+        </rule>
+      </not>
+    </condition>
+    <default>true</default>
+  </boolean>
+
+
+  <filename name="overlay_file">
+    <long_name>Overlay Image Filename</long_name>
+    <section>hidden</section>
+    <filetype>image</filetype>
+  </filename>
+
+
+  <tuple name="overlay_border">
+    <long_name>Overlay Border Sizes</long_name>
+    <section>hidden</section>
+    <condition>
+      <not>
+        <rule>
+          <name>overlay_file</name>
+          <value></value>
+        </rule>
+      </not>
+    </condition>
+    <child ref="t_border_left"/>
+    <child ref="t_border_right"/>
+    <child ref="t_border_top"/>
+    <child ref="t_border_bottom"/>
+  </tuple>
+
+
+  <boolean name="overlay_stretch">
+    <section>hidden</section>
+    <condition>
+      <not>
+        <rule>
+          <name>overlay_file</name>
+          <value></value>
+        </rule>
+      </not>
+    </condition>
+    <default>true</default>
+  </boolean>
+
+
+  <enumeration name="arrow_direction">
+    <long_name>Arrow Direction</long_name>
+    <section>hidden</section>
+    <condition>
+      <or>
+        <rule>
+          <name>function</name>
+          <value>STEPPER</value>
+        </rule>
+        <rule>
+          <name>function</name>
+          <value>ARROW</value>
+        </rule>
+      </or>
+    </condition>
+    <default>UP</default>
+    <entry value="UP">
+      <long_name>Up</long_name>
+    </entry>
+    <entry value="DOWN">
+      <long_name>Down</long_name>
+    </entry>
+    <entry value="LEFT">
+      <long_name>Left</long_name>
+    </entry>
+    <entry value="Right">
+      <long_name>Right</long_name>
+    </entry>
+  </enumeration>
+
+
+  <section name="main">
+    <long_name>Main</long_name>
+    <description>Main Settings</description>
+    <comment>All the main options of this engine</comment>
+  </section>
+
+  <section name="hidden"/> <!-- dummy section with reserved name -->
+
+</engine>
