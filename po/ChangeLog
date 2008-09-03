@@ -1,5 +1,11 @@
 2008-09-03  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
+	* es.po:
+	* oc.po:
+	removed invalid escape sequence
+
+2008-09-03  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
 	* de.po:
 	update for 100% completeness
 

@@ -384,7 +384,7 @@ msgstr "Ventana Activa"
 #: ../src/gnome-color-chooser.glade.h:77
 msgid "beautify icon labels (needed for icon label settings!)"
 msgstr ""
-"mejorar las etiquetas de los iconos\n"
+"mejorar las etiquetas de los iconos\n"
 "(necesario para las opciones de las etiquetas de iconos!)"
 
 #: ../src/gnome-color-chooser.glade.h:78
