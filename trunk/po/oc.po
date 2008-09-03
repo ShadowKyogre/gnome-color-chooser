@@ -259,7 +259,7 @@ msgstr "Especific"
 #: ../src/gnome-color-chooser.glade.h:54
 msgid "Start menue (needs panel restart!)"
 msgstr ""
-"Boton del menut\n"
+"Boton del menut\n"
 "(necessita de tornar amodar lo tablèu de bòrd (panel)!)"
 
 #: ../src/gnome-color-chooser.glade.h:55
