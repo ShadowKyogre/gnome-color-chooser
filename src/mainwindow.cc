@@ -553,8 +553,9 @@ void MainWindow::on_main_apply()
 
 void MainWindow::on_main_revert()
 {
-  this->on_file_new();
-  this->on_main_apply();
+  m_pConfig->reset_to_defaults();
+//todo: create a (ConfigLoader::)reset_engine_combos();
+  ModWidget::reload_all_widgets();
 }
 
 
@@ -566,9 +567,7 @@ void MainWindow::on_file_exit()
 
 void MainWindow::on_file_new()
 {
-  m_pConfig->reset_to_defaults();
-//todo: create a (ConfigLoader::)reset_engine_combos();
-  ModWidget::reload_all_widgets();
+  this->on_main_revert();
   m_filename = "";
 }
 
