@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gnome-color-chooser>
   <category name="default">
-    <!-- category name -->
+    <!-- translator node: this is a category name (tab label)-->
     <_long_name>Global</_long_name>
     <class name="GtkWidget" type="class"/>
     <element id="0" name="bg[NORMAL]" value="#999999" type="color" override="no"/><!-- DON'T USE ID 0 !!! -->
@@ -37,7 +37,7 @@
     <element id="82" name="GtkWidget::visited-link-color" value="#551A8B" type="color" override="no"/>
   </category>
   <category name="desktop-icon">
-    <!-- category name -->
+    <!-- translator node: this is a category name (tab label)-->
     <_long_name>Desktop Icons</_long_name>
     <class name="*DesktopIcon*" type="widget_class"/>
     <element id="22" name="NautilusIconContainer::frame_text" value="1" type="check_alone" override="no"/>
@@ -62,14 +62,15 @@
     <element id="76" name="NautilusIconContainer::prelight_alpha" value="255" type="spin" min="0" max="255" override="no"/>
   </category>
   <category name="panel">
-    <!-- category name -->
+    <!-- translator node: this is a category name (tab label)-->
     <_long_name>Panel</_long_name>
-    <class name="*Panel*" type="class"/>
-    <class name="*PanelWidget*" type="widget"/>
-    <class name="*PanelApplet*" type="widget"/>
-    <class name="*Tray*" type="class"/><!-- affects normal tray icons -->
-    <class name="*Tray*" type="widget"/><!-- affects some tray icons like xchat -->
-    <!-- <class name="*print*" type="widget"/> -->
+    <class name="PanelTopLevel.*" type="class"/> <!-- correct approach for in-process applets and stuff -->
+    <class name="*PanelApplet*" type="widget_class"/> <!-- for out-of-process applets -->
+    <class name="*PanelWidget*" type="widget_class"/> <!-- does this really have an effect ? -->
+    <!-- <class name="Panel*" type="class"/> --> <!-- workaround to match all other relevant panel parts -->
+    <!-- <class name="*Tray*" type="class"/> --> <!-- affects normal tray icons, but possibly more -->
+    <!-- <class name="*Tray*" type="widget"/> --> <!-- affects some tray icons like xchat, but possibly more -->
+    <!-- <class name="*print*" type="widget"/> --> <!-- also affects some printing dialogs -->
     <!-- <class name="*Mail*" type="widget_class"/> --> <!-- also affects Evolution's email preferences dialog -->
     <class name="*fast-user-switch-applet*" type = "widget"/>
     <element id="26" name="bg[NORMAL]" value="#999999" type="color" override="no"/>
@@ -100,7 +101,7 @@
     <element id="43" name="bg[SELECTED]" value="#FFC050" type="color" override="no"/>
   </category>
   <category name="scrollbar">
-    <!-- category name -->
+    <!-- translator node: this is a category name (tab label)-->
     <_long_name>Scrollbars</_long_name>
     <class name="*Scrollbar" type="widget_class"/>
     <element id="44" name="bg[NORMAL]" value="#00BFFF" type="color" override="no"/>
@@ -110,7 +111,7 @@
     <element id="77" name="GtkScrollbar::stepper_size" value="15" type="spin" min="1" max="50" override="no"/>
   </category>
   <category name="progressbar">
-    <!-- category name -->
+    <!-- translator node: this is a category name (tab label)-->
     <_long_name>Progress Bars</_long_name>
     <class name="GtkProgressBar" type="class"/>
     <element id="48" name="bg[SELECTED]" value="#00DFFF" type="color" override="no"/>
@@ -118,14 +119,14 @@
     <element id="50" name="ythickness" value="1" type="spin" min="0" max="20" override="no"/>
   </category>
   <category name="tooltips">
-    <!-- category name -->
+    <!-- translator node: this is a category name (tab label)-->
     <_long_name>Tooltips</_long_name>
     <class name="gtk-tooltip*" type="widget"/>
     <element id="51" name="bg[NORMAL]" value="#FFFFAF" type="color" override="no"/>
     <element id="78" name="fg[NORMAL]" value="#000000" type="color" override="no"/>
   </category>
   <category name="button">
-    <!-- category name -->
+    <!-- translator node: this is a category name (tab label)-->
     <_long_name>Buttons</_long_name>
     <class name="*.&lt;GtkButton&gt;*" type="widget_class"/>
     <element id="52" name="xthickness" value="2" type="spin" min="0" max="20" override="no"/>
@@ -143,7 +144,7 @@
     <element id="93" name="font_name" value="Arial 8" type="font" override="no"/>
   </category>
   <category name="combobox">
-    <!-- category name; comboboxes are button widgets with a dropdown list -->
+    <!-- translator node: this is a category name (tab label); comboboxes are button widgets with a dropdown list-->
     <_long_name>Comboboxes</_long_name>
     <class name="*.&lt;GtkComboBox&gt;.&lt;GtkCellView&gt;" type="widget_class"/>
     <!-- <class name="*.gtk-combobox-popup-menu.*" type="widget"/> --> <!-- would affect its dropdown menu -->

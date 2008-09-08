@@ -24,7 +24,7 @@ dnl
 # -------------------------------------------------------------------------
 
 AC_DEFUN([LF_CHECK_LD_FLAG],[
-  echo 'int main(int argc, char *argv[]){return 0;}' > conftest.temp.cc
+  echo 'int main(int argc, char **argv){return 0;}' > conftest.temp.cc
   for i in $1
   do
     AC_MSG_CHECKING([whether $CXX accepts $i])

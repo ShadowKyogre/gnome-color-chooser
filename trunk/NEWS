@@ -10,12 +10,26 @@ gnome-color-chooser@punk-ass-bitch.org .
 Version 0.2.4
 
 * changed project license to GNU GPL3+
+* changed project URL to http://gnomecc.sourceforge.net
 * new (direct) runtime dependency: glib
 * new compiletime dependencies: glib, gnome-common
+* newer intltool version required: 0.35.5
 * added following features:
-  - disable menubar and toolbar shadows
+  - possibility to disable menubar and toolbar shadows
   - change colors of hyperlinks used in (GTK+) applications
   - also affect fast-user-switch-applet by panel settings
+  - change colors of buttons and comboboxes separately from main colors
+  - Engine Schema validator: GTK+ engine authors can now easily debug their
+    schema files before publishing them (please note that schema_version 0.2,
+    which has _not_ been released yet, is the first supported version; more
+    news to come...)
+  - revert button that resets all theme modifications
+  - new command line options: FILENAME of a .gnomecc theme to load
+    and --validator-only (see manual page for further information)
+* loads of new translations, introducing Hebrew, Occitan (post 1500), Polish,
+  Portugese, Brazilian Portugese, Russian, and Thai; please help translating this
+  application into your language! There are still many untranslated strings!
+  (see http://gnomecc.sourceforge.net/article-1220391113.html for more info)
 * many "unimportant" changes like a decreased startup time by stripping down
   indirect dependencies by default and a decreased compile time
   (see ChangeLog for further details and problems that may occur using

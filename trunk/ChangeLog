@@ -1,3 +1,23 @@
+2008-09-08  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* NEWS:
+	updated news for the upcoming 0.2.4 release
+
+	* m4/link_as_needed.m4:
+	updated linker test script for newer autotools/g++ versions
+
+	* src/gnome-color-chooser.1:
+	changed homepage URL to http://gnomecc.sourceforge.net
+
+	* src/gnome-color-chooser.glade:
+	updated homepage URL and translator list in aboutdialog
+
+	* src/gnome-color-chooser.xml.in:
+	changed panel matchings, changed some translator notes
+
+	* src/mainwindow.cc:
+	changed revert button that it doesn't apply its changes on its own
+
 2008-09-03  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* src/gnome-color-chooser.glade:
