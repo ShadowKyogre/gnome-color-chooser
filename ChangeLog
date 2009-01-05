@@ -1,3 +1,15 @@
+2009-01-05  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	The HAPPY NEW YEAR commit:
+
+	* src/main.cc:
+	FIX: changed wrong string assignment that made gnome-color-chooser
+	create an include in ~/.gtkrc-2.0-gnome-color-chooser instead of
+	~/.gtkrc-2.0 with the effect that gnome-color-chooser settings
+	weren't applied on fresh installs anymore :( sorry, guys! ;-)
+	more details:
+	http://gnomecc.sourceforge.net/forum/index.php?topic=19.msg46#msg46
+
 2008-09-08  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* NEWS:

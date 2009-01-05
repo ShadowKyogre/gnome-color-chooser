@@ -180,14 +180,14 @@ int main (int argc, char *argv[])
   Gtk::Main kit(argc, argv);
 
 
-  string configfile = string(getenv("HOME")).append("/.gnome-color-chooser/config.xml");
-  string configpath = string(getenv("HOME")).append("/.gnome-color-chooser/");
-  string configpath_images = configpath + string("images/");
-  string globalpath_engines = DATADIR + string("/gtk-engines/");
-  string globalpath_profiles = string(DBDIR).append("/profiles/");
-  string dbfile = string(DBDIR).append("/gnome-color-chooser.xml");
-  string gtkrcfile = string(getenv("HOME")).append("/.gtkrc-2.0");
-  string customgtkrcfile = gtkrcfile.append("-gnome-color-chooser");
+  string configpath          = getenv("HOME") + string("/.gnome-color-chooser/");
+  string configfile          = configpath + "config.xml"; 
+  string configpath_images   = configpath + "images/";
+  string globalpath_engines  = DATADIR + string("/gtk-engines/");
+  string globalpath_profiles = DBDIR   + string("/profiles/");
+  string dbfile              = DBDIR   + string("/gnome-color-chooser.xml");
+  string gtkrcfile           = getenv("HOME") + string("/.gtkrc-2.0");
+  string customgtkrcfile     = gtkrcfile + "-gnome-color-chooser";
 
   cout << "Welcome to " << PACKAGE << " version " << VERSION
        << " for " << YOUR_OS << endl << endl;
