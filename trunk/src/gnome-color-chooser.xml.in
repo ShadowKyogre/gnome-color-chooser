@@ -88,6 +88,19 @@
     <element id="54" name="font_name" value="Arial 8" type="font" override="no"/>
     <element id="55" name="bg_pixmap[NORMAL]" value="&lt;none&gt;" type="image" override="no"/>
   </category>
+  <category name="startmenue">
+    <!-- translator node: this is a category name (tab label)-->
+    <_long_name>Start Menue</_long_name>
+    <class name="GtkWindow.gnome-panel-main-menu*" type="widget"/>
+    <element id="201" name="bg[NORMAL]" value="#999999" type="color" override="no"/>
+    <element id="202" name="bg[SELECTED]" value="#ff0000" type="color" override="no"/>
+    <element id="203" name="fg[NORMAL]" value="#ff0000" type="color" override="no"/>
+    <element id="204" name="fg[PRELIGHT]" value="#00ff00" type="color" override="no"/>
+    <element id="211" name="xthickness" value="1" type="spin" min="0" max="20" override="no"/>
+    <element id="212" name="ythickness" value="1" type="spin" min="0" max="20" override="no"/>
+    <element id="213" name="font_name" value="Arial 8" type="font" override="no"/>
+    <element id="214" name="bg_pixmap[NORMAL]" value="&lt;none&gt;" type="image" override="no"/>
+  </category>
   <category name="window-decoration-with_compiz">
     <class name="MetaFrames" type="class"/>
     <element id="38" name="fg[NORMAL]" value="#c8c8c8" type="color" override="no"/>

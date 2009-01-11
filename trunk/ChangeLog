@@ -1,3 +1,15 @@
+2009-01-11  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* profiles/compact.xml.in:
+	added prefix to make compact profile compatible to tooltip settings of
+	clearlooks 2.16.x theme
+
+	* src/gnome-color-chooser.xml.in:
+	* src/gnome-color-chooser.glade:
+	added settings to theme GNOME's start menue (GNOME 2.24+ needed),
+	set all GtkAdjustments of spin buttons to zero (removes compile
+	warnings with GTK+ 2.14+)
+
 2009-01-05  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	The HAPPY NEW YEAR commit:

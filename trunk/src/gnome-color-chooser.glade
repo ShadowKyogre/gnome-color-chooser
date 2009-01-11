@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.5 on Mon Sep  8 16:59:17 2008 
+<!--Generated with glade3 3.4.5 on Thu Jan  8 21:29:56 2009 
 	Version: 3.0.1
 	Date: Thu Mar  8 13:06:14 2007
 	User: gybrush
@@ -1635,7 +1635,7 @@
                           <widget class="GtkSpinButton" id="spinbutton_20">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="adjustment">0 0 20 1 10 10</property>
+                            <property name="adjustment">0 0 20 1 10 0</property>
                           </widget>
                           <packing>
                             <property name="fill">False</property>
@@ -1672,7 +1672,7 @@
                           <widget class="GtkSpinButton" id="spinbutton_21">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="adjustment">0 0 20 1 10 10</property>
+                            <property name="adjustment">0 0 20 1 10 0</property>
                           </widget>
                           <packing>
                             <property name="fill">False</property>
@@ -3225,7 +3225,7 @@
                           <widget class="GtkSpinButton" id="spinbutton_53">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="adjustment">0 0 20 1 10 10</property>
+                            <property name="adjustment">0 0 20 1 10 0</property>
                           </widget>
                           <packing>
                             <property name="expand">False</property>
@@ -3259,7 +3259,7 @@
                           <widget class="GtkSpinButton" id="spinbutton_52">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="adjustment">0 0 20 1 10 10</property>
+                            <property name="adjustment">0 0 20 1 10 0</property>
                           </widget>
                           <packing>
                             <property name="expand">False</property>
@@ -3339,7 +3339,7 @@
                         <child>
                           <widget class="GtkTable" id="table14">
                             <property name="visible">True</property>
-                            <property name="n_rows">9</property>
+                            <property name="n_rows">10</property>
                             <property name="n_columns">6</property>
                             <property name="column_spacing">5</property>
                             <child>
@@ -4063,6 +4063,116 @@
                                 <property name="bottom_attach">9</property>
                               </packing>
                             </child>
+                            <child>
+                              <widget class="GtkLabel" id="label49">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">X-Padding</property>
+                              </widget>
+                              <packing>
+                                <property name="top_attach">9</property>
+                                <property name="bottom_attach">10</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkHBox" id="hbox46">
+                                <property name="visible">True</property>
+                                <child>
+                                  <widget class="GtkCheckButton" id="checkbutton_36">
+                                    <property name="visible">True</property>
+                                    <property name="response_id">0</property>
+                                    <property name="draw_indicator">True</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="fill">False</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkSpinButton" id="spinbutton_36">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="adjustment">0 0 20 1 10 0</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="fill">False</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">2</property>
+                                <property name="right_attach">3</property>
+                                <property name="top_attach">9</property>
+                                <property name="bottom_attach">10</property>
+                                <property name="y_options">GTK_EXPAND</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="label48">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">Y-Padding</property>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">4</property>
+                                <property name="right_attach">5</property>
+                                <property name="top_attach">9</property>
+                                <property name="bottom_attach">10</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkHBox" id="hbox45">
+                                <property name="visible">True</property>
+                                <child>
+                                  <widget class="GtkCheckButton" id="checkbutton_37">
+                                    <property name="visible">True</property>
+                                    <property name="response_id">0</property>
+                                    <property name="draw_indicator">True</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="fill">False</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkSpinButton" id="spinbutton_37">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="adjustment">0 0 20 1 10 0</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="fill">False</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">5</property>
+                                <property name="right_attach">6</property>
+                                <property name="top_attach">9</property>
+                                <property name="bottom_attach">10</property>
+                                <property name="y_options">GTK_EXPAND</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkVSeparator" id="vseparator13">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                                <property name="top_attach">9</property>
+                                <property name="bottom_attach">10</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkVSeparator" id="vseparator14">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">3</property>
+                                <property name="right_attach">4</property>
+                                <property name="top_attach">9</property>
+                                <property name="bottom_attach">10</property>
+                              </packing>
+                            </child>
                           </widget>
                         </child>
                       </widget>
@@ -4096,11 +4206,467 @@
                         <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <widget class="GtkLabel" id="label25">
+                          <widget class="GtkTable" id="table15">
                             <property name="visible">True</property>
-                            <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                            <property name="ypad">10</property>
-                            <property name="label" translatable="yes">Not yet possible with GNOME</property>
+                            <property name="n_rows">7</property>
+                            <property name="n_columns">6</property>
+                            <property name="column_spacing">5</property>
+                            <child>
+                              <placeholder/>
+                            </child>
+                            <child>
+                              <widget class="GtkHBox" id="hbox134">
+                                <property name="visible">True</property>
+                                <child>
+                                  <widget class="GtkCheckButton" id="checkbutton_116">
+                                    <property name="visible">True</property>
+                                    <property name="sensitive">False</property>
+                                    <property name="response_id">0</property>
+                                    <property name="draw_indicator">True</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">False</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkFileChooserButton" id="filechooserbutton_20">
+                                    <property name="width_request">100</property>
+                                    <property name="visible">True</property>
+                                    <property name="sensitive">False</property>
+                                    <property name="preview_widget_active">False</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">5</property>
+                                <property name="right_attach">6</property>
+                                <property name="top_attach">3</property>
+                                <property name="bottom_attach">4</property>
+                                <property name="y_options"></property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkHBox" id="hbox133">
+                                <property name="visible">True</property>
+                                <child>
+                                  <widget class="GtkCheckButton" id="checkbutton_214">
+                                    <property name="visible">True</property>
+                                    <property name="response_id">0</property>
+                                    <property name="draw_indicator">True</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">False</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkFileChooserButton" id="filechooserbutton_214">
+                                    <property name="width_request">100</property>
+                                    <property name="visible">True</property>
+                                    <property name="preview_widget_active">False</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">5</property>
+                                <property name="right_attach">6</property>
+                                <property name="top_attach">2</property>
+                                <property name="bottom_attach">3</property>
+                                <property name="y_options"></property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkHBox" id="hbox129">
+                                <property name="visible">True</property>
+                                <child>
+                                  <widget class="GtkCheckButton" id="checkbutton_202">
+                                    <property name="visible">True</property>
+                                    <property name="response_id">0</property>
+                                    <property name="draw_indicator">True</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">False</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkColorButton" id="colorbutton_202">
+                                    <property name="visible">True</property>
+                                    <property name="response_id">0</property>
+                                    <property name="color">#000000000000</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">False</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">4</property>
+                                <property name="right_attach">5</property>
+                                <property name="top_attach">3</property>
+                                <property name="bottom_attach">4</property>
+                                <property name="x_options"></property>
+                                <property name="y_options"></property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkHBox" id="hbox128">
+                                <property name="visible">True</property>
+                                <child>
+                                  <widget class="GtkCheckButton" id="checkbutton_201">
+                                    <property name="visible">True</property>
+                                    <property name="response_id">0</property>
+                                    <property name="draw_indicator">True</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">False</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkColorButton" id="colorbutton_201">
+                                    <property name="visible">True</property>
+                                    <property name="response_id">0</property>
+                                    <property name="color">#000000000000</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">False</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">4</property>
+                                <property name="right_attach">5</property>
+                                <property name="top_attach">2</property>
+                                <property name="bottom_attach">3</property>
+                                <property name="x_options"></property>
+                                <property name="y_options"></property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="label121">
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                                <property name="xpad">20</property>
+                                <property name="label" translatable="yes">normal</property>
+                              </widget>
+                              <packing>
+                                <property name="top_attach">2</property>
+                                <property name="bottom_attach">3</property>
+                                <property name="x_options">GTK_FILL</property>
+                                <property name="y_options"></property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="label120">
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                                <property name="xpad">20</property>
+                                <property name="label" translatable="yes">hover</property>
+                              </widget>
+                              <packing>
+                                <property name="top_attach">3</property>
+                                <property name="bottom_attach">4</property>
+                                <property name="x_options">GTK_FILL</property>
+                                <property name="y_options"></property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="label116">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">Foreground</property>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">2</property>
+                                <property name="right_attach">3</property>
+                                <property name="x_options"></property>
+                                <property name="y_options"></property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkVSeparator" id="vseparator12">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                                <property name="bottom_attach">7</property>
+                                <property name="x_options">GTK_FILL</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkHBox" id="hbox127">
+                                <property name="visible">True</property>
+                                <child>
+                                  <widget class="GtkCheckButton" id="checkbutton_203">
+                                    <property name="visible">True</property>
+                                    <property name="response_id">0</property>
+                                    <property name="draw_indicator">True</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">False</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkColorButton" id="colorbutton_203">
+                                    <property name="visible">True</property>
+                                    <property name="response_id">0</property>
+                                    <property name="color">#000000000000</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">False</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">2</property>
+                                <property name="right_attach">3</property>
+                                <property name="top_attach">2</property>
+                                <property name="bottom_attach">3</property>
+                                <property name="x_options"></property>
+                                <property name="y_options"></property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkHBox" id="hbox126">
+                                <property name="visible">True</property>
+                                <child>
+                                  <widget class="GtkCheckButton" id="checkbutton_204">
+                                    <property name="visible">True</property>
+                                    <property name="response_id">0</property>
+                                    <property name="draw_indicator">True</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">False</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkColorButton" id="colorbutton_204">
+                                    <property name="visible">True</property>
+                                    <property name="response_id">0</property>
+                                    <property name="color">#000000000000</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">False</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">2</property>
+                                <property name="right_attach">3</property>
+                                <property name="top_attach">3</property>
+                                <property name="bottom_attach">4</property>
+                                <property name="x_options"></property>
+                                <property name="y_options"></property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="label115">
+                                <property name="visible">True</property>
+                                <property name="xalign">0</property>
+                                <property name="label" translatable="yes">Background</property>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">4</property>
+                                <property name="right_attach">6</property>
+                                <property name="x_options">GTK_FILL</property>
+                                <property name="y_options"></property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkVSeparator" id="vseparator11">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">3</property>
+                                <property name="right_attach">4</property>
+                                <property name="bottom_attach">4</property>
+                                <property name="x_options">GTK_FILL</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkHSeparator" id="hseparator16">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="right_attach">6</property>
+                                <property name="top_attach">1</property>
+                                <property name="bottom_attach">2</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkHBox" id="hbox92">
+                                <property name="visible">True</property>
+                                <child>
+                                  <widget class="GtkCheckButton" id="checkbutton_213">
+                                    <property name="visible">True</property>
+                                    <property name="response_id">0</property>
+                                    <property name="draw_indicator">True</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">False</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkFontButton" id="fontbutton_213">
+                                    <property name="visible">True</property>
+                                    <property name="response_id">0</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="padding">10</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">2</property>
+                                <property name="right_attach">6</property>
+                                <property name="top_attach">5</property>
+                                <property name="bottom_attach">6</property>
+                                <property name="y_options">GTK_FILL</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkHSeparator" id="hseparator14">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="right_attach">6</property>
+                                <property name="top_attach">4</property>
+                                <property name="bottom_attach">5</property>
+                                <property name="y_padding">6</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="label25">
+                                <property name="visible">True</property>
+                                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                                <property name="xalign">0</property>
+                                <property name="xpad">20</property>
+                                <property name="label" translatable="yes">Font</property>
+                              </widget>
+                              <packing>
+                                <property name="top_attach">5</property>
+                                <property name="bottom_attach">6</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="label122">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">X-Padding</property>
+                              </widget>
+                              <packing>
+                                <property name="top_attach">6</property>
+                                <property name="bottom_attach">7</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkHBox" id="hbox138">
+                                <property name="visible">True</property>
+                                <child>
+                                  <widget class="GtkCheckButton" id="checkbutton_211">
+                                    <property name="visible">True</property>
+                                    <property name="response_id">0</property>
+                                    <property name="draw_indicator">True</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="fill">False</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkSpinButton" id="spinbutton_211">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="adjustment">0 0 20 1 10 0</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="fill">False</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">2</property>
+                                <property name="right_attach">3</property>
+                                <property name="top_attach">6</property>
+                                <property name="bottom_attach">7</property>
+                                <property name="y_options">GTK_EXPAND</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="label123">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">Y-Padding</property>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">4</property>
+                                <property name="right_attach">5</property>
+                                <property name="top_attach">6</property>
+                                <property name="bottom_attach">7</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkHBox" id="hbox139">
+                                <property name="visible">True</property>
+                                <child>
+                                  <widget class="GtkCheckButton" id="checkbutton_212">
+                                    <property name="visible">True</property>
+                                    <property name="response_id">0</property>
+                                    <property name="draw_indicator">True</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="fill">False</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <widget class="GtkSpinButton" id="spinbutton_212">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="adjustment">0 0 20 1 10 0</property>
+                                  </widget>
+                                  <packing>
+                                    <property name="fill">False</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">5</property>
+                                <property name="right_attach">6</property>
+                                <property name="top_attach">6</property>
+                                <property name="bottom_attach">7</property>
+                                <property name="y_options">GTK_EXPAND</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <widget class="GtkVSeparator" id="vseparator15">
+                                <property name="visible">True</property>
+                              </widget>
+                              <packing>
+                                <property name="left_attach">3</property>
+                                <property name="right_attach">4</property>
+                                <property name="top_attach">6</property>
+                                <property name="bottom_attach">7</property>
+                              </packing>
+                            </child>
                           </widget>
                         </child>
                       </widget>
@@ -4122,99 +4688,6 @@
                     <property name="fill">False</property>
                     <property name="padding">2</property>
                     <property name="position">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <widget class="GtkTable" id="table8">
-                    <property name="visible">True</property>
-                    <property name="n_rows">1</property>
-                    <property name="n_columns">4</property>
-                    <child>
-                      <widget class="GtkHBox" id="hbox45">
-                        <property name="visible">True</property>
-                        <child>
-                          <widget class="GtkCheckButton" id="checkbutton_37">
-                            <property name="visible">True</property>
-                            <property name="response_id">0</property>
-                            <property name="draw_indicator">True</property>
-                          </widget>
-                          <packing>
-                            <property name="fill">False</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <widget class="GtkSpinButton" id="spinbutton_37">
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="adjustment">0 0 20 1 10 10</property>
-                          </widget>
-                          <packing>
-                            <property name="fill">False</property>
-                            <property name="position">1</property>
-                          </packing>
-                        </child>
-                      </widget>
-                      <packing>
-                        <property name="left_attach">3</property>
-                        <property name="right_attach">4</property>
-                        <property name="y_options">GTK_EXPAND</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <widget class="GtkHBox" id="hbox46">
-                        <property name="visible">True</property>
-                        <child>
-                          <widget class="GtkCheckButton" id="checkbutton_36">
-                            <property name="visible">True</property>
-                            <property name="response_id">0</property>
-                            <property name="draw_indicator">True</property>
-                          </widget>
-                          <packing>
-                            <property name="fill">False</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <widget class="GtkSpinButton" id="spinbutton_36">
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="adjustment">0 0 20 1 10 10</property>
-                          </widget>
-                          <packing>
-                            <property name="fill">False</property>
-                            <property name="position">1</property>
-                          </packing>
-                        </child>
-                      </widget>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="right_attach">2</property>
-                        <property name="y_options">GTK_EXPAND</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <widget class="GtkLabel" id="label48">
-                        <property name="visible">True</property>
-                        <property name="label" translatable="yes">Y-Padding
-(of widgets)</property>
-                      </widget>
-                      <packing>
-                        <property name="left_attach">2</property>
-                        <property name="right_attach">3</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <widget class="GtkLabel" id="label49">
-                        <property name="visible">True</property>
-                        <property name="label" translatable="yes">X-Padding
-(of widgets)</property>
-                      </widget>
-                    </child>
-                  </widget>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">False</property>
-                    <property name="padding">5</property>
-                    <property name="position">2</property>
                   </packing>
                 </child>
               </widget>
@@ -4359,7 +4832,7 @@
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="tooltip" translatable="yes" comments="visible in tooltip of render modes">Modes: 0=normal, 1=lighten, 2=colorize, 3=colorize monochromely</property>
-                                        <property name="adjustment">0 0 3 1 10 10</property>
+                                        <property name="adjustment">0 0 3 1 10 0</property>
                                       </widget>
                                       <packing>
                                         <property name="fill">False</property>
@@ -4394,7 +4867,7 @@
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="tooltip" translatable="yes" comments="visible in tooltip of render modes">Modes: 0=normal, 1=lighten, 2=colorize, 3=colorize monochromely</property>
-                                        <property name="adjustment">0 0 3 1 10 10</property>
+                                        <property name="adjustment">0 0 3 1 10 0</property>
                                       </widget>
                                       <packing>
                                         <property name="fill">False</property>
@@ -4537,7 +5010,7 @@
                                       <widget class="GtkSpinButton" id="spinbutton_65">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="adjustment">0 0 255 1 10 10</property>
+                                        <property name="adjustment">0 0 255 1 10 0</property>
                                       </widget>
                                       <packing>
                                         <property name="fill">False</property>
@@ -4571,7 +5044,7 @@
                                       <widget class="GtkSpinButton" id="spinbutton_66">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="adjustment">0 0 255 1 10 10</property>
+                                        <property name="adjustment">0 0 255 1 10 0</property>
                                       </widget>
                                       <packing>
                                         <property name="fill">False</property>
@@ -4605,7 +5078,7 @@
                                       <widget class="GtkSpinButton" id="spinbutton_67">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="adjustment">0 0 255 1 10 10</property>
+                                        <property name="adjustment">0 0 255 1 10 0</property>
                                       </widget>
                                       <packing>
                                         <property name="fill">False</property>
@@ -4639,7 +5112,7 @@
                                       <widget class="GtkSpinButton" id="spinbutton_68">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="adjustment">0 0 255 1 10 10</property>
+                                        <property name="adjustment">0 0 255 1 10 0</property>
                                       </widget>
                                       <packing>
                                         <property name="fill">False</property>
@@ -4686,7 +5159,7 @@
                                       <widget class="GtkSpinButton" id="spinbutton_71">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="adjustment">0 0 255 1 10 10</property>
+                                        <property name="adjustment">0 0 255 1 10 0</property>
                                       </widget>
                                       <packing>
                                         <property name="fill">False</property>
@@ -4720,7 +5193,7 @@
                                       <widget class="GtkSpinButton" id="spinbutton_72">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="adjustment">0 0 255 1 10 10</property>
+                                        <property name="adjustment">0 0 255 1 10 0</property>
                                       </widget>
                                       <packing>
                                         <property name="fill">False</property>
@@ -4985,7 +5458,7 @@
                                       <widget class="GtkSpinButton" id="spinbutton_25">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="adjustment">0 0 255 1 10 10</property>
+                                        <property name="adjustment">0 0 255 1 10 0</property>
                                         <property name="climb_rate">5</property>
                                       </widget>
                                       <packing>
@@ -5056,7 +5529,7 @@
                                       <widget class="GtkSpinButton" id="spinbutton_70">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="adjustment">0 0 255 1 10 10</property>
+                                        <property name="adjustment">0 0 255 1 10 0</property>
                                         <property name="climb_rate">5</property>
                                       </widget>
                                       <packing>
@@ -5223,7 +5696,7 @@
                                       <widget class="GtkSpinButton" id="spinbutton_76">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="adjustment">0 0 255 1 10 10</property>
+                                        <property name="adjustment">0 0 255 1 10 0</property>
                                         <property name="climb_rate">5</property>
                                       </widget>
                                       <packing>
@@ -5646,7 +6119,7 @@
                                   <widget class="GtkSpinButton" id="spinbutton_77">
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="adjustment">1 1 50 1 10 10</property>
+                                    <property name="adjustment">1 1 50 1 10 0</property>
                                   </widget>
                                   <packing>
                                     <property name="expand">False</property>
@@ -5680,7 +6153,7 @@
                                   <widget class="GtkSpinButton" id="spinbutton_47">
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="adjustment">1 1 50 1 10 10</property>
+                                    <property name="adjustment">1 1 50 1 10 0</property>
                                   </widget>
                                   <packing>
                                     <property name="expand">False</property>
@@ -5961,7 +6434,7 @@
                                   <widget class="GtkSpinButton" id="spinbutton_49">
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="adjustment">0 0 10 1 10 10</property>
+                                    <property name="adjustment">0 0 10 1 10 0</property>
                                   </widget>
                                   <packing>
                                     <property name="expand">False</property>
@@ -5995,7 +6468,7 @@
                                   <widget class="GtkSpinButton" id="spinbutton_50">
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="adjustment">0 0 10 1 10 10</property>
+                                    <property name="adjustment">0 0 10 1 10 0</property>
                                   </widget>
                                   <packing>
                                     <property name="expand">False</property>
@@ -6345,7 +6818,7 @@
                               <widget class="GtkSpinButton" id="spinbutton_104">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
-                                <property name="adjustment">0 0 64 4 10 10</property>
+                                <property name="adjustment">0 0 64 4 10 0</property>
                               </widget>
                               <packing>
                                 <property name="left_attach">2</property>
@@ -6360,7 +6833,7 @@
                               <widget class="GtkSpinButton" id="spinbutton_103">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
-                                <property name="adjustment">0 0 64 4 10 10</property>
+                                <property name="adjustment">0 0 64 4 10 0</property>
                               </widget>
                               <packing>
                                 <property name="left_attach">2</property>
@@ -6437,7 +6910,7 @@
                               <widget class="GtkSpinButton" id="spinbutton_100">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
-                                <property name="adjustment">0 0 64 4 10 10</property>
+                                <property name="adjustment">0 0 64 4 10 0</property>
                               </widget>
                               <packing>
                                 <property name="left_attach">2</property>
@@ -6470,7 +6943,7 @@
                               <widget class="GtkSpinButton" id="spinbutton_102">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
-                                <property name="adjustment">0 0 64 4 10 10</property>
+                                <property name="adjustment">0 0 64 4 10 0</property>
                               </widget>
                               <packing>
                                 <property name="left_attach">2</property>
@@ -6564,7 +7037,6 @@
                           <widget class="GtkTable" id="engines_table">
                             <property name="visible">True</property>
                             <property name="border_width">10</property>
-                            <property name="n_rows">1</property>
                             <property name="n_columns">2</property>
                             <child>
                               <placeholder/>
@@ -6854,9 +7326,9 @@ e4gle (0.1.x icon) &lt;http://www.skeagle.de&gt;
     <property name="destroy_with_parent">True</property>
     <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
     <property name="has_separator">False</property>
-    <property name="use_preview_label">False</property>
-    <property name="file_system_backend">gnome-vfs</property>
     <property name="preview_widget_active">False</property>
+    <property name="file_system_backend">gnome-vfs</property>
+    <property name="use_preview_label">False</property>
     <child internal-child="vbox">
       <widget class="GtkVBox" id="dialog-vbox2">
         <property name="visible">True</property>
@@ -6905,11 +7377,11 @@ e4gle (0.1.x icon) &lt;http://www.skeagle.de&gt;
     <property name="destroy_with_parent">True</property>
     <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
     <property name="has_separator">False</property>
-    <property name="use_preview_label">False</property>
     <property name="do_overwrite_confirmation">True</property>
-    <property name="file_system_backend">gnome-vfs</property>
-    <property name="preview_widget_active">False</property>
     <property name="action">GTK_FILE_CHOOSER_ACTION_SAVE</property>
+    <property name="preview_widget_active">False</property>
+    <property name="file_system_backend">gnome-vfs</property>
+    <property name="use_preview_label">False</property>
     <child internal-child="vbox">
       <widget class="GtkVBox" id="dialog-vbox3">
         <property name="visible">True</property>

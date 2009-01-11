@@ -78,11 +78,11 @@ style &quot;gnome-color-chooser-compact&quot;
 }
 class &quot;GtkWidget&quot; style &quot;gnome-color-chooser-compact&quot;
 
-style &quot;tooltips&quot;
+style &quot;gnome-color-chooser-compact-tooltips&quot;
 {
   xthickness = 4
   ythickness = 4
 }
-widget &quot;gtk-tooltip*&quot; style &quot;tooltips&quot;
+widget &quot;gtk-tooltip*&quot; style &quot;gnome-color-chooser-compact-tooltips&quot;
   </content>
 </profile>
