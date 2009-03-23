@@ -7204,7 +7204,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</property>
     <property name="authors">Werner Pantke &lt;gnome-color-chooser@punk-ass-bitch.org&gt;</property>
     <property name="translator_credits">Brazilian Portugese:
- * Alexandre Sapata Carbonell &lt;alexandrenescau@gmail.com&gt;
+ * Alexandre Sapata Carbonell
+   &lt;alexandrenescau@gmail.com&gt;
  * Diogo Lima &lt;diogooo@gmail.com&gt;
  * RoDoLFo TX https://launchpad.net/~rodolfo-inec
 
@@ -7232,7 +7233,8 @@ French:
  * zniavre mou &lt;zniavre2048@gmail.com&gt;
 
 German:
- * Werner Pantke &lt;gnome-color-chooser@punk-ass-bitch.org&gt;
+ * Werner Pantke
+   &lt;gnome-color-chooser@punk-ass-bitch.org&gt;
 
 Hebrew:
  * Yaron &lt;sh.yaron@gmail.com&gt;
@@ -7291,7 +7293,12 @@ Turkish:
  * Living Corpse https://launchpad.net/~corpse
  * maytekir &lt;maytekir@gmail.com&gt;
 
-Any new translation will be very appreciated.
+This list is a bit outdated. More information
+about translations and translators can be found
+at: 
+https://translations.launchpad.net/gnome-color-chooser/
+
+Any new translation will be very much appreciated.
 Please contact me!
 &lt;gnome-color-chooser@punk-ass-bitch.org&gt;
 </property>

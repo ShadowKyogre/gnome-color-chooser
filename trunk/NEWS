@@ -7,6 +7,21 @@ Please send gnome-color-chooser bug reports to
 gnome-color-chooser@punk-ass-bitch.org .
 
 
+Version 0.2.5
+
+* added possibility to customize GNOME's start menue (requires GNOME 2.24+)
+* made profile "compact" compatible with clearlooks 2.16.x
+* FIXed a bug that prevents GNOME Color Chooser from applying its settings,
+  see: http://gnomecc.sourceforge.net/forum/index.php?topic=19.msg46#msg46
+* unlike file->new, the revert button now also removes any changes made to
+  ~/.gtkrc-2.0
+* new languages: Arabic, English (Canada), Finnish, Norwegian Bokmal,
+  and Dutch; there are also many other new translations.
+  100% complete are: de (German), en_CA (English Canada), es (Spanish),
+  fr (French), he (Hebrew), it (Italian), and sv (Swedish).
+  Thanks to all contributors, YOU ROCK!
+
+
 Version 0.2.4
 
 * changed project license to GNU GPL3+
