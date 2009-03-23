@@ -160,7 +160,7 @@ bool Utils::remove_include(string filename, string include, string searchpattern
 
   if(rename(filename_tmp.c_str(), filename.c_str()))
   {
-    g_debug("Could not move file %s to %s.", filename_tmp.c_str(), filename.c_str());
+    g_debug("Could not rename file %s to %s.", filename_tmp.c_str(), filename.c_str());
     return 0;
   }
 

@@ -1,5 +1,5 @@
 # GNOME Color Chooser - GTK+/GNOME desktop appearance customization tool
-# Copyright (C) 2006-2008 Werner Pantke <wpantke@punk-ass-bitch.org>
+# Copyright (C) 2006-2009 Werner Pantke <wpantke@punk-ass-bitch.org>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
 #
 
 AC_INIT([GNOME Color Chooser],
-        [0.2.4],
+        [0.2.5],
         [Werner Pantke \<gnome-color-chooser\@punk-ass-bitch.org\>],
         [gnome-color-chooser])
 #AC_CONFIG_AUX_DIR(config)

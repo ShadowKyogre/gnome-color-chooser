@@ -564,7 +564,7 @@ void MainWindow::on_main_apply()
             "include \".gtkrc-2.0-gnome-color-chooser\"",
             ".gtkrc-2.0-gnome-color-chooser"))
       {
-        g_warning(_("Unable to modify file %s."), "~/.gtkrc-2.0");
+        g_warning(_("Unable to modify file %s."), m_gtkrcfile.c_str());
         return;
       }
     }
@@ -592,7 +592,7 @@ void MainWindow::on_main_revert()
         "include \".gtkrc-2.0-gnome-color-chooser\"",
         ".gtkrc-2.0-gnome-color-chooser"))
   {
-    g_warning(_("Unable to modify file %s."), "~/.gtkrc-2.0");
+    g_warning(_("Unable to modify file %s."), m_gtkrcfile.c_str());
   }
 
   // save settings
@@ -859,7 +859,7 @@ void MainWindow::on_help_info()
   {
     pDialog->set_transient_for(*this);
     pDialog->set_name(PACKAGE_NAME);
-    pDialog->set_copyright("Copyright (C) 2006-2008 Werner Pantke");
+    pDialog->set_copyright("Copyright (C) 2006-2009 Werner Pantke");
     pDialog->set_version(version.c_str());
     pDialog->set_comments(_("A tool for customizing the appearance of the GNOME desktop"));
     pDialog->set_logo(m_refIcon);

@@ -1,5 +1,18 @@
 2009-03-23  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
+	* NEWS:
+	* configure.ac:
+	updated for 0.2.5 release
+
+	* src/gnome-color-chooser.glade:
+	* src/mainwindow.cc:
+	updated year and translator notes
+
+	* src/utils.cc:
+	(minor debug string change)
+
+2009-03-23  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
 	* src/gnome-color-chooser.glade:
 	marked a string ('<b>Compiz</b>') as not translatable
 
