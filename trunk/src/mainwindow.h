@@ -1,5 +1,5 @@
 /* GNOME Color Chooser - GTK+/GNOME desktop appearance customization tool
- * Copyright (C) 2006-2008 Werner Pantke <wpantke@punk-ass-bitch.org>
+ * Copyright (C) 2006-2009 Werner Pantke <wpantke@punk-ass-bitch.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -52,6 +52,7 @@ public:
   void init(TreeHandler* config,
             string configfile,
             string filename,
+            string gtkrcfile,
             string customgtkrcfile,
             string version,
             string icon,
@@ -104,6 +105,7 @@ private:
   TreeHandler* m_pConfig;
   string m_filename;
   string m_configfile;
+  string m_gtkrcfile;
   string m_customgtkrcfile;
   Glib::RefPtr<Gdk::Pixbuf>  m_refIcon;
   string version;

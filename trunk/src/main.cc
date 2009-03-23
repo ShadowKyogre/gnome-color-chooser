@@ -1,5 +1,5 @@
 /* GNOME Color Chooser - GTK+/GNOME desktop appearance customization tool
- * Copyright (C) 2006-2008 Werner Pantke <wpantke@punk-ass-bitch.org>
+ * Copyright (C) 2006-2009 Werner Pantke <wpantke@punk-ass-bitch.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -64,40 +64,9 @@ OptionState optionstate;
 bool config_ok(
       string configfile,
       string dbfile,
-      string gtkrcfile,
       string customgtkrcfile)
 {
   GString *error;
-
-  if(! (Utils::Io::check_file(gtkrcfile, true)
-        || Utils::Io::create_file(gtkrcfile)) )
-  {
-    error =  g_string_new("");
-    g_string_printf(error, _("Could not open or create file %s."), gtkrcfile.c_str());
-    Utils::Ui::print_error(_("Error"), error->str, 1);
-    g_string_free(error, true);
-    return false;
-  }
-
-
-  if(!Utils::create_include(
-        gtkrcfile,
-        "include \".gtkrc-2.0-gnome-color-chooser\"",
-        ".gtkrc-2.0-gnome-color-chooser"))
-  {
-    if(!Utils::check_include(
-          gtkrcfile,
-          "include \".gtkrc-2.0-gnome-color-chooser\"",
-          ".gtkrc-2.0-gnome-color-chooser"))
-    {
-      error =  g_string_new("");
-      g_string_printf(error, _("Unable to modify file %s."), "~/.gtkrc-2.0");
-      Utils::Ui::print_error(_("Error"), error->str, 1);
-      g_string_free(error, true);
-      return false;
-    }
-  }
-
 
   if(!Utils::Io::check_file(customgtkrcfile, true)
      && !Utils::Io::create_file(customgtkrcfile))
@@ -203,7 +172,7 @@ int main (int argc, char *argv[])
   }
 
 
-  if(!config_ok(configfile, dbfile, gtkrcfile, customgtkrcfile))
+  if(!config_ok(configfile, dbfile, customgtkrcfile))
   {
     kit.run(); // run mainloop to make error messages appear on screen
     return 1;
@@ -271,6 +240,7 @@ int main (int argc, char *argv[])
     pWindow->init(pConfig,
                   configfile,
                   filename,
+                  gtkrcfile,
                   customgtkrcfile,
                   VERSION,
                   string(ICONDIR) + string("/gnome-color-chooser.svg"),
