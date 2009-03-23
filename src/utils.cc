@@ -1,5 +1,5 @@
 /* GNOME Color Chooser - GTK+/GNOME desktop appearance customization tool
- * Copyright (C) 2006-2008 Werner Pantke <wpantke@punk-ass-bitch.org>
+ * Copyright (C) 2006-2009 Werner Pantke <wpantke@punk-ass-bitch.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,6 +27,8 @@
 #include <fstream>
 #include <glib.h>
 #include <cstring>
+#include <unistd.h> // unlink()
+#include <stdio.h>  // rename()
 
 // Utils::Io
 #include <sys/types.h>
@@ -49,7 +51,7 @@ using namespace GnomeCC;
 
 bool Utils::check_include(string filename, string include, string searchpattern)
 {
-  if(!Utils::Io::check_file(filename, true))
+  if(!Utils::Io::check_file(filename))
     return 0;
     
   fstream fi(filename.c_str(), ios_base::in);
@@ -59,13 +61,23 @@ bool Utils::check_include(string filename, string include, string searchpattern)
 
   //scan
   string line;
+  size_t p_include;
+  size_t p_pattern;
+  size_t p_comment;
 
   while ( getline ( fi, line ) )
   {
-    //string::size_type i = line.find_first_not_of ( " \t\n\v" );
+    p_include = string::npos;
+    p_pattern = string::npos;
+    p_comment = string::npos;
 
     if ( line == include \
-          || (searchpattern != "" && line.find(searchpattern, 0) != string::npos) )
+          || (searchpattern != "" \
+                && ( p_pattern = line.find(searchpattern, 0) ) != string::npos \
+                && ( p_include = line.find("include", 0) ) != string::npos \
+                && p_include < p_pattern \
+                && ( ( p_comment = line.find('#',0) ) == string::npos \
+                      || p_comment > p_pattern) ) )
     {
       fi.close();
       return 1;
@@ -95,6 +107,64 @@ bool Utils::create_include(string filename, string include, string searchpattern
   }
 
   return 0;
+}
+
+
+// returns true if there is no matching include statement in the end,
+// no matter if there was one at all
+bool Utils::remove_include(string filename, string include, string searchpattern)
+{
+  if(!Utils::check_include(filename, include, searchpattern))
+    return 1;
+
+  string filename_tmp = filename + ".tmp";
+  fstream fi(filename.c_str(), ios_base::in);
+  fstream fo(filename_tmp.c_str(), ios_base::out | ios_base::trunc);
+
+  if(!fi || !fo)
+    return 0;
+
+  //scan
+  string line;
+  size_t p_include;
+  size_t p_pattern;
+  size_t p_comment;
+
+  while ( getline ( fi, line ) )
+  {
+    p_include = string::npos;
+    p_pattern = string::npos;
+    p_comment = string::npos;
+
+    if ( line == include \
+          || (searchpattern != "" \
+                && ( p_pattern = line.find(searchpattern, 0) ) != string::npos \
+                && ( p_include = line.find("include", 0) ) != string::npos \
+                && p_include < p_pattern \
+                && ( ( p_comment = line.find('#',0) ) == string::npos \
+                      || p_comment > p_pattern) ) )
+    {
+      // do nothing => remove this line
+    }
+    else
+      fo << line << "\n";
+  }
+  fi.close();
+  fo.close();
+
+  if(unlink(filename.c_str()))
+  {
+    g_debug("Could not delete file %s.", filename.c_str());
+    return 0;
+  }
+
+  if(rename(filename_tmp.c_str(), filename.c_str()))
+  {
+    g_debug("Could not move file %s to %s.", filename_tmp.c_str(), filename.c_str());
+    return 0;
+  }
+
+  return 1;
 }
 
 

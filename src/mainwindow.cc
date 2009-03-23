@@ -1,5 +1,5 @@
 /* GNOME Color Chooser - GTK+/GNOME desktop appearance customization tool
- * Copyright (C) 2006-2008 Werner Pantke <wpantke@punk-ass-bitch.org>
+ * Copyright (C) 2006-2009 Werner Pantke <wpantke@punk-ass-bitch.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -176,6 +176,7 @@ void MainWindow::close()
 void MainWindow::init(TreeHandler* config,
                       string       configfile,
                       string       filename,
+                      string       gtkrcfile,
                       string       customgtkrcfile,
                       string       version,
                       string       icon,
@@ -188,6 +189,7 @@ void MainWindow::init(TreeHandler* config,
   this->image_path        = image_path;
   this->m_configfile      = configfile;
   this->m_filename        = filename;
+  this->m_gtkrcfile       = gtkrcfile;
   this->m_customgtkrcfile = customgtkrcfile;
 
   set_title(PACKAGE_NAME);
@@ -539,14 +541,41 @@ void MainWindow::on_main_cancel()
 
 void MainWindow::on_main_apply()
 {
-  // save settings
   if(m_configfile != "")
   {
+
+    // check/create include statement in ~/.gtkrc-2.0
+    if(!Utils::check_include(
+          m_gtkrcfile,
+          "include \".gtkrc-2.0-gnome-color-chooser\"",
+          ".gtkrc-2.0-gnome-color-chooser"))
+    {
+
+      if(! (Utils::Io::check_file(m_gtkrcfile, true)
+            || Utils::Io::create_file(m_gtkrcfile)) )
+      {
+        g_warning(_("Could not open or create file %s."), m_gtkrcfile.c_str());
+        return;
+      }
+
+
+      if(!Utils::create_include(
+            m_gtkrcfile,
+            "include \".gtkrc-2.0-gnome-color-chooser\"",
+            ".gtkrc-2.0-gnome-color-chooser"))
+      {
+        g_warning(_("Unable to modify file %s."), "~/.gtkrc-2.0");
+        return;
+      }
+    }
+
+    // save settings
     ConfigLoader::export_config(m_pConfig, m_configfile, true, true);
 
     // let all gtk apps redraw (save changes and let the apps re-read them)
     this->write_gtkrc(m_customgtkrcfile);
     this->redraw_all_gtk_apps();
+
   }
 }
 
@@ -556,6 +585,22 @@ void MainWindow::on_main_revert()
   m_pConfig->reset_to_defaults();
 //todo: create a (ConfigLoader::)reset_engine_combos();
   ModWidget::reload_all_widgets();
+
+  // remove_include statement in ~/.gtkrc-2.0
+  if(!Utils::remove_include(
+        m_gtkrcfile,
+        "include \".gtkrc-2.0-gnome-color-chooser\"",
+        ".gtkrc-2.0-gnome-color-chooser"))
+  {
+    g_warning(_("Unable to modify file %s."), "~/.gtkrc-2.0");
+  }
+
+  // save settings
+  ConfigLoader::export_config(m_pConfig, m_configfile, true, true);
+
+  // let all gtk apps redraw (save changes and let the apps re-read them)
+  this->write_gtkrc(m_customgtkrcfile);
+  this->redraw_all_gtk_apps();
 }
 
 
@@ -567,7 +612,10 @@ void MainWindow::on_file_exit()
 
 void MainWindow::on_file_new()
 {
-  this->on_main_revert();
+  m_pConfig->reset_to_defaults();
+//todo: create a (ConfigLoader::)reset_engine_combos();
+  ModWidget::reload_all_widgets();
+
   m_filename = "";
 }
 

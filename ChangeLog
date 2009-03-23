@@ -1,3 +1,23 @@
+2009-03-23  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* src/gnome-color-chooser.glade:
+	marked a string ('<b>Compiz</b>') as not translatable
+
+	* src/main.cc:
+	moved handling of include statement in ~/.gtkrc-2.0 to utils.(h|cc)
+
+	* src/mainwindow.cc:
+	* src/mainwindow.h:
+	the file ~/.gtkrc-2.0 is now modified on-the-fly and not at program start only;
+	this means that it is adapted everytime you click on apply or revert.
+	the revert button doesn't only reset all settings but also reverts all changes
+	made to ~/.gtkrc-2.0
+
+	* src/utils.cc:
+	* src/utils.h:
+	added some gtkrc-syntax-awareness to check_include() ;-)
+	added remove_include() to remove an include statement from a gtkrc file
+
 2009-01-11  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* profiles/compact.xml.in:

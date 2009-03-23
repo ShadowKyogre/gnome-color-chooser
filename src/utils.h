@@ -1,5 +1,5 @@
 /* GNOME Color Chooser - GTK+/GNOME desktop appearance customization tool
- * Copyright (C) 2006-2008 Werner Pantke <wpantke@punk-ass-bitch.org>
+ * Copyright (C) 2006-2009 Werner Pantke <wpantke@punk-ass-bitch.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -44,6 +44,7 @@ namespace GnomeCC
     public:
       static bool check_include(string filename, string include, string searchpattern = "");
       static bool create_include(string filename, string include, string searchpattern = "");
+      static bool remove_include(string filename, string include, string searchpattern = "");
       static string int2string(int);
       static string double2string(double, int fractionalDigits=2);
 
