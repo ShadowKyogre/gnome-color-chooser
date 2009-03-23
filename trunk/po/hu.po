@@ -5,18 +5,554 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnomecc\n"
+"Project-Id-Version: gnomec-color-chooser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-26 11:58+0200\n"
-"PO-Revision-Date: 2008-05-15 01:28+0000\n"
+"POT-Creation-Date: 2009-03-23 19:32+0100\n"
+"PO-Revision-Date: 2009-03-23 19:19+0100\n"
 "Last-Translator: kaiju <Unknown>\n"
-"Language-Team: <szerencsefia@gmail.com>\n"
+"Language-Team: <szerencsefia@gmail.com> <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2008-09-02 21:12+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 "X-Poedit-Language: Hungarian\n"
+
+#: ../profiles/compact.xml.in.h:1
+#, fuzzy
+msgid "Compact"
+msgstr "Tömör"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:2 ../src/gnome-color-chooser.glade.h:30
+#, fuzzy
+msgid "Buttons"
+msgstr "Gombok"
+
+#. translator node: this is a category name (tab label); comboboxes are button widgets with a dropdown list
+#: ../src/gnome-color-chooser.xml.in.h:4
+msgid "Comboboxes"
+msgstr ""
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:6
+#, fuzzy
+msgid "Desktop Icons"
+msgstr "Asztali ikonok"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:8
+#, fuzzy
+msgid "Global"
+msgstr "Globális"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:10
+#: ../src/gnome-color-chooser.glade.h:49
+msgid "Panel"
+msgstr "Panel"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:12
+msgid "Progress Bars"
+msgstr ""
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:14
+#, fuzzy
+msgid "Scrollbars"
+msgstr "Görgetősávok"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:16
+msgid "Start Menue"
+msgstr "Indítómenü"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:18
+msgid "Tooltips"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:1
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> Images are currently not "
+"exported!!"
+msgstr ""
+"<b><span foreground=\"#ff0000\">Megjegyzés:</span></b> Jelenleg a képek "
+"nincsenek exportálva!!"
+
+#: ../src/gnome-color-chooser.glade.h:2
+#, fuzzy
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> These settings only work "
+"with gtk2-themes that don't specify these values on their own, otherwise "
+"nothing will happen on a change ;-)"
+msgstr ""
+"<b><span foreground=\"#ff0000\">Megjegyzés:</span></b> Ezek a beállítások "
+"csak azon gtk2-témáknál működnek, melyek maguk nem adják meg saját "
+"beállításaikat. Ellenkező esetben a változtatáskor nem fog történni semmi ;-)"
+
+#: ../src/gnome-color-chooser.glade.h:3
+msgid "<b>Buttons</b>"
+msgstr "<b>Gombok</b>"
+
+#. Comboboxes are button widgets with a dropdown list, translations may be longer than the english word
+#: ../src/gnome-color-chooser.glade.h:5
+msgid "<b>Comboboxes</b>"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:6
+msgid "<b>Default Configuration</b>"
+msgstr "<b>Alapértelmezett Beállítás</b>"
+
+#: ../src/gnome-color-chooser.glade.h:7
+msgid "<b>Desktop</b>"
+msgstr "<b>Asztal</b>"
+
+#: ../src/gnome-color-chooser.glade.h:8
+msgid "<b>Engines</b> [for advanced users!]"
+msgstr "<b>Téma-motorok</b> [haladó felhasználóknak!]"
+
+#: ../src/gnome-color-chooser.glade.h:9
+msgid "<b>Entry Fields</b>"
+msgstr "<b>Beviteli Mezők</b>"
+
+#: ../src/gnome-color-chooser.glade.h:10
+msgid "<b>Icon Labels</b>"
+msgstr "<b>Ikon Nevek</b>"
+
+#: ../src/gnome-color-chooser.glade.h:11
+msgid "<b>Icon sizes</b> (x² pixels)"
+msgstr "<b>Ikon méretek</b> (x² képpont)"
+
+#: ../src/gnome-color-chooser.glade.h:12
+msgid "<b>Icons</b>"
+msgstr "<b>Ikonok</b>"
+
+#. Abbreviation for Hyperlinks
+#: ../src/gnome-color-chooser.glade.h:14
+#, fuzzy
+msgid "<b>Links</b>"
+msgstr "Hivatkozások"
+
+#: ../src/gnome-color-chooser.glade.h:15
+msgid "<b>Metacity</b> (normal)"
+msgstr "<b>Metacity</b> (normál)"
+
+#: ../src/gnome-color-chooser.glade.h:16
+msgid "<b>Normal</b>"
+msgstr "<b>Normál</b>"
+
+#: ../src/gnome-color-chooser.glade.h:17
+msgid "<b>Panel</b>"
+msgstr "<b>Panel</b>"
+
+#: ../src/gnome-color-chooser.glade.h:18
+msgid "<b>Progress Bars</b>"
+msgstr "<b>Folyamatjelzők</b>"
+
+#. Label of the frame that shows the result of the Schema Validation process
+#: ../src/gnome-color-chooser.glade.h:20
+msgid "<b>Result</b>"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:21
+msgid "<b>Scrollbars</b>"
+msgstr "<b>Gördítősávok</b>"
+
+#: ../src/gnome-color-chooser.glade.h:22
+msgid "<b>Selection Box</b>"
+msgstr "<b>Jelölőnégyzet</b>"
+
+#: ../src/gnome-color-chooser.glade.h:23
+msgid "<b>Start Menu</b>"
+msgstr "<b>Indítómenü</b>"
+
+#: ../src/gnome-color-chooser.glade.h:24
+msgid "<b>Tooltips</b>"
+msgstr "<b>Gyorstippek</b>"
+
+#: ../src/gnome-color-chooser.glade.h:25
+msgid "<b>Window Decoration</b>"
+msgstr "<b>Ablakdekoráció</b>"
+
+#: ../src/gnome-color-chooser.glade.h:26
+msgid "Background"
+msgstr "Háttér"
+
+#: ../src/gnome-color-chooser.glade.h:27
+msgid "Background Opacity"
+msgstr "Háttér áttetszőség"
+
+#: ../src/gnome-color-chooser.glade.h:28
+msgid "Button"
+msgstr "Gomb"
+
+#: ../src/gnome-color-chooser.glade.h:29
+msgid "Button Size"
+msgstr "Gombméret"
+
+#: ../src/gnome-color-chooser.glade.h:31
+msgid "Color"
+msgstr "Szín"
+
+#: ../src/gnome-color-chooser.glade.h:32
+msgid "Desktop"
+msgstr "Asztal"
+
+#. Verb (to export)
+#: ../src/gnome-color-chooser.glade.h:34
+msgid "E_xport as"
+msgstr "E_xportál mint"
+
+#. Label for the filechooserbutton that selects an Engine Schema XML file
+#: ../src/gnome-color-chooser.glade.h:36
+msgid "Engine Schema (XML)"
+msgstr ""
+
+#. Menubar entry
+#. translator note: window title
+#: ../src/gnome-color-chooser.glade.h:38 ../src/validatorwindow.cc:51
+msgid "Engine Schema Validator"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:39
+msgid "Engines"
+msgstr "Téma-motorok"
+
+#: ../src/gnome-color-chooser.glade.h:40
+msgid "Font"
+msgstr "Betűtípus"
+
+#: ../src/gnome-color-chooser.glade.h:41
+msgid "Foreground"
+msgstr "Előtér"
+
+#: ../src/gnome-color-chooser.glade.h:42
+msgid "Global Colors"
+msgstr "Rendszer-színek"
+
+#: ../src/gnome-color-chooser.glade.h:43
+msgid "Icons"
+msgstr "Ikonok"
+
+#: ../src/gnome-color-chooser.glade.h:44
+msgid "Large Toolbar"
+msgstr "Nagyméretű Eszközsáv"
+
+#: ../src/gnome-color-chooser.glade.h:45
+msgid "Menue (e.g. application or context menues)"
+msgstr "Menük (pl. alkalmazás vagy tartalom menük)"
+
+#. visible in tooltip of render modes
+#: ../src/gnome-color-chooser.glade.h:47
+#, fuzzy
+msgid "Modes: 0=normal, 1=lighten, 2=colorize, 3=colorize monochromely"
+msgstr "Módok: 0=normál, 1=világosítás, 2=színezés, 3=monokróm színezés"
+
+#: ../src/gnome-color-chooser.glade.h:48
+msgid "Opacity"
+msgstr "Áttetszőség"
+
+#: ../src/gnome-color-chooser.glade.h:50
+#, fuzzy
+msgid "Profile:"
+msgstr "Profil:"
+
+#: ../src/gnome-color-chooser.glade.h:51
+msgid "Specific"
+msgstr "Specális"
+
+#: ../src/gnome-color-chooser.glade.h:52
+msgid "Start menue (needs panel restart!)"
+msgstr "Indítómenü (panel újraindítást igényel!)"
+
+#: ../src/gnome-color-chooser.glade.h:53
+msgid "Text"
+msgstr "Szöveg"
+
+#: ../src/gnome-color-chooser.glade.h:54
+#, fuzzy
+msgid "This color is only used if render mode is 2 or 3 (colorize)"
+msgstr ""
+"Ez a szín csak akkor használható, ha a render mód 2 vagy 3 (színesítés)"
+
+#: ../src/gnome-color-chooser.glade.h:55
+#, fuzzy
+msgid "This option does not affect all themes!"
+msgstr "Ez az opció nincs hatással minden témára!"
+
+#: ../src/gnome-color-chooser.glade.h:56
+msgid "Title/Buttons"
+msgstr "Címsor/Gombok"
+
+#. Button Label of the Schema Validator
+#: ../src/gnome-color-chooser.glade.h:58
+msgid "Validate"
+msgstr ""
+
+#. Label for the filechooserbutton that selects a Validator Schema XSD file
+#: ../src/gnome-color-chooser.glade.h:60
+msgid "Validator Schema (XSD)"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:61
+msgid "Width"
+msgstr "Szélesség"
+
+#: ../src/gnome-color-chooser.glade.h:62
+msgid "X-Padding"
+msgstr "X-Nyújtás"
+
+#: ../src/gnome-color-chooser.glade.h:63
+msgid ""
+"X-Padding\n"
+"(of widgets)"
+msgstr ""
+"X-Nyújtás\n"
+"(az elemeké)"
+
+#: ../src/gnome-color-chooser.glade.h:65
+msgid "Y-Padding"
+msgstr "Y-Nyújtás"
+
+#: ../src/gnome-color-chooser.glade.h:66
+msgid ""
+"Y-Padding\n"
+"(of widgets)"
+msgstr ""
+"Y-Nyújtás\n"
+"(az elemeké)"
+
+#: ../src/gnome-color-chooser.glade.h:68
+msgid "_File"
+msgstr "_Fájl"
+
+#: ../src/gnome-color-chooser.glade.h:69
+msgid "_Help"
+msgstr "_Súgó"
+
+#: ../src/gnome-color-chooser.glade.h:70
+msgid "_Install in GNOME"
+msgstr "_Telepítés GNOME alatt"
+
+#: ../src/gnome-color-chooser.glade.h:71
+msgid "_Tools"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:72
+msgid "activate hover effects"
+msgstr "aktív fölötte effektus"
+
+#: ../src/gnome-color-chooser.glade.h:73
+msgid "active"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:74
+msgid "active window"
+msgstr "aktív ablak"
+
+#: ../src/gnome-color-chooser.glade.h:75
+#, fuzzy
+msgid "beautify icon labels (needed for icon label settings!)"
+msgstr "ikon feliratok szépítése (szükséges az ikon felirat beállításokhoz!)"
+
+#: ../src/gnome-color-chooser.glade.h:76
+msgid "brightness"
+msgstr "fényesség"
+
+#: ../src/gnome-color-chooser.glade.h:77
+msgid "button pressed"
+msgstr "lenyomott gomb"
+
+#: ../src/gnome-color-chooser.glade.h:78
+msgid "colorize with"
+msgstr "színez"
+
+#: ../src/gnome-color-chooser.glade.h:79
+msgid "deactivate (stock) icons"
+msgstr "kikapcsolt (rendszer) ikonok"
+
+#: ../src/gnome-color-chooser.glade.h:80
+msgid "disabled"
+msgstr "kikapcsolva"
+
+#: ../src/gnome-color-chooser.glade.h:81
+#, fuzzy
+msgid "export comments (for easy human theme editing)"
+msgstr "megjegyzések exportálása (téma könnyű szerkesztéséhez)"
+
+#: ../src/gnome-color-chooser.glade.h:82
+msgid "export disabled theme elements"
+msgstr "kikapcsolt téma elemek exportálása"
+
+#: ../src/gnome-color-chooser.glade.h:83
+msgid "hover"
+msgstr "fölötte"
+
+#: ../src/gnome-color-chooser.glade.h:84
+msgid "inactive window"
+msgstr "inaktív ablak"
+
+#: ../src/gnome-color-chooser.glade.h:85
+#, fuzzy
+msgid "lighten"
+msgstr "világosít"
+
+#: ../src/gnome-color-chooser.glade.h:86
+msgid "normal"
+msgstr "normál"
+
+#: ../src/gnome-color-chooser.glade.h:87
+msgid "pressed"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:88
+msgid "render mode"
+msgstr "renderelés"
+
+#: ../src/gnome-color-chooser.glade.h:89
+msgid "saturation"
+msgstr "telítettség"
+
+#: ../src/gnome-color-chooser.glade.h:90
+msgid "selected"
+msgstr "kiválasztva"
+
+#. as in unvisited link
+#: ../src/gnome-color-chooser.glade.h:92
+msgid "unvisited"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:93
+msgid "use shadowless Menubars"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:94
+msgid "use shadowless Toolbars"
+msgstr ""
+
+#. as in (already) visited link
+#: ../src/gnome-color-chooser.glade.h:96
+msgid "visited"
+msgstr ""
+
+#: ../src/gnome-color-chooser.desktop.in.h:1
+msgid "Customize your GNOME desktop"
+msgstr "GNOME-asztal testreszabása"
+
+#: ../src/configloader.cc:129 ../src/configloader.cc:1134
+#, fuzzy
+msgid "Theme Default"
+msgstr "Téma alapértelmezett értékei"
+
+#: ../src/configloader.cc:758
+#, c-format
+msgid "Configuration of %s"
+msgstr "A %s beállítása"
+
+#: ../src/configloader.cc:1133
+#, fuzzy
+msgid "None"
+msgstr "Nincs"
+
+#: ../src/ioexception.cc:43
+msgid "Read Error"
+msgstr ""
+
+#: ../src/ioexception.cc:46
+msgid "Write Error"
+msgstr ""
+
+#: ../src/main.cc:75 ../src/mainwindow.cc:557
+#, c-format
+msgid "Could not open or create file %s."
+msgstr ""
+
+#. "Error" is the caption of an error message
+#: ../src/main.cc:76 ../src/main.cc:87 ../src/main.cc:97 ../src/main.cc:113
+#: ../src/main.cc:198
+msgid "Error"
+msgstr ""
+
+#: ../src/main.cc:86 ../src/mainwindow.cc:567 ../src/mainwindow.cc:595
+#, c-format
+msgid "Unable to modify file %s."
+msgstr ""
+
+#: ../src/main.cc:96
+#, c-format
+msgid "Could not open file %s."
+msgstr ""
+
+#. translator note: used in --help message, describes the CLI command --validator-only
+#: ../src/main.cc:129
+msgid "Start Engine Schema validator only"
+msgstr ""
+
+#. translator note: used in --help message, name of optional parameter (brackets!), please use uppercase letters only!
+#: ../src/main.cc:131
+msgid "[FILENAME]"
+msgstr ""
+
+#. dialog title
+#: ../src/mainwindow.cc:669
+msgid "Save Theme"
+msgstr "Téma Mentése"
+
+#. dialog title
+#: ../src/mainwindow.cc:696
+msgid "Save Theme as"
+msgstr "Téma Mentése mint"
+
+#. dialog title
+#: ../src/mainwindow.cc:722
+msgid "Export Theme as"
+msgstr "Téma Exportálása mint"
+
+#: ../src/mainwindow.cc:864
+#, fuzzy
+msgid "A tool for customizing the appearance of the GNOME desktop"
+msgstr "Eszköz a GNOME asztal színeinek testreszabásához"
+
+#: ../src/mainwindow.cc:911
+#, c-format
+msgid "Export to file %s failed: %s."
+msgstr ""
+
+#: ../src/treehandler.cc:558
+msgid "Version"
+msgstr "Verzió"
+
+#: ../src/treehandler.cc:559
+msgid "Website"
+msgstr "Honlap"
+
+#: ../src/treehandler.cc:563
+msgid "Author(s)"
+msgstr "Szerző(k)"
+
+#: ../src/validatorwindow.cc:109
+msgid "No XML file specified!"
+msgstr ""
+
+#: ../src/validatorwindow.cc:111
+msgid "No XSD file specified!"
+msgstr ""
+
+#. translator note: message that appears if a validation has been successful
+#: ../src/validatorwindow.cc:116
+msgid "Validation passed!"
+msgstr ""
+
+#: ../src/validatorwindow.cc:119
+msgid "Validation failed!"
+msgstr ""
+
+#. translator note: as in "error found on line x"
+#: ../src/validatorwindow.cc:211
+msgid "Line"
+msgstr ""
 
 #~ msgid ""
 #~ "<span size='small'><u><b>ToDo:</b></u>\n"
@@ -25,7 +561,8 @@ msgstr ""
 #~ "-> find translators! (please mail) ;-)</span>"
 #~ msgstr ""
 #~ "<span size='small'><u><b>Teendők:</b></u>\n"
-#~ "-> gyorstippek használata bővebb tájékoztatásra minden egyes beállításhoz\n"
+#~ "-> gyorstippek használata bővebb tájékoztatásra minden egyes "
+#~ "beállításhoz\n"
 #~ "-> GUI egyszerűsítése és előnézeti terület hozzáadása</span>"
 
 #~ msgid "Panel (does nothing with my clearlooks-theme)"
@@ -64,536 +601,8 @@ msgstr ""
 #~ msgid "A tool for customizing the appereance of the GNOME desktop"
 #~ msgstr "Eszköz a GNOME rendszerek megjelenésének testreszabásához."
 
-#: ../profiles/compact.xml.in.h:1
-#, fuzzy
-msgid "Compact"
-msgstr "Tömör"
-
-#. category name
-#: ../src/gnome-color-chooser.xml.in.h:2 ../src/gnome-color-chooser.glade.h:31
-#, fuzzy
-msgid "Buttons"
-msgstr "Gombok"
-
-#. category name; comboboxes are button widgets with a dropdown list
-#: ../src/gnome-color-chooser.xml.in.h:4
-msgid "Comboboxes"
-msgstr ""
-
-#. category name
-#: ../src/gnome-color-chooser.xml.in.h:6
-#, fuzzy
-msgid "Desktop Icons"
-msgstr "Asztali ikonok"
-
-#. category name
-#: ../src/gnome-color-chooser.xml.in.h:8
-#, fuzzy
-msgid "Global"
-msgstr "Globális"
-
-#. category name
-#: ../src/gnome-color-chooser.xml.in.h:10
-#: ../src/gnome-color-chooser.glade.h:51
-msgid "Panel"
-msgstr "Panel"
-
-#. category name
-#: ../src/gnome-color-chooser.xml.in.h:12
-msgid "Progress Bars"
-msgstr ""
-
-#. category name
-#: ../src/gnome-color-chooser.xml.in.h:14
-#, fuzzy
-msgid "Scrollbars"
-msgstr "Görgetősávok"
-
-#. category name
-#: ../src/gnome-color-chooser.xml.in.h:16
-msgid "Tooltips"
-msgstr ""
-
-#: ../src/gnome-color-chooser.glade.h:1
-msgid ""
-"<b><span foreground=\"#ff0000\">Note:</span></b> Images are currently not "
-"exported!!"
-msgstr ""
-"<b><span foreground=\"#ff0000\">Megjegyzés:</span></b> Jelenleg a képek "
-"nincsenek exportálva!!"
-
-#: ../src/gnome-color-chooser.glade.h:2
-#, fuzzy
-msgid ""
-"<b><span foreground=\"#ff0000\">Note:</span></b> These settings only work "
-"with gtk2-themes that don't specify these values on their own, otherwise "
-"nothing will happen on a change ;-)"
-msgstr ""
-"<b><span foreground=\"#ff0000\">Megjegyzés:</span></b> Ezek a beállítások "
-"csak azon gtk2-témáknál működnek, melyek maguk nem adják meg saját "
-"beállításaikat. Ellenkező esetben a változtatáskor nem fog történni semmi ;-)"
-
-#: ../src/gnome-color-chooser.glade.h:3
-msgid "<b>Buttons</b>"
-msgstr "<b>Gombok</b>"
-
-#. Comboboxes are button widgets with a dropdown list, translations may be longer than the english word
-#: ../src/gnome-color-chooser.glade.h:5
-msgid "<b>Comboboxes</b>"
-msgstr ""
-
-#: ../src/gnome-color-chooser.glade.h:6
-msgid "<b>Compiz</b>"
-msgstr "<b>Compiz</b>"
-
-#: ../src/gnome-color-chooser.glade.h:7
-msgid "<b>Default Configuration</b>"
-msgstr "<b>Alapértelmezett Beállítás</b>"
-
-#: ../src/gnome-color-chooser.glade.h:8
-msgid "<b>Desktop</b>"
-msgstr "<b>Asztal</b>"
-
-#: ../src/gnome-color-chooser.glade.h:9
-msgid "<b>Engines</b> [for advanced users!]"
-msgstr "<b>Téma-motorok</b> [haladó felhasználóknak!]"
-
-#: ../src/gnome-color-chooser.glade.h:10
-msgid "<b>Entry Fields</b>"
-msgstr "<b>Beviteli Mezők</b>"
-
-#: ../src/gnome-color-chooser.glade.h:11
-msgid "<b>Icon Labels</b>"
-msgstr "<b>Ikon Nevek</b>"
-
-#: ../src/gnome-color-chooser.glade.h:12
-msgid "<b>Icon sizes</b> (x² pixels)"
-msgstr "<b>Ikon méretek</b> (x² képpont)"
-
-#: ../src/gnome-color-chooser.glade.h:13
-msgid "<b>Icons</b>"
-msgstr "<b>Ikonok</b>"
-
-#. Abbreviation for Hyperlinks
-#: ../src/gnome-color-chooser.glade.h:15
-#, fuzzy
-msgid "<b>Links</b>"
-msgstr "Hivatkozások"
-
-#: ../src/gnome-color-chooser.glade.h:16
-msgid "<b>Metacity</b> (normal)"
-msgstr "<b>Metacity</b> (normál)"
-
-#: ../src/gnome-color-chooser.glade.h:17
-msgid "<b>Normal</b>"
-msgstr "<b>Normál</b>"
-
-#: ../src/gnome-color-chooser.glade.h:18
-msgid "<b>Panel</b>"
-msgstr "<b>Panel</b>"
-
-#: ../src/gnome-color-chooser.glade.h:19
-msgid "<b>Progress Bars</b>"
-msgstr "<b>Folyamatjelzők</b>"
-
-#. Label of the frame that shows the result of the Schema Validation process
-#: ../src/gnome-color-chooser.glade.h:21
-msgid "<b>Result</b>"
-msgstr ""
-
-#: ../src/gnome-color-chooser.glade.h:22
-msgid "<b>Scrollbars</b>"
-msgstr "<b>Gördítősávok</b>"
-
-#: ../src/gnome-color-chooser.glade.h:23
-msgid "<b>Selection Box</b>"
-msgstr "<b>Jelölőnégyzet</b>"
-
-#: ../src/gnome-color-chooser.glade.h:24
-msgid "<b>Start Menu</b>"
-msgstr "<b>Indítómenü</b>"
-
-#: ../src/gnome-color-chooser.glade.h:25
-msgid "<b>Tooltips</b>"
-msgstr "<b>Gyorstippek</b>"
-
-#: ../src/gnome-color-chooser.glade.h:26
-msgid "<b>Window Decoration</b>"
-msgstr "<b>Ablakdekoráció</b>"
-
-#: ../src/gnome-color-chooser.glade.h:27
-msgid "Background"
-msgstr "Háttér"
-
-#: ../src/gnome-color-chooser.glade.h:28
-msgid "Background Opacity"
-msgstr "Háttér áttetszőség"
-
-#: ../src/gnome-color-chooser.glade.h:29
-msgid "Button"
-msgstr "Gomb"
-
-#: ../src/gnome-color-chooser.glade.h:30
-msgid "Button Size"
-msgstr "Gombméret"
-
-#: ../src/gnome-color-chooser.glade.h:32
-msgid "Color"
-msgstr "Szín"
-
-#: ../src/gnome-color-chooser.glade.h:33
-msgid "Desktop"
-msgstr "Asztal"
-
-#. Verb (to export)
-#: ../src/gnome-color-chooser.glade.h:35
-msgid "E_xport as"
-msgstr "E_xportál mint"
-
-#. Label for the filechooserbutton that selects an Engine Schema XML file
-#: ../src/gnome-color-chooser.glade.h:37
-msgid "Engine Schema (XML)"
-msgstr ""
-
-#. Menubar entry
-#. translator note: window title
-#: ../src/gnome-color-chooser.glade.h:39 ../src/validatorwindow.cc:51
-msgid "Engine Schema Validator"
-msgstr ""
-
-#: ../src/gnome-color-chooser.glade.h:40
-msgid "Engines"
-msgstr "Téma-motorok"
-
-#: ../src/gnome-color-chooser.glade.h:41
-msgid "Font"
-msgstr "Betűtípus"
-
-#: ../src/gnome-color-chooser.glade.h:42
-msgid "Foreground"
-msgstr "Előtér"
-
-#: ../src/gnome-color-chooser.glade.h:43
-msgid "Global Colors"
-msgstr "Rendszer-színek"
-
-#: ../src/gnome-color-chooser.glade.h:44
-msgid "Icons"
-msgstr "Ikonok"
-
-#: ../src/gnome-color-chooser.glade.h:45
-msgid "Large Toolbar"
-msgstr "Nagyméretű Eszközsáv"
-
-#: ../src/gnome-color-chooser.glade.h:46
-msgid "Menue (e.g. application or context menues)"
-msgstr "Menük (pl. alkalmazás vagy tartalom menük)"
-
-#. visible in tooltip of render modes
-#: ../src/gnome-color-chooser.glade.h:48
-#, fuzzy
-msgid "Modes: 0=normal, 1=lighten, 2=colorize, 3=colorize monochromely"
-msgstr "Módok: 0=normál, 1=világosítás, 2=színezés, 3=monokróm színezés"
-
-#: ../src/gnome-color-chooser.glade.h:49
-msgid "Not yet possible with GNOME"
-msgstr "GNOME alatt még nem lehetséges"
-
-#: ../src/gnome-color-chooser.glade.h:50
-msgid "Opacity"
-msgstr "Áttetszőség"
-
-#: ../src/gnome-color-chooser.glade.h:52
-#, fuzzy
-msgid "Profile:"
-msgstr "Profil:"
-
-#: ../src/gnome-color-chooser.glade.h:53
-msgid "Specific"
-msgstr "Specális"
-
-#: ../src/gnome-color-chooser.glade.h:54
-msgid "Start menue (needs panel restart!)"
-msgstr "Indítómenü (panel újraindítást igényel!)"
-
-#: ../src/gnome-color-chooser.glade.h:55
-msgid "Text"
-msgstr "Szöveg"
-
-#: ../src/gnome-color-chooser.glade.h:56
-#, fuzzy
-msgid "This color is only used if render mode is 2 or 3 (colorize)"
-msgstr ""
-"Ez a szín csak akkor használható, ha a render mód 2 vagy 3 (színesítés)"
-
-#: ../src/gnome-color-chooser.glade.h:57
-#, fuzzy
-msgid "This option does not affect all themes!"
-msgstr "Ez az opció nincs hatással minden témára!"
-
-#: ../src/gnome-color-chooser.glade.h:58
-msgid "Title/Buttons"
-msgstr "Címsor/Gombok"
-
-#. Button Label of the Schema Validator
-#: ../src/gnome-color-chooser.glade.h:60
-msgid "Validate"
-msgstr ""
-
-#. Label for the filechooserbutton that selects a Validator Schema XSD file
-#: ../src/gnome-color-chooser.glade.h:62
-msgid "Validator Schema (XSD)"
-msgstr ""
-
-#: ../src/gnome-color-chooser.glade.h:63
-msgid "Width"
-msgstr "Szélesség"
-
-#: ../src/gnome-color-chooser.glade.h:64
-msgid "X-Padding"
-msgstr "X-Nyújtás"
-
-#: ../src/gnome-color-chooser.glade.h:65
-msgid ""
-"X-Padding\n"
-"(of widgets)"
-msgstr ""
-"X-Nyújtás\n"
-"(az elemeké)"
-
-#: ../src/gnome-color-chooser.glade.h:67
-msgid "Y-Padding"
-msgstr "Y-Nyújtás"
-
-#: ../src/gnome-color-chooser.glade.h:68
-msgid ""
-"Y-Padding\n"
-"(of widgets)"
-msgstr ""
-"Y-Nyújtás\n"
-"(az elemeké)"
-
-#: ../src/gnome-color-chooser.glade.h:70
-msgid "_File"
-msgstr "_Fájl"
-
-#: ../src/gnome-color-chooser.glade.h:71
-msgid "_Help"
-msgstr "_Súgó"
-
-#: ../src/gnome-color-chooser.glade.h:72
-msgid "_Install in GNOME"
-msgstr "_Telepítés GNOME alatt"
-
-#: ../src/gnome-color-chooser.glade.h:73
-msgid "_Tools"
-msgstr ""
-
-#: ../src/gnome-color-chooser.glade.h:74
-msgid "activate hover effects"
-msgstr "aktív fölötte effektus"
-
-#: ../src/gnome-color-chooser.glade.h:75
-msgid "active"
-msgstr ""
-
-#: ../src/gnome-color-chooser.glade.h:76
-msgid "active window"
-msgstr "aktív ablak"
-
-#: ../src/gnome-color-chooser.glade.h:77
-#, fuzzy
-msgid "beautify icon labels (needed for icon label settings!)"
-msgstr "ikon feliratok szépítése (szükséges az ikon felirat beállításokhoz!)"
-
-#: ../src/gnome-color-chooser.glade.h:78
-msgid "brightness"
-msgstr "fényesség"
-
-#: ../src/gnome-color-chooser.glade.h:79
-msgid "button pressed"
-msgstr "lenyomott gomb"
-
-#: ../src/gnome-color-chooser.glade.h:80
-msgid "colorize with"
-msgstr "színez"
-
-#: ../src/gnome-color-chooser.glade.h:81
-msgid "deactivate (stock) icons"
-msgstr "kikapcsolt (rendszer) ikonok"
-
-#: ../src/gnome-color-chooser.glade.h:82
-msgid "disabled"
-msgstr "kikapcsolva"
-
-#: ../src/gnome-color-chooser.glade.h:83
-#, fuzzy
-msgid "export comments (for easy human theme editing)"
-msgstr "megjegyzések exportálása (téma könnyű szerkesztéséhez)"
-
-#: ../src/gnome-color-chooser.glade.h:84
-msgid "export disabled theme elements"
-msgstr "kikapcsolt téma elemek exportálása"
-
-#: ../src/gnome-color-chooser.glade.h:85
-msgid "hover"
-msgstr "fölötte"
-
-#: ../src/gnome-color-chooser.glade.h:86
-msgid "inactive window"
-msgstr "inaktív ablak"
-
-#: ../src/gnome-color-chooser.glade.h:87
-#, fuzzy
-msgid "lighten"
-msgstr "világosít"
-
-#: ../src/gnome-color-chooser.glade.h:88
-msgid "normal"
-msgstr "normál"
-
-#: ../src/gnome-color-chooser.glade.h:89
-msgid "pressed"
-msgstr ""
-
-#: ../src/gnome-color-chooser.glade.h:90
-msgid "render mode"
-msgstr "renderelés"
-
-#: ../src/gnome-color-chooser.glade.h:91
-msgid "saturation"
-msgstr "telítettség"
-
-#: ../src/gnome-color-chooser.glade.h:92
-msgid "selected"
-msgstr "kiválasztva"
-
-#. as in unvisited link
-#: ../src/gnome-color-chooser.glade.h:94
-msgid "unvisited"
-msgstr ""
-
-#: ../src/gnome-color-chooser.glade.h:95
-msgid "use shadowless Menubars"
-msgstr ""
-
-#: ../src/gnome-color-chooser.glade.h:96
-msgid "use shadowless Toolbars"
-msgstr ""
-
-#. as in (already) visited link
-#: ../src/gnome-color-chooser.glade.h:98
-msgid "visited"
-msgstr ""
-
-#: ../src/gnome-color-chooser.desktop.in.h:1
-msgid "Customize your GNOME desktop"
-msgstr "GNOME-asztal testreszabása"
-
-#: ../src/configloader.cc:129 ../src/configloader.cc:1134
-#, fuzzy
-msgid "Theme Default"
-msgstr "Téma alapértelmezett értékei"
-
-#: ../src/configloader.cc:758
-#, c-format
-msgid "Configuration of %s"
-msgstr "A %s beállítása"
-
-#: ../src/configloader.cc:1133
-#, fuzzy
-msgid "None"
-msgstr "Nincs"
-
-#: ../src/ioexception.cc:43
-msgid "Read Error"
-msgstr ""
-
-#: ../src/ioexception.cc:46
-msgid "Write Error"
-msgstr ""
-
-#: ../src/main.cc:76 ../src/main.cc:106
-#, c-format
-msgid "Could not open or create file %s."
-msgstr ""
-
-#. "Error" is the caption of an error message
-#: ../src/main.cc:77 ../src/main.cc:95 ../src/main.cc:107 ../src/main.cc:118
-#: ../src/main.cc:128 ../src/main.cc:144 ../src/main.cc:229
-msgid "Error"
-msgstr ""
-
-#: ../src/main.cc:94 ../src/main.cc:117
-#, c-format
-msgid "Unable to modify file %s."
-msgstr ""
-
-#: ../src/main.cc:127
-#, c-format
-msgid "Could not open file %s."
-msgstr ""
-
-#. translator note: used in --help message, describes the CLI command --validator-only
-#: ../src/main.cc:160
-msgid "Start Engine Schema validator only"
-msgstr ""
-
-#. translator note: used in --help message, name of optional parameter (brackets!), please use uppercase letters only!
-#: ../src/main.cc:162
-msgid "[FILENAME]"
-msgstr ""
-
-#. dialog title
-#: ../src/mainwindow.cc:614
-msgid "Save Theme"
-msgstr "Téma Mentése"
-
-#. dialog title
-#: ../src/mainwindow.cc:641
-msgid "Save Theme as"
-msgstr "Téma Mentése mint"
-
-#. dialog title
-#: ../src/mainwindow.cc:667
-msgid "Export Theme as"
-msgstr "Téma Exportálása mint"
-
-#: ../src/mainwindow.cc:809
-#, fuzzy
-msgid "A tool for customizing the appearance of the GNOME desktop"
-msgstr "Eszköz a GNOME asztal színeinek testreszabásához"
-
-#: ../src/mainwindow.cc:856
-#, c-format
-msgid "Export to file %s failed: %s."
-msgstr ""
-
-#: ../src/treehandler.cc:558
-msgid "Version"
-msgstr "Verzió"
-
-#: ../src/treehandler.cc:559
-msgid "Website"
-msgstr "Honlap"
-
-#: ../src/treehandler.cc:563
-msgid "Author(s)"
-msgstr "Szerző(k)"
-
-#: ../src/validatorwindow.cc:106
-msgid "No XML file specified!"
-msgstr ""
-
-#: ../src/validatorwindow.cc:108
-msgid "No XSD file specified!"
-msgstr ""
-
-#. translator note: message that appears if a validation has been successful
-#: ../src/validatorwindow.cc:113
-msgid "Validation passed!"
-msgstr ""
-
-#: ../src/validatorwindow.cc:116
-msgid "Validation failed!"
-msgstr ""
+#~ msgid "<b>Compiz</b>"
+#~ msgstr "<b>Compiz</b>"
+
+#~ msgid "Not yet possible with GNOME"
+#~ msgstr "GNOME alatt még nem lehetséges"

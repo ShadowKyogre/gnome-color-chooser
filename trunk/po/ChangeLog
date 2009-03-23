@@ -1,3 +1,30 @@
+2009-03-23  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* LINGUAS:
+	* bg.po:
+	* cs.po:
+	* de.po:
+	* es.po:
+	* fr.po:
+	* he.po:
+	* hu.po:
+	* id.po:
+	* it.po:
+	* oc.po:
+	* pl.po:
+	* pt.po:
+	* pt_BR.po:
+	* ru.po:
+	* sv.po:
+	* th.po:
+	* tr.po:
+	* zh_CN.po:
+	new languages: Arabic, English (Canada), Finnish, Norwegian Bokmal,
+	and Dutch; there are also many other new translations.
+	100% complete are: de (German), en_CA (English Canada), es (Spanish),
+	fr (French), he (Hebrew), it (Italian), and sv (Swedish).
+	Thanks to all contributors, YOU ROCK!
+
 2008-09-03  Werner Pantke  <wpantke@punk-ass-bitch.org>
 
 	* es.po:
