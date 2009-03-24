@@ -1,0 +1,597 @@
+# German translations for gnome-color-chooser package.
+# Copyright (C) 2007-2008 Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>
+# This file is distributed under the same license as the gnome-color-chooser package.
+# Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>, 2007-2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-color-chooser\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-23 19:32+0100\n"
+"PO-Revision-Date: 2009-03-23 18:33+0100\n"
+"Last-Translator: Werner Pantke <wpantke@punk-ass-bitch.org>\n"
+"Language-Team: German <gnome-color-chooser@punk-ass-bitch.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../profiles/compact.xml.in.h:1
+msgid "Compact"
+msgstr "Kompakt"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:2 ../src/gnome-color-chooser.glade.h:30
+msgid "Buttons"
+msgstr "Schaltflächen"
+
+#. translator node: this is a category name (tab label); comboboxes are button widgets with a dropdown list
+#: ../src/gnome-color-chooser.xml.in.h:4
+msgid "Comboboxes"
+msgstr "Auswahlmenüknöpfe"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:6
+msgid "Desktop Icons"
+msgstr "Desktop Icons"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:8
+msgid "Global"
+msgstr "Allgemein"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:10
+#: ../src/gnome-color-chooser.glade.h:49
+msgid "Panel"
+msgstr "Panel"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:12
+msgid "Progress Bars"
+msgstr "Fortschrittsbalken"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:14
+msgid "Scrollbars"
+msgstr "Scrollbalken"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:16
+msgid "Start Menue"
+msgstr "Startmenü"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:18
+msgid "Tooltips"
+msgstr "Tooltips"
+
+#: ../src/gnome-color-chooser.glade.h:1
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> Images are currently not "
+"exported!!"
+msgstr ""
+"<b><span foreground=\"#ff0000\">Anmerkung:</span></b> Bilder werden momentan "
+"nicht exportiert!"
+
+#: ../src/gnome-color-chooser.glade.h:2
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> These settings only work "
+"with gtk2-themes that don't specify these values on their own, otherwise "
+"nothing will happen on a change ;-)"
+msgstr ""
+"<b><span foreground=\"#ff0000\">Anmerkung:</span></b> Diese Einstellungen "
+"werden nur wirksam, wenn sie noch nicht im momentan benutzten GTK2 Thema "
+"gesetzt sind, andernfalls werden sie ignoriert ;-)"
+
+#: ../src/gnome-color-chooser.glade.h:3
+msgid "<b>Buttons</b>"
+msgstr "<b>Knöpfe</b>"
+
+#. Comboboxes are button widgets with a dropdown list, translations may be longer than the english word
+#: ../src/gnome-color-chooser.glade.h:5
+msgid "<b>Comboboxes</b>"
+msgstr "<b>Auswahlmenüknöpfe</b>"
+
+#: ../src/gnome-color-chooser.glade.h:6
+msgid "<b>Default Configuration</b>"
+msgstr "<b>Standardkonfiguration</b>"
+
+#: ../src/gnome-color-chooser.glade.h:7
+msgid "<b>Desktop</b>"
+msgstr "<b>Desktop</b>"
+
+#: ../src/gnome-color-chooser.glade.h:8
+msgid "<b>Engines</b> [for advanced users!]"
+msgstr "<b>Engines</b> [für Fortgeschrittene!]"
+
+#: ../src/gnome-color-chooser.glade.h:9
+msgid "<b>Entry Fields</b>"
+msgstr "<b>Eingabefelder</b>"
+
+#: ../src/gnome-color-chooser.glade.h:10
+msgid "<b>Icon Labels</b>"
+msgstr "<b>Icon-Beschriftungen</b>"
+
+#: ../src/gnome-color-chooser.glade.h:11
+msgid "<b>Icon sizes</b> (x² pixels)"
+msgstr "<b>Icon-Größen</b> (x² Pixel)"
+
+#: ../src/gnome-color-chooser.glade.h:12
+msgid "<b>Icons</b>"
+msgstr "<b>Icons</b>"
+
+#. Abbreviation for Hyperlinks
+#: ../src/gnome-color-chooser.glade.h:14
+msgid "<b>Links</b>"
+msgstr "<b>Links</b>"
+
+#: ../src/gnome-color-chooser.glade.h:15
+msgid "<b>Metacity</b> (normal)"
+msgstr "<b>Metacity</b> (normal)"
+
+#: ../src/gnome-color-chooser.glade.h:16
+msgid "<b>Normal</b>"
+msgstr "<b>Normal</b>"
+
+#: ../src/gnome-color-chooser.glade.h:17
+msgid "<b>Panel</b>"
+msgstr "<b>Panel</b>"
+
+#: ../src/gnome-color-chooser.glade.h:18
+msgid "<b>Progress Bars</b>"
+msgstr "<b>Fortschrittsbalken</b>"
+
+#. Label of the frame that shows the result of the Schema Validation process
+#: ../src/gnome-color-chooser.glade.h:20
+msgid "<b>Result</b>"
+msgstr "<b>Ergebnis</b>"
+
+#: ../src/gnome-color-chooser.glade.h:21
+msgid "<b>Scrollbars</b>"
+msgstr "<b>Scrollbalken</b>"
+
+#: ../src/gnome-color-chooser.glade.h:22
+msgid "<b>Selection Box</b>"
+msgstr "<b>Auswahlbox</b>"
+
+#: ../src/gnome-color-chooser.glade.h:23
+msgid "<b>Start Menu</b>"
+msgstr "<b>Startmenü</b>"
+
+#: ../src/gnome-color-chooser.glade.h:24
+msgid "<b>Tooltips</b>"
+msgstr "<b>Tooltips</b>"
+
+#: ../src/gnome-color-chooser.glade.h:25
+msgid "<b>Window Decoration</b>"
+msgstr "<b>Fensterdekoration</b>"
+
+#: ../src/gnome-color-chooser.glade.h:26
+msgid "Background"
+msgstr "Hintergrund"
+
+#: ../src/gnome-color-chooser.glade.h:27
+msgid "Background Opacity"
+msgstr "Hintergrund-Deckkraft"
+
+#: ../src/gnome-color-chooser.glade.h:28
+msgid "Button"
+msgstr "Knopf"
+
+#: ../src/gnome-color-chooser.glade.h:29
+msgid "Button Size"
+msgstr "Knopfgröße"
+
+#: ../src/gnome-color-chooser.glade.h:31
+msgid "Color"
+msgstr "Farbe"
+
+#: ../src/gnome-color-chooser.glade.h:32
+msgid "Desktop"
+msgstr "Desktop"
+
+#. Verb (to export)
+#: ../src/gnome-color-chooser.glade.h:34
+msgid "E_xport as"
+msgstr "E_xportieren als"
+
+#. Label for the filechooserbutton that selects an Engine Schema XML file
+#: ../src/gnome-color-chooser.glade.h:36
+msgid "Engine Schema (XML)"
+msgstr "Engine Schema (XML)"
+
+#. Menubar entry
+#. translator note: window title
+#: ../src/gnome-color-chooser.glade.h:38 ../src/validatorwindow.cc:51
+msgid "Engine Schema Validator"
+msgstr "Engine Schema Validator"
+
+#: ../src/gnome-color-chooser.glade.h:39
+msgid "Engines"
+msgstr "Engines"
+
+#: ../src/gnome-color-chooser.glade.h:40
+msgid "Font"
+msgstr "Schrift"
+
+#: ../src/gnome-color-chooser.glade.h:41
+msgid "Foreground"
+msgstr "Vordergrund"
+
+#: ../src/gnome-color-chooser.glade.h:42
+msgid "Global Colors"
+msgstr "Globale Farben"
+
+#: ../src/gnome-color-chooser.glade.h:43
+msgid "Icons"
+msgstr "Icons"
+
+#: ../src/gnome-color-chooser.glade.h:44
+msgid "Large Toolbar"
+msgstr "Große Werkzeugleiste"
+
+#: ../src/gnome-color-chooser.glade.h:45
+msgid "Menue (e.g. application or context menues)"
+msgstr "Menü (z.B. Anwendungs- oder Kontextmenüs)"
+
+#. visible in tooltip of render modes
+#: ../src/gnome-color-chooser.glade.h:47
+msgid "Modes: 0=normal, 1=lighten, 2=colorize, 3=colorize monochromely"
+msgstr "Modi: 0=normal, 1=aufhellen, 2=einfärben, 3=monochrom einfärben"
+
+#: ../src/gnome-color-chooser.glade.h:48
+msgid "Opacity"
+msgstr "Deckkraft"
+
+#: ../src/gnome-color-chooser.glade.h:50
+msgid "Profile:"
+msgstr "Profil:"
+
+#: ../src/gnome-color-chooser.glade.h:51
+msgid "Specific"
+msgstr "Spezifisch"
+
+#: ../src/gnome-color-chooser.glade.h:52
+msgid "Start menue (needs panel restart!)"
+msgstr "Startmenü (erfordert Panel-Neustart!)"
+
+#: ../src/gnome-color-chooser.glade.h:53
+msgid "Text"
+msgstr "Text"
+
+#: ../src/gnome-color-chooser.glade.h:54
+msgid "This color is only used if render mode is 2 or 3 (colorize)"
+msgstr ""
+"Diese Farbe wird nur benutzt, falls der Render-Modus auf 2 oder 3 gesetzt "
+"ist (einfärben)"
+
+#: ../src/gnome-color-chooser.glade.h:55
+msgid "This option does not affect all themes!"
+msgstr "Diese Option funktioniert nicht mit jedem Thema!"
+
+#: ../src/gnome-color-chooser.glade.h:56
+msgid "Title/Buttons"
+msgstr "Titel/Knöpfe"
+
+#. Button Label of the Schema Validator
+#: ../src/gnome-color-chooser.glade.h:58
+msgid "Validate"
+msgstr "Validieren"
+
+#. Label for the filechooserbutton that selects a Validator Schema XSD file
+#: ../src/gnome-color-chooser.glade.h:60
+msgid "Validator Schema (XSD)"
+msgstr "Validator Schema (XSD)"
+
+#: ../src/gnome-color-chooser.glade.h:61
+msgid "Width"
+msgstr "Breite"
+
+#: ../src/gnome-color-chooser.glade.h:62
+msgid "X-Padding"
+msgstr "X-Polsterung"
+
+#: ../src/gnome-color-chooser.glade.h:63
+msgid ""
+"X-Padding\n"
+"(of widgets)"
+msgstr ""
+"X-Polsterung\n"
+"(von Widgets)"
+
+#: ../src/gnome-color-chooser.glade.h:65
+msgid "Y-Padding"
+msgstr "Y-Polsterung"
+
+#: ../src/gnome-color-chooser.glade.h:66
+msgid ""
+"Y-Padding\n"
+"(of widgets)"
+msgstr ""
+"Y-Polsterung\n"
+"(von Widgets)"
+
+#: ../src/gnome-color-chooser.glade.h:68
+msgid "_File"
+msgstr "_Datei"
+
+#: ../src/gnome-color-chooser.glade.h:69
+msgid "_Help"
+msgstr "_Hilfe"
+
+#: ../src/gnome-color-chooser.glade.h:70
+msgid "_Install in GNOME"
+msgstr "_Installieren in GNOME"
+
+#: ../src/gnome-color-chooser.glade.h:71
+msgid "_Tools"
+msgstr "Werkzeuge"
+
+#: ../src/gnome-color-chooser.glade.h:72
+msgid "activate hover effects"
+msgstr "Aktiviere Hover-Effekte"
+
+#: ../src/gnome-color-chooser.glade.h:73
+msgid "active"
+msgstr "aktiv"
+
+#: ../src/gnome-color-chooser.glade.h:74
+msgid "active window"
+msgstr "Aktives Fenster"
+
+#: ../src/gnome-color-chooser.glade.h:75
+msgid "beautify icon labels (needed for icon label settings!)"
+msgstr ""
+"Verschönere Icon-Beschriftungen\n"
+"(wird für sämtliche Icon-Beschriftungseinstellungen benötigt!)"
+
+#: ../src/gnome-color-chooser.glade.h:76
+msgid "brightness"
+msgstr "Helligkeit"
+
+#: ../src/gnome-color-chooser.glade.h:77
+msgid "button pressed"
+msgstr "Knopf gedrückt"
+
+#: ../src/gnome-color-chooser.glade.h:78
+msgid "colorize with"
+msgstr "einfärben mit"
+
+#: ../src/gnome-color-chooser.glade.h:79
+msgid "deactivate (stock) icons"
+msgstr "deaktiviere (Standard-) Icons"
+
+#: ../src/gnome-color-chooser.glade.h:80
+msgid "disabled"
+msgstr "deaktiviert"
+
+#: ../src/gnome-color-chooser.glade.h:81
+msgid "export comments (for easy human theme editing)"
+msgstr "exportiere Kommentare (für leichtes Selber-Editieren)"
+
+#: ../src/gnome-color-chooser.glade.h:82
+msgid "export disabled theme elements"
+msgstr "exportiere deaktivierte Themenelemente"
+
+#: ../src/gnome-color-chooser.glade.h:83
+msgid "hover"
+msgstr "hervorgehoben"
+
+#: ../src/gnome-color-chooser.glade.h:84
+msgid "inactive window"
+msgstr "Inaktives Fenster"
+
+#: ../src/gnome-color-chooser.glade.h:85
+msgid "lighten"
+msgstr "aufhellen"
+
+#: ../src/gnome-color-chooser.glade.h:86
+msgid "normal"
+msgstr "normal"
+
+#: ../src/gnome-color-chooser.glade.h:87
+msgid "pressed"
+msgstr "gedrückt"
+
+#: ../src/gnome-color-chooser.glade.h:88
+msgid "render mode"
+msgstr "Render-Modus"
+
+#: ../src/gnome-color-chooser.glade.h:89
+msgid "saturation"
+msgstr "Sättigung"
+
+#: ../src/gnome-color-chooser.glade.h:90
+msgid "selected"
+msgstr "selektiert"
+
+#. as in unvisited link
+#: ../src/gnome-color-chooser.glade.h:92
+msgid "unvisited"
+msgstr "unbesucht"
+
+#: ../src/gnome-color-chooser.glade.h:93
+msgid "use shadowless Menubars"
+msgstr "Verwende schattenlose Menüleisten"
+
+#: ../src/gnome-color-chooser.glade.h:94
+msgid "use shadowless Toolbars"
+msgstr "Verwende schattenlose Werkzeugleisten"
+
+#. as in (already) visited link
+#: ../src/gnome-color-chooser.glade.h:96
+msgid "visited"
+msgstr "besucht"
+
+#: ../src/gnome-color-chooser.desktop.in.h:1
+msgid "Customize your GNOME desktop"
+msgstr "Den GNOME-Desktop farblich anpassen"
+
+#: ../src/configloader.cc:129 ../src/configloader.cc:1134
+msgid "Theme Default"
+msgstr "Themenstandard"
+
+#: ../src/configloader.cc:758
+#, c-format
+msgid "Configuration of %s"
+msgstr "Konfiguration von %s"
+
+#: ../src/configloader.cc:1133
+msgid "None"
+msgstr "Keins"
+
+#: ../src/ioexception.cc:43
+msgid "Read Error"
+msgstr "Lesefehler"
+
+#: ../src/ioexception.cc:46
+msgid "Write Error"
+msgstr "Schreibfehler"
+
+#: ../src/main.cc:75 ../src/mainwindow.cc:557
+#, c-format
+msgid "Could not open or create file %s."
+msgstr "Konnte die Datei %s nicht öffnen oder anlegen."
+
+#. "Error" is the caption of an error message
+#: ../src/main.cc:76 ../src/main.cc:87 ../src/main.cc:97 ../src/main.cc:113
+#: ../src/main.cc:198
+msgid "Error"
+msgstr "Fehler"
+
+#: ../src/main.cc:86 ../src/mainwindow.cc:567 ../src/mainwindow.cc:595
+#, c-format
+msgid "Unable to modify file %s."
+msgstr "Kann die Datei %s nicht bearbeiten."
+
+#: ../src/main.cc:96
+#, c-format
+msgid "Could not open file %s."
+msgstr "Konnte die Datei %s nicht öffnen."
+
+#. translator note: used in --help message, describes the CLI command --validator-only
+#: ../src/main.cc:129
+msgid "Start Engine Schema validator only"
+msgstr "Starte ausschließlich den Engine Schema Validator"
+
+#. translator note: used in --help message, name of optional parameter (brackets!), please use uppercase letters only!
+#: ../src/main.cc:131
+msgid "[FILENAME]"
+msgstr "[DATEINAME]"
+
+#. dialog title
+#: ../src/mainwindow.cc:669
+msgid "Save Theme"
+msgstr "Thema speichern"
+
+#. dialog title
+#: ../src/mainwindow.cc:696
+msgid "Save Theme as"
+msgstr "Thema speichern unter"
+
+#. dialog title
+#: ../src/mainwindow.cc:722
+msgid "Export Theme as"
+msgstr "Thema exportieren als"
+
+#: ../src/mainwindow.cc:864
+msgid "A tool for customizing the appearance of the GNOME desktop"
+msgstr "Ein Werkzeug, um das Aussehen des GNOME Desktops anzupassen"
+
+#: ../src/mainwindow.cc:911
+#, c-format
+msgid "Export to file %s failed: %s."
+msgstr "Exportieren nach Datei %s schlug fehl: %s."
+
+#: ../src/treehandler.cc:558
+msgid "Version"
+msgstr "Version"
+
+#: ../src/treehandler.cc:559
+msgid "Website"
+msgstr "Webseite"
+
+#: ../src/treehandler.cc:563
+msgid "Author(s)"
+msgstr "Author(en)"
+
+#: ../src/validatorwindow.cc:109
+msgid "No XML file specified!"
+msgstr "Keine XML-Datei ausgewählt!"
+
+#: ../src/validatorwindow.cc:111
+msgid "No XSD file specified!"
+msgstr "Keine XSD-Datei ausgewählt!"
+
+#. translator note: message that appears if a validation has been successful
+#: ../src/validatorwindow.cc:116
+msgid "Validation passed!"
+msgstr "Validierung erfolgreich!"
+
+#: ../src/validatorwindow.cc:119
+msgid "Validation failed!"
+msgstr "Validierung fehlgeschlagen!"
+
+#. translator note: as in "error found on line x"
+#: ../src/validatorwindow.cc:211
+msgid "Line"
+msgstr "Zeile"
+
+#~ msgid "<b>Compiz</b>"
+#~ msgstr "<b>Compiz</b>"
+
+#~ msgid "Not yet possible with GNOME"
+#~ msgstr "Noch nicht möglich mit GNOME"
+
+#~ msgid "Validate Engine Schema"
+#~ msgstr "Validiere Engine Schema"
+
+#~ msgid "alt. selected"
+#~ msgstr "alt. selektiert"
+
+#, fuzzy
+#~ msgid "gtk-info"
+#~ msgstr "gtk-ok"
+
+#~ msgid "gtk-ok"
+#~ msgstr "gtk-ok"
+
+#~ msgid "Panel (does nothing with my clearlooks-theme)"
+#~ msgstr "Panel (Wirksamkeit unbekannt *G*)"
+
+#~ msgid ""
+#~ "<span size='small'><u><b>ToDo:</b></u>\n"
+#~ "-> use tooltips to explain what each config is being for\n"
+#~ "-> simplify GUI and add a preview area\n"
+#~ "-> find translators! (please mail) ;-)</span>"
+#~ msgstr ""
+#~ "<span size='small'><u><b>ToDo:</b></u>\n"
+#~ "-> benutze Tooltips zur Erklärung der Konfigurationsmöglichkeiten\n"
+#~ "-> vereinfache GUI und füge Vorschau-Anzeige hinzu</span>"
+
+#~ msgid "GNOME Color Chooser"
+#~ msgstr "GNOME Color Chooser"
+
+#~ msgid "gtk-apply"
+#~ msgstr "gtk-apply"
+
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-cancel"
+
+#~ msgid "gtk-save"
+#~ msgstr "gtk-save"
+
+#~ msgid ""
+#~ "cs: Lucas \"Drom\" Lommer <llommer@svn.gnome.org>\n"
+#~ "de: JackTheDipper <gnome-color-chooser@punk-ass-bitch.org>\n"
+#~ "fr: zniavre mou <zniavre2048@gmail.com>\n"
+#~ "hu:  Erno Horvath <szerencsefia@gmail.com>\n"
+#~ "sv: Daniel Nylander <dnylande@gnome.org>\n"
+#~ "\n"
+#~ "Any new translation will be very appreciated.\n"
+#~ "Please contact me!\n"
+#~ "<gnome-color-chooser@punk-ass-bitch.org>"
+#~ msgstr "JackTheDipper <gnome-color-chooser@punk-ass-bitch.org>"
+
+#~ msgid "[selected]"
+#~ msgstr "[selektiert]"

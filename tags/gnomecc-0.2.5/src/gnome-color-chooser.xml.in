@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gnome-color-chooser>
+  <category name="default">
+    <!-- translator node: this is a category name (tab label)-->
+    <_long_name>Global</_long_name>
+    <class name="GtkWidget" type="class"/>
+    <element id="0" name="bg[NORMAL]" value="#999999" type="color" override="no"/><!-- DON'T USE ID 0 !!! -->
+    <element id="1" name="bg[PRELIGHT]" value="#ff0000" type="color" override="no"/>
+    <element id="2" name="bg[SELECTED]" value="#ffffff" type="color" override="no"/>
+    <element id="3" name="bg[ACTIVE]" value="#0000ff" type="color" override="no"/>
+    <element id="4" name="bg[INSENSITIVE]" value="#EEEAB0" type="color" override="no"/>
+    <element id="5" name="fg[NORMAL]" value="#ff0000" type="color" override="no"/>
+    <element id="6" name="fg[PRELIGHT]" value="#00ff00" type="color" override="no"/>
+    <element id="7" name="fg[SELECTED]" value="#ffffff" type="color" override="no"/>
+    <element id="8" name="fg[ACTIVE]" value="#ffff00" type="color" override="no"/>
+    <element id="9" name="fg[INSENSITIVE]" value="#DBDACC" type="color" override="no"/>
+    <element id="10" name="base[NORMAL]" value="#999999" type="color" override="no"/>
+    <element id="11" name="base[PRELIGHT]" value="#ff0000" type="color" override="no"/>
+    <element id="12" name="base[SELECTED]" value="#ffffff" type="color" override="no"/>
+    <element id="13" name="base[ACTIVE]" value="#0000ff" type="color" override="no"/>
+    <element id="14" name="base[INSENSITIVE]" value="#EEEAB0" type="color" override="no"/>
+    <element id="15" name="text[NORMAL]" value="#ff0000" type="color" override="no"/>
+    <element id="16" name="text[PRELIGHT]" value="#00ff00" type="color" override="no"/>
+    <element id="17" name="text[SELECTED]" value="#ffffff" type="color" override="no"/>
+    <element id="18" name="text[ACTIVE]" value="#ffff00" type="color" override="no"/>
+    <element id="19" name="text[INSENSITIVE]" value="#DBDACC" type="color" override="no"/>
+    <element id="20" name="xthickness" value="3" type="spin" min="0" max="20" override="no"/>
+    <element id="21" name="ythickness" value="3" type="spin" min="0" max="20" override="no"/>
+    <element id="56" name="bg_pixmap[NORMAL]" value="&lt;none&gt;" type="image" override="no"/>
+    <element id="57" name="bg_pixmap[PRELIGHT]" value="&lt;none&gt;" type="image" override="no"/>
+    <!-- <element id="58" name="bg_pixmap[SELECTED]" value="&lt;none&gt;" type="image" override="no"/> -->
+    <!-- <element id="59" name="bg_pixmap[ACTIVE]" value="&lt;none&gt;" type="image" override="no"/> -->
+    <element id="60" name="bg_pixmap[INSENSITIVE]" value="&lt;none&gt;" type="image" override="no"/>
+    <element id="79" name="GtkMenuBar::shadow_type" value="GTK_SHADOW_NONE" type="check_alone" override="no"/>
+    <element id="80" name="GtkToolbar::shadow_type" value="GTK_SHADOW_NONE" type="check_alone" override="no"/>
+    <element id="81" name="GtkWidget::link-color" value="#0000EE" type="color" override="no"/>
+    <element id="82" name="GtkWidget::visited-link-color" value="#551A8B" type="color" override="no"/>
+  </category>
+  <category name="desktop-icon">
+    <!-- translator node: this is a category name (tab label)-->
+    <_long_name>Desktop Icons</_long_name>
+    <class name="*DesktopIcon*" type="widget_class"/>
+    <element id="22" name="NautilusIconContainer::frame_text" value="1" type="check_alone" override="no"/>
+    <element id="23" name="text[NORMAL]" value="#000000" type="color" override="no"/>
+    <element id="24" name="base[NORMAL]" value="#ffffff" type="color" override="no"/>
+    <element id="25" name="NautilusIconContainer::normal_alpha" value="0" type="spin" min="0" max="255" override="no"/>
+    <element id="61" name="NautilusIconContainer::normal_icon_render_mode" value="0" type="spin" min="0" max="3" override="no"/>
+    <element id="62" name="NautilusIconContainer::prelight_icon_render_mode" value="1" type="spin" min="0" max="3" override="no"/>
+    <element id="63" name="NautilusIconContainer::normal_icon_color" value="#FF0000" type="color" override="no"/>
+    <element id="64" name="NautilusIconContainer::prelight_icon_color" value="#FF00AA" type="color" override="no"/>
+    <element id="65" name="NautilusIconContainer::normal_icon_saturation" value="150" type="spin" min="0" max="255" override="no"/>
+    <element id="66" name="NautilusIconContainer::prelight_icon_saturation" value="255" type="spin" min="0" max="255" override="no"/>
+    <element id="67" name="NautilusIconContainer::normal_icon_brightness" value="200" type="spin" min="0" max="255" override="no"/>
+    <element id="68" name="NautilusIconContainer::prelight_icon_brightness" value="255" type="spin" min="0" max="255" override="no"/>
+    <element id="69" name="NautilusIconContainer::selection_box_color" value="#0000FF" type="color" override="no"/>
+    <element id="70" name="NautilusIconContainer::selection_box_alpha" value="100" type="spin" min="0" max="255" override="no"/>
+    <element id="71" name="NautilusIconContainer::normal_icon_lighten" value="0" type="spin" min="0" max="255" override="no"/>
+    <element id="72" name="NautilusIconContainer::prelight_icon_lighten" value="25" type="spin" min="0" max="255" override="no"/>
+    <element id="73" name="NautilusIconContainer::activate_prelight_icon_label" value="1" type="check_alone" override="no"/>
+    <element id="74" name="text[PRELIGHT]" value="#000000" type="color" override="no"/>
+    <element id="75" name="base[PRELIGHT]" value="#ffffff" type="color" override="no"/>
+    <element id="76" name="NautilusIconContainer::prelight_alpha" value="255" type="spin" min="0" max="255" override="no"/>
+  </category>
+  <category name="panel">
+    <!-- translator node: this is a category name (tab label)-->
+    <_long_name>Panel</_long_name>
+    <class name="PanelTopLevel.*" type="class"/> <!-- correct approach for in-process applets and stuff -->
+    <class name="*PanelApplet*" type="widget_class"/> <!-- for out-of-process applets -->
+    <class name="*PanelWidget*" type="widget_class"/> <!-- does this really have an effect ? -->
+    <!-- <class name="Panel*" type="class"/> --> <!-- workaround to match all other relevant panel parts -->
+    <!-- <class name="*Tray*" type="class"/> --> <!-- affects normal tray icons, but possibly more -->
+    <!-- <class name="*Tray*" type="widget"/> --> <!-- affects some tray icons like xchat, but possibly more -->
+    <!-- <class name="*print*" type="widget"/> --> <!-- also affects some printing dialogs -->
+    <!-- <class name="*Mail*" type="widget_class"/> --> <!-- also affects Evolution's email preferences dialog -->
+    <class name="*fast-user-switch-applet*" type = "widget"/>
+    <element id="26" name="bg[NORMAL]" value="#999999" type="color" override="no"/>
+    <element id="27" name="bg[PRELIGHT]" value="#ff0000" type="color" override="no"/>
+    <element id="28" name="bg[SELECTED]" value="#ffffff" type="color" override="no"/>
+    <element id="29" name="bg[ACTIVE]" value="#0000ff" type="color" override="no"/>
+    <element id="30" name="bg[INSENSITIVE]" value="#EEEAB0" type="color" override="no"/>
+    <element id="31" name="fg[NORMAL]" value="#ff0000" type="color" override="no"/>
+    <element id="32" name="fg[PRELIGHT]" value="#00ff00" type="color" override="no"/>
+    <element id="33" name="fg[SELECTED]" value="#ffffff" type="color" override="no"/>
+    <element id="34" name="fg[ACTIVE]" value="#ffff00" type="color" override="no"/>
+    <element id="35" name="fg[INSENSITIVE]" value="#DBDACC" type="color" override="no"/>
+    <element id="36" name="xthickness" value="1" type="spin" min="0" max="20" override="no"/>
+    <element id="37" name="ythickness" value="1" type="spin" min="0" max="20" override="no"/>
+    <element id="54" name="font_name" value="Arial 8" type="font" override="no"/>
+    <element id="55" name="bg_pixmap[NORMAL]" value="&lt;none&gt;" type="image" override="no"/>
+  </category>
+  <category name="startmenue">
+    <!-- translator node: this is a category name (tab label)-->
+    <_long_name>Start Menue</_long_name>
+    <class name="GtkWindow.gnome-panel-main-menu*" type="widget"/>
+    <element id="201" name="bg[NORMAL]" value="#999999" type="color" override="no"/>
+    <element id="202" name="bg[SELECTED]" value="#ff0000" type="color" override="no"/>
+    <element id="203" name="fg[NORMAL]" value="#ff0000" type="color" override="no"/>
+    <element id="204" name="fg[PRELIGHT]" value="#00ff00" type="color" override="no"/>
+    <element id="211" name="xthickness" value="1" type="spin" min="0" max="20" override="no"/>
+    <element id="212" name="ythickness" value="1" type="spin" min="0" max="20" override="no"/>
+    <element id="213" name="font_name" value="Arial 8" type="font" override="no"/>
+    <element id="214" name="bg_pixmap[NORMAL]" value="&lt;none&gt;" type="image" override="no"/>
+  </category>
+  <category name="window-decoration-with_compiz">
+    <class name="MetaFrames" type="class"/>
+    <element id="38" name="fg[NORMAL]" value="#c8c8c8" type="color" override="no"/>
+    <element id="39" name="fg[SELECTED]" value="#FFFFFF" type="color" override="no"/>
+    <element id="40" name="bg[NORMAL]" value="#bbbbbb" type="color" override="no"/>
+    <element id="41" name="bg[SELECTED]" value="#FFC050" type="color" override="no"/>
+  </category>
+  <category name="window-decoration">
+    <class name="GtkWindow" type="class"/>
+    <element id="42" name="fg[NORMAL]" value="#c8c8c8" type="color" override="no"/>
+    <element id="43" name="bg[SELECTED]" value="#FFC050" type="color" override="no"/>
+  </category>
+  <category name="scrollbar">
+    <!-- translator node: this is a category name (tab label)-->
+    <_long_name>Scrollbars</_long_name>
+    <class name="*Scrollbar" type="widget_class"/>
+    <element id="44" name="bg[NORMAL]" value="#00BFFF" type="color" override="no"/>
+    <element id="45" name="bg[PRELIGHT]" value="#FFFFFF" type="color" override="no"/>
+    <element id="46" name="bg[ACTIVE]" value="#00DFFF" type="color" override="no"/>
+    <element id="47" name="GtkScrollbar::slider_width" value="15" type="spin" min="1" max="50" override="no"/>
+    <element id="77" name="GtkScrollbar::stepper_size" value="15" type="spin" min="1" max="50" override="no"/>
+  </category>
+  <category name="progressbar">
+    <!-- translator node: this is a category name (tab label)-->
+    <_long_name>Progress Bars</_long_name>
+    <class name="GtkProgressBar" type="class"/>
+    <element id="48" name="bg[SELECTED]" value="#00DFFF" type="color" override="no"/>
+    <element id="49" name="xthickness" value="1" type="spin" min="0" max="20" override="no"/>
+    <element id="50" name="ythickness" value="1" type="spin" min="0" max="20" override="no"/>
+  </category>
+  <category name="tooltips">
+    <!-- translator node: this is a category name (tab label)-->
+    <_long_name>Tooltips</_long_name>
+    <class name="gtk-tooltip*" type="widget"/>
+    <element id="51" name="bg[NORMAL]" value="#FFFFAF" type="color" override="no"/>
+    <element id="78" name="fg[NORMAL]" value="#000000" type="color" override="no"/>
+  </category>
+  <category name="button">
+    <!-- translator node: this is a category name (tab label)-->
+    <_long_name>Buttons</_long_name>
+    <class name="*.&lt;GtkButton&gt;*" type="widget_class"/>
+    <element id="52" name="xthickness" value="2" type="spin" min="0" max="20" override="no"/>
+    <element id="53" name="ythickness" value="1" type="spin" min="0" max="20" override="no"/>
+    <element id="83" name="bg[NORMAL]" value="#999999" type="color" override="no"/>
+    <element id="84" name="bg[PRELIGHT]" value="#ff0000" type="color" override="no"/>
+    <element id="85" name="bg[SELECTED]" value="#ffffff" type="color" override="no"/>
+    <element id="86" name="bg[ACTIVE]" value="#0000ff" type="color" override="no"/>
+    <element id="87" name="bg[INSENSITIVE]" value="#EEEAB0" type="color" override="no"/>
+    <element id="88" name="fg[NORMAL]" value="#ff0000" type="color" override="no"/>
+    <element id="89" name="fg[PRELIGHT]" value="#00ff00" type="color" override="no"/>
+    <!-- <element id="90" name="fg[SELECTED]" value="#ffffff" type="color" override="no"/> --> <!-- has no effect -->
+    <element id="91" name="fg[ACTIVE]" value="#ffff00" type="color" override="no"/>
+    <element id="92" name="fg[INSENSITIVE]" value="#DBDACC" type="color" override="no"/>
+    <element id="93" name="font_name" value="Arial 8" type="font" override="no"/>
+  </category>
+  <category name="combobox">
+    <!-- translator node: this is a category name (tab label); comboboxes are button widgets with a dropdown list-->
+    <_long_name>Comboboxes</_long_name>
+    <class name="*.&lt;GtkComboBox&gt;.&lt;GtkCellView&gt;" type="widget_class"/>
+    <!-- <class name="*.gtk-combobox-popup-menu.*" type="widget"/> --> <!-- would affect its dropdown menu -->
+    <element id="94" name="text[NORMAL]" value="#ff0000" type="color" override="no"/>
+    <element id="95" name="text[PRELIGHT]" value="#00ff00" type="color" override="no"/>
+    <!-- <element id="96" name="fg[SELECTED]" value="#ffffff" type="color" override="no"/> --> <!-- has no effect -->
+    <element id="97" name="text[ACTIVE]" value="#ffff00" type="color" override="no"/>
+    <element id="98" name="text[INSENSITIVE]" value="#DBDACC" type="color" override="no"/>
+  </category>
+  <category name="_TOPLEVEL_">
+    <element id="100" name="gtk-menu" value="16,16" type="iconsize" min="0" max="64" override="no"/>
+    <!-- <element id="101" name="panel" value="16,16" type="iconsize" min="0" max="64" override="no"/> -->
+    <element id="102" name="panel-menu" value="20,20" type="iconsize" min="0" max="64" override="no"/>
+    <element id="103" name="gtk-large-toolbar" value="24,24" type="iconsize" min="0" max="64" override="no"/>
+    <element id="104" name="gtk-button" value="20,20" type="iconsize" min="0" max="64" override="no"/>
+    <element id="105" name="gtk-button-images" value="0" type="check_alone" min="0" max="64" override="no"/>
+  </category>
+</gnome-color-chooser>

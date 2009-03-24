@@ -1,0 +1,64 @@
+2009-03-23  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* LINGUAS:
+	* bg.po:
+	* cs.po:
+	* de.po:
+	* es.po:
+	* fr.po:
+	* he.po:
+	* hu.po:
+	* id.po:
+	* it.po:
+	* oc.po:
+	* pl.po:
+	* pt.po:
+	* pt_BR.po:
+	* ru.po:
+	* sv.po:
+	* th.po:
+	* tr.po:
+	* zh_CN.po:
+	new languages: Arabic, English (Canada), Finnish, Norwegian Bokmal,
+	and Dutch; there are also many other new translations.
+	100% complete are: de (German), en_CA (English Canada), es (Spanish),
+	fr (French), he (Hebrew), it (Italian), and sv (Swedish).
+	Thanks to all contributors, YOU ROCK!
+
+2008-09-03  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* es.po:
+	* oc.po:
+	removed invalid escape sequence
+
+2008-09-03  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* de.po:
+	update for 100% completeness
+
+2008-09-03  Werner Pantke  <wpantke@punk-ass-bitch.org>
+
+	* LINGUAS:
+	added new translations: Hebrew, Occitan (post 1500), Polish,
+	  Brazilian Portugese, Russian, Thai
+	updated all other translations
+
+	the following translation files are affected:
+	* bg.po:
+	* cs.po:
+	* es.po:
+	* fr.po:
+	* he.po:
+	* hu.po:
+	* id.po:
+	* it.po:
+	* oc.po:
+	* pl.po:
+	* pt.po:
+	* pt_BR.po:
+	* ru.po:
+	* sv.po:
+	* th.po:
+	* tr.po:
+	* zh_CN.po:
+

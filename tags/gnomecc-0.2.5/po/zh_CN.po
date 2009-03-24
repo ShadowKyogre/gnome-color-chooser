@@ -1,0 +1,572 @@
+# Simplified Chinese translation for gnome-color-chooser
+# Copyright (C) 2007-2008 Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>
+# This file is distributed under the same license as the gnome-color-chooser package.
+# Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>, 2007-2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-color-chooser\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-23 19:32+0100\n"
+"PO-Revision-Date: 2009-03-23 19:16+0100\n"
+"Last-Translator: Aron <Unknown>\n"
+"Language-Team: Simplified Chinese <zh_CN@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-03-23 14:24+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../profiles/compact.xml.in.h:1
+msgid "Compact"
+msgstr "紧凑"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:2 ../src/gnome-color-chooser.glade.h:30
+msgid "Buttons"
+msgstr "按钮"
+
+#. translator node: this is a category name (tab label); comboboxes are button widgets with a dropdown list
+#: ../src/gnome-color-chooser.xml.in.h:4
+msgid "Comboboxes"
+msgstr "组合框"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:6
+msgid "Desktop Icons"
+msgstr "桌面图标"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:8
+msgid "Global"
+msgstr "全局"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:10
+#: ../src/gnome-color-chooser.glade.h:49
+msgid "Panel"
+msgstr "面板"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:12
+msgid "Progress Bars"
+msgstr "进度条"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:14
+msgid "Scrollbars"
+msgstr "滚动条"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:16
+msgid "Start Menue"
+msgstr "开始菜单"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:18
+msgid "Tooltips"
+msgstr "工具提示"
+
+#: ../src/gnome-color-chooser.glade.h:1
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> Images are currently not "
+"exported!!"
+msgstr ""
+"<b><span foreground=\"#ff0000\">注意：</span></b> 图片目前并未被导出！！"
+
+#: ../src/gnome-color-chooser.glade.h:2
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> These settings only work "
+"with gtk2-themes that don't specify these values on their own, otherwise "
+"nothing will happen on a change ;-)"
+msgstr ""
+"<b><span foreground=\"#ff0000\">注意：</span></b> 这些设置只有当 gtk2-themes "
+"没有指定相应设置时才会生效，否则改变设置不会有任何变化发生 ;-)"
+
+#: ../src/gnome-color-chooser.glade.h:3
+msgid "<b>Buttons</b>"
+msgstr "<b>按钮</b>"
+
+#. Comboboxes are button widgets with a dropdown list, translations may be longer than the english word
+#: ../src/gnome-color-chooser.glade.h:5
+msgid "<b>Comboboxes</b>"
+msgstr "<b>组合框</b>"
+
+#: ../src/gnome-color-chooser.glade.h:6
+msgid "<b>Default Configuration</b>"
+msgstr "<b>默认设置</b>"
+
+#: ../src/gnome-color-chooser.glade.h:7
+msgid "<b>Desktop</b>"
+msgstr "<b>桌面</b>"
+
+#: ../src/gnome-color-chooser.glade.h:8
+msgid "<b>Engines</b> [for advanced users!]"
+msgstr "<b>引擎</b> [高级用户使用！]"
+
+#: ../src/gnome-color-chooser.glade.h:9
+msgid "<b>Entry Fields</b>"
+msgstr "<b>输入域</b>"
+
+#: ../src/gnome-color-chooser.glade.h:10
+msgid "<b>Icon Labels</b>"
+msgstr "<b>图标标签</b>"
+
+#: ../src/gnome-color-chooser.glade.h:11
+msgid "<b>Icon sizes</b> (x² pixels)"
+msgstr "<b>图标大小</b> (x² 像素)"
+
+#: ../src/gnome-color-chooser.glade.h:12
+msgid "<b>Icons</b>"
+msgstr "<b>图标</b>"
+
+#. Abbreviation for Hyperlinks
+#: ../src/gnome-color-chooser.glade.h:14
+msgid "<b>Links</b>"
+msgstr "<b>链接</b>"
+
+#: ../src/gnome-color-chooser.glade.h:15
+msgid "<b>Metacity</b> (normal)"
+msgstr "<b>Metacity</b> (常规)"
+
+#: ../src/gnome-color-chooser.glade.h:16
+msgid "<b>Normal</b>"
+msgstr "<b>常规</b>"
+
+#: ../src/gnome-color-chooser.glade.h:17
+msgid "<b>Panel</b>"
+msgstr "<b>面板</b>"
+
+#: ../src/gnome-color-chooser.glade.h:18
+msgid "<b>Progress Bars</b>"
+msgstr "<b>进度条</b>"
+
+#. Label of the frame that shows the result of the Schema Validation process
+#: ../src/gnome-color-chooser.glade.h:20
+msgid "<b>Result</b>"
+msgstr "<b>结果</b>"
+
+#: ../src/gnome-color-chooser.glade.h:21
+msgid "<b>Scrollbars</b>"
+msgstr "<b>滚动条</b>"
+
+#: ../src/gnome-color-chooser.glade.h:22
+msgid "<b>Selection Box</b>"
+msgstr "<b>选择框</b>"
+
+#: ../src/gnome-color-chooser.glade.h:23
+msgid "<b>Start Menu</b>"
+msgstr "<b>开始菜单</b>"
+
+#: ../src/gnome-color-chooser.glade.h:24
+msgid "<b>Tooltips</b>"
+msgstr "<b>小提示</b>"
+
+#: ../src/gnome-color-chooser.glade.h:25
+msgid "<b>Window Decoration</b>"
+msgstr "<b>窗体装饰</b>"
+
+#: ../src/gnome-color-chooser.glade.h:26
+msgid "Background"
+msgstr "背景"
+
+#: ../src/gnome-color-chooser.glade.h:27
+msgid "Background Opacity"
+msgstr "背景不透明度"
+
+#: ../src/gnome-color-chooser.glade.h:28
+msgid "Button"
+msgstr "按钮"
+
+#: ../src/gnome-color-chooser.glade.h:29
+msgid "Button Size"
+msgstr "按钮大小"
+
+#: ../src/gnome-color-chooser.glade.h:31
+msgid "Color"
+msgstr "颜色"
+
+#: ../src/gnome-color-chooser.glade.h:32
+msgid "Desktop"
+msgstr "桌面"
+
+#. Verb (to export)
+#: ../src/gnome-color-chooser.glade.h:34
+msgid "E_xport as"
+msgstr "导出为(_x)"
+
+#. Label for the filechooserbutton that selects an Engine Schema XML file
+#: ../src/gnome-color-chooser.glade.h:36
+msgid "Engine Schema (XML)"
+msgstr "引擎 Schema (XML)"
+
+#. Menubar entry
+#. translator note: window title
+#: ../src/gnome-color-chooser.glade.h:38 ../src/validatorwindow.cc:51
+msgid "Engine Schema Validator"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:39
+msgid "Engines"
+msgstr "引擎"
+
+#: ../src/gnome-color-chooser.glade.h:40
+msgid "Font"
+msgstr "字体"
+
+#: ../src/gnome-color-chooser.glade.h:41
+msgid "Foreground"
+msgstr "前景"
+
+#: ../src/gnome-color-chooser.glade.h:42
+msgid "Global Colors"
+msgstr "全局色"
+
+#: ../src/gnome-color-chooser.glade.h:43
+msgid "Icons"
+msgstr "图标"
+
+#: ../src/gnome-color-chooser.glade.h:44
+msgid "Large Toolbar"
+msgstr "大工具栏"
+
+#: ../src/gnome-color-chooser.glade.h:45
+msgid "Menue (e.g. application or context menues)"
+msgstr "菜单（例如应用程序或文章的菜单）"
+
+#. visible in tooltip of render modes
+#: ../src/gnome-color-chooser.glade.h:47
+msgid "Modes: 0=normal, 1=lighten, 2=colorize, 3=colorize monochromely"
+msgstr "模式: 0=正常, 1=照明, 2=彩色, 3=单色调"
+
+#: ../src/gnome-color-chooser.glade.h:48
+msgid "Opacity"
+msgstr "不透明度"
+
+#: ../src/gnome-color-chooser.glade.h:50
+msgid "Profile:"
+msgstr "配置文件："
+
+#: ../src/gnome-color-chooser.glade.h:51
+msgid "Specific"
+msgstr "特定的"
+
+#: ../src/gnome-color-chooser.glade.h:52
+msgid "Start menue (needs panel restart!)"
+msgstr "开始菜单 (需要重启面板)"
+
+#: ../src/gnome-color-chooser.glade.h:53
+msgid "Text"
+msgstr "文字"
+
+#: ../src/gnome-color-chooser.glade.h:54
+msgid "This color is only used if render mode is 2 or 3 (colorize)"
+msgstr "只有在渲染模式为2或者3的时候这种颜色会被使用"
+
+#: ../src/gnome-color-chooser.glade.h:55
+msgid "This option does not affect all themes!"
+msgstr "这个选项不影响所有主题！"
+
+#: ../src/gnome-color-chooser.glade.h:56
+msgid "Title/Buttons"
+msgstr "标题/按键"
+
+#. Button Label of the Schema Validator
+#: ../src/gnome-color-chooser.glade.h:58
+msgid "Validate"
+msgstr "验证"
+
+#. Label for the filechooserbutton that selects a Validator Schema XSD file
+#: ../src/gnome-color-chooser.glade.h:60
+msgid "Validator Schema (XSD)"
+msgstr "验证 Schema (XSD)"
+
+#: ../src/gnome-color-chooser.glade.h:61
+msgid "Width"
+msgstr "宽"
+
+#: ../src/gnome-color-chooser.glade.h:62
+msgid "X-Padding"
+msgstr "X-填充"
+
+#: ../src/gnome-color-chooser.glade.h:63
+msgid ""
+"X-Padding\n"
+"(of widgets)"
+msgstr ""
+"X-填充\n"
+"(控件)"
+
+#: ../src/gnome-color-chooser.glade.h:65
+msgid "Y-Padding"
+msgstr "Y-填充"
+
+#: ../src/gnome-color-chooser.glade.h:66
+msgid ""
+"Y-Padding\n"
+"(of widgets)"
+msgstr ""
+"Y-填充\n"
+"(用于 widgets)"
+
+#: ../src/gnome-color-chooser.glade.h:68
+msgid "_File"
+msgstr "文件 (_F)"
+
+#: ../src/gnome-color-chooser.glade.h:69
+msgid "_Help"
+msgstr "帮助 (_H)"
+
+#: ../src/gnome-color-chooser.glade.h:70
+msgid "_Install in GNOME"
+msgstr "在GNOME下安装 (_I)"
+
+#: ../src/gnome-color-chooser.glade.h:71
+msgid "_Tools"
+msgstr "工具(_T)"
+
+#: ../src/gnome-color-chooser.glade.h:72
+msgid "activate hover effects"
+msgstr "激活旋转效果"
+
+#: ../src/gnome-color-chooser.glade.h:73
+msgid "active"
+msgstr "活动"
+
+#: ../src/gnome-color-chooser.glade.h:74
+msgid "active window"
+msgstr "活动窗口"
+
+#: ../src/gnome-color-chooser.glade.h:75
+msgid "beautify icon labels (needed for icon label settings!)"
+msgstr "美化图标标签 (图标标签设置中需要)"
+
+#: ../src/gnome-color-chooser.glade.h:76
+msgid "brightness"
+msgstr "亮度"
+
+#: ../src/gnome-color-chooser.glade.h:77
+msgid "button pressed"
+msgstr "按键被按下"
+
+#: ../src/gnome-color-chooser.glade.h:78
+msgid "colorize with"
+msgstr "着色"
+
+#: ../src/gnome-color-chooser.glade.h:79
+msgid "deactivate (stock) icons"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:80
+msgid "disabled"
+msgstr "禁用"
+
+#: ../src/gnome-color-chooser.glade.h:81
+msgid "export comments (for easy human theme editing)"
+msgstr "导出评论（以方便human主题的编辑）"
+
+#: ../src/gnome-color-chooser.glade.h:82
+msgid "export disabled theme elements"
+msgstr "导出被禁用的主题"
+
+#: ../src/gnome-color-chooser.glade.h:83
+msgid "hover"
+msgstr "旋转"
+
+#: ../src/gnome-color-chooser.glade.h:84
+msgid "inactive window"
+msgstr "非活动窗口"
+
+#: ../src/gnome-color-chooser.glade.h:85
+msgid "lighten"
+msgstr "照明"
+
+#: ../src/gnome-color-chooser.glade.h:86
+msgid "normal"
+msgstr "普通"
+
+#: ../src/gnome-color-chooser.glade.h:87
+msgid "pressed"
+msgstr "被按下"
+
+#: ../src/gnome-color-chooser.glade.h:88
+msgid "render mode"
+msgstr "渲染模式"
+
+#: ../src/gnome-color-chooser.glade.h:89
+msgid "saturation"
+msgstr "饱和"
+
+#: ../src/gnome-color-chooser.glade.h:90
+msgid "selected"
+msgstr "已选"
+
+#. as in unvisited link
+#: ../src/gnome-color-chooser.glade.h:92
+msgid "unvisited"
+msgstr "未访问的"
+
+#: ../src/gnome-color-chooser.glade.h:93
+msgid "use shadowless Menubars"
+msgstr "使用无阴影的菜单栏"
+
+#: ../src/gnome-color-chooser.glade.h:94
+msgid "use shadowless Toolbars"
+msgstr "使用无阴影的工具栏"
+
+#. as in (already) visited link
+#: ../src/gnome-color-chooser.glade.h:96
+msgid "visited"
+msgstr "已访问的"
+
+#: ../src/gnome-color-chooser.desktop.in.h:1
+msgid "Customize your GNOME desktop"
+msgstr "自定义您的 GNOME 桌面"
+
+#: ../src/configloader.cc:129 ../src/configloader.cc:1134
+msgid "Theme Default"
+msgstr "默认主题"
+
+#: ../src/configloader.cc:758
+#, c-format
+msgid "Configuration of %s"
+msgstr "%s 的设置"
+
+#: ../src/configloader.cc:1133
+msgid "None"
+msgstr "无"
+
+#: ../src/ioexception.cc:43
+msgid "Read Error"
+msgstr "读取错误"
+
+#: ../src/ioexception.cc:46
+msgid "Write Error"
+msgstr "写错误"
+
+#: ../src/main.cc:75 ../src/mainwindow.cc:557
+#, c-format
+msgid "Could not open or create file %s."
+msgstr "无法读取或创建文件：%s"
+
+#. "Error" is the caption of an error message
+#: ../src/main.cc:76 ../src/main.cc:87 ../src/main.cc:97 ../src/main.cc:113
+#: ../src/main.cc:198
+msgid "Error"
+msgstr "错误"
+
+#: ../src/main.cc:86 ../src/mainwindow.cc:567 ../src/mainwindow.cc:595
+#, c-format
+msgid "Unable to modify file %s."
+msgstr "无法更改文件%s"
+
+#: ../src/main.cc:96
+#, c-format
+msgid "Could not open file %s."
+msgstr "无法打开文件%s"
+
+#. translator note: used in --help message, describes the CLI command --validator-only
+#: ../src/main.cc:129
+msgid "Start Engine Schema validator only"
+msgstr "仅以默认引擎 Schema 启动"
+
+#. translator note: used in --help message, name of optional parameter (brackets!), please use uppercase letters only!
+#: ../src/main.cc:131
+msgid "[FILENAME]"
+msgstr "[文件名]"
+
+#. dialog title
+#: ../src/mainwindow.cc:669
+msgid "Save Theme"
+msgstr "保存主题"
+
+#. dialog title
+#: ../src/mainwindow.cc:696
+msgid "Save Theme as"
+msgstr "主题另存为"
+
+#. dialog title
+#: ../src/mainwindow.cc:722
+msgid "Export Theme as"
+msgstr "主题导出至"
+
+#: ../src/mainwindow.cc:864
+msgid "A tool for customizing the appearance of the GNOME desktop"
+msgstr "设置 GNOME 桌面的全部自定义工具"
+
+#: ../src/mainwindow.cc:911
+#, c-format
+msgid "Export to file %s failed: %s."
+msgstr "输出到文件 %s 失败：%s"
+
+#: ../src/treehandler.cc:558
+msgid "Version"
+msgstr "版本"
+
+#: ../src/treehandler.cc:559
+msgid "Website"
+msgstr "网站"
+
+#: ../src/treehandler.cc:563
+msgid "Author(s)"
+msgstr "作者"
+
+#: ../src/validatorwindow.cc:109
+msgid "No XML file specified!"
+msgstr "未指明任何 XML 文件！"
+
+#: ../src/validatorwindow.cc:111
+msgid "No XSD file specified!"
+msgstr "未指明任何 XSD 文件！"
+
+#. translator note: message that appears if a validation has been successful
+#: ../src/validatorwindow.cc:116
+msgid "Validation passed!"
+msgstr "确认通过！"
+
+#: ../src/validatorwindow.cc:119
+msgid "Validation failed!"
+msgstr "确认失败！"
+
+#. translator note: as in "error found on line x"
+#: ../src/validatorwindow.cc:211
+msgid "Line"
+msgstr "行"
+
+#~ msgid "<b>Compiz</b>"
+#~ msgstr "<b>Compiz</b>"
+
+#~ msgid "Not yet possible with GNOME"
+#~ msgstr "GNOME 目前仍做不到"
+
+#~ msgid ""
+#~ "<span size='small'><u><b>ToDo:</b></u>\n"
+#~ "-> use tooltips to explain what each config is being for\n"
+#~ "-> simplify GUI and add a preview area\n"
+#~ "-> find translators! (please mail) ;-)</span>"
+#~ msgstr ""
+#~ "<span size='small'><u><b>ToDo:</b></u>\n"
+#~ "-> 利用小提示解释各项设置选项的功能\n"
+#~ "-> 简化用户界面， 添加一个预览区域\n"
+#~ "-> 寻找翻译！(邮件联系) ;-)</span>"
+
+#~ msgid "Panel (does nothing with my clearlooks-theme)"
+#~ msgstr "面板 (与我的 clearlooks-theme 无关)"
+
+#~ msgid "gtk-apply"
+#~ msgstr "gtk-apply"
+
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-cancel"
+
+#~ msgid "gtk-ok"
+#~ msgstr "gtk-ok"
+
+#~ msgid "gtk-save"
+#~ msgstr "gtk-save"
+
+#~ msgid "GNOME Color Chooser"
+#~ msgstr "GNOME Color Chooser"
+
+#~ msgid "A tool for customizing the appereance of the GNOME desktop"
+#~ msgstr "个性化您的 GNOME 桌面的工具"

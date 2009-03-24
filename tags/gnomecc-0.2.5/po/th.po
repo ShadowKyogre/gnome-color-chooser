@@ -1,0 +1,537 @@
+# Thai translation for gnome-color-chooser
+# Copyright (C) 2008 Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>
+# This file is distributed under the same license as the gnome-color-chooser package.
+# Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-color-chooser\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-23 19:32+0100\n"
+"PO-Revision-Date: 2009-03-23 19:17+0100\n"
+"Last-Translator: Tharawut Paripaiboon <Unknown>\n"
+"Language-Team: Thai <th@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-09-02 21:12+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../profiles/compact.xml.in.h:1
+msgid "Compact"
+msgstr ""
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:2 ../src/gnome-color-chooser.glade.h:30
+msgid "Buttons"
+msgstr "ปุ่ม"
+
+#. translator node: this is a category name (tab label); comboboxes are button widgets with a dropdown list
+#: ../src/gnome-color-chooser.xml.in.h:4
+msgid "Comboboxes"
+msgstr ""
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:6
+msgid "Desktop Icons"
+msgstr "ไอคอนเดสท็อป"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:8
+msgid "Global"
+msgstr "ทั่วไป"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:10
+#: ../src/gnome-color-chooser.glade.h:49
+msgid "Panel"
+msgstr "พาเนล"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:12
+msgid "Progress Bars"
+msgstr "แถบความคืบหน้า"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:14
+msgid "Scrollbars"
+msgstr "แถบเลื่อน"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:16
+msgid "Start Menue"
+msgstr "เมนูเริ่ม"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:18
+msgid "Tooltips"
+msgstr "ทูลทิป"
+
+#: ../src/gnome-color-chooser.glade.h:1
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> Images are currently not "
+"exported!!"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:2
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> These settings only work "
+"with gtk2-themes that don't specify these values on their own, otherwise "
+"nothing will happen on a change ;-)"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:3
+msgid "<b>Buttons</b>"
+msgstr "<b>ปุ่ม</b>"
+
+#. Comboboxes are button widgets with a dropdown list, translations may be longer than the english word
+#: ../src/gnome-color-chooser.glade.h:5
+msgid "<b>Comboboxes</b>"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:6
+msgid "<b>Default Configuration</b>"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:7
+msgid "<b>Desktop</b>"
+msgstr "<b>เดสท็อป</b>"
+
+#: ../src/gnome-color-chooser.glade.h:8
+msgid "<b>Engines</b> [for advanced users!]"
+msgstr "<b>Engines</b> [for advanced users!]"
+
+#: ../src/gnome-color-chooser.glade.h:9
+msgid "<b>Entry Fields</b>"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:10
+msgid "<b>Icon Labels</b>"
+msgstr "<b>ป้ายชื่อไอคอน</b>"
+
+#: ../src/gnome-color-chooser.glade.h:11
+msgid "<b>Icon sizes</b> (x² pixels)"
+msgstr "<b>ขนาดของไอคอน</b> (x² pixels)"
+
+#: ../src/gnome-color-chooser.glade.h:12
+msgid "<b>Icons</b>"
+msgstr "<b>ไอคอน</b>"
+
+#. Abbreviation for Hyperlinks
+#: ../src/gnome-color-chooser.glade.h:14
+msgid "<b>Links</b>"
+msgstr "<b>ลิงก์</b>"
+
+#: ../src/gnome-color-chooser.glade.h:15
+msgid "<b>Metacity</b> (normal)"
+msgstr "<b>Metacity</b> (ปกติ)"
+
+#: ../src/gnome-color-chooser.glade.h:16
+msgid "<b>Normal</b>"
+msgstr "<b>ปกติ</b>"
+
+#: ../src/gnome-color-chooser.glade.h:17
+msgid "<b>Panel</b>"
+msgstr "<b>พาเนล</b>"
+
+#: ../src/gnome-color-chooser.glade.h:18
+msgid "<b>Progress Bars</b>"
+msgstr "<b>แถบความคืบหน้า</b>"
+
+#. Label of the frame that shows the result of the Schema Validation process
+#: ../src/gnome-color-chooser.glade.h:20
+msgid "<b>Result</b>"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:21
+msgid "<b>Scrollbars</b>"
+msgstr "<b>แถบเลื่อน</b>"
+
+#: ../src/gnome-color-chooser.glade.h:22
+msgid "<b>Selection Box</b>"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:23
+msgid "<b>Start Menu</b>"
+msgstr "<b>เมนูเริ่ม</b>"
+
+#: ../src/gnome-color-chooser.glade.h:24
+msgid "<b>Tooltips</b>"
+msgstr "<b>ทูลทิป</b>"
+
+#: ../src/gnome-color-chooser.glade.h:25
+msgid "<b>Window Decoration</b>"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:26
+msgid "Background"
+msgstr "พื้นหลัง"
+
+#: ../src/gnome-color-chooser.glade.h:27
+msgid "Background Opacity"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:28
+msgid "Button"
+msgstr "ปุ่ม"
+
+#: ../src/gnome-color-chooser.glade.h:29
+msgid "Button Size"
+msgstr "ขนาดของปุ่ม"
+
+#: ../src/gnome-color-chooser.glade.h:31
+msgid "Color"
+msgstr "สี"
+
+#: ../src/gnome-color-chooser.glade.h:32
+msgid "Desktop"
+msgstr "เดสท็อป"
+
+#. Verb (to export)
+#: ../src/gnome-color-chooser.glade.h:34
+msgid "E_xport as"
+msgstr ""
+
+#. Label for the filechooserbutton that selects an Engine Schema XML file
+#: ../src/gnome-color-chooser.glade.h:36
+msgid "Engine Schema (XML)"
+msgstr ""
+
+#. Menubar entry
+#. translator note: window title
+#: ../src/gnome-color-chooser.glade.h:38 ../src/validatorwindow.cc:51
+msgid "Engine Schema Validator"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:39
+msgid "Engines"
+msgstr "Engines"
+
+#: ../src/gnome-color-chooser.glade.h:40
+msgid "Font"
+msgstr "แบบอักษร"
+
+#: ../src/gnome-color-chooser.glade.h:41
+msgid "Foreground"
+msgstr "สีพื้นหน้า"
+
+#: ../src/gnome-color-chooser.glade.h:42
+msgid "Global Colors"
+msgstr "สีโดยรวม"
+
+#: ../src/gnome-color-chooser.glade.h:43
+msgid "Icons"
+msgstr "ไอคอน"
+
+#: ../src/gnome-color-chooser.glade.h:44
+msgid "Large Toolbar"
+msgstr "แถบเครื่องมือขนาดใหญ่"
+
+#: ../src/gnome-color-chooser.glade.h:45
+msgid "Menue (e.g. application or context menues)"
+msgstr ""
+
+#. visible in tooltip of render modes
+#: ../src/gnome-color-chooser.glade.h:47
+msgid "Modes: 0=normal, 1=lighten, 2=colorize, 3=colorize monochromely"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:48
+msgid "Opacity"
+msgstr "ความโปร่งแสง"
+
+#: ../src/gnome-color-chooser.glade.h:50
+msgid "Profile:"
+msgstr "โปรไฟล์:"
+
+#: ../src/gnome-color-chooser.glade.h:51
+msgid "Specific"
+msgstr "เจาะจง"
+
+#: ../src/gnome-color-chooser.glade.h:52
+msgid "Start menue (needs panel restart!)"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:53
+msgid "Text"
+msgstr "ข้อความ"
+
+#: ../src/gnome-color-chooser.glade.h:54
+msgid "This color is only used if render mode is 2 or 3 (colorize)"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:55
+msgid "This option does not affect all themes!"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:56
+msgid "Title/Buttons"
+msgstr ""
+
+#. Button Label of the Schema Validator
+#: ../src/gnome-color-chooser.glade.h:58
+msgid "Validate"
+msgstr ""
+
+#. Label for the filechooserbutton that selects a Validator Schema XSD file
+#: ../src/gnome-color-chooser.glade.h:60
+msgid "Validator Schema (XSD)"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:61
+msgid "Width"
+msgstr "ความกว้าง"
+
+#: ../src/gnome-color-chooser.glade.h:62
+msgid "X-Padding"
+msgstr "ระยะห่างแนวนอน"
+
+#: ../src/gnome-color-chooser.glade.h:63
+msgid ""
+"X-Padding\n"
+"(of widgets)"
+msgstr ""
+"ระยะห่างแนวนอน\n"
+"(ของ widgets)"
+
+#: ../src/gnome-color-chooser.glade.h:65
+msgid "Y-Padding"
+msgstr "ระยะห่างแนวตั้ง"
+
+#: ../src/gnome-color-chooser.glade.h:66
+msgid ""
+"Y-Padding\n"
+"(of widgets)"
+msgstr ""
+"ระยะห่างแนวตั้ง\n"
+"(ของ widgets)"
+
+#: ../src/gnome-color-chooser.glade.h:68
+msgid "_File"
+msgstr "แฟ้ม"
+
+#: ../src/gnome-color-chooser.glade.h:69
+msgid "_Help"
+msgstr "วิธีใช้"
+
+#: ../src/gnome-color-chooser.glade.h:70
+msgid "_Install in GNOME"
+msgstr "ติดตั้งภายใน GNOME"
+
+#: ../src/gnome-color-chooser.glade.h:71
+msgid "_Tools"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:72
+msgid "activate hover effects"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:73
+msgid "active"
+msgstr "กำลังใช้งาน"
+
+#: ../src/gnome-color-chooser.glade.h:74
+msgid "active window"
+msgstr "หน้าต่างที่กำลังใช้งาน"
+
+#: ../src/gnome-color-chooser.glade.h:75
+msgid "beautify icon labels (needed for icon label settings!)"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:76
+msgid "brightness"
+msgstr "ความสว่าง"
+
+#: ../src/gnome-color-chooser.glade.h:77
+msgid "button pressed"
+msgstr "ปุ่มที่ถูกกด"
+
+#: ../src/gnome-color-chooser.glade.h:78
+msgid "colorize with"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:79
+msgid "deactivate (stock) icons"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:80
+msgid "disabled"
+msgstr "ปิดการใช้งาน"
+
+#: ../src/gnome-color-chooser.glade.h:81
+msgid "export comments (for easy human theme editing)"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:82
+msgid "export disabled theme elements"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:83
+msgid "hover"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:84
+msgid "inactive window"
+msgstr "หน้าต่างที่ไม่ได้ทำงาน"
+
+#: ../src/gnome-color-chooser.glade.h:85
+msgid "lighten"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:86
+msgid "normal"
+msgstr "ปกติ"
+
+#: ../src/gnome-color-chooser.glade.h:87
+msgid "pressed"
+msgstr "ถูกกด"
+
+#: ../src/gnome-color-chooser.glade.h:88
+msgid "render mode"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:89
+msgid "saturation"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:90
+msgid "selected"
+msgstr "เลือกอยู่"
+
+#. as in unvisited link
+#: ../src/gnome-color-chooser.glade.h:92
+msgid "unvisited"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:93
+msgid "use shadowless Menubars"
+msgstr ""
+
+#: ../src/gnome-color-chooser.glade.h:94
+msgid "use shadowless Toolbars"
+msgstr ""
+
+#. as in (already) visited link
+#: ../src/gnome-color-chooser.glade.h:96
+msgid "visited"
+msgstr ""
+
+#: ../src/gnome-color-chooser.desktop.in.h:1
+msgid "Customize your GNOME desktop"
+msgstr "ปรับแต่งเดสท็อป GNOME ของคุณ"
+
+#: ../src/configloader.cc:129 ../src/configloader.cc:1134
+msgid "Theme Default"
+msgstr "ธีมปริยาย"
+
+#: ../src/configloader.cc:758
+#, c-format
+msgid "Configuration of %s"
+msgstr ""
+
+#: ../src/configloader.cc:1133
+msgid "None"
+msgstr "ไม่มี"
+
+#: ../src/ioexception.cc:43
+msgid "Read Error"
+msgstr "เกิดข้อผิดพลาดในการอ่าน"
+
+#: ../src/ioexception.cc:46
+msgid "Write Error"
+msgstr "เกิดข้อผิดพลาดในการเขียน"
+
+#: ../src/main.cc:75 ../src/mainwindow.cc:557
+#, c-format
+msgid "Could not open or create file %s."
+msgstr "ไม่สามารถเปิดหรือสร้างแฟ้ม %s"
+
+#. "Error" is the caption of an error message
+#: ../src/main.cc:76 ../src/main.cc:87 ../src/main.cc:97 ../src/main.cc:113
+#: ../src/main.cc:198
+msgid "Error"
+msgstr "ผิดพลาด"
+
+#: ../src/main.cc:86 ../src/mainwindow.cc:567 ../src/mainwindow.cc:595
+#, c-format
+msgid "Unable to modify file %s."
+msgstr "ไม่สามารถแก้ไขแฟ้ม %s"
+
+#: ../src/main.cc:96
+#, c-format
+msgid "Could not open file %s."
+msgstr "ไม่สามารถเปิดแฟ้ม %s"
+
+#. translator note: used in --help message, describes the CLI command --validator-only
+#: ../src/main.cc:129
+msgid "Start Engine Schema validator only"
+msgstr ""
+
+#. translator note: used in --help message, name of optional parameter (brackets!), please use uppercase letters only!
+#: ../src/main.cc:131
+msgid "[FILENAME]"
+msgstr ""
+
+#. dialog title
+#: ../src/mainwindow.cc:669
+msgid "Save Theme"
+msgstr "บันทึกธีม"
+
+#. dialog title
+#: ../src/mainwindow.cc:696
+msgid "Save Theme as"
+msgstr "บันทึกธีมเป็น"
+
+#. dialog title
+#: ../src/mainwindow.cc:722
+msgid "Export Theme as"
+msgstr ""
+
+#: ../src/mainwindow.cc:864
+msgid "A tool for customizing the appearance of the GNOME desktop"
+msgstr "เครื่องมือสำหรับปรับแต่งหน้าตาของเดสท็อป GNOME"
+
+#: ../src/mainwindow.cc:911
+#, c-format
+msgid "Export to file %s failed: %s."
+msgstr ""
+
+#: ../src/treehandler.cc:558
+msgid "Version"
+msgstr "เวอร์ชัน"
+
+#: ../src/treehandler.cc:559
+msgid "Website"
+msgstr "เว็บไซต์"
+
+#: ../src/treehandler.cc:563
+msgid "Author(s)"
+msgstr "ผู้เขียน"
+
+#: ../src/validatorwindow.cc:109
+msgid "No XML file specified!"
+msgstr ""
+
+#: ../src/validatorwindow.cc:111
+msgid "No XSD file specified!"
+msgstr ""
+
+#. translator note: message that appears if a validation has been successful
+#: ../src/validatorwindow.cc:116
+msgid "Validation passed!"
+msgstr ""
+
+#: ../src/validatorwindow.cc:119
+msgid "Validation failed!"
+msgstr ""
+
+#. translator note: as in "error found on line x"
+#: ../src/validatorwindow.cc:211
+msgid "Line"
+msgstr ""
+
+#~ msgid "<b>Compiz</b>"
+#~ msgstr "<b>Compiz</b>"
+
+#~ msgid "Not yet possible with GNOME"
+#~ msgstr "ยังเป็นไปไม่ได้กับ GNOME ในตอนนี้"

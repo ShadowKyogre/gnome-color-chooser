@@ -1,0 +1,542 @@
+# Hebrew translations for gnome-color-chooser package.
+# Copyright (C) 2007-2008 Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>
+# This file is distributed under the same license as the gnome-color-chooser package.
+# Werner Pantke <gnome-color-chooser@punk-ass-bitch.org>, 2007-2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-color-chooser\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-23 19:32+0100\n"
+"PO-Revision-Date: 2009-03-23 19:21+0100\n"
+"Last-Translator: Yaron <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <he@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-03-23 14:24+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../profiles/compact.xml.in.h:1
+msgid "Compact"
+msgstr "מרוכז"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:2 ../src/gnome-color-chooser.glade.h:30
+msgid "Buttons"
+msgstr "לחצנים"
+
+#. translator node: this is a category name (tab label); comboboxes are button widgets with a dropdown list
+#: ../src/gnome-color-chooser.xml.in.h:4
+msgid "Comboboxes"
+msgstr "תיבות בחירה"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:6
+msgid "Desktop Icons"
+msgstr "סמלי שולחן העבודה"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:8
+msgid "Global"
+msgstr "כללי"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:10
+#: ../src/gnome-color-chooser.glade.h:49
+msgid "Panel"
+msgstr "לוח"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:12
+msgid "Progress Bars"
+msgstr "סרגלי התקדמות"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:14
+msgid "Scrollbars"
+msgstr "סרגלי גלילה"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:16
+msgid "Start Menue"
+msgstr "תפריט התחלה"
+
+#. translator node: this is a category name (tab label)
+#: ../src/gnome-color-chooser.xml.in.h:18
+msgid "Tooltips"
+msgstr "חלוניות עצה"
+
+#: ../src/gnome-color-chooser.glade.h:1
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> Images are currently not "
+"exported!!"
+msgstr ""
+"<b><span foreground=\"#ff0000\">הערה:</span></b> התמונות אינן מיוצאות נכון "
+"לעכשיו!!"
+
+#: ../src/gnome-color-chooser.glade.h:2
+msgid ""
+"<b><span foreground=\"#ff0000\">Note:</span></b> These settings only work "
+"with gtk2-themes that don't specify these values on their own, otherwise "
+"nothing will happen on a change ;-)"
+msgstr ""
+"<b><span foreground=\"#ff0000\">הערה:</span></b>הגדרות אלה תעבודנה רק עם "
+"ערכות נושא של gtk2 שאינן מגדירות ערכים אלו בעצמן, אחרת לא יקרה דבר עם שינוי "
+"הערכים ;-)"
+
+#: ../src/gnome-color-chooser.glade.h:3
+msgid "<b>Buttons</b>"
+msgstr "<b>לחצנים</b>"
+
+#. Comboboxes are button widgets with a dropdown list, translations may be longer than the english word
+#: ../src/gnome-color-chooser.glade.h:5
+msgid "<b>Comboboxes</b>"
+msgstr "<b>תיבות בחירה</b>"
+
+#: ../src/gnome-color-chooser.glade.h:6
+msgid "<b>Default Configuration</b>"
+msgstr "<b>הגדרות ברירת מחדל</b>"
+
+#: ../src/gnome-color-chooser.glade.h:7
+msgid "<b>Desktop</b>"
+msgstr "<b>שולחן עבודה</b>"
+
+#: ../src/gnome-color-chooser.glade.h:8
+msgid "<b>Engines</b> [for advanced users!]"
+msgstr "<b>מנועים</b> [עבור משתמשים מתקדמים!]"
+
+#: ../src/gnome-color-chooser.glade.h:9
+msgid "<b>Entry Fields</b>"
+msgstr "<b>שדות הזנה</b>"
+
+#: ../src/gnome-color-chooser.glade.h:10
+msgid "<b>Icon Labels</b>"
+msgstr "<b>תוויות סמל</b>"
+
+#: ../src/gnome-color-chooser.glade.h:11
+msgid "<b>Icon sizes</b> (x² pixels)"
+msgstr "<b>גדלי הסמל</b> (x² פיקסלים)"
+
+#: ../src/gnome-color-chooser.glade.h:12
+msgid "<b>Icons</b>"
+msgstr "<b>סמלים</b>"
+
+#. Abbreviation for Hyperlinks
+#: ../src/gnome-color-chooser.glade.h:14
+msgid "<b>Links</b>"
+msgstr "<b>קישורים</b>"
+
+#: ../src/gnome-color-chooser.glade.h:15
+msgid "<b>Metacity</b> (normal)"
+msgstr "<b>Metacity</b> (רגיל)"
+
+#: ../src/gnome-color-chooser.glade.h:16
+msgid "<b>Normal</b>"
+msgstr "<b>רגיל</b>"
+
+#: ../src/gnome-color-chooser.glade.h:17
+msgid "<b>Panel</b>"
+msgstr "<b>חלונית</b>"
+
+#: ../src/gnome-color-chooser.glade.h:18
+msgid "<b>Progress Bars</b>"
+msgstr "<b>סרגלי התקדמות</b>"
+
+#. Label of the frame that shows the result of the Schema Validation process
+#: ../src/gnome-color-chooser.glade.h:20
+msgid "<b>Result</b>"
+msgstr "<b>תוצאה</b>"
+
+#: ../src/gnome-color-chooser.glade.h:21
+msgid "<b>Scrollbars</b>"
+msgstr "<b>סרגלי גלילה</b>"
+
+#: ../src/gnome-color-chooser.glade.h:22
+msgid "<b>Selection Box</b>"
+msgstr "<b>תיבת בחירה</b>"
+
+#: ../src/gnome-color-chooser.glade.h:23
+msgid "<b>Start Menu</b>"
+msgstr "<b>תפריט התחלה</b>"
+
+#: ../src/gnome-color-chooser.glade.h:24
+msgid "<b>Tooltips</b>"
+msgstr "<b>תיאורי עזרה</b>"
+
+#: ../src/gnome-color-chooser.glade.h:25
+msgid "<b>Window Decoration</b>"
+msgstr "<b>קישוט החלון</b>"
+
+#: ../src/gnome-color-chooser.glade.h:26
+msgid "Background"
+msgstr "רקע"
+
+#: ../src/gnome-color-chooser.glade.h:27
+msgid "Background Opacity"
+msgstr "אטימות הרקע"
+
+#: ../src/gnome-color-chooser.glade.h:28
+msgid "Button"
+msgstr "לחצן"
+
+#: ../src/gnome-color-chooser.glade.h:29
+msgid "Button Size"
+msgstr "גודל הלחצן"
+
+#: ../src/gnome-color-chooser.glade.h:31
+msgid "Color"
+msgstr "צבע"
+
+#: ../src/gnome-color-chooser.glade.h:32
+msgid "Desktop"
+msgstr "שולחן עבודה"
+
+#. Verb (to export)
+#: ../src/gnome-color-chooser.glade.h:34
+msgid "E_xport as"
+msgstr "יי_צא בתור"
+
+#. Label for the filechooserbutton that selects an Engine Schema XML file
+#: ../src/gnome-color-chooser.glade.h:36
+msgid "Engine Schema (XML)"
+msgstr "סכמת המנוע (XML)"
+
+#. Menubar entry
+#. translator note: window title
+#: ../src/gnome-color-chooser.glade.h:38 ../src/validatorwindow.cc:51
+msgid "Engine Schema Validator"
+msgstr "מאמת מנוע הסכמה"
+
+#: ../src/gnome-color-chooser.glade.h:39
+msgid "Engines"
+msgstr "מנועים"
+
+#: ../src/gnome-color-chooser.glade.h:40
+msgid "Font"
+msgstr "גופן"
+
+#: ../src/gnome-color-chooser.glade.h:41
+msgid "Foreground"
+msgstr "קדמה"
+
+#: ../src/gnome-color-chooser.glade.h:42
+msgid "Global Colors"
+msgstr "צבעים כלליים"
+
+#: ../src/gnome-color-chooser.glade.h:43
+msgid "Icons"
+msgstr "סמלים"
+
+#: ../src/gnome-color-chooser.glade.h:44
+msgid "Large Toolbar"
+msgstr "סרגל כלים גדול"
+
+#: ../src/gnome-color-chooser.glade.h:45
+msgid "Menue (e.g. application or context menues)"
+msgstr "תפריט (לדוגמה: תפריט התוכנה או תפריט הקשר)"
+
+#. visible in tooltip of render modes
+#: ../src/gnome-color-chooser.glade.h:47
+msgid "Modes: 0=normal, 1=lighten, 2=colorize, 3=colorize monochromely"
+msgstr "מצבים: 0=רגיל, 1=מובהר, 2=צבוע, 3=צבע בגווני אפור"
+
+#: ../src/gnome-color-chooser.glade.h:48
+msgid "Opacity"
+msgstr "אטימות"
+
+#: ../src/gnome-color-chooser.glade.h:50
+msgid "Profile:"
+msgstr "פרופיל:"
+
+#: ../src/gnome-color-chooser.glade.h:51
+msgid "Specific"
+msgstr "מסויים"
+
+#: ../src/gnome-color-chooser.glade.h:52
+msgid "Start menue (needs panel restart!)"
+msgstr "תפריט התחלה (דורש את איתחול הלוח!)"
+
+#: ../src/gnome-color-chooser.glade.h:53
+msgid "Text"
+msgstr "טקסט"
+
+#: ../src/gnome-color-chooser.glade.h:54
+msgid "This color is only used if render mode is 2 or 3 (colorize)"
+msgstr "השימוש בצבע זה ייעשה רק במידה וייבחרו מצבים 2 או 3 (צביעה)"
+
+#: ../src/gnome-color-chooser.glade.h:55
+msgid "This option does not affect all themes!"
+msgstr "אפשרות זו אינה משפיעה על כל ערכות הנושא!"
+
+#: ../src/gnome-color-chooser.glade.h:56
+msgid "Title/Buttons"
+msgstr "כותרת/לחצנים"
+
+#. Button Label of the Schema Validator
+#: ../src/gnome-color-chooser.glade.h:58
+msgid "Validate"
+msgstr "אימות"
+
+#. Label for the filechooserbutton that selects a Validator Schema XSD file
+#: ../src/gnome-color-chooser.glade.h:60
+msgid "Validator Schema (XSD)"
+msgstr "סכמת מאמת (XSD)"
+
+#: ../src/gnome-color-chooser.glade.h:61
+msgid "Width"
+msgstr "רוחב"
+
+#: ../src/gnome-color-chooser.glade.h:62
+msgid "X-Padding"
+msgstr "גבול-X"
+
+#: ../src/gnome-color-chooser.glade.h:63
+msgid ""
+"X-Padding\n"
+"(of widgets)"
+msgstr ""
+"גבול-X\n"
+"(של הווידג'טים)"
+
+#: ../src/gnome-color-chooser.glade.h:65
+msgid "Y-Padding"
+msgstr "גבול-Y"
+
+#: ../src/gnome-color-chooser.glade.h:66
+msgid ""
+"Y-Padding\n"
+"(of widgets)"
+msgstr ""
+"גבול-Y\n"
+"(של הווידג'טים)"
+
+#: ../src/gnome-color-chooser.glade.h:68
+msgid "_File"
+msgstr "_קובץ"
+
+#: ../src/gnome-color-chooser.glade.h:69
+msgid "_Help"
+msgstr "_עזרה"
+
+#: ../src/gnome-color-chooser.glade.h:70
+msgid "_Install in GNOME"
+msgstr "ה_תקן תחת GNOME"
+
+#: ../src/gnome-color-chooser.glade.h:71
+msgid "_Tools"
+msgstr "_כלים"
+
+#: ../src/gnome-color-chooser.glade.h:72
+msgid "activate hover effects"
+msgstr "הפעל אפקטים של ריחוף"
+
+#: ../src/gnome-color-chooser.glade.h:73
+msgid "active"
+msgstr "פעיל"
+
+#: ../src/gnome-color-chooser.glade.h:74
+msgid "active window"
+msgstr "חלון פעיל"
+
+#: ../src/gnome-color-chooser.glade.h:75
+msgid "beautify icon labels (needed for icon label settings!)"
+msgstr "ייפה את תוויות הסמלים (דרוש עבור הגדרות תווית סמל!)"
+
+#: ../src/gnome-color-chooser.glade.h:76
+msgid "brightness"
+msgstr "בהירות"
+
+#: ../src/gnome-color-chooser.glade.h:77
+msgid "button pressed"
+msgstr "לחצן נלחץ"
+
+#: ../src/gnome-color-chooser.glade.h:78
+msgid "colorize with"
+msgstr "צבע באמצעות"
+
+#: ../src/gnome-color-chooser.glade.h:79
+msgid "deactivate (stock) icons"
+msgstr "בטל את הפעלת (ערום) הסמלים"
+
+#: ../src/gnome-color-chooser.glade.h:80
+msgid "disabled"
+msgstr "מנוטרל"
+
+#: ../src/gnome-color-chooser.glade.h:81
+msgid "export comments (for easy human theme editing)"
+msgstr "ייצא הערות (לעריכה קלה של ערכת הנושא)"
+
+#: ../src/gnome-color-chooser.glade.h:82
+msgid "export disabled theme elements"
+msgstr "ייצא את פריטי ערכת הנושא המנוטרלים"
+
+#: ../src/gnome-color-chooser.glade.h:83
+msgid "hover"
+msgstr "ריחוף"
+
+#: ../src/gnome-color-chooser.glade.h:84
+msgid "inactive window"
+msgstr "חלון לא פעיל"
+
+#: ../src/gnome-color-chooser.glade.h:85
+msgid "lighten"
+msgstr "מובהר"
+
+#: ../src/gnome-color-chooser.glade.h:86
+msgid "normal"
+msgstr "רגיל"
+
+#: ../src/gnome-color-chooser.glade.h:87
+msgid "pressed"
+msgstr "נלחץ"
+
+#: ../src/gnome-color-chooser.glade.h:88
+msgid "render mode"
+msgstr "מצב עיבוד"
+
+#: ../src/gnome-color-chooser.glade.h:89
+msgid "saturation"
+msgstr "רוויה"
+
+#: ../src/gnome-color-chooser.glade.h:90
+msgid "selected"
+msgstr "נבחר"
+
+#. as in unvisited link
+#: ../src/gnome-color-chooser.glade.h:92
+msgid "unvisited"
+msgstr "ללא ביקורים"
+
+#: ../src/gnome-color-chooser.glade.h:93
+msgid "use shadowless Menubars"
+msgstr "השתמש בסרגלי תפריטים ללא צל"
+
+#: ../src/gnome-color-chooser.glade.h:94
+msgid "use shadowless Toolbars"
+msgstr "השתמש בסרגלי כלים ללא שם"
+
+#. as in (already) visited link
+#: ../src/gnome-color-chooser.glade.h:96
+msgid "visited"
+msgstr "ביקור"
+
+#: ../src/gnome-color-chooser.desktop.in.h:1
+msgid "Customize your GNOME desktop"
+msgstr "התאם אישית את שולחן ה־GNOME שלך"
+
+#: ../src/configloader.cc:129 ../src/configloader.cc:1134
+msgid "Theme Default"
+msgstr "ברירת מחדל של ערכת הנושא"
+
+#: ../src/configloader.cc:758
+#, c-format
+msgid "Configuration of %s"
+msgstr "הגדרת %s"
+
+#: ../src/configloader.cc:1133
+msgid "None"
+msgstr "ללא"
+
+#: ../src/ioexception.cc:43
+msgid "Read Error"
+msgstr "שגיאת קריאה"
+
+#: ../src/ioexception.cc:46
+msgid "Write Error"
+msgstr "שגיאת כתיבה"
+
+#: ../src/main.cc:75 ../src/mainwindow.cc:557
+#, c-format
+msgid "Could not open or create file %s."
+msgstr "לא ניתן לפתוח או ליצור את הקובץ %s."
+
+#. "Error" is the caption of an error message
+#: ../src/main.cc:76 ../src/main.cc:87 ../src/main.cc:97 ../src/main.cc:113
+#: ../src/main.cc:198
+msgid "Error"
+msgstr "שגיאה"
+
+#: ../src/main.cc:86 ../src/mainwindow.cc:567 ../src/mainwindow.cc:595
+#, c-format
+msgid "Unable to modify file %s."
+msgstr "לא ניתן לשנות את הקובץ %s."
+
+#: ../src/main.cc:96
+#, c-format
+msgid "Could not open file %s."
+msgstr "לא ניתן לפתוח את הקובץ %s."
+
+#. translator note: used in --help message, describes the CLI command --validator-only
+#: ../src/main.cc:129
+msgid "Start Engine Schema validator only"
+msgstr "הפעל את מנוע מאמת הסכמה בלבד"
+
+#. translator note: used in --help message, name of optional parameter (brackets!), please use uppercase letters only!
+#: ../src/main.cc:131
+msgid "[FILENAME]"
+msgstr "[FILENAME]"
+
+#. dialog title
+#: ../src/mainwindow.cc:669
+msgid "Save Theme"
+msgstr "שמור ערכת נושא"
+
+#. dialog title
+#: ../src/mainwindow.cc:696
+msgid "Save Theme as"
+msgstr "שמור ערכת נושא בשם"
+
+#. dialog title
+#: ../src/mainwindow.cc:722
+msgid "Export Theme as"
+msgstr "ייצא ערכת נושא בשם"
+
+#: ../src/mainwindow.cc:864
+msgid "A tool for customizing the appearance of the GNOME desktop"
+msgstr "כלי להתאמת התצוגה של שולחן העבודה GNOME"
+
+#: ../src/mainwindow.cc:911
+#, c-format
+msgid "Export to file %s failed: %s."
+msgstr "הייצוא אל הקובץ %s נכשל: %s."
+
+#: ../src/treehandler.cc:558
+msgid "Version"
+msgstr "גירסה"
+
+#: ../src/treehandler.cc:559
+msgid "Website"
+msgstr "אתר"
+
+#: ../src/treehandler.cc:563
+msgid "Author(s)"
+msgstr "יוצר/ים"
+
+#: ../src/validatorwindow.cc:109
+msgid "No XML file specified!"
+msgstr "לא צויין קובץ XML!"
+
+#: ../src/validatorwindow.cc:111
+msgid "No XSD file specified!"
+msgstr "לא צויין קובץ XSD!"
+
+#. translator note: message that appears if a validation has been successful
+#: ../src/validatorwindow.cc:116
+msgid "Validation passed!"
+msgstr "האימות עבר בהצלחה!"
+
+#: ../src/validatorwindow.cc:119
+msgid "Validation failed!"
+msgstr "האימות נכשל!"
+
+#. translator note: as in "error found on line x"
+#: ../src/validatorwindow.cc:211
+msgid "Line"
+msgstr "קו"
+
+#~ msgid "<b>Compiz</b>"
+#~ msgstr "<b>קומפיז</b>"
+
+#~ msgid "Not yet possible with GNOME"
+#~ msgstr "לא אפשרי עדיין עם GNOME"
