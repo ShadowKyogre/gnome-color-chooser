@@ -26,7 +26,7 @@ AM_CONFIG_HEADER(config.h)
 AM_INIT_AUTOMAKE([dist-bzip2])
 
 
-PKG_CHECK_MODULES(DEPS, gtkmm-2.4 >= 2.8.0 libglademm-2.4 >= 2.6.0 libgnome-2.0 >= 2.16.0  libgnomeui-2.0 >= 2.14.0 libxml-2.0 >= 2.6.0 )
+PKG_CHECK_MODULES(DEPS, gtkmm-2.4 >= 2.8.0 libglademm-2.4 >= 2.6.0 libxml-2.0 >= 2.6.0 )
 AC_SUBST(DEPS_CFLAGS)
 AC_SUBST(DEPS_LIBS)
 

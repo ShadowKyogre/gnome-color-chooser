@@ -37,8 +37,8 @@
 #include <libintl.h>
 #include <locale.h>
 #include <string>
-#include <libgnome/libgnome.h>
-#include <libgnomeui/libgnomeui.h>
+//#include <libgnome/libgnome.h>
+//#include <libgnomeui/libgnomeui.h>
 #include <gtkmm/main.h>
 #include <glib.h>
 #include <glib/gi18n.h>
@@ -135,7 +135,7 @@ int main (int argc, char *argv[])
 
   GOptionContext *context = g_option_context_new("");
   g_option_context_add_main_entries(context, options, GETTEXT_PACKAGE);
-
+/*
   GnomeProgram *program;
   program = gnome_program_init(
                  PACKAGE, VERSION,
@@ -145,7 +145,7 @@ int main (int argc, char *argv[])
                  GNOME_PARAM_APP_DATADIR, DATADIR,
                  GNOME_PARAM_NONE);
 
-
+*/
   Gtk::Main kit(argc, argv);
 
 
